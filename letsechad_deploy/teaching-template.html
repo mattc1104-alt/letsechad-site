@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TEACHING_TITLE — L'ets Echad</title>
+<meta name="description" content="TEACHING_SUMMARY">
+<meta name="theme-color" content="#0F0B07">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0F0B07;--ink2:#1A1108;--ink3:#251A0C;
+  --bark:#3E2C14;--brown:#6B4E28;
+  --stone:#7A6040;--sand:#A08860;--light:#C8AA80;
+  --gold:#BF9B2C;--gold2:#D4AF3A;--gold3:#E8C84A;
+  --parch:#F5EDD8;--cream:#FBF7EF;--white:#FFFFFF;
+  --bdr:rgba(191,155,44,.18);--bdr2:rgba(191,155,44,.38);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--t:.22s;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--parch);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none}
+.W{max-width:1160px;margin:0 auto;padding:0 2rem}
+.Wsm{max-width:820px;margin:0 auto;padding:0 2rem}
+.serif{font-family:var(--serif)}
+.sh{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.sh-xl{font-size:clamp(3rem,7.5vw,5.8rem)}
+.sh-lg{font-size:clamp(2rem,4.5vw,3.2rem)}
+.sh-md{font-size:clamp(1.5rem,3vw,2rem)}
+.eyebrow{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.gold{color:var(--gold2)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;height:78px;display:flex;align-items:center;background:rgba(15,11,7,.95);border-bottom:1px solid rgba(191,155,44,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.nav-in{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.nav-logo{display:flex;align-items:center;gap:.85rem;flex-shrink:0}
+.nav-logo-img{height:54px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.nav-logo-wrap{line-height:1.1}
+.nav-logo-name{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--gold2);letter-spacing:.01em;display:block}
+.nav-logo-sub{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:.05rem}
+.nav-a{font-size:.73rem;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.52);padding:.42rem .75rem;border-radius:2px;transition:color var(--t)}
+.nav-a:hover{color:rgba(255,255,255,.88)}
+.nav-a.cur{color:var(--gold2)}
+.nav-give{margin-left:.5rem;border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.38rem .95rem!important;border-radius:2px}
+.nav-give:hover{background:var(--gold);color:var(--ink)!important}
+.burger{display:none;flex-direction:column;gap:5px;padding:6px}
+.burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.65);border-radius:2px}
+.mob{display:none;position:fixed;inset:78px 0 0 0;z-index:899;background:var(--ink2);flex-direction:column;padding:1.5rem 2rem;gap:.15rem;overflow-y:auto}
+.mob.open{display:flex}
+.mob-a{font-size:1.15rem;font-family:var(--serif);color:rgba(255,255,255,.55);padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.mob-a:last-child{border-bottom:none;color:var(--gold);margin-top:.5rem}
+/* HERO */
+.t-hero{background:var(--ink);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.t-hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(191,155,44,.07) 0%,transparent 62%);top:50%;left:50%;transform:translate(-50%,-52%);pointer-events:none}
+.t-hero-in{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.t-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:2rem;transition:color var(--t)}
+.t-back:hover{color:var(--gold)}
+.t-back::before{content:'←'}
+.t-tag{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.2rem}
+.t-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1.5rem}
+.t-refs{font-family:var(--serif);font-style:italic;font-size:.95rem;color:rgba(255,255,255,.38)}
+/* BODY */
+.t-body{padding:5rem 0 6rem}
+.t-body-inner{max-width:700px;margin:0 auto;padding:0 2rem}
+.t-body-inner p{font-family:var(--serif);font-size:1.08rem;line-height:1.9;color:var(--ink);margin-bottom:1.6rem}
+.t-body-inner h2{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--bark);margin:2.8rem 0 1rem;padding-top:1.5rem;border-top:1px solid var(--bdr)}
+.t-body-inner h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--bark);margin:2rem 0 .75rem}
+.t-body-inner blockquote{margin:2rem 0;padding:1.2rem 1.8rem;border-left:3px solid var(--gold);background:rgba(191,155,44,.04)}
+.t-body-inner blockquote p{font-style:italic;color:var(--stone)}
+.t-body-inner strong{font-weight:600;color:var(--bark)}
+/* FOOTER */
+.footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.12);padding:4rem 0 0}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-logo{height:72px;width:auto;filter:brightness(0) invert(1);opacity:.55;margin-bottom:1rem}
+.ft-tag{font-family:var(--serif);font-size:.88rem;font-style:italic;color:rgba(255,255,255,.28);line-height:1.6;max-width:220px;margin-bottom:.7rem}
+.ft-url{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.45}
+.ft-col h4{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.ft-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.32);margin-bottom:.45rem;transition:color var(--t)}
+.ft-col a:hover{color:rgba(255,255,255,.75)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.ft-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
+.ft-verse{font-family:var(--serif);font-size:.8rem;font-style:italic;color:rgba(255,255,255,.2)}
+@media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+@media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.burger{display:flex}}
+@media(max-width:600px){.ft-grid{grid-template-columns:1fr}.t-body{padding:3.5rem 0 4rem}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <div class="nav-in">
+    <a href="../index.html" class="nav-logo" aria-label="L'ets Echad home">
+      <img src="LOGO_SRC" alt="L'ets Echad" class="nav-logo-img">
+      <div class="nav-logo-wrap">
+        <span class="nav-logo-name">L'ets Echad</span>
+        <span class="nav-logo-sub">Ezekiel 37:19</span>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="Site">
+      <a href="../teachings.html" class="nav-a cur">Teachings</a>
+      <a href="../about.html" class="nav-a">About</a>
+      <a href="../resources.html" class="nav-a">Resources</a>
+      <a href="../support.html" class="nav-a nav-give">Give</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mob" id="mob" role="dialog" aria-label="Mobile menu">
+  <a href="../teachings.html" class="mob-a">Teachings</a>
+  <a href="../about.html" class="mob-a">About</a>
+  <a href="../resources.html" class="mob-a">Resources</a>
+  <a href="../support.html" class="mob-a">Give</a>
+</div>
+
+<header class="t-hero">
+  <div class="t-hero-in">
+    <a href="../teachings.html" class="t-back">All Teachings</a>
+    <span class="t-tag">TEACHING_TAG</span>
+    <h1 class="t-title">TEACHING_TITLE</h1>
+    <p class="t-refs">TEACHING_REFS</p>
+  </div>
+</header>
+
+<main class="t-body">
+  <div class="t-body-inner">
+    TEACHING_BODY
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="W">
+    <div class="ft-grid">
+      <div>
+        <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo">
+        <p class="ft-tag">Torah teaching ministry. Rooted in Ezekiel 37:19.</p>
+        <span class="ft-url">letsechad.netlify.app</span>
+      </div>
+      <div class="ft-col">
+        <h4>Ministry</h4>
+        <a href="../about.html">About L'ets Echad</a>
+        <a href="../teachings.html">All Teachings</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../support.html">Give to L'ets Echad</a>
+      </div>
+      <div class="ft-col">
+        <h4>Support Israel</h4>
+        <a href="https://support.fidf.org" target="_blank" rel="noopener">FIDF</a>
+        <a href="https://secure.afmda.org" target="_blank" rel="noopener">Magen David Adom</a>
+        <a href="https://give.zakaworld.org" target="_blank" rel="noopener">ZAKA</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span class="ft-copy">&copy; L'ets Echad. All rights reserved.</span>
+      <span class="ft-verse">Into One Stick &mdash; Ezekiel 37:19</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../logo.js"></script>
+<script>
+const imgs=document.querySelectorAll('img');
+imgs.forEach(i=>{if(i.src&&i.src.indexOf('LOGO_SRC')!==-1)i.src=window.LOGO;});
+const nav=document.getElementById('nav');
+const burger=document.getElementById('burger');
+const mob=document.getElementById('mob');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',window.scrollY>10));
+burger.addEventListener('click',()=>{
+  const open=mob.classList.toggle('open');
+  burger.classList.toggle('x',open);
+  burger.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+mob.querySelectorAll('.mob-a').forEach(a=>a.addEventListener('click',()=>{
+  mob.classList.remove('open');burger.classList.remove('x');
+  burger.setAttribute('aria-expanded','false');document.body.style.overflow='';
+}));
+</script>
+</body>
+</html>

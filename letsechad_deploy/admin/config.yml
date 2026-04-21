@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: mattc1104-alt/letsechad-site
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "teachings"
+    label: "Teachings"
+    label_singular: "Teaching"
+    folder: "teachings"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Parashah Tag"
+        name: "tag"
+        widget: "string"
+        hint: "e.g. Shemot · Yitro  or  Elul · Conference 2024"
+      - label: "Book"
+        name: "book"
+        widget: "select"
+        options:
+          - { label: "Bereishit (Genesis)", value: "bereishit" }
+          - { label: "Shemot (Exodus)", value: "shemot" }
+          - { label: "Vayikra (Leviticus)", value: "vayikra" }
+          - { label: "Bamidbar (Numbers)", value: "bamidbar" }
+          - { label: "Devarim (Deuteronomy)", value: "devarim" }
+          - { label: "Conference / Special", value: "conference" }
+      - label: "Scripture References"
+        name: "refs"
+        widget: "string"
+        hint: "e.g. Exod 18:1–20:23 · Isa 6:1–7:6"
+      - label: "Card Summary"
+        name: "summary"
+        widget: "text"
+        hint: "2-4 sentences shown on the teachings page card."
+      - label: "Full Teaching"
+        name: "body"
+        widget: "markdown"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
