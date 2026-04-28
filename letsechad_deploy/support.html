@@ -214,7 +214,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 <section class="pad" style="background:var(--parch)">
   <div class="W">
     <div class="give-g">
-      <div class="give-body fu">
+      <div class="give-body fu in">
         <p class="eyebrow" style="margin-bottom:1.1rem">Why Give</p>
         <h2 class="sh sh-lg" style="color:var(--ink);margin-bottom:1.5rem;line-height:1.15">Invest in the Work of Reunification</h2>
         <p class="body-lg give-body"><strong>L'ets Echad is a teaching ministry.</strong> Every dvar Torah, every study guide, every resource is freely available. There is no paywall, no premium tier. The mission is to make Torah teaching accessible to anyone sensing the call of return — regardless of where they are financially.</p>
@@ -349,9 +349,7 @@ mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
 if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)
-  document.querySelectorAll('.fu').forEach(el=>el.classList.add('in'));
-}
-
+  document.querySelectorAll('.fu').forEach(el=>el.classList.add('in'));}
 </script>
 <script src="logo.js"></script>
 <script>
