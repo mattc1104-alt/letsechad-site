@@ -230,19 +230,20 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
           </div>
         </div>
       </div>
-      <div class="give-cta-box fu d2">
-        <h3>Make a Gift</h3>
-        <p>Choose an amount and click to give. You'll be taken to a secure giving page.</p>
-        <div class="amt-g">
-          <button class="amt-btn" onclick="setAmt(18)">$18</button>
-          <button class="amt-btn on" onclick="setAmt(36)">$36</button>
-          <button class="amt-btn" onclick="setAmt(72)">$72</button>
-          <button class="amt-btn" onclick="setAmt(180)">$180</button>
-        </div>
-        <span class="amt-display" id="amtDisp">$36</span>
-        <a href="#" class="btn btn-gold btn-lg" id="giveBtn" style="width:100%;justify-content:center">Give $36 →</a>
-        <p class="donate-note">Secure giving powered by Donorbox. One-time and monthly options available. You'll receive a receipt for your records.</p>
-      </div>
+     <div class="fu d2">
+  <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
+  <iframe src="https://donorbox.org/embed/support-l-ets-echad?default_interval=o&enable_auto_scroll=false"
+    name="donorbox"
+    allowpaymentrequest="allowpaymentrequest"
+    seamless="seamless"
+    frameborder="0"
+    scrolling="no"
+    height="900px"
+    width="100%"
+    style="max-width:500px;min-width:250px;max-height:none!important"
+    allow="payment">
+  </iframe>
+</div>
     </div>
   </div>
 </section>
@@ -364,13 +365,7 @@ if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)
   document.querySelectorAll('.fu').forEach(el=>el.classList.add('in'));
 
 
-let amt = 36;
-function setAmt(n) {
-  amt = n;
-  document.querySelectorAll('.amt-btn').forEach(b => b.classList.remove('on'));
-  event.target.classList.add('on');
-  document.getElementById('amtDisp').textContent = '$' + n;
-  document.getElementById('giveBtn').textContent = 'Give $' + n + ' →';
+
 }
 
 </script>
