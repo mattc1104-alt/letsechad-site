@@ -230,19 +230,9 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
           </div>
         </div>
       </div>
-     <div class="fu d2">
-  <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
-  <iframe src="https://donorbox.org/embed/support-l-ets-echad?default_interval=o&enable_auto_scroll=false"
-    name="donorbox"
-    allowpaymentrequest="allowpaymentrequest"
-    seamless="seamless"
-    frameborder="0"
-    scrolling="no"
-    height="900px"
-    width="100%"
-    style="max-width:500px;min-width:250px;max-height:none!important"
-    allow="payment">
-  </iframe>
+<div class="fu d2">
+  <script type="module" src="https://donorbox.org/widgets.js" async></script>
+  <dbox-widget campaign="support-l-ets-echad" type="donation_form" enable-auto-scroll="true"></dbox-widget>
 </div>
     </div>
   </div>
@@ -363,9 +353,6 @@ const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.targ
 document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
 if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)
   document.querySelectorAll('.fu').forEach(el=>el.classList.add('in'));
-
-
-
 }
 
 </script>
