@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Teshuvah: Standing Before the Covenant — L'ets Echad</title>
-<meta name="description" content="Parshat Nitzavim. The covenant at Moab runs parallel to Sinai — it does not replace it. And it makes teshuvah possible. A teaching by Matti Kahana.">
+<meta name="description" content="Parshat Nitzavim. The covenant at Moab is separate from Sinai, runs parallel to it, and makes teshuvah possible. A teaching by Matti Kahana.">
 <meta property="og:title" content="Teshuvah: Standing Before the Covenant — L'ets Echad">
 <meta property="og:description" content="Parshat Nitzavim. The covenant in the plains of Moab and the meaning of return.">
 <meta property="og:type" content="article">
@@ -15,11 +15,11 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --ink:#0F0B07;--ink2:#1A1108;--ink3:#251A0C;
+  --ink:#0F0B07;--ink2:#1A1108;
   --bark:#3E2C14;--brown:#6B4E28;
-  --stone:#7A6040;--sand:#A08860;--light:#C8AA80;
-  --gold:#BF9B2C;--gold2:#D4AF3A;--gold3:#E8C84A;
-  --parch:#F5EDD8;--cream:#FBF7EF;--white:#FFFFFF;
+  --stone:#7A6040;--sand:#A08860;
+  --gold:#BF9B2C;--gold2:#D4AF3A;
+  --parch:#F5EDD8;
   --bdr:rgba(191,155,44,.18);--bdr2:rgba(191,155,44,.38);
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Instrument Sans',system-ui,sans-serif;
@@ -31,6 +31,7 @@ img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .W{max-width:1160px;margin:0 auto;padding:0 2rem}
+/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:900;height:78px;display:flex;align-items:center;background:rgba(15,11,7,.95);border-bottom:1px solid rgba(191,155,44,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow var(--t)}
 .nav.on{box-shadow:0 4px 40px rgba(0,0,0,.55)}
 .nav-in{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
@@ -57,7 +58,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .mob-a:hover{color:var(--gold2)}
 .mob-a:last-child{border-bottom:none;color:var(--gold);margin-top:.5rem}
 /* HERO */
-.t-hero{background:var(--ink);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.t-hero{background:var(--ink2);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
 .t-hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(191,155,44,.07) 0%,transparent 62%);top:50%;left:50%;transform:translate(-50%,-52%);pointer-events:none}
 .t-hero-in{position:relative;z-index:2;max-width:820px;margin:0 auto}
 .t-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:2rem;transition:color var(--t)}
@@ -71,20 +72,40 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .t-body{padding:5rem 0 6rem}
 .t-body-inner{max-width:700px;margin:0 auto;padding:0 2rem}
 .t-body-inner p{font-family:var(--serif);font-size:1.08rem;line-height:1.9;color:var(--ink);margin-bottom:1.5rem}
-.t-body-inner h2{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--bark);margin:3rem 0 1rem;padding-top:1.8rem;border-top:1px solid var(--bdr)}
+.t-body-inner h2{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--bark);margin:3.2rem 0 1.2rem;padding-top:2rem;border-top:1px solid var(--bdr)}
+.t-body-inner strong{font-weight:600;color:var(--bark)}
+/* Scripture */
 .t-body-inner blockquote{margin:2rem 0;padding:1.2rem 1.8rem;border-left:3px solid var(--gold);background:rgba(191,155,44,.04)}
 .t-body-inner blockquote p{font-style:italic;color:var(--stone);margin-bottom:.5rem}
 .t-body-inner blockquote p:last-child{margin-bottom:0}
-.t-body-inner .ref{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);display:block;margin-top:.6rem}
-.t-body-inner strong{font-weight:600;color:var(--bark)}
-.t-body-inner .heb{font-family:var(--serif);font-style:italic;color:var(--brown)}
+.t-body-inner blockquote p.ann{font-family:var(--sans);font-style:normal;font-size:.76rem;color:var(--sand);padding-left:.6rem;border-left:1px solid var(--bdr);margin-bottom:.55rem}
+.ref{font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);display:block;margin-top:.75rem}
+/* Translation note */
+.trans-note{font-family:var(--sans);font-size:.78rem;color:var(--sand);font-style:italic;margin-bottom:1.2rem}
+/* Punch line */
+.punch{font-family:var(--serif);font-size:1.12rem;font-weight:500;color:var(--bark);margin:1.8rem 0;line-height:1.6}
+/* Covenant list */
+.covenant-list{margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:.4rem}
+.covenant-item{font-family:var(--serif);font-size:1rem;color:var(--ink);padding:.5rem .9rem;border-left:2px solid var(--bdr2);line-height:1.7}
+.covenant-item span{color:var(--stone);font-style:italic}
+/* Steps */
 .steps{margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:.75rem}
 .step-item{display:flex;gap:1rem;align-items:flex-start}
-.step-num{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(191,155,44,.1);border:1px solid var(--bdr);padding:.3rem .6rem;border-radius:2px;white-space:nowrap;margin-top:.15rem;flex-shrink:0}
-.step-item p{margin-bottom:0}
-.covenant-list{margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:.5rem}
-.covenant-item{font-family:var(--serif);font-size:1rem;color:var(--ink);padding:.5rem .85rem;border-left:2px solid var(--bdr2);line-height:1.7}
-.closing{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--bdr);font-family:var(--serif);font-style:italic;color:var(--stone)}
+.step-num{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(191,155,44,.1);border:1px solid var(--bdr);padding:.3rem .65rem;border-radius:2px;white-space:nowrap;margin-top:.22rem;flex-shrink:0}
+.step-item p{margin-bottom:0;font-family:var(--serif);font-size:1.02rem;line-height:1.8;color:var(--ink)}
+/* Teruah refs */
+.teruah-list{margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:1rem}
+.teruah-item{padding:.8rem 1rem .8rem 1.2rem;border-left:2px solid var(--bdr2)}
+.teruah-item .trl{font-family:var(--sans);font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
+.teruah-item p{font-family:var(--serif);font-size:1rem;color:var(--ink);margin-bottom:0;line-height:1.75}
+/* Divider */
+.s-div{display:flex;align-items:center;gap:1rem;margin:3rem 0}
+.s-div::before,.s-div::after{content:'';flex:1;height:1px;background:var(--bdr)}
+.s-div span{font-family:var(--serif);color:var(--gold);font-size:1rem;opacity:.5}
+/* Closing */
+.closing{margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--bdr)}
+.closing p{font-family:var(--serif);font-style:italic;color:var(--stone);margin-bottom:.6rem}
+.closing p:last-child{margin-bottom:0}
 /* FOOTER */
 .footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.12);padding:4rem 0 0}
 .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
@@ -141,45 +162,70 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
     <span class="t-tag">Devarim &middot; Nitzavim</span>
     <h1 class="t-title">Teshuvah: Standing Before the Covenant</h1>
     <p class="t-meta">Matti Kahana &middot; Shabbat 9/20/2025</p>
-    <p class="t-refs">Deut 29:9&ndash;30:20 &middot; Isa 61:10&ndash;63:9</p>
+    <p class="t-refs">Deuteronomy 29:9&ndash;30:20 &middot; Isaiah 61:10&ndash;63:9</p>
   </div>
 </header>
 
 <main class="t-body">
   <div class="t-body-inner">
 
-    <p>Parshat Nitzavim means "Standing." For such a short portion — just under two chapters — it carries some of the most profound concepts in all of Torah: the unity of Israel, freewill, easy access to Torah, the enduring covenant, repentance, and the future redemption of the messianic age.</p>
+    <p>Shabbat Shalom, beloved.</p>
+    <p>Today we're in Parshat Nitzavim. Which means "Standing." In the Book of Devarim.</p>
+    <p>For such a short portion &mdash; just under two chapters &mdash; we have some of the most profound concepts in all of Torah. The unity of Israel. Freewill. Easy access to Torah. The enduring covenant. Repentance. And the future redemption of the messianic age.</p>
+    <p>All of it is here.</p>
+
+    <div class="s-div"><span>&#x2736;</span></div>
 
     <h2>Atem Nitzavim Hayom</h2>
 
+    <p class="trans-note">Deuteronomy 29:9 &mdash; if your translation follows the Vulgate, it will be verse 10.</p>
+
     <blockquote>
-      <p>You are all standing here today before Adonai your Elohim — the heads of your tribes, your elders, your officers, every man of Israel, your wives, your children, and the sojourner who is in the midst of your encampment, from your hewer of wood to your drawer of water — that you may enter into the covenant with Adonai your Elohim and into his oath which Adonai your Elohim makes with you today.</p>
-      <span class="ref">Deuteronomy 29:9&ndash;11</span>
+      <p><em>Atem nitzavim hayom &mdash;</em></p>
+      <p>You are all standing here today before Adonai your Elohim,</p>
+      <p>the heads of your tribes,</p>
+      <p class="ann">the princes, the patriarchs of the family</p>
+      <p>your elders,</p>
+      <p class="ann">the 70 elders appointed by Moshe</p>
+      <p>and your officers,</p>
+      <p class="ann">appointed to authority by the people</p>
+      <p>every man of Israel, your wives, your children, and the sojourner who is in the midst of your encampment,</p>
+      <p class="ann">those who have attached themselves to Israel &mdash; converts</p>
+      <p>from your hewer of wood to your drawer of water &mdash;</p>
+      <p class="ann">even including the Gibeonites, who would join deceitfully</p>
+      <p>that you may enter into the covenant with Adonai your Elohim and into his oath which Adonai your Elohim makes with you today, that he may establish you today as a people for himself.</p>
+      <span class="ref">Deuteronomy 29:9&ndash;12</span>
     </blockquote>
 
-    <p>The entire second generation — from least to greatest — assembles with Moses on the day to enter a new covenant with the Creator. Verse 13 extends it further:</p>
+    <p>And then verse 13:</p>
 
     <blockquote>
       <p>And not with you alone do I make this covenant and this oath, but with them that stands here with us this day before Adonai our Elohim, and also with them that are not here with us this day.</p>
       <span class="ref">Deuteronomy 29:13&ndash;14</span>
     </blockquote>
 
-    <p>I was not there on that day. But I am here now. This covenant includes me — and it includes you.</p>
+    <p>Stop there.</p>
+    <p>This is so important. I'm not even sure how to convey the significance. Or even the best way to start.</p>
+    <p>What we just read is the entire second generation &mdash; from least to greatest &mdash; assembled with Moses on the day. To enter into a new covenant with the Creator of the universe.</p>
+    <p>I wasn't there on that day. But I'm here now.</p>
+    <p>And I can be confident that this covenant includes me &mdash; and it includes you.</p>
 
     <h2>A Covenant Separate from Sinai</h2>
 
-    <p>Go back one verse to Deuteronomy 29:1, from last week's parasha:</p>
+    <p>Now go back one verse, to Deuteronomy 29:1, from last week's parasha:</p>
 
     <blockquote>
       <p>These are the words of the covenant which Adonai commanded Moses to make with the children of Israel in the land of Moab, beside the covenant which he made with them in Horeb.</p>
       <span class="ref">Deuteronomy 29:1</span>
     </blockquote>
 
-    <p>That word "beside" in the Hebrew is stronger than it looks. It means "alone from" or "separate from." The second generation enters a covenant that is <em>separate</em> from the covenant at Horeb — at Sinai.</p>
-
-    <p>Some have argued that the Sinai covenant is conditional, that Israel failed it, that Jeremiah 31 and Ezekiel 36 render it obsolete. Those arguments don't hold up against the covenant at Moab.</p>
-
-    <p>Failure is already factored in. Deuteronomy 30:1 opens: <em>And it shall come to pass, when all these things come upon you, the blessing and the curse.</em> Jeremiah 31 and Ezekiel 36 point back to this covenant: "I will write my law on your heart." Deuteronomy 30:6 spells out the mechanism:</p>
+    <p>That word "beside" in the Hebrew is actually stronger than it looks. It means "alone from" or "separate from."</p>
+    <p>So we have the second generation entering into a covenant that is <strong>separate</strong> from the covenant at Horeb &mdash; at Sinai.</p>
+    <p>Now here's why that matters.</p>
+    <p>I can build a case against the Sinai covenant. That it was conditional. That Israel failed it. I could say that Jeremiah 31 and Ezekiel 36 render it obsolete. I could point out that Sinai required an intermediary &mdash; Moses being the primary example. In fact many people have made those very arguments. You've probably heard them.</p>
+    <p>Those arguments don't hold up against the covenant at Moab.</p>
+    <p>Failure is already factored in. Deuteronomy 30:1 opens: <em>"And it shall come to pass, when all these things come upon you, the blessing AND the curse."</em> He's not surprised. He planned for it.</p>
+    <p>Jeremiah 31 and Ezekiel 36 don't cancel Sinai &mdash; they point back to this covenant at Moab. "I will write my law on your heart. I will take your heart of stone and give you a heart of flesh." That's not new. That's Deuteronomy 30:6 coming to pass:</p>
 
     <blockquote>
       <p>And Adonai your Elohim will circumcise your heart, and the heart of your seed, to love Adonai your Elohim with all your heart and with all your soul, that you may live.</p>
@@ -189,113 +235,192 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
     <p>And then verses 12 and 14:</p>
 
     <blockquote>
-      <p>It is not in heaven, that you should say, Who will go up for us to heaven and bring it to us&hellip; But the word is very near to you, in your mouth, and in your heart, that you may do it.</p>
+      <p>It is not in heaven, that you should say, who will go up for us to heaven and bring it to us&hellip; But the word is very near to you, in your mouth, and in your heart, that you may do it.</p>
       <span class="ref">Deuteronomy 30:12, 14</span>
     </blockquote>
 
-    <p>It's you — not someone else. No intermediary required.</p>
+    <p>It's you. Not someone else.</p>
+    <p>Everyone who sinned and broke the Sinai covenant died in the wilderness. But their children &mdash; the second generation &mdash; are still part of the Sinai covenant. When their parents declared "what you say we will do," they accepted G-d's kingship upon themselves AND their descendants.</p>
+    <p class="punch">This is true even today.</p>
+    <p>Deuteronomy 5:2&ndash;3 makes it explicit:</p>
+
+    <blockquote>
+      <p>Adonai our Elohim made a covenant with us in Horeb. Adonai made not this covenant with our fathers, but with us, even us, who are all of us here alive this day.</p>
+      <span class="ref">Deuteronomy 5:2&ndash;3</span>
+    </blockquote>
+
+    <p>So those descendants &mdash; the second generation &mdash; also&hellip; <strong>ALSO</strong> enter into the covenant in the plains of Moab. They get to benefit from both.</p>
 
     <h2>New Covenants Do Not Cancel Old Ones</h2>
 
-    <p>It would be a serious mistake to think that entering a new covenant makes previous covenants obsolete. That is a strong accusation against G-d. If you and I sign a business contract and then I sign a new contract with someone else, voiding ours — you would be upset, and rightly so. Do that repeatedly and your word is worth nothing.</p>
-
-    <p>When entering a new covenant, everything true of the previous remains true. Everything from Sinai is still there: the ten commandments, the Torah, the identity of a nation of priests and kings, the feast days. The Moab covenant runs parallel to Sinai. It doesn't replace it — it adds to it.</p>
-
-    <p>This is how it has always worked. The second generation standing before Moses in Moab already carried multiple covenants:</p>
-
-    <div class="covenant-list">
-      <div class="covenant-item">As descendants of Noah — the Noahide covenant</div>
-      <div class="covenant-item">As descendants of Abraham — the Abrahamic covenant</div>
-      <div class="covenant-item">As descendants of Isaac and Jacob — personalized variations of the Abrahamic</div>
-      <div class="covenant-item">As descendants of the first generation — the Sinai covenant</div>
-      <div class="covenant-item">Some — the Levitical covenant (Mal 2:4)</div>
-      <div class="covenant-item">Some — the covenant of Phinehas</div>
-      <div class="covenant-item">Now — the covenant in the plains of Moab, for them and all their descendants</div>
-    </div>
-
-    <p>In the future, some descendants would be part of the Davidic covenant. And those who circumcise their heart — as commanded in Deuteronomy 10:16 — will have their heart circumcised by G-d as promised in Deuteronomy 30:6, entering the Jeremiah 31 covenant. Not as a replacement. In addition. In parallel.</p>
-
-    <p>My family was outside after a rainstorm not long ago. The children spotted a rainbow, and my daughter Emunah asked to do the rainbow blessing. It goes: <em>Blessed are You, Adonai our Elohim, King of the universe, who remembers the covenant, and is faithful to His covenant, and keeps His promise.</em> G-d made a covenant with Noah and his descendants. You and I, as descendants of Noah, still benefit from that covenant today.</p>
-
-    <h2>What Is Teshuvah?</h2>
-
-    <p>This parasha is always read on the Shabbat before Rosh Hashanah. Deuteronomy 30:6 is tied to the month of Elul. Elul — aleph, lamed, vav, lamed — is an acronym hidden in the very words of that verse: <span class="heb">et-levavkha ve-et levav</span> — your heart and the heart of your children.</p>
-
-    <p>The first five verses of Deuteronomy 30 show what makes verse 6 possible:</p>
+    <p>Now this is a point I want to make clearly, because I think it's one of the most misunderstood things in both Jewish and Christian theology.</p>
+    <p>It would be a mistake to think that entering a new covenant makes previous covenants obsolete. That's actually a very strong accusation against G-d.</p>
+    <p>Here's an example. If you and I enter into a business agreement &mdash; a binding contract, a business "covenant" &mdash; and then I go do a deal with someone else, sign a new contract, and suddenly the contract you and I made is void&hellip; you'd be upset. And it would be right that you're upset.</p>
+    <p>Then I did it again? People would start to talk.</p>
+    <p>My business deals would become worthless. My reputation, marred.</p>
+    <p>Everything from Sinai is still there. The ten commandments. The Torah. The identity of a nation of priests and kings. The Tabernacle, the sacrifices, the feast days. None of that went anywhere. When they entered the covenant at Moab, it ran parallel to Sinai. They get to benefit from both.</p>
+    <p>This past week we got a little bit of rain. My family and I were all outside afterward enjoying that smell of fresh rainfall. The children spotted a rainbow, and I'm standing there looking at it, just enjoying the beauty, when little Emunah comes up to me and says she wants to do the rainbow blessing.</p>
+    <p>I had to look it up. The blessing we say upon seeing a rainbow:</p>
 
     <blockquote>
-      <p>And it shall come to pass, when all these things are come upon you, the blessing and the curse, which I have set before you, and you shall remember them among all the nations where Adonai your Elohim has driven you, and shall return unto Adonai your Elohim&hellip;</p>
+      <p>Blessed are You, Adonai our Elohim, King of the universe, who remembers the covenant, and is faithful to His covenant, and keeps His promise.</p>
+    </blockquote>
+
+    <p>G-d made a covenant with Noah and his descendants. You and I &mdash; as descendants of Noah &mdash; still benefit from that covenant today. Every rainbow is a reminder.</p>
+    <p>So here in Nitzavim, the second generation standing before Moses is already carrying an entire stack of covenants:</p>
+
+    <div class="covenant-list">
+      <div class="covenant-item">As descendants of Noah &mdash; <span>the Noahide covenant</span></div>
+      <div class="covenant-item">As descendants of Abraham &mdash; <span>the Abrahamic covenant</span></div>
+      <div class="covenant-item">G-d makes personalized variations with Isaac and Jacob &mdash; <span>they benefit from those as well</span></div>
+      <div class="covenant-item">As descendants of the first generation &mdash; <span>the Sinai covenant</span></div>
+      <div class="covenant-item">Some of them &mdash; <span>the Levitical covenant, spoken of in Malachi 2:4</span></div>
+      <div class="covenant-item">Some of those &mdash; <span>Phinehas's covenant of peace</span></div>
+      <div class="covenant-item">And now &mdash; <span>the covenant in the plains of Moab, for them and all their descendants</span></div>
+    </div>
+
+    <p>In the future some of those descendants will be part of the Davidic covenant. And those who circumcise their heart &mdash; as commanded in Deuteronomy 10:16 &mdash; will have their heart circumcised by G-d as promised in Deuteronomy 30:6, and will enter into the Jeremiah 31 covenant.</p>
+    <p>Not as a replacement. In addition. In parallel.</p>
+    <p class="punch">Every covenant G-d has made is still in force. That's who He is.</p>
+
+    <div class="s-div"><span>&#x2736;</span></div>
+
+    <h2>Teshuvah</h2>
+
+    <p>This parasha is always read on the Shabbat before Rosh Hashanah &mdash; and that is not an accident.</p>
+    <p>Deuteronomy 30:6 is tied to the month of Elul. Elul &mdash; aleph, lamed, vav, lamed &mdash; is an acronym embedded in the very words of that verse:</p>
+
+    <blockquote>
+      <p><em>et-LEVAVKHA</em> &mdash; your heart</p>
+      <p><em>ve-et LEVAV</em> &mdash; and the heart</p>
+    </blockquote>
+
+    <p>Your heart and the heart of your children. Hidden right there in the promise of circumcision.</p>
+    <p>Now look at the first five verses of Deuteronomy 30 to see what makes verse 6 possible:</p>
+
+    <blockquote>
+      <p>And it shall come to pass, when all these things are come upon you, the blessing and the curse, which I have set before you, and you shall remember them among all the nations where Adonai your Elohim has driven you, and shall <strong>return</strong> unto Adonai your Elohim&hellip;</p>
       <span class="ref">Deuteronomy 30:1&ndash;2</span>
     </blockquote>
 
-    <p>English gives you "repentance." Greek gives you <em>metanoia</em> — a change of mind. These carry the idea of being sorry and evolving into a new person. But teshuvah is the opposite of becoming a new person. Teshuvah is <em>return</em>. Going back to the relationship you were meant to have.</p>
-
-    <p>When you remember that you are a child of the Most High, made in his image, you run back to him. You fix the things that created separation. You don't stop at feeling sorry. You return.</p>
-
-    <p>The steps:</p>
+    <p>In English we say "repentance." But as with most Greek ideas, it doesn't carry the original meaning.</p>
+    <p>The Greek word is <em>metanoia</em> &mdash; to change your mind. The Latin goes back to <em>paeniteo</em> &mdash; to regret, to be sorry. So what we've inherited theologically is an idea of feeling bad and evolving into a new person.</p>
+    <p>But teshuvah is the <strong>opposite</strong> of becoming a new person.</p>
+    <p>Teshuvah is return. Going back to the relationship we previously had with G-d. Going back to the relationship you were <em>meant</em> to have.</p>
+    <p>Rav Kook said it this way: "When we forget the essence of our own soul, everything becomes confused and in doubt. The primary teshuva, that which immediately lights the darkness, is when a person returns to himself, to the root of his soul &mdash; then he will immediately return to G-d, to the soul of all souls."</p>
+    <p>When we remember that we are children of the Most High, made in His image &mdash; we run back to Him. We fix the things that created separation.</p>
+    <p>That's teshuva.</p>
+    <p>Yes, we're sorry. Yes, we change our minds. But we don't <strong>stop</strong> there. We fix what we can. And we <strong>return</strong>.</p>
 
     <div class="steps">
-      <div class="step-item"><span class="step-num">Recognize</span><p>See what you are doing is wrong. Stop. Leave it behind.</p></div>
-      <div class="step-item"><span class="step-num">Regret</span><p>Be sorry. Change your mind.</p></div>
-      <div class="step-item"><span class="step-num">Confess</span><p>Confess before G-d and commit not to return to it.</p></div>
+      <div class="step-item"><span class="step-num">Recognize</span><p>See what you're doing is wrong. Stop. Leave it behind.</p></div>
+      <div class="step-item"><span class="step-num">Regret</span><p>Be sorry about it. Change your mind.</p></div>
+      <div class="step-item"><span class="step-num">Confess</span><p>Confess before G-d and commit to not returning to it.</p></div>
       <div class="step-item"><span class="step-num">Return</span><p>Do a 180. Reorient your entire life toward G-d.</p></div>
     </div>
 
-    <p>Isaiah sums up everything Deuteronomy 30 teaches about teshuvah in a single verse:</p>
+    <p>If you turn to Isaiah 55:7, this sums up everything Deuteronomy 30 and everywhere else teaches:</p>
 
     <blockquote>
-      <p>Let the wicked forsake his way, and the unrighteous man his thoughts: and let him return unto Adonai, and he will have mercy upon him; and to our Elohim, for he will abundantly pardon.</p>
+      <p>Let the wicked forsake his way, and the unrighteous man his thoughts, and let him return unto Adonai, and he will have mercy upon him; and to our Elohim, for he will abundantly pardon.</p>
       <span class="ref">Isaiah 55:7</span>
     </blockquote>
 
-    <h2>The Parable of the Prodigal Son</h2>
+    <p>If the wicked man leaves his evil ways, stops with the idolatrous thoughts, and does teshuvah &mdash; G-d <strong>will</strong> have mercy. And will forgive. Abundantly.</p>
 
-    <p>The parable is a picture of teshuvah from Deuteronomy 30. The younger son takes his inheritance and leaves. He wastes it, ends up feeding pigs in a foreign land, longing for scraps. Then comes a moment of clarity. He recognizes his sin. He regrets it. He confesses:</p>
+    <h2>The Prodigal Son</h2>
 
-    <blockquote>
-      <p>I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before you, and am no more worthy to be called your son: make me as one of your hired servants.</p>
-    </blockquote>
-
-    <p>And as he is returning — not after he arrives, while he is still on the road — the father sees him from afar. Has mercy. Runs to him. Hugs him, kisses him, gives him a robe and a signet ring, and restores him to full sonship.</p>
-
-    <p>I take this parable to be about the return of Ephraim, the lost of the House of Israel. The picture it paints of teshuvah is straight out of Deuteronomy 30. The covenant at Moab makes that return possible.</p>
-
-    <h2>Hosea's Invitation</h2>
-
-    <p>The generation that died in the wilderness did not have access to teshuvah. They had Moses' intercession and Leviticus 26 — if they confessed and accepted their punishment, G-d would not destroy them. But that is not teshuvah. Moses himself did not have access to teshuvah. He tried. G-d said no, stop asking.</p>
-
-    <p>We have what they did not. Hosea 14:</p>
+    <p>There's a parable that is an almost perfect picture of teshuvah. You know it.</p>
+    <p>The younger son takes his inheritance and leaves. Goes to a far country and wastes the whole thing living wickedly. Then a famine comes. He's starving. He joins himself to a local there &mdash; a stranger in a strange land &mdash; and that man sends him to feed the pigs. The prodigal son is longing for the pigs' food. The scraps.</p>
+    <p>And then he has a moment of clarity.</p>
+    <p>He recognizes his sin. Leaves the pig pen. Regrets his wicked actions. And he confesses:</p>
 
     <blockquote>
-      <p>O Israel, return to Adonai your Elohim, for you have fallen because of your iniquity. Take with you words and turn to Adonai: say unto him, Take away all iniquity, and receive us graciously&hellip; I will heal their backsliding, I will love them freely, for my anger is turned away from him.</p>
-      <span class="ref">Hosea 14:1&ndash;2, 4</span>
+      <p>"I will arise and go to my father, and will say unto him, Father, I have sinned against heaven and before you, and am no more worthy to be called your son. Make me as one of your hired servants."</p>
     </blockquote>
 
-    <p>It is not too late. Judgment day is still a few days away. Repent. Fix the things causing separation. Come home. Return to your Maker, return to your Father — both as an individual and as a member of the lost house of Israel, still in exile. G-d has promised: if you return, he will forgive.</p>
+    <p>We know the rest. As he is returning &mdash; while he is still on the road &mdash; the Father sees him from afar. Has mercy. Runs to him. Hugs him, kisses him. Gives him a robe and a signet ring and restores him to full sonship.</p>
+    <p>I take this parable, like many others, to be about the return of Ephraim &mdash; the lost of the House of Israel. The picture it paints of teshuvah is straight out of Deuteronomy 30.</p>
 
-    <h2>Hayom — The Day</h2>
+    <div class="s-div"><span>&#x2736;</span></div>
 
-    <p><span class="heb">Atem nitzavim hayom kulchem lifnei Adonai Eloheikhem.</span> You are all standing before Adonai your Elohim on <em>the</em> day.</p>
+    <h2>The Beauty of the Moab Covenant</h2>
 
-    <p>Yom Teruah is not well understood. Often it becomes a day of tooting horns. But look at what a <em>teruah</em> actually does in the Tanakh:</p>
-
-    <p>In Numbers 10:5, the teruah causes the encampment to move — a time of change. In Leviticus 25:9, the teruah sounds the Jubilee — freedom, renewal, restoration. In Joshua 6, the teruah brings down the walls of Jericho — G-d's sovereignty over the physical, regime change.</p>
-
-    <p>In Numbers 23:21, Balaam says about Israel: <em>Adonai his Elohim is with him, the teruah melek is among them</em> — the teruah of the King.</p>
-
-    <p>On Yom Teruah, Ezra and Nehemiah read the Torah to the returning exiles and they accepted G-d's kingship wholeheartedly. The <em>hayom</em> — the day — in this Torah reading points to that day. The head of the year, where we accept the kingship of the Creator of the universe.</p>
+    <p>Here's what I want you to see.</p>
+    <p>Without the covenant at Moab &mdash; teshuvah wouldn't be possible.</p>
+    <p>The generation that died in the wilderness didn't have access to teshuvah. They had Moses' intercession. They had Leviticus 26, which says if they confess their sin and accept their punishment, G-d won't destroy them or break his covenant.</p>
+    <p>But that is not teshuvah.</p>
+    <p>Moses himself didn't have access to teshuvah. He tried. He asked G-d to let him enter the land. G-d said: No. Stop asking.</p>
+    <p>The covenant at Moab changes that. For us and for all our descendants.</p>
+    <p>Hosea chapter 14, starting at verse 1:</p>
 
     <blockquote>
-      <p>O clap your hands, all you people; shout unto Elohim with the voice of triumph. For Adonai most high is awesome; he is a great King over all the earth&hellip; Elohim has gone up with a teruah, Adonai with the sound of a trumpet&hellip; For Elohim is the King of all the earth: sing praises with understanding.</p>
-      <span class="ref">Psalm 47:1&ndash;2, 5, 7</span>
+      <p>O Israel, return to Adonai your Elohim, for you have fallen because of your iniquity. Take with you words and turn to Adonai: say unto him, Take away all iniquity, and receive us graciously, for we will offer the bulls of our lips. Assyria will not save us. We will not ride upon horses. Neither will we say any more to the work of our hands, You are our gods &mdash; for in You the fatherless find mercy.</p>
+      <span class="ref">Hosea 14:1&ndash;3</span>
     </blockquote>
 
-    <p>In two days the month of Elul ends. The King leaves the field and returns to his throne room. We blow the trumpets. We accept his kingship upon ourselves for another year. We stand before him as he opens the heavenly books and begins his righteous judgment — judging our deeds, our fruit from the past year. For 10 days the books remain open. Then Yom Kippur: the day of atonement, the final moments before the verdict is sealed for the year.</p>
+    <p>And G-d answers:</p>
+
+    <blockquote>
+      <p>I will heal their backsliding. I will love them freely, for my anger is turned away from him.</p>
+      <span class="ref">Hosea 14:4</span>
+    </blockquote>
+
+    <p>It's not too late.</p>
+    <p>Judgment day is still a few days away.</p>
+    <p>Repent. Fix the things causing separation. Come home.</p>
+    <p>Return to your Maker. Return to your Father. Return both as an individual <strong>and</strong> as a member of the lost House of Israel &mdash; still in exile, still waiting to come home.</p>
+    <p class="punch">G-d has promised: if you return, he will forgive.</p>
+
+    <div class="s-div"><span>&#x2736;</span></div>
+
+    <h2>Hayom &mdash; The Day</h2>
+
+    <p><em>Atem nitzavim hayom kulchem lifnei Adonai Eloheikhem.</em></p>
+    <p>You are <strong>all</strong> standing before Adonai your Elohim. On <strong>the</strong> day.</p>
+    <p>One of the things that breaks my heart &mdash; Yom Teruah is not a very well understood or appreciated holy day. It often ends up being a day of just tooting horns. People talk about connections to some future messianic event and then go home. And it's understandable &mdash; there are only two verses in the Torah that openly describe this holiday.</p>
+    <p>In Numbers 29 it's called a day of Teruah. In Leviticus 23 it's called <em>Zikrown Teruah</em> &mdash; a remembrance Teruah. Not looking forward. Recalling something to mind from the past. Something that came even before G-d took Israel from Egypt. Something they remembered &mdash; but we have forgotten.</p>
+    <p>But look at what a teruah actually <em>does</em> throughout the Tanakh.</p>
+
+    <div class="teruah-list">
+      <div class="teruah-item">
+        <span class="trl">Numbers 10:5</span>
+        <p>The teruah causes the entire encampment to pick up and move &mdash; a signal for change, for action.</p>
+      </div>
+      <div class="teruah-item">
+        <span class="trl">Leviticus 25:9</span>
+        <p>The teruah announces the Jubilee &mdash; freedom, renewal, restoration. The land returns to its owners. The slaves go free.</p>
+      </div>
+      <div class="teruah-item">
+        <span class="trl">Joshua 6</span>
+        <p>The teruah brings down the walls of Jericho. G-d's sovereignty declared over the physical. Regime change.</p>
+      </div>
+      <div class="teruah-item">
+        <span class="trl">Numbers 23:21</span>
+        <p>Balaam, looking at Israel and unable to curse them, says: "Adonai his Elohim is with him. The teruah melek is among them." The teruah of the King.</p>
+      </div>
+    </div>
+
+    <p>The teruah reminds us of G-d's voice &mdash; from the midst of the trumpet blast at Sinai. The teruah reminds us of G-d's voice at creation, when He spoke and it came into existence.</p>
+    <p class="punch">Sinai. Creation. Kingship. Covenant. All of it is bound up in that sound.</p>
+    <p>When Ezra and Nehemiah read the Torah to the returning exiles, it was on this day &mdash; Yom Teruah &mdash; that the people wept and accepted G-d's kingship wholeheartedly. The <em>hayom</em> in this Torah reading points to that day. This most important day of the year &mdash; the head of the year &mdash; where we accept the kingship of the Creator of the universe.</p>
+
+    <blockquote>
+      <p>O clap your hands, all you people. Shout unto Elohim with the voice of triumph. For Adonai Most High is awesome &mdash; he is a great King over all the earth&hellip; Elohim has gone up with a <strong>teruah</strong>. Adonai with the sound of a trumpet. Sing praises to Elohim, sing praises. Sing praises unto our King, sing praises. For Elohim is the King of all the earth &mdash; sing praises with understanding. Elohim reigns over the nations. Elohim sits upon the throne of his holiness. The princes of the people are gathered together &mdash; even the people of the Elohim of Abraham, for the shields of the earth belong unto Elohim. He is greatly exalted.</p>
+      <span class="ref">Psalm 47</span>
+    </blockquote>
+
+    <p>In two days the month of Elul ends. The King leaves the field. He returns to his palace. To his throne room.</p>
+    <p>We blow the trumpets. We give a joyous shout. We proclaim YHVH is King of the universe &mdash; <em>Melech Ha'olam</em>. We accept his kingship upon ourselves for another year.</p>
+    <p>And we stand before Him &mdash; all of us, on the day &mdash; as He opens the heavenly books and begins his righteous judgment. Judging our deeds, the fruit of the past year.</p>
+    <p>He judges for life or for death. And this isn't only physical life and death. It's our careers, our finances, our households, the fruits of our labor, even our health.</p>
+    <p>For ten days &mdash; the days of awe &mdash; the books remain open. Time to appeal. Time for last-minute correction.</p>
+    <p>Then Yom Kippur. The day of forgiveness. Of comfort. Of atonement. The final moments to appeal before the case is closed and the verdict is sealed for the year.</p>
 
     <div class="closing">
       <p>May each and every one of you be signed and sealed in the book of life, for a good and sweet year.</p>
-      <p style="margin-top:.75rem">5786 — its digits sum to 26, the gematria of Yod-Hei-Vav-Hei. The year of Hashem.</p>
-      <p style="margin-top:.75rem">Kol Tuv &mdash; Matti Kahana</p>
+      <p>5786 &mdash; its digits add to 26. The gematria of Yod-Hei-Vav-Hei. The year of Hashem.</p>
+      <p>Kol Tuv &mdash; Matti Kahana</p>
     </div>
 
   </div>
@@ -355,7 +480,7 @@ mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
 <script src="../logo.js"></script>
 <script>
 (function(){
-  if(!window.LOGO) return;
+  if(!window.LOGO)return;
   document.querySelectorAll('img').forEach(function(i){
     if(i.src&&i.src.indexOf('LOGO_SRC')!==-1)i.src=window.LOGO;
   });
