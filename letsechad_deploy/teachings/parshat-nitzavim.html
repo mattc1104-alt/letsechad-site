@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Teshuvah: Standing Before the Covenant — L'ets Echad</title>
+<meta name="description" content="Parshat Nitzavim. The covenant at Moab runs parallel to Sinai — it does not replace it. And it makes teshuvah possible. A teaching by Matti Kahana.">
+<meta property="og:title" content="Teshuvah: Standing Before the Covenant — L'ets Echad">
+<meta property="og:description" content="Parshat Nitzavim. The covenant in the plains of Moab and the meaning of return.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://letsechad.com/teachings/parshat-nitzavim.html">
+<meta name="theme-color" content="#0F0B07">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0F0B07;--ink2:#1A1108;--ink3:#251A0C;
+  --bark:#3E2C14;--brown:#6B4E28;
+  --stone:#7A6040;--sand:#A08860;--light:#C8AA80;
+  --gold:#BF9B2C;--gold2:#D4AF3A;--gold3:#E8C84A;
+  --parch:#F5EDD8;--cream:#FBF7EF;--white:#FFFFFF;
+  --bdr:rgba(191,155,44,.18);--bdr2:rgba(191,155,44,.38);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--t:.22s;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--parch);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none}
+.W{max-width:1160px;margin:0 auto;padding:0 2rem}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;height:78px;display:flex;align-items:center;background:rgba(15,11,7,.95);border-bottom:1px solid rgba(191,155,44,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow var(--t)}
+.nav.on{box-shadow:0 4px 40px rgba(0,0,0,.55)}
+.nav-in{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.nav-logo{display:flex;align-items:center;gap:.85rem;flex-shrink:0}
+.nav-logo-img{height:54px;width:auto;filter:brightness(0) invert(1);opacity:.85;transition:opacity var(--t)}
+.nav-logo:hover .nav-logo-img{opacity:1}
+.nav-logo-wrap{line-height:1.1}
+.nav-logo-name{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--gold2);letter-spacing:.01em;display:block}
+.nav-logo-sub{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:.05rem}
+.nav-a{font-size:.73rem;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.52);padding:.42rem .75rem;border-radius:2px;transition:color var(--t),background var(--t)}
+.nav-a:hover{color:rgba(255,255,255,.88);background:rgba(255,255,255,.055)}
+.nav-a.cur{color:var(--gold2)}
+.nav-give{margin-left:.5rem;border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.38rem .95rem!important;border-radius:2px;transition:background var(--t),color var(--t)!important}
+.nav-give:hover{background:var(--gold);color:var(--ink)!important}
+.burger{display:none;flex-direction:column;gap:5px;padding:6px;border-radius:2px}
+.burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.65);border-radius:2px;transition:all var(--t) var(--ease)}
+.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{display:none;position:fixed;inset:78px 0 0 0;z-index:899;background:var(--ink2);flex-direction:column;padding:1.5rem 2rem;gap:.15rem;overflow-y:auto}
+.mob.open{display:flex}
+.mob-a{font-size:1.15rem;font-family:var(--serif);color:rgba(255,255,255,.55);padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.05);transition:color var(--t)}
+.mob-a:hover{color:var(--gold2)}
+.mob-a:last-child{border-bottom:none;color:var(--gold);margin-top:.5rem}
+/* HERO */
+.t-hero{background:var(--ink);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.t-hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(191,155,44,.07) 0%,transparent 62%);top:50%;left:50%;transform:translate(-50%,-52%);pointer-events:none}
+.t-hero-in{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.t-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:2rem;transition:color var(--t)}
+.t-back:hover{color:var(--gold)}
+.t-back::before{content:'←'}
+.t-tag{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.2rem}
+.t-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1rem}
+.t-meta{font-family:var(--serif);font-style:italic;font-size:.88rem;color:rgba(255,255,255,.28);margin-bottom:.6rem}
+.t-refs{font-family:var(--serif);font-style:italic;font-size:.9rem;color:rgba(255,255,255,.35)}
+/* BODY */
+.t-body{padding:5rem 0 6rem}
+.t-body-inner{max-width:700px;margin:0 auto;padding:0 2rem}
+.t-body-inner p{font-family:var(--serif);font-size:1.08rem;line-height:1.9;color:var(--ink);margin-bottom:1.5rem}
+.t-body-inner h2{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--bark);margin:3rem 0 1rem;padding-top:1.8rem;border-top:1px solid var(--bdr)}
+.t-body-inner blockquote{margin:2rem 0;padding:1.2rem 1.8rem;border-left:3px solid var(--gold);background:rgba(191,155,44,.04)}
+.t-body-inner blockquote p{font-style:italic;color:var(--stone);margin-bottom:.5rem}
+.t-body-inner blockquote p:last-child{margin-bottom:0}
+.t-body-inner .ref{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);display:block;margin-top:.6rem}
+.t-body-inner strong{font-weight:600;color:var(--bark)}
+.t-body-inner .heb{font-family:var(--serif);font-style:italic;color:var(--brown)}
+.steps{margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:.75rem}
+.step-item{display:flex;gap:1rem;align-items:flex-start}
+.step-num{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(191,155,44,.1);border:1px solid var(--bdr);padding:.3rem .6rem;border-radius:2px;white-space:nowrap;margin-top:.15rem;flex-shrink:0}
+.step-item p{margin-bottom:0}
+.covenant-list{margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:.5rem}
+.covenant-item{font-family:var(--serif);font-size:1rem;color:var(--ink);padding:.5rem .85rem;border-left:2px solid var(--bdr2);line-height:1.7}
+.closing{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--bdr);font-family:var(--serif);font-style:italic;color:var(--stone)}
+/* FOOTER */
+.footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.12);padding:4rem 0 0}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-logo{height:72px;width:auto;filter:brightness(0) invert(1);opacity:.55;margin-bottom:1rem}
+.ft-tag{font-family:var(--serif);font-size:.88rem;font-style:italic;color:rgba(255,255,255,.28);line-height:1.6;max-width:220px;margin-bottom:.7rem}
+.ft-url{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.45}
+.ft-col h4{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.ft-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.32);margin-bottom:.45rem;transition:color var(--t)}
+.ft-col a:hover{color:rgba(255,255,255,.75)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.ft-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
+.ft-verse{font-family:var(--serif);font-size:.8rem;font-style:italic;color:rgba(255,255,255,.2)}
+@media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+@media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.burger{display:flex}}
+@media(max-width:600px){.ft-grid{grid-template-columns:1fr}.t-body{padding:3.5rem 0 4rem}.W{padding:0 1.25rem}.t-body-inner{padding:0 1.25rem}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <div class="nav-in">
+    <a href="../index.html" class="nav-logo" aria-label="L'ets Echad home">
+      <img src="LOGO_SRC" alt="L'ets Echad" class="nav-logo-img">
+      <div class="nav-logo-wrap">
+        <span class="nav-logo-name">L'ets Echad</span>
+        <span class="nav-logo-sub">Ezekiel 37:19</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#start" class="nav-a">Start Here</a>
+      <a href="../teachings.html" class="nav-a cur">Teachings</a>
+      <a href="../about.html" class="nav-a">About</a>
+      <a href="../resources.html" class="nav-a">Resources</a>
+      <a href="../index.html#connect" class="nav-a">Contact</a>
+      <a href="../support.html" class="nav-a nav-give">Give</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mob" id="mob" aria-label="Mobile">
+  <a href="../index.html#start" class="mob-a">Start Here</a>
+  <a href="../teachings.html" class="mob-a">Teachings</a>
+  <a href="../about.html" class="mob-a">About</a>
+  <a href="../resources.html" class="mob-a">Resources</a>
+  <a href="../index.html#connect" class="mob-a">Contact</a>
+  <a href="../support.html" class="mob-a">Give</a>
+</nav>
+
+<header class="t-hero">
+  <div class="t-hero-in">
+    <a href="../teachings.html" class="t-back">All Teachings</a>
+    <span class="t-tag">Devarim &middot; Nitzavim</span>
+    <h1 class="t-title">Teshuvah: Standing Before the Covenant</h1>
+    <p class="t-meta">Matti Kahana &middot; Shabbat 9/20/2025</p>
+    <p class="t-refs">Deut 29:9&ndash;30:20 &middot; Isa 61:10&ndash;63:9</p>
+  </div>
+</header>
+
+<main class="t-body">
+  <div class="t-body-inner">
+
+    <p>Parshat Nitzavim means "Standing." For such a short portion — just under two chapters — it carries some of the most profound concepts in all of Torah: the unity of Israel, freewill, easy access to Torah, the enduring covenant, repentance, and the future redemption of the messianic age.</p>
+
+    <h2>Atem Nitzavim Hayom</h2>
+
+    <blockquote>
+      <p>You are all standing here today before Adonai your Elohim — the heads of your tribes, your elders, your officers, every man of Israel, your wives, your children, and the sojourner who is in the midst of your encampment, from your hewer of wood to your drawer of water — that you may enter into the covenant with Adonai your Elohim and into his oath which Adonai your Elohim makes with you today.</p>
+      <span class="ref">Deuteronomy 29:9&ndash;11</span>
+    </blockquote>
+
+    <p>The entire second generation — from least to greatest — assembles with Moses on the day to enter a new covenant with the Creator. Verse 13 extends it further:</p>
+
+    <blockquote>
+      <p>And not with you alone do I make this covenant and this oath, but with them that stands here with us this day before Adonai our Elohim, and also with them that are not here with us this day.</p>
+      <span class="ref">Deuteronomy 29:13&ndash;14</span>
+    </blockquote>
+
+    <p>I was not there on that day. But I am here now. This covenant includes me — and it includes you.</p>
+
+    <h2>A Covenant Separate from Sinai</h2>
+
+    <p>Go back one verse to Deuteronomy 29:1, from last week's parasha:</p>
+
+    <blockquote>
+      <p>These are the words of the covenant which Adonai commanded Moses to make with the children of Israel in the land of Moab, beside the covenant which he made with them in Horeb.</p>
+      <span class="ref">Deuteronomy 29:1</span>
+    </blockquote>
+
+    <p>That word "beside" in the Hebrew is stronger than it looks. It means "alone from" or "separate from." The second generation enters a covenant that is <em>separate</em> from the covenant at Horeb — at Sinai.</p>
+
+    <p>Some have argued that the Sinai covenant is conditional, that Israel failed it, that Jeremiah 31 and Ezekiel 36 render it obsolete. Those arguments don't hold up against the covenant at Moab.</p>
+
+    <p>Failure is already factored in. Deuteronomy 30:1 opens: <em>And it shall come to pass, when all these things come upon you, the blessing and the curse.</em> Jeremiah 31 and Ezekiel 36 point back to this covenant: "I will write my law on your heart." Deuteronomy 30:6 spells out the mechanism:</p>
+
+    <blockquote>
+      <p>And Adonai your Elohim will circumcise your heart, and the heart of your seed, to love Adonai your Elohim with all your heart and with all your soul, that you may live.</p>
+      <span class="ref">Deuteronomy 30:6</span>
+    </blockquote>
+
+    <p>And then verses 12 and 14:</p>
+
+    <blockquote>
+      <p>It is not in heaven, that you should say, Who will go up for us to heaven and bring it to us&hellip; But the word is very near to you, in your mouth, and in your heart, that you may do it.</p>
+      <span class="ref">Deuteronomy 30:12, 14</span>
+    </blockquote>
+
+    <p>It's you — not someone else. No intermediary required.</p>
+
+    <h2>New Covenants Do Not Cancel Old Ones</h2>
+
+    <p>It would be a serious mistake to think that entering a new covenant makes previous covenants obsolete. That is a strong accusation against G-d. If you and I sign a business contract and then I sign a new contract with someone else, voiding ours — you would be upset, and rightly so. Do that repeatedly and your word is worth nothing.</p>
+
+    <p>When entering a new covenant, everything true of the previous remains true. Everything from Sinai is still there: the ten commandments, the Torah, the identity of a nation of priests and kings, the feast days. The Moab covenant runs parallel to Sinai. It doesn't replace it — it adds to it.</p>
+
+    <p>This is how it has always worked. The second generation standing before Moses in Moab already carried multiple covenants:</p>
+
+    <div class="covenant-list">
+      <div class="covenant-item">As descendants of Noah — the Noahide covenant</div>
+      <div class="covenant-item">As descendants of Abraham — the Abrahamic covenant</div>
+      <div class="covenant-item">As descendants of Isaac and Jacob — personalized variations of the Abrahamic</div>
+      <div class="covenant-item">As descendants of the first generation — the Sinai covenant</div>
+      <div class="covenant-item">Some — the Levitical covenant (Mal 2:4)</div>
+      <div class="covenant-item">Some — the covenant of Phinehas</div>
+      <div class="covenant-item">Now — the covenant in the plains of Moab, for them and all their descendants</div>
+    </div>
+
+    <p>In the future, some descendants would be part of the Davidic covenant. And those who circumcise their heart — as commanded in Deuteronomy 10:16 — will have their heart circumcised by G-d as promised in Deuteronomy 30:6, entering the Jeremiah 31 covenant. Not as a replacement. In addition. In parallel.</p>
+
+    <p>My family was outside after a rainstorm not long ago. The children spotted a rainbow, and my daughter Emunah asked to do the rainbow blessing. It goes: <em>Blessed are You, Adonai our Elohim, King of the universe, who remembers the covenant, and is faithful to His covenant, and keeps His promise.</em> G-d made a covenant with Noah and his descendants. You and I, as descendants of Noah, still benefit from that covenant today.</p>
+
+    <h2>What Is Teshuvah?</h2>
+
+    <p>This parasha is always read on the Shabbat before Rosh Hashanah. Deuteronomy 30:6 is tied to the month of Elul. Elul — aleph, lamed, vav, lamed — is an acronym hidden in the very words of that verse: <span class="heb">et-levavkha ve-et levav</span> — your heart and the heart of your children.</p>
+
+    <p>The first five verses of Deuteronomy 30 show what makes verse 6 possible:</p>
+
+    <blockquote>
+      <p>And it shall come to pass, when all these things are come upon you, the blessing and the curse, which I have set before you, and you shall remember them among all the nations where Adonai your Elohim has driven you, and shall return unto Adonai your Elohim&hellip;</p>
+      <span class="ref">Deuteronomy 30:1&ndash;2</span>
+    </blockquote>
+
+    <p>English gives you "repentance." Greek gives you <em>metanoia</em> — a change of mind. These carry the idea of being sorry and evolving into a new person. But teshuvah is the opposite of becoming a new person. Teshuvah is <em>return</em>. Going back to the relationship you were meant to have.</p>
+
+    <p>When you remember that you are a child of the Most High, made in his image, you run back to him. You fix the things that created separation. You don't stop at feeling sorry. You return.</p>
+
+    <p>The steps:</p>
+
+    <div class="steps">
+      <div class="step-item"><span class="step-num">Recognize</span><p>See what you are doing is wrong. Stop. Leave it behind.</p></div>
+      <div class="step-item"><span class="step-num">Regret</span><p>Be sorry. Change your mind.</p></div>
+      <div class="step-item"><span class="step-num">Confess</span><p>Confess before G-d and commit not to return to it.</p></div>
+      <div class="step-item"><span class="step-num">Return</span><p>Do a 180. Reorient your entire life toward G-d.</p></div>
+    </div>
+
+    <p>Isaiah sums up everything Deuteronomy 30 teaches about teshuvah in a single verse:</p>
+
+    <blockquote>
+      <p>Let the wicked forsake his way, and the unrighteous man his thoughts: and let him return unto Adonai, and he will have mercy upon him; and to our Elohim, for he will abundantly pardon.</p>
+      <span class="ref">Isaiah 55:7</span>
+    </blockquote>
+
+    <h2>The Parable of the Prodigal Son</h2>
+
+    <p>The parable is a picture of teshuvah from Deuteronomy 30. The younger son takes his inheritance and leaves. He wastes it, ends up feeding pigs in a foreign land, longing for scraps. Then comes a moment of clarity. He recognizes his sin. He regrets it. He confesses:</p>
+
+    <blockquote>
+      <p>I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before you, and am no more worthy to be called your son: make me as one of your hired servants.</p>
+    </blockquote>
+
+    <p>And as he is returning — not after he arrives, while he is still on the road — the father sees him from afar. Has mercy. Runs to him. Hugs him, kisses him, gives him a robe and a signet ring, and restores him to full sonship.</p>
+
+    <p>I take this parable to be about the return of Ephraim, the lost of the House of Israel. The picture it paints of teshuvah is straight out of Deuteronomy 30. The covenant at Moab makes that return possible.</p>
+
+    <h2>Hosea's Invitation</h2>
+
+    <p>The generation that died in the wilderness did not have access to teshuvah. They had Moses' intercession and Leviticus 26 — if they confessed and accepted their punishment, G-d would not destroy them. But that is not teshuvah. Moses himself did not have access to teshuvah. He tried. G-d said no, stop asking.</p>
+
+    <p>We have what they did not. Hosea 14:</p>
+
+    <blockquote>
+      <p>O Israel, return to Adonai your Elohim, for you have fallen because of your iniquity. Take with you words and turn to Adonai: say unto him, Take away all iniquity, and receive us graciously&hellip; I will heal their backsliding, I will love them freely, for my anger is turned away from him.</p>
+      <span class="ref">Hosea 14:1&ndash;2, 4</span>
+    </blockquote>
+
+    <p>It is not too late. Judgment day is still a few days away. Repent. Fix the things causing separation. Come home. Return to your Maker, return to your Father — both as an individual and as a member of the lost house of Israel, still in exile. G-d has promised: if you return, he will forgive.</p>
+
+    <h2>Hayom — The Day</h2>
+
+    <p><span class="heb">Atem nitzavim hayom kulchem lifnei Adonai Eloheikhem.</span> You are all standing before Adonai your Elohim on <em>the</em> day.</p>
+
+    <p>Yom Teruah is not well understood. Often it becomes a day of tooting horns. But look at what a <em>teruah</em> actually does in the Tanakh:</p>
+
+    <p>In Numbers 10:5, the teruah causes the encampment to move — a time of change. In Leviticus 25:9, the teruah sounds the Jubilee — freedom, renewal, restoration. In Joshua 6, the teruah brings down the walls of Jericho — G-d's sovereignty over the physical, regime change.</p>
+
+    <p>In Numbers 23:21, Balaam says about Israel: <em>Adonai his Elohim is with him, the teruah melek is among them</em> — the teruah of the King.</p>
+
+    <p>On Yom Teruah, Ezra and Nehemiah read the Torah to the returning exiles and they accepted G-d's kingship wholeheartedly. The <em>hayom</em> — the day — in this Torah reading points to that day. The head of the year, where we accept the kingship of the Creator of the universe.</p>
+
+    <blockquote>
+      <p>O clap your hands, all you people; shout unto Elohim with the voice of triumph. For Adonai most high is awesome; he is a great King over all the earth&hellip; Elohim has gone up with a teruah, Adonai with the sound of a trumpet&hellip; For Elohim is the King of all the earth: sing praises with understanding.</p>
+      <span class="ref">Psalm 47:1&ndash;2, 5, 7</span>
+    </blockquote>
+
+    <p>In two days the month of Elul ends. The King leaves the field and returns to his throne room. We blow the trumpets. We accept his kingship upon ourselves for another year. We stand before him as he opens the heavenly books and begins his righteous judgment — judging our deeds, our fruit from the past year. For 10 days the books remain open. Then Yom Kippur: the day of atonement, the final moments before the verdict is sealed for the year.</p>
+
+    <div class="closing">
+      <p>May each and every one of you be signed and sealed in the book of life, for a good and sweet year.</p>
+      <p style="margin-top:.75rem">5786 — its digits sum to 26, the gematria of Yod-Hei-Vav-Hei. The year of Hashem.</p>
+      <p style="margin-top:.75rem">Kol Tuv &mdash; Matti Kahana</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="W">
+    <div class="ft-grid">
+      <div>
+        <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo">
+        <p class="ft-tag">"Into One Stick &mdash; Ezekiel 37:19"<br>A ministry of reunification.</p>
+        <p class="ft-url">letsechad.com</p>
+      </div>
+      <div class="ft-col">
+        <h4>Ministry</h4>
+        <a href="../about.html">About L'ets Echad</a>
+        <a href="../about.html#mission">Our Mission</a>
+        <a href="../about.html#matti">About Matti</a>
+        <a href="../index.html#connect">Contact</a>
+      </div>
+      <div class="ft-col">
+        <h4>Content</h4>
+        <a href="../teachings.html">All Teachings</a>
+        <a href="../index.html#start">Start Here</a>
+        <a href="../resources.html">Resources</a>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <a href="../support.html">Give to L'ets Echad</a>
+        <a href="https://support.fidf.org" target="_blank" rel="noopener">FIDF</a>
+        <a href="https://secure.afmda.org" target="_blank" rel="noopener">Magen David Adom</a>
+        <a href="https://give.zakaworld.org" target="_blank" rel="noopener">ZAKA</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">&copy; 2025 L'ets Echad &middot; <a href="mailto:contact@letsechad.com" style="color:inherit">contact@letsechad.com</a> &middot; <a href="../privacy.html" style="color:inherit">Privacy</a></p>
+      <p class="ft-verse">"They shall become one in My hand." &mdash; Ezekiel 37:19</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>40),{passive:true});
+const burger=document.getElementById('burger'),mob=document.getElementById('mob');
+burger.addEventListener('click',()=>{
+  const o=mob.classList.toggle('open');
+  burger.classList.toggle('x',o);
+  burger.setAttribute('aria-expanded',o);
+  document.body.style.overflow=o?'hidden':'';
+});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mob.classList.remove('open');burger.classList.remove('x');
+  burger.setAttribute('aria-expanded','false');document.body.style.overflow='';
+}));
+</script>
+<script src="../logo.js"></script>
+<script>
+(function(){
+  if(!window.LOGO) return;
+  document.querySelectorAll('img').forEach(function(i){
+    if(i.src&&i.src.indexOf('LOGO_SRC')!==-1)i.src=window.LOGO;
+  });
+})();
+</script>
+</body>
+</html>
