@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Shema, Shomer, Asah: Parshat Eikev — L'ets Echad</title>
+<meta name="description" content="Eikev means heel — and consequence. Not if you listen, but when. The pattern of Shema, Shomer, Asah runs through both paragraphs of the Shema and through every mitzvah we take on. A teaching by Matti Kahana.">
+<meta property="og:title" content="Shema, Shomer, Asah: Parshat Eikev — L'ets Echad">
+<meta property="og:description" content="It is not if you listen. It is when. The inevitable outcome of Shema is redemption.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://letsechad.com/teachings/parshat-eikev.html">
+<meta name="theme-color" content="#0F0B07">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0F0B07;--ink2:#1A1108;
+  --bark:#3E2C14;--brown:#6B4E28;
+  --stone:#7A6040;--sand:#A08860;
+  --gold:#BF9B2C;--gold2:#D4AF3A;
+  --parch:#F5EDD8;
+  --bdr:rgba(191,155,44,.18);--bdr2:rgba(191,155,44,.38);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--t:.22s;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--parch);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none}
+.W{max-width:1160px;margin:0 auto;padding:0 2rem}
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;height:78px;display:flex;align-items:center;background:rgba(15,11,7,.95);border-bottom:1px solid rgba(191,155,44,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow var(--t)}
+.nav.on{box-shadow:0 4px 40px rgba(0,0,0,.55)}
+.nav-in{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.nav-logo{display:flex;align-items:center;gap:.85rem;flex-shrink:0}
+.nav-logo-img{height:54px;width:auto;filter:brightness(0) invert(1);opacity:.85;transition:opacity var(--t)}
+.nav-logo:hover .nav-logo-img{opacity:1}
+.nav-logo-wrap{line-height:1.1}
+.nav-logo-name{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--gold2);letter-spacing:.01em;display:block}
+.nav-logo-sub{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:.05rem}
+.nav-a{font-size:.73rem;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.52);padding:.42rem .75rem;border-radius:2px;transition:color var(--t),background var(--t)}
+.nav-a:hover{color:rgba(255,255,255,.88);background:rgba(255,255,255,.055)}
+.nav-a.cur{color:var(--gold2)}
+.nav-give{margin-left:.5rem;border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.38rem .95rem!important;border-radius:2px;transition:background var(--t),color var(--t)!important}
+.nav-give:hover{background:var(--gold);color:var(--ink)!important}
+.burger{display:none;flex-direction:column;gap:5px;padding:6px;border-radius:2px}
+.burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.65);border-radius:2px;transition:all var(--t) var(--ease)}
+.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{display:none;position:fixed;inset:78px 0 0 0;z-index:899;background:var(--ink2);flex-direction:column;padding:1.5rem 2rem;gap:.15rem;overflow-y:auto}
+.mob.open{display:flex}
+.mob-a{font-size:1.15rem;font-family:var(--serif);color:rgba(255,255,255,.55);padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.05);transition:color var(--t)}
+.mob-a:hover{color:var(--gold2)}
+.mob-a:last-child{border-bottom:none;color:var(--gold);margin-top:.5rem}
+/* HERO */
+.t-hero{background:var(--ink2);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.t-hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(191,155,44,.07) 0%,transparent 62%);top:50%;left:50%;transform:translate(-50%,-52%);pointer-events:none}
+.t-hero-in{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.t-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:2rem;transition:color var(--t)}
+.t-back:hover{color:var(--gold)}
+.t-back::before{content:'←'}
+.t-tag{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.2rem}
+.t-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1rem}
+.t-meta{font-family:var(--serif);font-style:italic;font-size:.88rem;color:rgba(255,255,255,.28);margin-bottom:.6rem}
+.t-refs{font-family:var(--serif);font-style:italic;font-size:.9rem;color:rgba(255,255,255,.35)}
+/* BODY */
+.t-body{padding:5rem 0 6rem}
+.t-body-inner{max-width:700px;margin:0 auto;padding:0 2rem}
+.t-body-inner p{font-family:var(--serif);font-size:1.08rem;line-height:1.9;color:var(--ink);margin-bottom:1.5rem}
+.t-body-inner h2{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--bark);margin:3.2rem 0 1.2rem;padding-top:2rem;border-top:1px solid var(--bdr)}
+.t-body-inner strong{font-weight:600;color:var(--bark)}
+/* Scripture */
+.t-body-inner blockquote{margin:2rem 0;padding:1.2rem 1.8rem;border-left:3px solid var(--gold);background:rgba(191,155,44,.04)}
+.t-body-inner blockquote p{font-style:italic;color:var(--stone);margin-bottom:.6rem}
+.t-body-inner blockquote p:last-child{margin-bottom:0}
+.ref{font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);display:block;margin-top:.75rem}
+/* Pull quote */
+.pull{margin:2.5rem 0;padding:1.6rem 2rem;border-top:1px solid var(--bdr2);border-bottom:1px solid var(--bdr2);text-align:center}
+.pull p{font-family:var(--serif);font-size:1.3rem;font-style:italic;color:var(--bark);line-height:1.5;margin-bottom:0}
+/* Punch */
+.punch{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--bark);margin:1.8rem 0;line-height:1.6}
+/* Three-verb framework */
+.three-verbs{margin:1.8rem 0 2rem;display:flex;flex-direction:column;gap:.75rem}
+.verb-item{display:flex;gap:1rem;align-items:flex-start}
+.verb-label{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:rgba(191,155,44,.1);border:1px solid var(--bdr);padding:.32rem .7rem;border-radius:2px;white-space:nowrap;margin-top:.22rem;flex-shrink:0;min-width:4.5rem;text-align:center}
+.verb-item p{margin-bottom:0;font-family:var(--serif);font-size:1rem;line-height:1.8;color:var(--ink)}
+/* Shema pattern table */
+.shema-table{margin:1.8rem 0 2rem;border-collapse:collapse;width:100%}
+.shema-table th{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr2);padding:.4rem .75rem;text-align:left}
+.shema-table td{font-family:var(--serif);font-size:.96rem;color:var(--ink);padding:.55rem .75rem;border-bottom:1px solid var(--bdr);line-height:1.6;vertical-align:top}
+.shema-table td:first-child{color:var(--stone);white-space:nowrap;font-style:italic}
+.shema-table td:nth-child(2){font-weight:600;color:var(--bark);white-space:nowrap}
+/* Divider */
+.s-div{display:flex;align-items:center;gap:1rem;margin:3rem 0}
+.s-div::before,.s-div::after{content:'';flex:1;height:1px;background:var(--bdr)}
+.s-div span{font-family:var(--serif);color:var(--gold);font-size:1rem;opacity:.5}
+/* Closing */
+.closing{margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--bdr)}
+.closing p{font-family:var(--serif);font-style:italic;color:var(--stone);margin-bottom:.6rem}
+.closing p:last-child{margin-bottom:0}
+/* FOOTER */
+.footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.12);padding:4rem 0 0}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-logo{height:72px;width:auto;filter:brightness(0) invert(1);opacity:.55;margin-bottom:1rem}
+.ft-tag{font-family:var(--serif);font-size:.88rem;font-style:italic;color:rgba(255,255,255,.28);line-height:1.6;max-width:220px;margin-bottom:.7rem}
+.ft-url{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.45}
+.ft-col h4{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.ft-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.32);margin-bottom:.45rem;transition:color var(--t)}
+.ft-col a:hover{color:rgba(255,255,255,.75)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.ft-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
+.ft-verse{font-family:var(--serif);font-size:.8rem;font-style:italic;color:rgba(255,255,255,.2)}
+@media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+@media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.burger{display:flex}}
+@media(max-width:600px){.ft-grid{grid-template-columns:1fr}.t-body{padding:3.5rem 0 4rem}.W{padding:0 1.25rem}.t-body-inner{padding:0 1.25rem}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <div class="nav-in">
+    <a href="../index.html" class="nav-logo" aria-label="L'ets Echad home">
+      <img src="LOGO_SRC" alt="L'ets Echad" class="nav-logo-img">
+      <div class="nav-logo-wrap">
+        <span class="nav-logo-name">L'ets Echad</span>
+        <span class="nav-logo-sub">Ezekiel 37:19</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#start" class="nav-a">Start Here</a>
+      <a href="../teachings.html" class="nav-a cur">Teachings</a>
+      <a href="../about.html" class="nav-a">About</a>
+      <a href="../resources.html" class="nav-a">Resources</a>
+      <a href="../index.html#connect" class="nav-a">Contact</a>
+      <a href="../support.html" class="nav-a nav-give">Give</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mob" id="mob" aria-label="Mobile">
+  <a href="../index.html#start" class="mob-a">Start Here</a>
+  <a href="../teachings.html" class="mob-a">Teachings</a>
+  <a href="../about.html" class="mob-a">About</a>
+  <a href="../resources.html" class="mob-a">Resources</a>
+  <a href="../index.html#connect" class="mob-a">Contact</a>
+  <a href="../support.html" class="mob-a">Give</a>
+</nav>
+
+<header class="t-hero">
+  <div class="t-hero-in">
+    <a href="../teachings.html" class="t-back">All Teachings</a>
+    <span class="t-tag">Devarim &middot; Eikev</span>
+    <h1 class="t-title">Shema, Shomer, Asah</h1>
+    <p class="t-meta">Matti Kahana &middot; Shabbat 8/16/2025</p>
+    <p class="t-refs">Deuteronomy 7:12&ndash;11:25 &middot; Isaiah 49:14&ndash;51:3</p>
+  </div>
+</header>
+
+<main class="t-body">
+  <div class="t-body-inner">
+
+    <p>Shabbat Shalom, beloved.</p>
+
+    <p>Today we're learning from Parashat Eikev. Which means <em>heel</em>. In the Book of Devarim.</p>
+
+    <p>Devarim is Moshe's final address to the people of Israel. Prophetically he is preparing everything needed for the generation entering the land &mdash; and every future generation after. Every prophecy we find later from Jeremiah, Isaiah, Ezekiel, and all the others is merely expounding on and adding detail to the groundwork laid out in Devarim.</p>
+
+    <p>Moshe teaches and clarifies all of the Torah that Adonai has taught him throughout the previous 40 years. He makes it clear that the Torah is "not hidden from you, neither is it far off." He implements the Shema so that Israel will proclaim G-d's oneness and kingship every morning and every night. He teaches grace after meals &mdash; ensuring that even the mundane act of eating becomes a moment of holiness where we show gratitude and remember the covenant.</p>
+
+    <p>If we were limited to only one book of the Bible, Devarim would be the clear choice. It has everything needed to recognize G-d's identity, to discern His heart, to be in relationship with Him &mdash; and it gives us the blueprint for teshuvah, so that when we stray, we're able to return to Adonai our Elohim and obey His voice. To love and obey Adonai with all of your heart, and with all of your soul.</p>
+
+    <p>Devarim shows us how to live Torah in daily life.</p>
+
+    <div class="s-div"><span>&#x2736;</span></div>
+
+    <h2>Eikev &mdash; The Heel</h2>
+
+    <p>This week as I focused in on the Torah portion of Eikev, I only made it two words in before I found a rabbit hole worth exploring.</p>
+
+    <p><em>Ve-ha-yah &mdash; eikev &mdash; tish-me-un &mdash; et &mdash; ham-mish-pa-tim &mdash; ha-eleh.</em></p>
+
+    <p>And it shall be <em>eikev</em> you listen to these laws.</p>
+
+    <p>Eikev is a very interesting word &mdash; Strong's 6118. It shares the same root as the name Yakov &mdash; Jacob. Looking at English translations, about half have rendered <em>eikev</em> as "if" and the other half as "because." Both are technically defensible, but they lead to entirely different readings:</p>
+
+    <p><em>And it shall be <strong>if</strong> you listen to these laws&hellip;</em> That makes it a conditional clause. Only if it happens that you listen will G-d keep His covenant.</p>
+
+    <p><em>And it shall be <strong>because</strong> you listen to these laws&hellip;</em> That makes it a guarantee.</p>
+
+    <p>The Hebrew word <em>eikev</em> means heel &mdash; and by extension, what comes after. The BibleHub lexicon describes it this way: the term functions as a hinge between an action and its inevitable outcome, affirming the moral causality G-d has woven into His covenant dealings with humanity. Whether blessing or judgment, <em>eikev</em> highlights that nothing in life is random; every word of G-d stands, and every human response has a corresponding harvest.</p>
+
+    <p><strong>It is not an if. It is a when.</strong></p>
+
+    <p>And it shall be what comes after you listen &mdash; and guard &mdash; and do &mdash; Adonai your Elohim will keep His covenant with you and the lovingkindness that He swore to your fathers.</p>
+
+    <blockquote>
+      <p>He will love you, and bless you, and multiply you: he will also bless the fruit of your womb, and the fruit of your land, your grain, and your wine, and your oil, the increase of your herds, and the flocks of your sheep, in the land which he swore unto your fathers to give you. You shall be blessed above all peoples&hellip; And Adonai will take away from you all sickness, and will put none of the evil diseases of Egypt upon you; but will lay them upon all those that hate you.</p>
+      <span class="ref">Deuteronomy 7:13&ndash;15</span>
+    </blockquote>
+
+    <p>Even here in chapter 7 we're setting the stage for Deuteronomy 30:</p>
+
+    <blockquote>
+      <p>And it shall come to pass, when all these things are come upon you, the blessing and the curse, which I have set before you, and you shall call them to mind among all the nations whither the L-rd your G-d has driven you, and shall return unto the L-rd your G-d, and shall obey his voice according to all that I command you this day, you and your children, with all your heart and with all your soul.</p>
+      <span class="ref">Deuteronomy 30:1&ndash;2</span>
+    </blockquote>
+
+    <p>Moshe is telling us: <em>eikev</em> &mdash; the result of <em>shema</em> &mdash; is redemption.</p>
+
+    <p>Notice too that next week's portion is Re&rsquo;eh &mdash; which means <em>seeing</em>. First you hear. Then you guard and do. Then you see. The Torah portions themselves follow the pattern.</p>
+
+    <div class="pull"><p>When you listen, you will guard. When you guard, you will do. When you do, G-d will keep His covenant.</p></div>
+
+    <div class="s-div"><span>&#x2736;</span></div>
+
+    <h2>Shema, Shomer, Asah</h2>
+
+    <p>The three-word pattern of this verse is not incidental. It runs through the entire portion &mdash; and through both paragraphs of the Shema itself.</p>
+
+    <div class="three-verbs">
+      <div class="verb-item"><span class="verb-label">Shema</span><p>To hear, to listen. But not passive hearing &mdash; <em>shema</em> means to hear and respond. It is the beginning of relationship.</p></div>
+      <div class="verb-item"><span class="verb-label">Shomer</span><p>To guard, to observe, to give heed. You watch over things you value. Shomer is the stage of treasuring &mdash; internalizing what you have heard until it becomes precious to you.</p></div>
+      <div class="verb-item"><span class="verb-label">Asah</span><p>To do, to accomplish, to make. Asah is the outward expression of what has been heard and guarded. It is Torah lived.</p></div>
+    </div>
+
+    <p>This pattern is woven through both paragraphs of the Shema:</p>
+
+    <table class="shema-table">
+      <thead><tr><th>Reference</th><th>Word</th><th>Command</th></tr></thead>
+      <tbody>
+        <tr><td>Deut 6:4</td><td>Shema</td><td>Listen, O Israel</td></tr>
+        <tr><td>Deut 6:17</td><td>Shomer</td><td>Keep the commandments of Adonai</td></tr>
+        <tr><td>Deut 6:18</td><td>Asah</td><td>Do what is right and good</td></tr>
+        <tr><td>Deut 11:13</td><td>Shema</td><td>Listen to My commandments</td></tr>
+        <tr><td>Deut 11:22</td><td>Shomer</td><td>Guard all these commandments</td></tr>
+        <tr><td>Deut 11:22</td><td>Asah</td><td>To do them</td></tr>
+      </tbody>
+    </table>
+
+    <p>But then go back to Exodus 24:7. G-d has spoken on the Mount. Moshe has taught the people. And the people say:</p>
+
+    <blockquote>
+      <p>All that the L-rd has said will we do, and be obedient.</p>
+      <span class="ref">Exodus 24:7</span>
+    </blockquote>
+
+    <p><em>Na-a-seh ve-nish-ma.</em> Asah and then Shema. <strong>We'll do, then we'll listen.</strong></p>
+
+    <p>Now Moshe is saying: slow down. Don't make the mistake of the wilderness generation. The order matters.</p>
+
+    <p>Shema first. Then Shomer. Then Asah.</p>
+
+    <div class="s-div"><span>&#x2736;</span></div>
+
+    <h2>Torah Teaches Relationship, Not Perfection</h2>
+
+    <p>I want to share with you a mitzvah that my family and I are currently in the Shomer stage of.</p>
+
+    <p>For quite a while it was something we did on occasion &mdash; when we were around others who practiced it, we would join in. That was our Shema stage. We were being exposed to it, listening to it being done, learning about it. It wasn't yet a meaningful part of our life.</p>
+
+    <p>More recently we've developed a desire to include it regularly. We've begun to Shomer &mdash; to guard it. In this stage we're learning the beauty of it and beginning to value it. We're slowly working to add it into our life. It's not something we always do; often we still overlook it, or get busy and forget.</p>
+
+    <p>Which is okay.</p>
+
+    <p><strong>The idea that you have to do every mitzvah perfectly, or never mess it up, is a strawman. Torah doesn't teach perfection. It teaches relationship.</strong> G-d asks us to keep trying, to keep learning, to keep coming closer. It is a covenant of love, not a competition of performance.</p>
+
+    <blockquote>
+      <p>And now, Israel, what does Adonai your Elohim ask of you, but to fear Adonai your Elohim, to walk in all his ways, and to love him, and to serve Adonai your Elohim with all your heart and with all your soul, to keep the commandments of Adonai, and his statutes, which I command you this day for your good.</p>
+      <span class="ref">Deuteronomy 10:12&ndash;13</span>
+    </blockquote>
+
+    <p>He asks everything of us: awe, love, service, heart, and soul. And how do we express all of that? By keeping His commandments. And it is all for our good &mdash; each mitzvah we add into our lives benefits us.</p>
+
+    <p>King Shlomo &mdash; the wisest of all men &mdash; came to the same conclusion: "The end of the matter, when all is heard: Fear G-d and keep His commandments, for this is the whole of man." (Ecclesiastes 12:13)</p>
+
+    <h2>Grace After Meals</h2>
+
+    <p>The mitzvah my family and I are working to ingrain is <em>birkat hamazon</em> &mdash; grace after meals. Found in Deuteronomy 8:10:</p>
+
+    <blockquote>
+      <p>When you have eaten and are satisfied, then you shall bless Adonai your Elohim for the good land which he has given you.</p>
+      <span class="ref">Deuteronomy 8:10</span>
+    </blockquote>
+
+    <p>My excuse for not doing it was always: well, we're not in the land of Israel. But the truth is, slowing down and waiting for the children to finish eating is inconvenient when I'm ready to get back to work.</p>
+
+    <p><em>Na-a-seh ve-nish-ma.</em> We'll do, then maybe we'll listen. We all have a bit of that wilderness generation we need to train out.</p>
+
+    <p>As my family has become more Shomer of this commandment, it has changed how I spend that time. If I have to slow down and wait for the children to finish eating, I now have more time with them to speak words of Torah. I get to teach them gratitude and how to praise the Creator for His goodness.</p>
+
+    <p>Soon it will be part of our daily life. And it certainly is something that is good for us.</p>
+
+    <p><strong>Repentance isn't about trying to escape punishment from a mean, angry G-d. It's about recognizing we have strayed away from Him, and returning.</strong></p>
+
+    <div class="s-div"><span>&#x2736;</span></div>
+
+    <h2>Are We That Generation?</h2>
+
+    <p>Elul is the time when the King is in the field &mdash; the judge has left his courtroom. Normally there are legal precedents and the accuser standing nearby. But during Elul, the Creator allows us to draw near, to return, to get our affairs in order. Don't wait until judgment day.</p>
+
+    <p>My goal in this teaching is to bring from my side of the Ezekiel 37 stick &mdash; to provide things that may assist the lost of the house of Israel in their process of returning. For thousands of years, jealousy and enmity have caused Ephraim to reject the Torah and Judah's observance of it. And it has caused Judah to reject Ephraim.</p>
+
+    <p>It is time to put an end to that.</p>
+
+    <p>In Eikev we learn that there will come a generation that <em>listens</em> first. And then they will guard the commandments &mdash; treasuring them, watching over the smallest details. And then they will do them. They will live it. With a willing and loving heart.</p>
+
+    <div class="pull"><p>Are we that generation?</p></div>
+
+    <div class="closing">
+      <p>Kol Tuv &mdash; Matti Kahana</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="W">
+    <div class="ft-grid">
+      <div>
+        <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo">
+        <p class="ft-tag">"Into One Stick &mdash; Ezekiel 37:19"<br>A ministry of reunification.</p>
+        <p class="ft-url">letsechad.com</p>
+      </div>
+      <div class="ft-col">
+        <h4>Ministry</h4>
+        <a href="../about.html">About L'ets Echad</a>
+        <a href="../about.html#mission">Our Mission</a>
+        <a href="../about.html#matti">About Matti</a>
+        <a href="../index.html#connect">Contact</a>
+      </div>
+      <div class="ft-col">
+        <h4>Content</h4>
+        <a href="../teachings.html">All Teachings</a>
+        <a href="../index.html#start">Start Here</a>
+        <a href="../resources.html">Resources</a>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <a href="../support.html">Give to L'ets Echad</a>
+        <a href="https://support.fidf.org" target="_blank" rel="noopener">FIDF</a>
+        <a href="https://secure.afmda.org" target="_blank" rel="noopener">Magen David Adom</a>
+        <a href="https://give.zakaworld.org" target="_blank" rel="noopener">ZAKA</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">&copy; 2025 L'ets Echad &middot; <a href="mailto:contact@letsechad.com" style="color:inherit">contact@letsechad.com</a> &middot; <a href="../privacy.html" style="color:inherit">Privacy</a></p>
+      <p class="ft-verse">"They shall become one in My hand." &mdash; Ezekiel 37:19</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>40),{passive:true});
+const burger=document.getElementById('burger'),mob=document.getElementById('mob');
+burger.addEventListener('click',()=>{
+  const o=mob.classList.toggle('open');
+  burger.classList.toggle('x',o);
+  burger.setAttribute('aria-expanded',o);
+  document.body.style.overflow=o?'hidden':'';
+});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mob.classList.remove('open');burger.classList.remove('x');
+  burger.setAttribute('aria-expanded','false');document.body.style.overflow='';
+}));
+</script>
+<script src="../logo.js"></script>
+<script>
+(function(){
+  if(!window.LOGO)return;
+  document.querySelectorAll('img').forEach(function(i){
+    if(i.src&&i.src.indexOf('LOGO_SRC')!==-1)i.src=window.LOGO;
+  });
+})();
+</script>
+</body>
+</html>
