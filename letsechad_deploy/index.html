@@ -156,7 +156,14 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 /* START HERE */
 .start{background:var(--cream);border-bottom:1px solid var(--bdr)}
 .start-hd{text-align:center;padding:3.5rem 0 2rem}
-.start-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bdr);border-left:1px solid var(--bdr)}
+.start-grid{
+  width:min(100% - 4rem, 1160px);
+  margin:0 auto 3rem;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--bdr);
+  border-left:1px solid var(--bdr);
+}
 .sc{padding:2.25rem 2rem;border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr);cursor:pointer;transition:background var(--t)}
 .sc:hover{background:var(--parch)}
 .sc-n{font-family:var(--serif);font-size:2.4rem;color:rgba(191,155,44,.75);line-height:1;margin-bottom:.75rem;display:block}
@@ -310,7 +317,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
     <div class="sc fu" onclick="location.href='para.html'">
       <span class="sc-n">01</span>
       <h3 class="sc-t">Start with a Teaching</h3>
-      <p class="sc-b">"We encourage you to start with Para:uncovered because it is foundational to our ministry. <br>Then explore the other teachings."</p>
+      <p class="sc-b">"We encourage you to start with Para:Uncovered because its foundational to our ministry. <br>Then explore the other teachings."</p>
       <span class="sc-lnk">View Para:uncovered →</span>
     </div>
     <div class="sc fu d2" onclick="location.href='about.html'">
