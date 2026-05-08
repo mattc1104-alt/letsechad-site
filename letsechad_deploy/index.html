@@ -157,7 +157,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .start{background:var(--cream);border-bottom:1px solid var(--bdr)}
 .start-hd{text-align:center;padding:3.5rem 0 2rem}
 .start-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bdr);border-left:1px solid var(--bdr)}
-.sc{padding:2.25rem 2rem;border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr);cursor:pointer;transition:background var(--t)}
+.sc{padding:2.25rem 1.5rem;border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr);cursor:pointer;transition:background var(--t)}
 .sc:hover{background:var(--parch)}
 .sc-n{font-family:var(--serif);font-size:2.4rem;color:rgba(191,155,44,.75);line-height:1;margin-bottom:.75rem;display:block}
 .sc-t{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:.4rem}
@@ -240,10 +240,10 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
   .t-g,.fw-g{grid-template-columns:1fr}
   .fw-c{border-right:none;border-bottom:1px solid rgba(255,255,255,.05)}
   .fw-c:last-child{border-bottom:none}
-  .start-grid{grid-template-columns:1fr}
-  .t-g{grid-template-columns:1fr 1fr}
+.t-g{grid-template-columns:1fr 1fr}
 }
-@media(max-width:600px){.t-g{grid-template-columns:1fr}.h-card{padding:1.5rem}.pull-mark{display:none}}
+@media(max-width:600px){.t-g{grid-template-columns:1fr}.h-card{padding:1.5rem}.pull-mark{display:none}.start-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.start-grid{grid-template-columns:1fr}}
 
 </style>
 </head>
