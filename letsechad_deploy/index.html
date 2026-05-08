@@ -159,7 +159,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .start-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bdr);border-left:1px solid var(--bdr)}
 .sc{padding:2.25rem 2rem;border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr);cursor:pointer;transition:background var(--t)}
 .sc:hover{background:var(--parch)}
-.sc-n{font-family:var(--serif);font-size:2.4rem;color:rgba(191,155,44,.18);line-height:1;margin-bottom:.75rem;display:block}
+.sc-n{font-family:var(--serif);font-size:2.4rem;color:rgba(191,155,44,.75);line-height:1;margin-bottom:.75rem;display:block}
 .sc-t{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:.4rem}
 .sc-b{font-size:.8rem;color:var(--stone);line-height:1.7}
 .sc-lnk{display:inline-flex;align-items:center;gap:.3rem;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:.85rem;transition:gap var(--t)}
@@ -307,23 +307,29 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
     <h2 class="sh sh-md" style="margin-top:.75rem;color:var(--ink)">Where to Begin</h2>
   </div>
   <div class="start-grid">
-    <div class="sc fu" onclick="location.href='about.html'">
+    <div class="sc fu" onclick="document.getElementById('connect').scrollIntoView({behavior:'smooth'})">
       <span class="sc-n">01</span>
-      <h3 class="sc-t">What Is L'ets Echad?</h3>
+      <h3 class="sc-t">Stay Connected</h3>
+      <p class="sc-b">Get new teachings when they're ready. No noise. Just Torah — grounded in Ezekiel 37 and rooted in the Tanakh.</p>
+      <span class="sc-lnk">Subscribe →</span>
+    </div>
+    <div class="sc fu d2" onclick="location.href='para.html'">
+      <span class="sc-n">02</span>
+      <h3 class="sc-t">Para: Uncovered</h3>
+      <p class="sc-b">You are standing between what you left and what you haven't found yet. That feeling has a name in Torah. It is not shame.</p>
+      <span class="sc-lnk">Read the teaching →</span>
+    </div>
+    <div class="sc fu d3" onclick="location.href='about.html'">
+      <span class="sc-n">03</span>
+      <h3 class="sc-t">Get to Know Us</h3>
       <p class="sc-b">Understand the ministry, the Ezekiel 37 framework, and what "two sticks becoming one" means for you right now.</p>
       <span class="sc-lnk">Learn more →</span>
     </div>
-    <div class="sc fu d2" onclick="location.href='teachings.html'">
-      <span class="sc-n">02</span>
-      <h3 class="sc-t">Start with a Teaching</h3>
-      <p class="sc-b">No background required. Each dvar Torah is grounded in the text and designed to be accessible to anyone sensing the call of return.</p>
+    <div class="sc fu d4" onclick="location.href='teachings.html'">
+      <span class="sc-n">04</span>
+      <h3 class="sc-t">Explore Teachings</h3>
+      <p class="sc-b">Drashot on the weekly parsha, thematic studies, and conference teachings. Grounded in the text. Always.</p>
       <span class="sc-lnk">View teachings →</span>
-    </div>
-    <div class="sc fu d3" onclick="document.getElementById('connect').scrollIntoView({behavior:'smooth'})">
-      <span class="sc-n">03</span>
-      <h3 class="sc-t">Stay Connected</h3>
-      <p class="sc-b">Get new teachings delivered when they're ready. No noise. Just Torah — grounded in Ezekiel 37 and rooted in the Tanakh.</p>
-      <span class="sc-lnk">Subscribe →</span>
     </div>
   </div>
 </section>
