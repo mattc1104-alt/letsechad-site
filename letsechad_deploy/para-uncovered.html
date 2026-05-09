@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Para: Uncovered — A Torah Teaching for Those Coming Home — L'ets Echad</title>
+<meta name="description" content="You are standing between what you left and what you haven't found yet. That feeling has a name in Torah. And it is not shame.">
+<meta property="og:title" content="Para: Uncovered — L'ets Echad">
+<meta property="og:description" content="A Torah teaching for those coming home. What you're feeling has a name. It is not shame.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://letsechad.com/para.html">
+<meta name="theme-color" content="#0F0B07">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ── Reset ───────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:88px;
+  font-size:16px;
+}
+
+:root{
+  --ink:#0F0B07;--ink2:#1A1108;--ink3:#0A0704;
+  --bark:#3E2C14;--brown:#5C3D18;
+  --stone:#7A6040;--sand:#A08860;
+  --gold:#BF9B2C;--gold2:#D4AF3A;
+  --parch:#F5EDD8;--parch2:#EDE0C0;--parch3:#E2D0A8;
+  --bdr:rgba(191,155,44,.15);--bdr2:rgba(191,155,44,.32);--bdr3:rgba(191,155,44,.55);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--dur:.22s;
+}
+
+body{
+  font-family:var(--sans);background:var(--parch);color:var(--ink);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none}
+
+a:focus-visible,button:focus-visible{
+  outline:2px solid var(--gold2);outline-offset:4px;border-radius:2px;
+}
+
+/* ── Reduced motion ───────────────────────────── */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.001ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.001ms!important;
+  }
+}
+
+/* ── Skip link ───────────────────────────────── */
+.skip-link{
+  position:fixed;top:-100%;left:1rem;z-index:9999;
+  background:var(--gold);color:var(--ink);
+  padding:.5rem 1rem;font-size:.85rem;font-weight:600;
+  border-radius:0 0 4px 4px;transition:top var(--dur);
+}
+.skip-link:focus{top:0}
+
+/* ── Navigation ──────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  height:72px;display:flex;align-items:center;
+  background:rgba(10,7,4,.96);
+  border-bottom:1px solid rgba(191,155,44,.12);
+  backdrop-filter:blur(16px);
+  transition:box-shadow var(--dur);
+}
+.nav.on{box-shadow:0 2px 48px rgba(0,0,0,.7)}
+.nav-in{
+  width:100%;max-width:1200px;margin:0 auto;
+  padding:0 2rem;display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{display:flex;align-items:center;gap:.85rem}
+.nav-logo-img{height:48px;width:auto;filter:brightness(0) invert(1);opacity:.8;transition:opacity var(--dur)}
+.nav-logo:hover .nav-logo-img,.nav-logo:focus-visible .nav-logo-img{opacity:1}
+.nav-logo-name{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--gold2);display:block}
+.nav-logo-sub{font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:.05rem}
+.nav-a{
+  font-size:.72rem;letter-spacing:.04em;color:rgba(255,255,255,.5);
+  padding:.5rem .75rem;border-radius:3px;
+  transition:color var(--dur),background var(--dur);
+}
+.nav-a:hover,.nav-a:focus-visible{color:rgba(255,255,255,.9);background:rgba(255,255,255,.06);outline:none}
+.nav-give{
+  margin-left:.5rem;border:1px solid var(--gold)!important;color:var(--gold)!important;
+  padding:.4rem 1rem!important;border-radius:3px;
+  transition:background var(--dur),color var(--dur)!important;
+}
+.nav-give:hover,.nav-give:focus-visible{background:var(--gold);color:var(--ink)!important}
+.burger{display:none;flex-direction:column;gap:5px;padding:6px;border-radius:3px}
+.burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.6);border-radius:2px;transition:all var(--dur) var(--ease)}
+.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{
+  display:none;position:fixed;inset:72px 0 0 0;z-index:899;
+  background:var(--ink3);flex-direction:column;
+  padding:1.5rem 2rem;gap:.1rem;overflow-y:auto;
+}
+.mob[aria-hidden="false"]{display:flex}
+.mob-a{
+  font-family:var(--serif);font-size:1.15rem;color:rgba(255,255,255,.5);
+  padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.05);transition:color var(--dur);
+}
+.mob-a:hover,.mob-a:focus-visible{color:var(--gold2);outline:none}
+.mob-a:last-child{border-bottom:none;color:var(--gold);margin-top:.5rem}
+
+/* ── Hero ────────────────────────────────────── */
+.hero{
+  min-height:100vh;display:grid;place-items:center;
+  position:relative;overflow:hidden;background:var(--parch2);
+  text-align:center;padding:9rem 2rem 6rem;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23f)' opacity='.05'/%3E%3C/svg%3E");
+  background-size:400px 400px;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(ellipse 80% 70% at 50% 50%,transparent 30%,rgba(15,11,7,.25) 100%);
+}
+.hero-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.hero-heb{
+  font-family:var(--serif);font-size:clamp(7rem,20vw,17rem);line-height:.9;
+  color:var(--bark);opacity:.08;display:block;letter-spacing:-.02em;
+  margin-bottom:-1.2rem;user-select:none;pointer-events:none;
+}
+.hero-rule{
+  width:40%;max-width:280px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(62,44,20,.5),transparent);
+  margin:0 auto 2rem;
+}
+.hero-eyebrow{
+  font-family:var(--sans);font-size:.6rem;font-weight:600;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.2rem;
+}
+.hero-title{
+  font-family:var(--serif);font-size:clamp(2.8rem,7vw,5rem);
+  font-weight:300;line-height:1.04;color:var(--bark);letter-spacing:-.02em;margin-bottom:.8rem;
+}
+.hero-sub{
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(1rem,2.2vw,1.3rem);color:var(--stone);margin-bottom:1.8rem;line-height:1.55;
+}
+.hero-author{font-family:var(--serif);font-size:.95rem;color:var(--sand);letter-spacing:.06em}
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;z-index:3;opacity:.3;
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero-scroll{animation:bob 2.8s ease-in-out infinite}
+}
+.hero-scroll span{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--bark)}
+.hero-scroll svg{width:16px;height:16px;stroke:var(--bark);fill:none;stroke-width:1.5}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+
+/* ── Pastoral letter ─────────────────────────── */
+.letter{background:var(--ink2);padding:6rem 2rem 5.5rem;position:relative}
+.letter::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.4;
+}
+.letter-inner{max-width:640px;margin:0 auto;text-align:center}
+.letter-inner p{
+  font-family:var(--serif);font-size:clamp(1.08rem,2.2vw,1.35rem);
+  line-height:1.95;color:rgba(255,255,255,.68);margin-bottom:1.4rem;
+}
+.letter-inner p:last-child{margin-bottom:0}
+.letter-inner strong{color:#fff;font-weight:400}
+.letter-inner em{color:var(--gold2);font-style:italic}
+
+/* ── Article body ────────────────────────────── */
+.body{padding:0 0 6rem}
+.body-inner{max-width:68ch;margin:0 auto;padding:0 2rem}
+.body-inner p{
+  font-family:var(--serif);
+  font-size:clamp(1.08rem,1.4vw,1.18rem);
+  line-height:1.78;color:var(--ink);margin-bottom:1.35rem;
+}
+.body-inner strong{font-weight:600;color:var(--bark)}
+
+/* ── Section header — DRAMATIC (dark, full-bleed) ── */
+.sec{
+  background:var(--ink2);
+  margin-inline:calc(50% - 50vw);
+  padding-inline:calc(50vw - 50%);
+  padding-top:3.25rem;padding-bottom:2.5rem;
+  margin-top:3rem;margin-bottom:2rem;
+  position:relative;
+}
+.sec::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(191,155,44,.3),transparent);
+}
+.sec-inner{max-width:68ch;margin:0 auto;padding:0 2rem;display:flex;align-items:flex-start;gap:1.5rem}
+.sec-letter{
+  font-family:var(--serif);font-size:clamp(3.5rem,8vw,5.5rem);
+  font-weight:300;line-height:1;color:var(--gold);opacity:.55;
+  flex-shrink:0;margin-top:-.2rem;
+}
+.sec-title{
+  font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:300;color:#fff;line-height:1.15;margin:0;
+}
+
+/* ── Section header — SOFT (parchment) ─────────── */
+.sec.soft{
+  background:transparent;
+  margin-inline:0;
+  padding-inline:0;
+  padding-top:0;padding-bottom:0;
+  margin-top:4rem;margin-bottom:1.5rem;
+}
+.sec.soft::after{display:none}
+.sec.soft .sec-inner{
+  border-top:1px solid var(--bdr2);
+  padding-top:1.5rem;
+  max-width:68ch;
+}
+.sec.soft .sec-title{color:var(--bark)}
+.sec.soft .sec-letter{color:var(--gold);opacity:.35}
+
+/* ── Act break ───────────────────────────────── */
+.act-break{
+  margin-inline:calc(50% - 50vw);
+  padding-inline:calc(50vw - 50%);
+  padding-top:2.25rem;padding-bottom:2.25rem;
+  background:var(--ink3);
+  text-align:center;position:relative;
+}
+.act-break::before,.act-break::after{
+  content:'';position:absolute;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(191,155,44,.25),transparent);
+}
+.act-break::before{top:0}.act-break::after{bottom:0}
+.act-num{
+  font-family:var(--sans);font-size:.55rem;font-weight:600;
+  letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);opacity:.6;display:block;margin-bottom:.4rem;
+}
+.act-title{
+  font-family:var(--serif);font-size:clamp(.9rem,2vw,1.1rem);
+  font-weight:300;font-style:italic;color:rgba(255,255,255,.5);
+  display:block;letter-spacing:.04em;
+}
+
+/* ── Scripture ───────────────────────────────── */
+.body-inner blockquote{
+  margin:1.75rem 0;padding:1.2rem 1.8rem 1.2rem 1.5rem;
+  border-left:2px solid var(--gold);background:rgba(191,155,44,.04);
+}
+.body-inner blockquote p{
+  font-style:italic;color:var(--stone);margin-bottom:.5rem;font-size:1.04rem;
+}
+.body-inner blockquote p:last-of-type{margin-bottom:0}
+.body-inner blockquote cite{
+  font-family:var(--sans);font-size:.62rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-top:.7rem;font-style:normal;
+}
+
+/* ── Hebrew word callout ─────────────────────── */
+.hw{
+  margin:2rem 0;padding:1.4rem 1.8rem;
+  background:var(--parch3);border:1px solid var(--bdr3);
+  display:grid;grid-template-columns:auto 1fr;gap:.8rem 1.4rem;align-items:center;
+}
+.hw-heb{
+  font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);
+  color:var(--bark);line-height:1;grid-row:1/3;
+}
+.hw-trans{
+  font-family:var(--sans);font-size:.62rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);align-self:end;
+}
+.hw-def{
+  font-family:var(--serif);font-size:1rem;color:var(--stone);
+  font-style:italic;line-height:1.6;align-self:start;
+}
+
+/* ── Pull quote ──────────────────────────────── */
+.pull{
+  margin-inline:calc(50% - 50vw);
+  padding-inline:calc(50vw - 50%);
+  padding-top:3.5rem;padding-bottom:3.5rem;
+  background:var(--ink3);text-align:center;position:relative;
+}
+.pull::before,.pull::after{
+  content:'';position:absolute;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(191,155,44,.4),transparent);
+}
+.pull::before{top:0}.pull::after{bottom:0}
+.pull-inner{max-width:600px;margin:0 auto;padding:0 2rem}
+.pull p{
+  font-family:var(--serif);font-size:clamp(1.2rem,3vw,1.65rem);
+  font-style:italic;color:rgba(255,255,255,.88);line-height:1.6;margin-bottom:0;
+}
+.pull p strong{color:var(--gold2);font-style:normal;font-weight:400}
+
+/* ── Para / Kippur contrast grid ────────────── */
+.pk{margin:2rem 0;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--bdr2)}
+.pk-cell{padding:1.2rem 1.4rem}
+.pk-cell:first-child{border-right:1px solid var(--bdr2)}
+.pk-cell h4{
+  font-family:var(--sans);font-size:.6rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;
+}
+.pk-cell p{font-family:var(--serif);font-size:.97rem;color:var(--stone);font-style:italic;margin-bottom:0;line-height:1.6}
+
+/* ── Five marks ──────────────────────────────── */
+.marks{margin:1.8rem 0 2rem;display:flex;flex-direction:column;gap:.6rem}
+.mark{
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1rem 1.2rem;border-left:3px solid var(--bdr2);
+  background:rgba(191,155,44,.018);
+}
+.mark-n{
+  font-family:var(--sans);font-size:.6rem;font-weight:700;
+  color:var(--gold);background:rgba(191,155,44,.14);border:1px solid var(--bdr2);
+  min-width:1.6rem;height:1.6rem;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.08rem;
+}
+.mark h4{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--bark);margin-bottom:.3rem}
+.mark p{font-size:.97rem;color:var(--stone);margin-bottom:.5rem;line-height:1.75}
+.mark p:last-child{margin-bottom:0}
+
+/* ── Three ascents ───────────────────────────── */
+.ascents{margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:.5rem}
+.ascent{display:flex;gap:.9rem;align-items:flex-start;padding:.75rem .9rem;border-left:2px solid var(--bdr2)}
+.ascent-n{
+  font-family:var(--sans);font-size:.58rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold);flex-shrink:0;margin-top:.22rem;min-width:5.5rem;
+}
+.ascent p{font-family:var(--serif);font-size:.99rem;color:var(--ink);margin-bottom:0;line-height:1.8}
+
+/* ── Door panels ─────────────────────────────── */
+.door{
+  margin:2.25rem 0;padding:1.7rem 1.9rem;
+  border:1px solid var(--bdr2);border-top:3px solid var(--gold);
+  background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,0)),var(--parch2);
+  box-shadow:0 14px 36px rgba(62,44,20,.07);
+}
+.door h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--bark);margin-bottom:.8rem}
+.door p{font-family:var(--serif);font-size:1rem;color:var(--stone);margin-bottom:.85rem;line-height:1.85}
+.door p:last-child{margin-bottom:0}
+.shema-box{
+  font-family:var(--serif);font-size:1.2rem;color:var(--bark);
+  text-align:center;padding:.85rem 0;
+  border-top:1px solid var(--bdr2);border-bottom:1px solid var(--bdr2);
+  margin:.8rem 0;line-height:1.7;
+}
+.feast-row{display:flex;gap:.8rem;align-items:baseline;padding:.38rem 0;border-bottom:1px solid var(--bdr)}
+.feast-row:last-of-type{border-bottom:none}
+.feast-n{font-family:var(--serif);font-weight:600;color:var(--bark);font-size:.96rem;flex-shrink:0;min-width:9rem}
+.feast-d{font-family:var(--serif);font-size:.9rem;color:var(--stone);font-style:italic}
+
+/* ── Verdict line ────────────────────────────── */
+.verdict{
+  font-family:var(--serif);font-size:1.12rem;font-weight:600;
+  color:var(--bark);margin:1.8rem 0;padding:.6rem 0 .6rem 1.2rem;border-left:3px solid var(--gold);
+}
+
+/* ── Subheading ──────────────────────────────── */
+.subhead{
+  font-family:var(--serif);font-size:1.25rem;font-weight:400;
+  color:var(--bark);margin:2rem 0 .7rem;
+  padding-bottom:.4rem;border-bottom:1px solid var(--bdr);
+}
+
+/* ── Divider ─────────────────────────────────── */
+.divider{display:flex;align-items:center;gap:1rem;margin:2.5rem 0}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--bdr)}
+.divider span{font-family:var(--serif);color:var(--gold);font-size:.95rem;opacity:.55}
+
+/* ── Closing ─────────────────────────────────── */
+.closing{background:var(--ink3);padding:6rem 2rem 7rem;text-align:center;position:relative}
+.closing::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.45;
+}
+.closing-inner{max-width:500px;margin:0 auto}
+.shema-display{
+  font-family:var(--serif);font-size:clamp(1.3rem,4vw,2.1rem);
+  line-height:1.8;color:rgba(255,255,255,.9);margin-bottom:2.5rem;
+}
+.shema-display strong{color:var(--gold2);font-weight:400}
+.shema-display em{color:rgba(255,255,255,.45);font-style:normal;font-size:.7em;display:block;letter-spacing:.06em;margin-top:.2rem}
+.closing-words{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.5);line-height:2;margin-bottom:2.5rem}
+.kol{font-family:var(--serif);font-size:.9rem;font-style:italic;color:rgba(255,255,255,.2)}
+
+/* ── Footer ──────────────────────────────────── */
+.footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.1);padding:4rem 0 0}
+.ft-W{max-width:1160px;margin:0 auto;padding:0 2rem}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-logo{height:68px;width:auto;filter:brightness(0) invert(1);opacity:.5;margin-bottom:.9rem}
+.ft-tagline{font-family:var(--serif);font-size:.85rem;font-style:italic;color:rgba(255,255,255,.25);line-height:1.6;max-width:210px;margin-bottom:.6rem}
+.ft-url{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.4}
+.ft-col h4{font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+.ft-col a{display:block;font-size:.78rem;color:rgba(255,255,255,.3);margin-bottom:.42rem;transition:color var(--dur)}
+.ft-col a:hover,.ft-col a:focus-visible{color:rgba(255,255,255,.75);outline:none}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.05);padding:1.4rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.ft-copy{font-size:.68rem;color:rgba(255,255,255,.2)}
+.ft-verse{font-family:var(--serif);font-size:.78rem;font-style:italic;color:rgba(255,255,255,.2)}
+
+/* ── Print ───────────────────────────────────── */
+@media print{
+  .nav,.burger,.mob,.hero-scroll,.footer,.act-break{display:none}
+  body{background:#fff;color:#000;font-size:11pt}
+  .hero{min-height:auto;padding:2rem 0 1rem;background:transparent}
+  .hero-heb{display:none}
+  .letter{background:transparent;padding:1rem 0}
+  .letter-inner p{color:#333}
+  .sec{background:transparent;padding:.5rem 0;margin-inline:0;padding-inline:0}
+  .sec.soft{margin-top:2rem}
+  .sec-title{color:#000}
+  .pull{background:transparent;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-inline:0;padding-inline:0}
+  .pull p{color:#333}
+  .closing{background:transparent;padding:1rem 0}
+  .shema-display strong,.shema-display em,.closing-words,.kol{color:#333}
+  a[href]::after{content:" (" attr(href) ")";font-size:8pt;color:#666}
+  blockquote{border-left:2px solid #999}
+  .mark,.ascent,.door{border-color:#ccc}
+  .hw{border-color:#ccc;background:#f5f5f5}
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+@media(max-width:860px){.nav-links{display:none}.burger{display:flex}}
+@media(max-width:600px){
+  .nav{height:64px}
+  .nav-in{padding:0 1rem}
+  .nav-logo-img{height:38px}
+  .nav-logo-name{font-size:.98rem}
+  .nav-logo-sub{font-size:.47rem}
+  .mob{inset:64px 0 0 0}
+  .hero{min-height:100svh;padding:7.5rem 1.25rem 4rem}
+  .hero-heb{font-size:clamp(6rem,32vw,10rem);margin-bottom:-.75rem}
+  .body-inner{padding:0 1.25rem}
+  .sec{padding-top:2.25rem;padding-bottom:1.85rem}
+  .sec-inner{gap:.9rem;padding:0 1.25rem}
+  .sec-letter{font-size:3rem}
+  .hw{grid-template-columns:1fr}
+  .hw-heb{grid-row:auto;text-align:right;margin-bottom:.4rem}
+  .pk{grid-template-columns:1fr}
+  .pk-cell:first-child{border-right:none;border-bottom:1px solid var(--bdr2)}
+  .mark{padding:.95rem 1rem}
+  .ascent{flex-direction:column;gap:.25rem}
+  .ascent-n{min-width:auto}
+  .feast-row{flex-direction:column;gap:.12rem}
+  .feast-n{min-width:auto}
+  .door{padding:1.25rem}
+  .ft-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo" aria-label="L'ets Echad — home">
+      <img src="LOGO_SRC" alt="L'ets Echad" class="nav-logo-img" id="site-logo">
+      <div>
+        <span class="nav-logo-name">L'ets Echad</span>
+        <span class="nav-logo-sub">Ezekiel 37:19</span>
+      </div>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="index.html#start" class="nav-a" role="listitem">Start Here</a>
+      <a href="teachings.html" class="nav-a" role="listitem">Teachings</a>
+      <a href="about.html" class="nav-a" role="listitem">About</a>
+      <a href="resources.html" class="nav-a" role="listitem">Resources</a>
+      <a href="index.html#connect" class="nav-a" role="listitem">Contact</a>
+      <a href="support.html" class="nav-a nav-give" role="listitem">Give</a>
+    </div>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mob-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mob" id="mob-menu" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="index.html#start" class="mob-a">Start Here</a>
+  <a href="teachings.html" class="mob-a">Teachings</a>
+  <a href="about.html" class="mob-a">About</a>
+  <a href="resources.html" class="mob-a">Resources</a>
+  <a href="index.html#connect" class="mob-a">Contact</a>
+  <a href="support.html" class="mob-a">Give</a>
+</nav>
+
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <span class="hero-heb" aria-hidden="true" lang="he">פָּרַע</span>
+    <div class="hero-rule" aria-hidden="true"></div>
+    <span class="hero-eyebrow">A Torah Teaching for Those Coming Home</span>
+    <h1 class="hero-title">Para: Uncovered</h1>
+    <p class="hero-sub">On Exodus 32, Israel's Exposure, and the G‑d Who Covers Again</p>
+    <p class="hero-author">By Matti Kahana</p>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Read</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</header>
+
+<section class="letter" aria-label="Pastoral letter">
+  <div class="letter-inner">
+    <p>Shalom beloved,</p>
+    <p>You may have grown up in a religious system that told you it had the truth. A system that used HaShem's name, His history, His stories.</p>
+    <p>Then something shifted. Maybe gradually, maybe all at once. Something in you broke open and you saw what was at the center. You realized that your fathers had inherited lies. <em>(Jer 16:19)</em></p>
+    <p>And now you are standing somewhere between what you left and what you haven't found yet. That place is disorienting. It feels exposed. Raw.</p>
+    <p><strong>That feeling has a name in Torah. And it is not shame.</strong></p>
+    <p>You were not foolish. You were not weak. You were made para.</p>
+    <p>Para. It's a Hebrew word. It means uncovered. Exposed. And it is the exact word the Torah uses for what happened to Israel at Sinai when the priests gave them a substitute and called it by HaShem's name.</p>
+    <p>You are not the first person this has happened to. HaShem's response to para has never been contempt. It has always been the same thing. <strong>Come back. I will cover you again.</strong></p>
+  </div>
+</section>
+
+<main id="main-content">
+<article class="body">
+
+<!-- ═══════════════════════ ACT ONE ═══════════════════════ -->
+<div class="act-break" aria-label="Part one of three">
+  <span class="act-num">Part One</span>
+  <span class="act-title">The Exposure</span>
+</div>
+
+  <section aria-labelledby="sec-aleph" id="aleph">
+    <div class="sec soft">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">א</span>
+        <h2 class="sec-title" id="sec-aleph">Aleph: The Word at the Center</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>Moses comes down from Mt Sinai after forty days. He is carrying the tablets of the covenant in his hands. This is what he sees.</p>
+      <blockquote>
+        <p>"Moses saw that the people were exposed (פָּרַע / para), for Aaron had exposed them (פְּרָעֹה) making them an object of disgrace among their adversaries."</p>
+        <cite>Exodus 32:25</cite>
+      </blockquote>
+      <div class="hw" role="definition">
+        <span class="hw-heb" lang="he" aria-label="Hebrew: Para">פָּרַע</span>
+        <span class="hw-trans">Para</span>
+        <span class="hw-def">To uncover. To expose. To remove restraint. To strip away the covering that protects.</span>
+      </div>
+      <p>This word shows up in other places in Torah, and each use teaches us more about what it means. Para is used for the Sotah, a woman suspected of adultery, whose hair is uncovered by the priest.</p>
+      <p>Her protective dignity is suspended until the truth is known.</p>
+      <blockquote>
+        <p>"And the priest shall stand the woman before HaShem and uncover (פָּרַע / para) the head of the woman, and place in her hands the grain offering of remembrance. It is the grain offering of jealousy and in the hand of the priest shall be the bitter waters that bring the curse."</p>
+        <cite>Numbers 5:18</cite>
+      </blockquote>
+      <p>Para is used for the metzora, someone with diseased skin, who tears his garments and walks around crying "unclean."</p>
+      <blockquote>
+        <p>"And the one with the diseased skin. His garments shall be torn, and his head shall be uncovered (פָּרַע / para), and he shall cover his upper lip and cry out: Unclean, unclean."</p>
+        <cite>Leviticus 13:45</cite>
+      </blockquote>
+      <p>In both cases, something that was covering and protecting has been removed. The person underneath is now exposed.</p>
+      <p>Aaron did not just allow a bad ritual. He stripped the covenant covering from an entire nation. What Moses saw when he came down the mountain was not a party around a golden statue. He saw his people naked before their enemies in the deepest spiritual sense.</p>
+      <p>If you have come out of a religious system and felt that strange rawness — the walls came down overnight — that is para. The system was covering you. But it was a false covering. Like wearing someone else's coat. It kept out some of the cold, but it was never yours, and it was never the covering HaShem designed for you.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="sec-bet" id="bet">
+    <div class="sec soft">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">ב</span>
+        <h2 class="sec-title" id="sec-bet">Bet: The Calf Was Not Primitive</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>We have a tendency to picture the golden calf as primitive idol worship. The people just lost their minds after forty days and prayed to a statue. That picture is wrong and it's dangerous, because it lets us off the hook.</p>
+      <p>What Aaron built was not a foreign god.</p>
+      <blockquote>
+        <p>"This is your god, O Israel, who brought you up out of the land of Egypt!"</p>
+        <cite>Exodus 32:4</cite>
+      </blockquote>
+      <p>He did not say: here is Baal. He took HaShem's own defining act — the Exodus, the redemption from Egypt, the single most powerful demonstration of HaShem's love for Israel — and attributed it to the calf.</p>
+      <p>He gave the substitute HaShem's history. HaShem's identity. HaShem's relationship with Israel.</p>
+      <p>This is the particular evil of the calf. It was not obvious. It kept the name. It kept the story — even the emotional warmth of belonging to the G‑d who saves. It just relocated all of that onto something human hands had made.</p>
+      <div class="verdict">The most dangerous substitute is the one that wears the true G‑d's clothing while containing something else entirely.</div>
+      <p>Then Aaron built an altar, declared a feast, established a whole ritual structure. The calf had priests, holy days, offerings, a moral and communal life organized around it. This was not chaos. This was a complete religious system built by human decision, sustained by institutional authority, and experienced by its participants as genuine worship of the G‑d of Israel.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="sec-gimel" id="gimel">
+    <div class="sec soft">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">ג</span>
+        <h2 class="sec-title" id="sec-gimel">Gimel: Jeroboam — The Pattern Institutionalized</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>The golden calf at Sinai was destroyed. Moses ground it to powder. But the pattern that produced it did not die with it. When the kingdom split after Solomon, a king named Jeroboam picked the calf back up.</p>
+      <p>Jeroboam had a political problem. His people, the Northern Kingdom, would travel to Jerusalem to worship at the Temple. When they went to Jerusalem, their hearts might return to the House of David, and his kingdom would be lost. So he made a calculation. He would give them a religion closer to home.</p>
+      <blockquote>
+        <p>"He made two golden calves. And he said to the people: 'It is too much for you to go up to Jerusalem. Here are your gods, O Israel, who brought you up from the land of Egypt.' He set one in Beth El, and the other he put in Dan... He made temples on high places and appointed priests from among all the people, who were not of the Levites. He instituted a feast on the fifteenth day of the eighth month like the feast that was in Judah..."</p>
+        <cite>1 Kings 12:28–33</cite>
+      </blockquote>
+      <p>Two golden calves. Aaron's exact words over each one, word for word. New priests, not from the Levitical line. New sacred sites replacing Jerusalem. A new calendar replacing Torah's appointed times. A complete institutional replacement of Israel's covenant structure, with a system that claimed to be the same thing.</p>
+      <p>Jeroboam did not tell his people they were abandoning HaShem. He told them they were worshipping HaShem, just more conveniently, more accessibly. Only the location changed. Only the priesthood changed. Only the calendar changed.</p>
+      <p><strong>Only everything.</strong></p>
+      <p>The Northern Kingdom carried these calves for over two hundred years. Nineteen kings ruled, from Shechem to Samaria. Not one removed them. Generation after generation was born into this. Worshipping sincerely, loving genuinely, never knowing they were para.</p>
+      <p>For two hundred years, parents raised children in it and the children raised grandchildren. Each generation inherited a world where the substitute was normal, was ancient, was simply what G‑d looked like. Imagine the child born into this world. They never had reason to question it because everyone around them confirmed it. Their parents believed it. Their teachers taught it. Their holy days, prayers, and memories were shaped by it. Their sincerity was completely real, even when the object of their worship was not. HaShem knows this. It is precisely why His response to para is not condemnation. It is the call to come home.</p>
+    </div>
+  </section>
+
+<!-- ═══════════════════════ ACT TWO ═══════════════════════ -->
+<div class="act-break" aria-label="Part two of three">
+  <span class="act-num">Part Two</span>
+  <span class="act-title">The Divorce and the Love That Survived</span>
+</div>
+
+  <section aria-labelledby="sec-dalet" id="dalet">
+    <div class="sec soft">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">ד</span>
+        <h2 class="sec-title" id="sec-dalet">Dalet: Hosea — The Prophet Who Lived the Message</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>HaShem sends a prophet into the world of the Northern Kingdom, after two hundred years of calf worship. This prophet is Hosea.</p>
+      <p>And before Hosea speaks a single word of theology, HaShem makes him live the message first.</p>
+      <blockquote>
+        <p>"When HaShem first spoke through Hosea, HaShem said to him: 'Go, take to yourself a wife of harlotry and have children of harlotry, for the land commits great harlotry by forsaking HaShem.'"</p>
+        <cite>Hosea 1:2</cite>
+      </blockquote>
+      <p>Hosea marries Gomer. Gomer leaves him. She goes after lovers who give her bread and water, wool and flax. The things she needs — things she doesn't realize are coming ultimately from HaShem through her husband. She chases substitutes because she cannot see the true source.</p>
+      <p>This is not a metaphor applied to a theology after the fact. This is a man who wept real tears over a wife who left him for something lesser. Who lay awake knowing she was out there. Who felt what it costs to love someone who cannot recognize what they have.</p>
+      <p>Hosea does not speak about the calves from a distance. He speaks as the one who was left for them and who never stopped loving.</p>
+      <p>HaShem speaks through his household. Three children are born, each given a name that is a verdict. The third, a son, receives the most devastating name in all of Prophets.</p>
+      <blockquote>
+        <p>"Then HaShem said: 'Call his name Lo Ammi — "Not My People" — for you are not my people, and I am not Ehyeh to you.'"</p>
+        <cite>Hosea 1:9</cite>
+      </blockquote>
+      <div class="hw" role="definition">
+        <span class="hw-heb" lang="he" aria-label="Hebrew: Lo Ammi">לֹא עַמִּי</span>
+        <span class="hw-trans">Lo Ammi — "Not My People"</span>
+        <span class="hw-def">The formal name of the covenant rupture.</span>
+      </div>
+      <p>HaShem does not say, "I am not your G‑d." He says, "I am not Ehyeh to you."</p>
+      <p>Ehyeh. "I am." Or "I will be." — the name HaShem revealed to Moshe at the burning bush. Ehyeh asher Ehyeh. "I will be what I will be." Israel came to know Him through experiencing His mighty acts: the plagues, the Sea, Mount Sinai. Knowledge through living in relationship.</p>
+      <p>That name is a promise of presence. Lo Ammi is that promise revoked. Not, "I never existed." Not, "I am angry at you." But: "I am no longer Ehyeh to you." The way of knowing Me through living in covenant relationship is closed.</p>
+      <p>Lo Ammi is para given a proper name. The covering removed and then announced out loud, for everyone to hear.</p>
+      <p>This is what two hundred years of calf worship produced. Not just theological drift. A formal severance in which HaShem declares the covenant relationship has ended.</p>
+      <p>And Jeremiah names what that severance was in legal terms. Not a separation. Not a cooling off. A bill of divorce.</p>
+      <blockquote>
+        <p>"And I saw that for all the causes whereby backsliding Israel committed adultery, I had put her away and given her a bill of divorce; yet her treacherous sister Judah feared not, but went and played the harlot also."</p>
+        <cite>Jeremiah 3:8</cite>
+      </blockquote>
+      <p>The bill of cutting off. This is the language of Deuteronomy 24:1. HaShem did not set the law aside. He applied it. The Northern Kingdom committed adultery against the covenant for two hundred years, and HaShem gave her a divorce.</p>
+      <p>Now here is something that must be understood carefully, because it matters enormously for where this teaching is going.</p>
+      <p>Israel went after the Baals. She committed harlotry. She committed adultery against the covenant. But she never married another. She couldn't. Israel does not have the authority to give herself in marriage. Only HaShem can give her. Only HaShem can receive her. She whored but she did not remarry.</p>
+      <p>This matters because the concern of Deuteronomy 24:4 only applies when a divorced woman has become "v'haitah l'ish acher" — she became another man's wife. A formal second marriage covenant. Israel never entered one. Her harlotry defiled her. It did not bind her to another husband.</p>
+      <blockquote>
+        <p>"And she leaves his house and she goes and becomes another man's wife. And if the latter husband hates her and writes her a bill of divorce and places it in her hand and sends her away from his house, or if the latter husband dies who took her to himself as a wife. Her former husband who sent her away may not take her again to be his wife, after she has been defiled."</p>
+        <cite>Deuteronomy 24:2–4</cite>
+      </blockquote>
+      <p>The question is whether HaShem will choose to take her back — whether His love for Israel will survive the divorce He enacted.</p>
+      <p>HaShem's answer through Hosea is yes.</p>
+      <p>Not because Israel earned it. Not because the damage was small. Because HaShem's initiative in love is as sovereign as His initiative in judgment. He gave the divorce by His own choice. He offers the re-betrothal by His own choice. Israel's harlotry left her alone and uncovered. It did not extinguish the love of the husband who divorced her.</p>
+      <p>Jeremiah 31 tells us what the re-betrothal will look like when it comes:</p>
+      <blockquote>
+        <p>"Behold, the days are coming, declares HaShem, when I will make a renewed covenant with the house of Israel and the house of Judah... I will put my Torah within them, and I will write it on their hearts. And I will be their G‑d, and they shall be My people."</p>
+        <cite>Jeremiah 31:31–33</cite>
+      </blockquote>
+      <p>The house of Israel and the house of Judah. Both houses. Together. And the covenant contains "My Torah" written on their hearts. Not Torah replaced, not Torah abolished. Torah internalized at a depth the first set of tablets, broken at the calf, could never achieve.</p>
+      <p>The problem was never the Torah. It was always the people. Jeremiah 31 fixes the people. The Torah stands exactly where it always stood. Their hearts change. Their desire changes. Every Feast kept, every Sabbath entered, every meal eaten with HaShem — not from obligation but from love. That is what Torah written on the heart produces. Not a new religion. The original one, finally running the way HaShem designed it.</p>
+    </div>
+  </section>
+
+  <div class="pull">
+    <div class="pull-inner">
+      <p>The same G‑d who issued the divorce is the same G‑d who promises the re-betrothal. <strong>The divorce was real. The love was stronger.</strong></p>
+    </div>
+  </div>
+
+  <div class="body-inner">
+    <p>If your own para has left you feeling too far gone, too damaged, too stained by the years in the calf system, sit with this. The Northern Kingdom received a formal bill of divorce from the Almighty and HaShem still said "I will betroth you to Me forever." You never married the calf. You were never legally another man's. You were uncovered, Lo Ammi, waiting. The divorce does not get the final word. Hosea 2:19 does.</p>
+    <p>And look what HaShem does. In the very next breath after Lo Ammi, in the very next verse, He turns the verdict over and shows what's on the other side:</p>
+    <blockquote>
+      <p>"Yet the number of the children of Israel shall be like the sand of the sea, which cannot be measured or numbered. And in the place where it was said to them, 'You are Lo Ammi,' it shall be said to them, 'You are the sons of the living G‑d.'"</p>
+      <cite>Hosea 1:10</cite>
+    </blockquote>
+    <p>The same place. The same people. The same mouth that said Lo Ammi says Ammi — "My People." HaShem does not move the address. He transforms what is spoken there.</p>
+    <blockquote>
+      <p>"I will sow her for myself in the land. And I will have mercy on Lo Ruchamah. And I will say to Lo Ammi: 'You are My People.' And he shall say, 'You are my G‑d.'"</p>
+      <cite>Hosea 2:23</cite>
+    </blockquote>
+    <p>HaShem speaks first. He says "You are My People" before Israel says a word. The re-covering comes before the response. This is grace in motion — not as reward, but as initiative.</p>
+    <p>From that place of love — from inside the wound of his own marriage — Hosea delivers his verdict on the calf system. And it is absolute.</p>
+    <blockquote>
+      <p>"I have spurned your calf, O Samaria... A craftsman made it; it is not G‑d. The calf of Samaria shall be broken to pieces."</p>
+      <cite>Hosea 8:5–6</cite>
+    </blockquote>
+    <p>A craftsman made it. It is not G‑d. The test is simple: did it come by divine self-revelation, or by human construction?</p>
+    <p>Sincerity does not change the answer. Antiquity does not change the answer. If human minds conceived it, if human hands shaped it — including the hands of men who debated, defined, and voted on what the divine nature would be said to be — then Hosea's verdict still stands. A craftsman made it.</p>
+    <blockquote>
+      <p>"My people are destroyed for lack of knowledge. Because you have rejected knowledge, I will reject you from being a priest to Me. And since you have forgotten the Torah of your G‑d, I also will forget your children."</p>
+      <cite>Hosea 4:6</cite>
+    </blockquote>
+    <p>The priesthood of the calf system did not simply err. They actively displaced Torah knowledge with the theology of the substitute. The people could not know HaShem because the priests were teaching them about the calf. Every proclamation, ritual, feast, and moral instruction pointed to the substitute and away from HaShem. Generations of sincere worshippers were destroyed for lack of knowledge — not their own fault, but the fault of the system that shaped them.</p>
+  </div>
+
+  <!-- ה — DRAMATIC: Five marks earn the full band -->
+  <section aria-labelledby="sec-hey" id="hey">
+    <div class="sec">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">ה</span>
+        <h2 class="sec-title" id="sec-hey">Hey: What the Calf Pattern Looks Like</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>This pattern is not ancient history. It keeps repeating.</p>
+      <p>From what we have seen, from Sinai, Jeroboam, and Hosea, we can derive the pattern of the calf. It has five marks. Each was present at Sinai. Each was present in the Northern Kingdom. When a system bears those marks, it is not merely mistaken. It is repeating the calf.</p>
+      <div class="marks" role="list">
+        <div class="mark" role="listitem">
+          <div class="mark-n" aria-label="Mark 1">1</div>
+          <div>
+            <h4>A theology crafted by human decision, not divine revelation.</h4>
+            <p>Aaron consulted the people, received the gold, fashioned the calf. Human process. Human decision. Jeroboam made a political calculation and built his religion around it. When the foundational claims of a theological system about the divine nature were established not through Torah, not through the prophets, but through committees of men who debated, voted, and exiled those who disagreed — the origin is the same as Aaron standing at the furnace. Human process. Human decision. Not divine revelation.</p>
+          </div>
+        </div>
+        <div class="mark" role="listitem">
+          <div class="mark-n" aria-label="Mark 2">2</div>
+          <div>
+            <h4>HaShem's own titles and history reassigned to the non-divine.</h4>
+            <p>Aaron did not invent a foreign god. He took HaShem's own defining act — the Exodus — and attributed it to the calf. HaShem's history. HaShem's identity. HaShem's relationship with Israel, all transferred to the substitute.</p>
+            <p>When a theology takes titles Torah reserves for HaShem alone and gives them to another, then calls that the true faith of Israel, it is repeating Aaron's move. This is the calf wearing HaShem's clothing. The danger is not that it looks foreign. The danger is that it looks like HaShem.</p>
+          </div>
+        </div>
+        <div class="mark" role="listitem">
+          <div class="mark-n" aria-label="Mark 3">3</div>
+          <div>
+            <h4>A priestly and prophetic system built to maintain the substitute.</h4>
+            <p>Aaron built an altar, declared a feast, put himself between the people and the calf. Jeroboam appointed an entire non-Levitical priesthood. The false prophets of Baal whom Elijah confronted on Mount Carmel cut themselves and wept and cried out with full sincerity to a god who could not answer.</p>
+            <p>The existence of a sincere, articulate, morally demanding priestly system does not validate the god at the center of it. Hosea knew this. He watched the priests of the north teach Torah's people to forget Torah. The sophistication of the system, the sincerity of its ministers, the centuries of its tradition — none of these things change whether the thing at the center is HaShem or a craftsman's work.</p>
+          </div>
+        </div>
+        <div class="mark" role="listitem">
+          <div class="mark-n" aria-label="Mark 4">4</div>
+          <div>
+            <h4>Israel replaced at the center of the covenant.</h4>
+            <p>Jeroboam replaced Jerusalem. Replaced the Levitical structure. Replaced the calendar. When a theological system declares that the Jewish people's covenant has expired — that a new entity has inherited the covenant promises, that Torah is obsolete — the Jewish people's relationship with HaShem is now conditional on accepting the substitute.</p>
+          </div>
+        </div>
+        <div class="mark" role="listitem">
+          <div class="mark-n" aria-label="Mark 5">5</div>
+          <div>
+            <h4>Torah set aside.</h4>
+            <p>"You have forgotten the Torah of your G‑d." The calf system did not abolish Torah loudly. It just made Torah secondary. Then unnecessary. When a theology declares that the commandments given at Sinai are fulfilled and no longer binding — that the Shabbat, the appointed times, the dietary laws are done away with or spiritualized into irrelevance — Torah has been forgotten exactly as Hosea describes.</p>
+          </div>
+        </div>
+      </div>
+      <p><strong>A craftsman made it. It is not G‑d. &nbsp;— Hosea 8:6</strong></p>
+    </div>
+  </section>
+
+  <!-- ו — soft -->
+  <section aria-labelledby="sec-vav" id="vav">
+    <div class="sec soft">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">ו</span>
+        <h2 class="sec-title" id="sec-vav">Vav: The Exposure</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>When those marks are present, what follows is para. The covenant covering is gone — not because HaShem is cruel but because you can't hold the covering while abandoning the Covenant-Giver.</p>
+      <p>Hosea describes what para looks like from the inside:</p>
+      <blockquote>
+        <p>"For their mother has played the harlot... For she said: 'I will go after my lovers, who give me my bread and my water, my wool and my flax, my oil and my drink.' Therefore I will hedge up her way with thorns... She shall pursue her lovers but not overtake them... Then she shall say: 'I will go and return to my first husband, for it was better for me then than now.' And she did not know that it was I who gave her the grain, the wine, and the oil..."</p>
+        <cite>Hosea 2:5–8</cite>
+      </blockquote>
+      <p>She did not know. HaShem says it Himself. Not just as an accusation. As a wound. He was the one giving her the grain, the wine, and the oil. Every gift she attributed to the substitute came from His hand. He kept providing while she kept leaving. He watched her chase lovers with bread He had baked.</p>
+      <p>She chased the substitute because she genuinely believed the substitute was giving her what she needed. She felt the warmth of community, the comfort of belonging, the sense of being loved by G‑d. Those things were real — but they came from HaShem, not from the calf. He was sustaining her even in her para, and watching her attribute His gifts to the substitute.</p>
+      <p>The para that follows is not HaShem removing His love. It is HaShem removing the veil that the substitute held over her eyes, so she can finally see clearly. The thorns in the path are not cruelty. They are the obstacles that slow her down enough to realize she is going in the wrong direction.</p>
+      <p>If your journey out of the system has been painful — if it has felt like loss, like everything familiar disappeared at once — you are in the thorns of Hosea 2:6. This is not punishment. This is HaShem slowing you down on the path to the substitute so you can turn around and find the path home. That disorientation is not HaShem pulling away. It's the false covering finally coming off. What feels like exposure is clarity beginning.</p>
+    </div>
+  </section>
+
+  <!-- ז — DRAMATIC: Wilderness call earns the full band -->
+  <section aria-labelledby="sec-zayin" id="zayin">
+    <div class="sec">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">ז</span>
+        <h2 class="sec-title" id="sec-zayin">Zayin: The Wilderness</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>After the exposure, after the thorns, after substitutes have failed her — HaShem speaks.</p>
+      <blockquote>
+        <p>"Therefore, behold, I will allure her and bring her into the wilderness and speak tenderly to her. And there I will give her her vineyards and make the Valley of Achor a door of hope. And there she shall answer as in the days of her youth, as at the time when she came out of the land of Egypt. And in that day, declares HaShem, you will call Me 'My Husband,' and no longer will you call Me 'My Baal.'"</p>
+        <cite>Hosea 2:14–16</cite>
+      </blockquote>
+      <p>I will allure her. I will court her again. This is not a commanding G‑d dragging a reluctant people back by force. HaShem is choosing to woo. He is not finished with her. He has never been finished with her.</p>
+      <p>I will bring her into the wilderness. Where HaShem and Israel first met. Sinai. The Exodus. The place before the land, before the kings, before the calves and before all the structures that got in between them. He brings her to the wilderness, where it is just the two of them. No intermediary. No substitute. No system standing between them.</p>
+      <p>I will speak to her heart. Intimately. The way a husband speaks to a wife he has loved through betrayal and exile and has never stopped wanting to hold.</p>
+      <p>The Valley of Achor — "the Valley of Trouble" — becomes an opening of hope. The very place of Israel's worst shame becomes the entrance to restoration. This is HaShem's character. He does not route the restoration around the pain. He routes it through the pain, and transforms it.</p>
+      <p>You will call Me Ishi — "My Husband" — not My Baal. Baal means lord or master. The one who controls through obligation and fear. Ishi — "My Husband" — means the one I belong to by love, by choice, by covenant freely entered. HaShem is not calling Israel back to a renovated religious structure. He is calling her back to a marriage.</p>
+      <blockquote>
+        <p>"I will betroth you to Me forever. I will betroth you to Me in righteousness and justice, in lovingkindness and compassion. I will betroth you to Me in faithfulness. And you shall know HaShem."</p>
+        <cite>Hosea 2:19–20</cite>
+      </blockquote>
+      <p>You shall know HaShem. Intimate knowledge. Not just having information about Him. The same word used for the deepest human knowing. This is what the calf system could never give, no matter how elaborate its theology or sincere its priests. It could give information about a constructed god. It could not give da'at HaShem — that direct, unmediated knowing of the One who is.</p>
+      <p>This is what you are being called back to. Not a new system to replace the old one. Not a reformed substitute. Not a better calf. Direct knowing of HaShem. Through His Torah, through the covenant He made with Israel, through the Shema that is still true, through the appointed times He still keeps even when His people have forgotten them, through the language of the wilderness where it is just you and the One who brought you out of whatever Egypt held you.</p>
+    </div>
+  </section>
+
+<!-- ═══════════════════════ ACT THREE ═════════════════════ -->
+<div class="act-break" aria-label="Part three of three">
+  <span class="act-num">Part Three</span>
+  <span class="act-title">The Way Home</span>
+</div>
+
+  <!-- ח — soft -->
+  <section aria-labelledby="sec-chet" id="chet">
+    <div class="sec soft">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">ח</span>
+        <h2 class="sec-title" id="sec-chet">Chet: The Teshuvah HaShem Requires</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>Hosea ends with a final call. After all the indictment, after the full weight of para, after the wilderness promise — three simple movements of return.</p>
+      <blockquote>
+        <p>"Return, O Israel, to HaShem your G‑d, for you have stumbled because of your iniquity. Take with you words and return to HaShem; say to Him: 'Take away all iniquity; accept what is good, and we will pay with bulls the vows of our lips. Assyria shall not save us; we will not ride on horses; and we will say no more, Our G‑d, to the work of our hands. In You the orphan finds mercy.' I will heal their apostasy; I will love them freely, for My anger has turned from them."</p>
+        <cite>Hosea 14:2–5</cite>
+      </blockquote>
+      <p><strong>First: Come with words.</strong></p>
+      <p>Take with you words. Not a perfect theological system, not a rebuilt temple, not years of study completed first. Come and speak: Here is what I did. Here is what was done to me. Take it away. I am coming back. That is the whole prayer.</p>
+      <p><strong>Second: Renounce the substitutes.</strong></p>
+      <p>We will say no more "Our G‑d" to the work of our hands. The return to HaShem requires naming what the substitute was. Not in bitterness. Not to condemn everyone still inside the system. But because you cannot say "I am coming back to You" while still calling the calf by HaShem's name.</p>
+      <p>This is the hardest part. The system gave you real things — community, meaning, years of sincere devotion. Renouncing the god at the center does not mean none of that was real. It means being honest about what the center actually was. The grief and the renunciation can coexist. HaShem is not asking you to pretend the years meant nothing. He is asking you to stop calling the calf by His name.</p>
+      <p><strong>Third: Trust the response.</strong></p>
+      <p>"I will love them freely." Not because the repentance is thorough enough or the theology finally correct enough, but because this is who HaShem is.</p>
+      <p>He heals the apostasy — not forgiveness that leaves the wound, but the wound itself is removed. HaShem is not asking you to be whole before you come back. He is saying come back, and I will do the healing. The healing is not the precondition of the return. It is the gift that comes with it.</p>
+    </div>
+  </section>
+
+  <!-- ט — soft -->
+  <section aria-labelledby="sec-tet" id="tet">
+    <div class="sec soft">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">ט</span>
+        <h2 class="sec-title" id="sec-tet">Tet: A Word Directly to You</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>HaShem saw you the whole time.</p>
+      <p>He was not absent from you during your years inside the system. He was the one sustaining you, giving you bread and water and oil even while you attributed them to the substitute. He was there in every genuine moment of worship you had, even when it was misdirected. He was watching. Waiting. Never once stopped wanting you to come home.</p>
+      <p>The home He is calling you back to is not another system. It is the wilderness. The stripped-down place of direct encounter. It is Torah, still standing, still true, still the blueprint for the life He designed for His people. It is the Shema — one sentence, six Hebrew words. Words that have outlasted every empire and every calf that human hands have ever crafted.</p>
+      <p>The calves of Beth El and Dan are dust. Samaria is ruins. But the Shema is still proclaimed evening and morning by the people of the covenant, in the language of the covenant, to the G‑d of the covenant.</p>
+    </div>
+  </section>
+
+  <div class="pull">
+    <div class="pull-inner">
+      <p>Come home. Take with you words. He is already in the wilderness, waiting, ready to speak to your heart.</p>
+    </div>
+  </div>
+
+  <!-- י — DRAMATIC: Yom Kippur is the climax -->
+  <section aria-labelledby="sec-yod" id="yod">
+    <div class="sec">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">י</span>
+        <h2 class="sec-title" id="sec-yod">Yod: Yom Kippur — The Day Para Was Answered</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>Everything in this teaching converges on a single day in the Hebrew calendar. A day HaShem built into every year as a standing testimony that para is never the final word.</p>
+      <p>To understand it, we have to follow Moses up the mountain. Not once. Three times.</p>
+
+      <h3 class="subhead">The Three Ascents</h3>
+      <div class="ascents">
+        <div class="ascent">
+          <span class="ascent-n">First Ascent</span>
+          <p>Exodus 24. Moses goes up alone for forty days and forty nights. HaShem gives the Torah and writes the covenant on two tablets with His own hand. The covering is complete. When Moses comes down in Exodus 32, he finds the people para, uncovered in their sin. The tablets shatter at the foot of the mountain, and the covenant covering is broken before their eyes.</p>
+        </div>
+        <div class="ascent">
+          <span class="ascent-n">Second Ascent</span>
+          <p>Exodus 32:30. Moses returns to the mountain for a people who have made themselves para before their enemies. And there, as leader of the covenant people, he does teshuvah before HaShem on their behalf. "If You will not forgive them, blot me out of Your book." Deuteronomy 9 tells us this was no momentary plea. For forty days and forty nights Moses lay prostrate, fasting before HaShem, standing in judgment with the people. Down below the people removed their ornaments and mourned. This is righteous leadership. Moses does not defend the sin. He leads the teshuvah until mercy comes.</p>
+        </div>
+        <div class="ascent">
+          <span class="ascent-n">Third Ascent</span>
+          <p>The first of Elul. HaShem says to Moses, "Carve for yourself two tablets of stone like the first, and come up." Again Moses ascends for forty days and forty nights. But now he carries in his hands blank tablets he himself has carved from the stone. The second tablets are not like the first. They're a joint effort. They come after rupture, after intercession, after teshuvah. Moses prepares the tablets, and HaShem writes again. The covenant is not abandoned. The covering is restored.</p>
+        </div>
+      </div>
+
+      <h3 class="subhead">The 10th of Tishrei</h3>
+      <p>Count it out. Forty days after the 1st of Elul is the 10th of Tishrei. Moses comes down the mountain carrying the second tablets. The Torah written again, the covenant restored, the covering returned to a people who deserved to be destroyed.</p>
+      <p>That day is Yom Kippur, every year.</p>
+      <p>It is the anniversary of the specific day HaShem forgave the golden calf. The holiest day in the Hebrew calendar is permanently anchored to the worst moment in Israel's history — and to what HaShem chose to do instead of destroying them.</p>
+
+      <h3 class="subhead">Kippur — The Covering Restored</h3>
+      <div class="hw" role="definition">
+        <span class="hw-heb" lang="he" aria-label="Hebrew: Kippur">כִּפּוּר</span>
+        <span class="hw-trans">Kippur</span>
+        <span class="hw-def">From the root kafar — to cover, to atone, to place a covering over.</span>
+      </div>
+      <p>The Kaporet, the lid of the Ark of the Covenant, shares this root. On Yom Kippur the High Priest entered the Holy of Holies and sprinkled blood on the Kaporet. This ritual reminded Israel that HaShem had forgiven them and restored His covering over them. One goat carried their sins far away. The other goat symbolized that HaShem's mercy — already extended at Sinai — was renewed over His people for another year.</p>
+      <p>Para and Kippur are theological opposites. Two words describing the same reality from opposite sides:</p>
+      <div class="pk">
+        <div class="pk-cell"><h4>Para</h4><p>The covenant covering removed. The people exposed.</p></div>
+        <div class="pk-cell"><h4>Kippur</h4><p>The covenant covering restored. The people covered again.</p></div>
+      </div>
+      <p>Yom Kippur is the day of re-covering, built into every year because HaShem continues to answer para with mercy.</p>
+
+      <h3 class="subhead">The Thirteen Attributes</h3>
+      <p>When Moses went up for the third time, HaShem passed before him on the mountain and proclaimed His own name. Not in peacetime. In the aftermath of the worst rupture Israel had ever caused:</p>
+      <blockquote>
+        <p>"HaShem, HaShem, G‑d. Compassionate and gracious, slow to anger, abundant in lovingkindness and truth, keeping lovingkindness for thousands, forgiving iniquity and transgression and sin, and Who cleanses..."</p>
+        <cite>Exodus 34:6–7</cite>
+      </blockquote>
+      <p>The Thirteen Attributes of Mercy. They never returned empty when sincerely prayed. Think about when they were first proclaimed. Not at the first tablets, which were given to an unfallen people.</p>
+      <p>It was the second set of tablets — after para, after teshuvah, after HaShem looked at a people who danced before a calf and chose to cover them anyway. These attributes are forged in the fire of the greatest failure and the deepest forgiveness in Israel's history.</p>
+      <p>This is why modern Yom Kippur liturgy returns to the Thirteen Attributes again and again. The congregation is not abstractly reciting divine qualities. Even without the physical Temple or the Yom Kippur ritual, they're invoking that specific moment on the mountain. Moses prostrate on the ground. The second tablets being written.</p>
+      <p>On the 10th of Tishrei they are saying: You did this then. Do it again. We are para again. Cover us again. And He covers His people for another year, because HaShem's mercy is sufficient.</p>
+
+      <h3 class="subhead">The Second Tablets</h3>
+      <p>The first tablets were written by HaShem's hand alone (Exodus 31:18). Given to an unfallen people. The covenant in its original innocence.</p>
+      <p>The second tablets — HaShem tells Moses to carve the stone himself, and I will write the words (Exodus 34:1). Moses's hands shape the vessel. HaShem fills it. The second tablets are a collaboration — human teshuvah meeting divine forgiveness. They carry something the first tablets could not contain: the knowledge of what HaShem is willing to do to keep the covenant alive with a people who failed Him completely.</p>
+      <p>A love that survives betrayal is deeper than a love that has never been tested. The second tablets are the proof that HaShem's love for Israel is the deeper kind.</p>
+    </div>
+  </section>
+
+  <!-- יא — soft -->
+  <section aria-labelledby="sec-yod-aleph" id="yod-aleph">
+    <div class="sec soft">
+      <div class="sec-inner">
+        <span class="sec-letter" aria-hidden="true" lang="he">יא</span>
+        <h2 class="sec-title" id="sec-yod-aleph">Yod-Aleph: What This Looks Like</h2>
+      </div>
+    </div>
+    <div class="body-inner">
+      <p>The wilderness HaShem promises in Hosea 2:14 is not a place you reach once and stay. It becomes a rhythm: daily returning, weekly stopping, a calendar of appointed meetings. Hosea's promise is not just that HaShem will speak to Israel's heart. It is that He will give back the vineyards. Practical, fruitful, rooted life in covenant relationship.</p>
+      <p>You do not need to master everything at once. The Northern Kingdom did not collapse in a day and it does not rebuild in a day. What follows are not requirements. They are doors. Each one, if you walk through it, begins to restore the covering that the calf system stripped away.</p>
+
+      <div class="door">
+        <h3>Evening and Morning: The Shema</h3>
+        <p>Today, before anything else changes, orient your day toward HaShem. Evening before bed and in the morning when you wake up. Deuteronomy 6:4–9 commands Israel to speak the Shema when you lie down and when you rise up. This is not a technique. It is a covenantal act. A twice-daily declaration of who you belong to.</p>
+        <p>For someone coming out of a calf system, the morning has been oriented toward something else your whole life. The day began under a different name. The Shema re-orients. No Hebrew fluency, no siddur, no completed study required. Just stop and say it:</p>
+        <div class="shema-box" lang="he" aria-label="Shema Yisrael — Adonai Eloheinu — Adonai Echad: Hear O Israel, HaShem is our G‑d, HaShem is One">
+          Shema Yisrael — Adonai Eloheinu — Adonai Echad<br>
+          <em style="font-family:var(--sans);font-size:.7em;color:var(--stone);letter-spacing:.04em">Hear O Israel — HaShem is our G‑d — HaShem is One</em>
+        </div>
+        <p>This is the re-betrothal of Hosea 2:19 lived out daily. You are not performing a ritual. You are telling HaShem that you are His. HaShem is One. Not divided, not shared with a substitute. One.</p>
+        <p>Say it tonight. Everything else in this builds from there.</p>
+      </div>
+
+      <div class="door">
+        <h3>Shabbat: The Weekly Wilderness</h3>
+        <p>The wilderness that Hosea promises — where HaShem brings Israel to speak to her heart — HaShem built a weekly version of it into the calendar. It is Shabbat.</p>
+        <p>The seventh day. Sundown Friday to three stars Saturday night. HaShem rested on it at creation. He commanded Israel to rest on it at Sinai. In Exodus 31:13 He calls the Shabbat a sign between Himself and Israel. A covenant marker. An identifying seal.</p>
+        <p>Often Sabbath is one of the first changes people make when leaving the calf system. Which is good. It's recognizing Jeroboam's move. The calendar shifted. The covenant sign relocated. Coming back to Shabbat is one of the most concrete things you can do to say: I am returning to HaShem's calendar. Not the calf's.</p>
+        <p>What does it actually look like? Before sundown Friday, create a separation between the weekdays and the Sabbath. Light candles. Bless HaShem for the day. Stop working, stop creating, producing, transacting. Eat well. Rest. Spend time in Torah. Spend time with HaShem.</p>
+        <p>When three stars appear Saturday night, the week begins again.</p>
+      </div>
+
+      <div class="door">
+        <h3>The Festivals: Showing Up at HaShem's Calendar</h3>
+        <p>HaShem gave Israel a calendar of appointed meetings. The Festivals of Leviticus 23. He calls them Moedai — "My appointed times." Not Moses' appointed times. Not Israel's appointed times. Mine. These are the times He has set aside to meet with His people.</p>
+        <p>Jeroboam moved the calendar deliberately to sever the Northern Kingdom from these appointments. Two hundred years without Yom Kippur. Two hundred years para — uncovered — because the annual mechanism of re-covering was no longer accessible.</p>
+        <p>The return to HaShem is inseparable from the return to HaShem's appointed times. Find the next Feast on the calendar. Learn what covenant moment it re-enters.</p>
+        <p><strong>Show up.</strong></p>
+        <div class="feast-row"><span class="feast-n">Pesach</span><span class="feast-d">14th of Nisan. The anniversary of the Exodus. The night HaShem redeemed Israel. The covenant meal.</span></div>
+        <div class="feast-row"><span class="feast-n">Shavuot</span><span class="feast-d">6th of Sivan, 50 days after Pesach. The anniversary of the giving of Torah at Sinai. The covenant received.</span></div>
+        <div class="feast-row"><span class="feast-n">Rosh Hashanah</span><span class="feast-d">1st of Tishrei. The King, HaShem is seated on His throne. The shofar wakes Israel up. Israel reaffirms His kingship upon themselves.</span></div>
+        <div class="feast-row"><span class="feast-n">Yom Kippur</span><span class="feast-d">10th of Tishrei. The day Moses came down with the second tablets. The annual re-covering.</span></div>
+        <div class="feast-row"><span class="feast-n">Sukkot</span><span class="feast-d">15th–21st of Tishrei. Dwelling in temporary booths. The wilderness re-entered. HaShem's covering over Israel re-lived.</span></div>
+        <p style="margin-top:.9rem">Every Feast you keep is an appointed time that the Northern Kingdom missed, now being recovered. Every Yom Kippur you stand before HaShem is a re-covering the Northern Kingdom missed, now being restored. The calendar is not a burden. It is the schedule of a covenant marriage. These are the times HaShem has set aside for you.</p>
+      </div>
+
+      <div class="door">
+        <h3>Find Judah: You Were Not Designed to Return Alone</h3>
+        <p>You're not alone and you're not expected to figure it out all by yourself. HaShem has a plan.</p>
+        <blockquote style="margin:.4rem 0 1rem">
+          <p>"Thus says HaShem of Hosts: In those days ten men from the nations of every tongue shall take hold of the robe of a Jew, saying, 'Let us go with you, for we have heard that G‑d is with you.'"</p>
+          <cite>Zechariah 8:23</cite>
+        </blockquote>
+        <p>Ten men. Every tongue. They grab the tzitzit of a Jew. Not the other way around. The Northern Kingdom does not lead Judah somewhere new. Those returning find Judah and say: Take me with you. I have heard that G‑d is with you. Walk with me to where you are going.</p>
+        <p>For thousands of years — through exile, through persecution, through every force in history that tried to destroy them — the house of Judah held the Torah, the calendar, the covenant memory, the appointed times, the language. They kept Shabbat when it cost them their lives. They said the Shema in the camps. They are still here.</p>
+        <p>You cannot fully return to the covenant alone. You need someone who has been keeping it. It doesn't mean you have to become Jewish. Zechariah doesn't say the ten men convert. He says they walk together. But you need the living tradition. You need someone who can show you what the practice looks like, answer your questions when you get it wrong, walk alongside you as you recover what over twenty-nine hundred years of false worship and exile caused the Northern Kingdom to forget.</p>
+        <p>Find someone from the house of Judah who is walking in Torah. Ask them to walk with you. Approach them the way Zechariah describes — not as a critic of what they got wrong, not with a list of things you think they need to learn from you. Take hold of the tzitzit. Say it. "I have heard that G‑d is with you. Teach me."</p>
+      </div>
+
+      <div class="divider" aria-hidden="true"><span>&#x2736;</span></div>
+
+      <p>HaShem said "You are My People" while Israel was still in exile. Still scattered. Still carrying Lo Ammi like a name tag. He said it first. Before performance. Before perfect observance. Before anything.</p>
+      <p>He is waiting for you to say back to Him: You are my G‑d.</p>
+      <p>That exchange is the entire return. Everything else is living it out.</p>
+    </div>
+  </section>
+
+</article>
+</main>
+
+<section class="closing" aria-label="Closing">
+  <div class="closing-inner">
+    <div class="shema-display" role="text" aria-label="Shema Yisrael, Adonai Eloheinu, Adonai Echad. Hear O Israel, HaShem is our G‑d, HaShem is One.">
+      <strong>Shema Yisrael</strong>
+      <em>Hear O Israel</em>
+      <strong>Adonai Eloheinu</strong>
+      <em>HaShem is our G‑d</em>
+      <strong>Adonai Echad</strong>
+      <em>HaShem is One</em>
+    </div>
+    <p class="closing-words">
+      This was always true. It is still true. It will always be true.<br>
+      Nothing changed it. No calf replaced it. No substitute outlasted it.<br><br>
+      Come home to HaShem.
+    </p>
+    <p class="kol">Kol Tuv.</p>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="ft-W">
+    <div class="ft-grid">
+      <div>
+        <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo" id="footer-logo">
+        <p class="ft-tagline">"Into One Stick — Ezekiel 37:19"<br>A ministry of reunification.</p>
+        <p class="ft-url">letsechad.com</p>
+      </div>
+      <div class="ft-col">
+        <h4>Ministry</h4>
+        <a href="about.html">About L'ets Echad</a>
+        <a href="about.html#mission">Our Mission</a>
+        <a href="about.html#matti">About Matti</a>
+        <a href="index.html#connect">Contact</a>
+      </div>
+      <div class="ft-col">
+        <h4>Content</h4>
+        <a href="teachings.html">All Teachings</a>
+        <a href="index.html#start">Start Here</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <a href="support.html">Give to L'ets Echad</a>
+        <a href="https://support.fidf.org" target="_blank" rel="noopener noreferrer">FIDF</a>
+        <a href="https://secure.afmda.org" target="_blank" rel="noopener noreferrer">Magen David Adom</a>
+        <a href="https://give.zakaworld.org" target="_blank" rel="noopener noreferrer">ZAKA</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">&copy; 2025 L'ets Echad &middot; <a href="mailto:contact@letsechad.com" style="color:inherit">contact@letsechad.com</a> &middot; <a href="privacy.html" style="color:inherit">Privacy</a></p>
+      <p class="ft-verse">"They shall become one in My hand." — Ezekiel 37:19</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('on', window.scrollY > 40), { passive: true });
+
+const burger = document.getElementById('burger');
+const mobMenu = document.getElementById('mob-menu');
+let menuOpen = false;
+
+function setMenu(open) {
+  menuOpen = open;
+  burger.classList.toggle('x', open);
+  burger.setAttribute('aria-expanded', String(open));
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  mobMenu.setAttribute('aria-hidden', String(!open));
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+
+burger.addEventListener('click', () => setMenu(!menuOpen));
+document.addEventListener('click', e => { if (menuOpen && !nav.contains(e.target) && !mobMenu.contains(e.target)) setMenu(false); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) setMenu(false); });
+mobMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+if (window.LOGO) {
+  ['site-logo', 'footer-logo'].forEach(id => { const el = document.getElementById(id); if (el) el.src = window.LOGO; });
+}
+</script>
+<script src="logo.js" onerror="/* logo.js not found */"></script>
+</body>
+</html>
