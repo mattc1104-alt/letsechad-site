@@ -86,6 +86,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .res-nav-a{font-size:.67rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:.9rem 1.1rem;border-bottom:2px solid transparent;transition:color var(--t),border-color var(--t);white-space:nowrap}
 .res-nav-a:hover{color:rgba(255,255,255,.75)}
 .res-nav-a.on{color:var(--gold2);border-bottom-color:var(--gold2)}
+
 /* GLOSSARY */
 .gloss-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr)}
 .gloss-c{background:var(--white);padding:1.5rem 1.75rem}
@@ -133,6 +134,60 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .guide-t{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--ink);margin-bottom:.4rem;line-height:1.3}
 .guide-d{font-size:.77rem;color:var(--stone);line-height:1.7;margin-bottom:1rem}
 .guide-soon{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sand)}
+
+/* CATEGORY CARDS */
+.cat-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:.75rem;
+}
+
+.cat-card{
+  background:var(--white);
+  border:1px solid var(--bdr);
+  border-radius:2px;
+  padding:.9rem 1rem;
+  text-align:center;
+  transition:border-color var(--t),background var(--t),transform var(--t);
+  cursor:pointer;
+}
+
+.cat-card:hover{
+  border-color:var(--bdr2);
+  background:var(--parch);
+  transform:translateY(-1px);
+}
+
+.cat-card-n{
+  font-size:.6rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:block;
+  margin-bottom:.3rem;
+}
+
+.cat-card-t{
+  font-family:var(--serif);
+  font-size:.9rem;
+  color:var(--ink);
+  line-height:1.25;
+  display:block;
+}
+
+@media(max-width:1020px){
+  .cat-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+@media(max-width:860px){
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(max-width:600px){
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+}  
+  
 /* RESPONSIVE */
 @media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.ext-g{grid-template-columns:1fr 1fr}.gloss-g{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.burger{display:flex}.read-g{grid-template-columns:1fr}.guide-g{grid-template-columns:1fr 1fr}.gloss-g{grid-template-columns:repeat(2,1fr)}}
@@ -194,75 +249,73 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 <!-- GLOSSARY -->
 <section class="pad" id="glossary" style="background:var(--cream)">
   <div class="W">
-    <div style="margin-bottom:2.5rem" class="fu">
+    <div style="text-align:center;margin-bottom:2rem" class="fu">
       <p class="eyebrow" style="margin-bottom:.85rem">Key Terms</p>
       <h2 class="sh sh-md" style="color:var(--ink);margin-bottom:.5rem">Glossary</h2>
-      <p class="body-md" style="max-width:560px">Words that appear throughout the teachings. Understanding these terms unlocks the text.</p>
+      <p class="body-md" style="max-width:620px;margin:0 auto">
+        Browse key terms used across L'ets Echad teachings, organized by category. Each card opens the full glossary in the section you choose.
+      </p>
     </div>
-    <div class="gloss-g">
-      <div class="gloss-c fu">
-        <span class="gloss-heb">אֶפְרַיִם</span>
-        <span class="gloss-eng">Ephraim</span>
-        <p class="gloss-t">The Northern Kingdom — and all scattered from it</p>
-        <p class="gloss-d">Son of Joseph, leader of the northern ten tribes. After the split in 1 Kings 12, Ephraim became the prophetic name for the entire Northern Kingdom. In the prophets, it refers to all Israel scattered in exile — and those now being called back.</p>
-        <span class="gloss-ref">1 Kings 12 · Hosea 5:3 · Ezekiel 37:16</span>
-      </div>
-      <div class="gloss-c fu d1">
-        <span class="gloss-heb">תְּשׁוּבָה</span>
-        <span class="gloss-eng">Teshuvah</span>
-        <p class="gloss-t">Return — not just remorse</p>
-        <p class="gloss-d">From the root שׁוּב (shuv) — to turn, to return. Teshuvah is active and forward-facing. It is the deliberate journey back toward HaShem, Torah, and covenant. Not just sorrow for sin but the actual act of turning around and walking home.</p>
-        <span class="gloss-ref">Deuteronomy 30:2 · Hosea 2:9 · Jeremiah 31:18</span>
-      </div>
-      <div class="gloss-c fu d2">
-        <span class="gloss-heb">תּוֹלְדוֹת</span>
-        <span class="gloss-eng">Toldot</span>
-        <p class="gloss-t">Generations — legacy, not just lineage</p>
-        <p class="gloss-d">Usually translated "generations" but carries the weight of legacy — the deeds and actions that shape descendants. The actions of the patriarchs are prophetic signs for their children. Understanding toldot is the key to understanding what HaShem is doing now.</p>
-        <span class="gloss-ref">Genesis 2:4 · Genesis 37:2</span>
-      </div>
-      <div class="gloss-c fu d3">
-        <span class="gloss-heb">שֵׁם</span>
-        <span class="gloss-eng">Shem</span>
-        <p class="gloss-t">Name — identity, essence, legacy</p>
-        <p class="gloss-d">Not just a label. Shem carries appearance, distinction, inner essence, and the legacy a person leaves behind. In Torah, knowing your shem — your identity before HaShem — is the foundation of everything. You cannot walk in your calling until you know who you are.</p>
-        <span class="gloss-ref">Exodus 3:15 · Proverbs 22:1</span>
-      </div>
-      <div class="gloss-c fu d4">
-        <span class="gloss-heb">אֶחָד</span>
-        <span class="gloss-eng">Echad</span>
-        <p class="gloss-t">One — unified, not merely singular</p>
-        <p class="gloss-d">The Hebrew word for one that appears in the Shema and in Ezekiel 37:19. Echad implies unity from diversity — not sameness but oneness. Two sticks becoming one in His hand. This is the destination of everything L'ets Echad teaches toward.</p>
-        <span class="gloss-ref">Deuteronomy 6:4 · Ezekiel 37:17–19</span>
-      </div>
-      <div class="gloss-c fu d5">
-        <span class="gloss-heb">גָּלוּת</span>
-        <span class="gloss-eng">Galut</span>
-        <p class="gloss-t">Exile — the condition of the scattered</p>
-        <p class="gloss-d">The state of being scattered from the land and from covenant. The Northern Kingdom entered galut in 722 BCE under Assyria. The prophets consistently treat galut not as permanent but as a condition with a known exit: teshuvah and return. Galut is not the end of the story.</p>
-        <span class="gloss-ref">2 Kings 17:6 · Amos 9:9 · Deuteronomy 28:64</span>
-      </div>
-      <div class="gloss-c fu">
-        <span class="gloss-heb">יְהוּדָה</span>
-        <span class="gloss-eng">Yehudah / Judah</span>
-        <p class="gloss-t">The Southern Kingdom — the Jewish people</p>
-        <p class="gloss-d">The tribe of Judah, from which the Southern Kingdom took its name. The Jewish people today are primarily from the Southern Kingdom (Judah, Benjamin, and Levi). Judah preserved Torah through exile. In Ezekiel 37, the stick of Judah and the stick of Ephraim become one.</p>
-        <span class="gloss-ref">Genesis 49:8 · Zechariah 8:23 · Ezekiel 37:16</span>
-      </div>
-      <div class="gloss-c fu d1">
-        <span class="gloss-heb">נָבִיא</span>
-        <span class="gloss-eng">Navi</span>
-        <p class="gloss-t">Prophet — one who speaks what HaShem reveals</p>
-        <p class="gloss-d">A navi does not merely predict the future. A navi speaks HaShem's word into a specific situation — covenant warnings, calls to return, promises of restoration. Hosea, Jeremiah, Isaiah, and Ezekiel are the primary nevi'im for the two-house story.</p>
-        <span class="gloss-ref">Deuteronomy 18:18 · Amos 3:7</span>
-      </div>
-      <div class="gloss-c fu d2">
-        <span class="gloss-heb">בְּרִית</span>
-        <span class="gloss-eng">Brit</span>
-        <p class="gloss-t">Covenant — binding relationship with obligation</p>
-        <p class="gloss-d">Not a contract. A brit is a binding relationship between parties, sealed by oath. HaShem's brit with Abraham, with Israel at Sinai, and the brit chadashah promised in Jeremiah 31 are all expressions of the same covenantal faithfulness. Ephraim was not released from it — only exiled.</p>
-        <span class="gloss-ref">Genesis 17:7 · Jeremiah 31:31–33 · Deuteronomy 29:13</span>
-      </div>
+
+    <div class="cat-grid fu">
+      <a href="glossary.html#panel-core" class="cat-card">
+        <span class="cat-card-n">01</span>
+        <span class="cat-card-t">L'ets Echad Core</span>
+      </a>
+
+      <a href="glossary.html#panel-tanakh" class="cat-card">
+        <span class="cat-card-n">02</span>
+        <span class="cat-card-t">Torah &amp; Tanakh</span>
+      </a>
+
+      <a href="glossary.html#panel-return" class="cat-card">
+        <span class="cat-card-n">03</span>
+        <span class="cat-card-t">Return &amp; Exile</span>
+      </a>
+
+      <a href="glossary.html#panel-identity" class="cat-card">
+        <span class="cat-card-n">04</span>
+        <span class="cat-card-t">Identity</span>
+      </a>
+
+      <a href="glossary.html#panel-careful" class="cat-card">
+        <span class="cat-card-n">05</span>
+        <span class="cat-card-t">Terms with Baggage</span>
+      </a>
+
+      <a href="glossary.html#panel-worship" class="cat-card">
+        <span class="cat-card-n">06</span>
+        <span class="cat-card-t">Worship &amp; Service</span>
+      </a>
+
+      <a href="glossary.html#panel-time" class="cat-card">
+        <span class="cat-card-n">07</span>
+        <span class="cat-card-t">Time &amp; Practice</span>
+      </a>
+
+      <a href="glossary.html#panel-people" class="cat-card">
+        <span class="cat-card-n">08</span>
+        <span class="cat-card-t">People &amp; Places</span>
+      </a>
+
+      <a href="glossary.html#panel-study" class="cat-card">
+        <span class="cat-card-n">09</span>
+        <span class="cat-card-t">Study &amp; Discernment</span>
+      </a>
+
+      <a href="glossary.html#panel-christian" class="cat-card">
+        <span class="cat-card-n">10</span>
+        <span class="cat-card-t">Christian Background</span>
+      </a>
+
+      <a href="glossary.html#panel-errors" class="cat-card">
+        <span class="cat-card-n">11</span>
+        <span class="cat-card-t">Errors &amp; Dangers</span>
+      </a>
+    </div>
+
+    <div style="text-align:center;margin-top:2rem" class="fu">
+      <a href="glossary.html" class="btn btn-dark btn-md">Open Full Glossary →</a>
     </div>
   </div>
 </section>
