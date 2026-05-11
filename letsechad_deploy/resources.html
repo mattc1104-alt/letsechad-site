@@ -162,6 +162,16 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .ext-use{font-size:.65rem;color:var(--sand);line-height:1.6;font-style:italic;margin-bottom:.85rem}
 .ext-lnk{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.3rem;transition:gap var(--t);margin-top:auto}
 .ext-c:hover .ext-lnk{gap:.5rem}
+
+  .ext-c{
+  color:inherit;
+  text-decoration:none;
+}
+
+.ext-c:visited{
+  color:inherit;
+}
+  
 /* GUIDES */
 .guide-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .guide-c{background:var(--white);border:1px solid var(--bdr);border-radius:2px;padding:1.6rem;transition:border-color var(--t)}
@@ -469,126 +479,155 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
       <p class="body-md" style="max-width:600px">We link what we've actually used and would hand to someone. Every resource here has been vetted. We don't endorse every theological position on every site — we're pointing you to what's useful.</p>
     </div>
 
-    <div class="ext-cat fu">
-      <div class="ext-cat-hd"><h3>Core Text Libraries</h3><span class="ext-cat-tag">Start Here</span></div>
-      <div class="ext-g">
-        <div class="ext-c">
-          <p class="ext-name">Sefaria</p>
-          <p class="ext-d">Free access to 3,000 years of Jewish texts — Tanakh, Talmud, Midrash, commentaries, liturgy, and more. Hebrew and English side by side. Every text reference in our teachings links here.</p>
-          <p class="ext-use">Use for: any text reference, source sheets, classical commentators</p>
-          <a href="https://www.sefaria.org" target="_blank" rel="noopener" class="ext-lnk">Visit sefaria.org →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">AlHaTorah</p>
-          <p class="ext-d">Deep Tanakh study with Mikraot Gedolot, classical commentators, concordance tools, and 2,500 years of biblical interpretation. Better than Sefaria for serious Tanakh research.</p>
-          <p class="ext-use">Use for: Rashi, Ramban, Ibn Ezra, Tanakh topics, concordance work</p>
-          <a href="https://www.alhatorah.org" target="_blank" rel="noopener" class="ext-lnk">Visit alhatorah.org →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">Mechon Mamre</p>
-          <p class="ext-d">Clean, fast Hebrew-English Tanakh — the full Hebrew Bible parallel to the 1917 JPS English translation. Also offers MP3 recordings and downloadable text. No distractions.</p>
-          <p class="ext-use">Use for: fast Tanakh reading, Hebrew-English comparison, audio</p>
-          <a href="https://www.mechon-mamre.org" target="_blank" rel="noopener" class="ext-lnk">Visit mechon-mamre.org →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ext-cat fu">
-      <div class="ext-cat-hd"><h3>Hebrew Language Tools</h3><span class="ext-cat-tag">Language</span></div>
-      <div class="ext-g">
-        <div class="ext-c">
-          <p class="ext-name">Pealim</p>
-          <p class="ext-d">Conjugation and meaning for more than 9,000 Hebrew words. The most practical tool for understanding how Hebrew roots work in context — essential for Torah study.</p>
-          <p class="ext-use">Use for: Hebrew verbs, roots, binyanim, conjugation, pronunciation</p>
-          <a href="https://www.pealim.com" target="_blank" rel="noopener" class="ext-lnk">Visit pealim.com →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">Morfix</p>
-          <p class="ext-d">Free Hebrew-English and English-Hebrew dictionary with audio pronunciation, inflections, synonyms, and translation. Solid for quick word lookups while reading.</p>
-          <p class="ext-use">Use for: vocabulary, pronunciation, quick definitions</p>
-          <a href="https://www.morfix.co.il" target="_blank" rel="noopener" class="ext-lnk">Visit morfix.co.il →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">Hebcal</p>
-          <p class="ext-d">Jewish holiday calendars, Hebrew date conversion, candle-lighting and Havdalah times, Torah readings, daily learning schedules, and embeddable calendar feeds. Bookmark it.</p>
-          <p class="ext-use">Use for: Hebrew dates, holidays, parashah, Omer, candle lighting</p>
-          <a href="https://www.hebcal.com" target="_blank" rel="noopener" class="ext-lnk">Visit hebcal.com →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ext-cat fu">
-      <div class="ext-cat-hd"><h3>Learning Communities</h3><span class="ext-cat-tag">Community</span></div>
-      <div class="ext-g">
-        <div class="ext-c">
-          <p class="ext-name">7613: The Chosen Path</p>
-          <p class="ext-d">A guided community for people leaving Christianity, exploring Torah as Noahides, or deepening Jewish learning. Members ask rabbis questions directly, study Tanakh from a Jewish perspective, and attend weekly Torah study.</p>
-          <p class="ext-use">Use for: community, direct rabbi Q&amp;A, Noahide and Torah learning</p>
-          <a href="https://community.7613thechosenpath.com/share/8qvkIQSVIf0CcolS" target="_blank" rel="noopener" class="ext-lnk">Visit 7613 →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">Yeshivat Tikkunei Ava</p>
-          <p class="ext-d">Grade-level Torah study, family Pirkei Avot, Tanakh curriculum, and Hebrew reading for children and adults. Especially useful for families beginning the journey and wanting structured learning for their kids.</p>
-          <p class="ext-use">Use for: children's Torah education, family study, Hebrew reading</p>
-          <a href="https://www.ytava.org" target="_blank" rel="noopener" class="ext-lnk">Visit ytava.org →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">Chabad.org</p>
-          <p class="ext-d">Deep library of Jewish texts, weekly parashah with Rashi in English, holiday guides, and halachic resources. We don't endorse every theological position but the textual library is excellent.</p>
-          <p class="ext-use">Use for: Rashi, weekly parashah, Jewish calendar, basic commentary</p>
-          <a href="https://www.chabad.org" target="_blank" rel="noopener" class="ext-lnk">Visit chabad.org →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ext-cat fu">
-      <div class="ext-cat-hd"><h3>Advanced Study Tools</h3><span class="ext-cat-tag">For the Deeper Dive</span></div>
-      <div class="ext-g">
-        <div class="ext-c">
-          <p class="ext-name">TorahCalc</p>
-          <p class="ext-d">Tools for Torah study including unit conversions, gematria, calendar conversions, molad calculations, and more. Nerdy but genuinely useful for anyone going deep into the text and its numeric patterns.</p>
-          <p class="ext-use">Use for: gematria, halachic units, Hebrew calendar, molad, conversions</p>
-          <a href="https://www.torahcalc.com" target="_blank" rel="noopener" class="ext-lnk">Visit torahcalc.com →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">My Jewish Learning</p>
-          <p class="ext-d">Accessible introductions to Jewish concepts, holidays, history, and practice. Good entry point before going deeper with Sefaria or AlHaTorah.</p>
-          <p class="ext-use">Use for: introductory Jewish concepts, holidays, history, practice</p>
-          <a href="https://www.myjewishlearning.com" target="_blank" rel="noopener" class="ext-lnk">Visit myjewishlearning.com →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">Academy of the Hebrew Language</p>
-          <p class="ext-d">The official authority on modern Hebrew grammar, spelling, transliteration, and terminology. More reference than daily use, but authoritative when questions about Hebrew standards come up.</p>
-          <p class="ext-use">Use for: Hebrew standards, spelling, transliteration questions</p>
-          <a href="https://hebrew-academy.org.il/en" target="_blank" rel="noopener" class="ext-lnk">Visit hebrew-academy.org.il →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ext-cat fu">
-      <div class="ext-cat-hd"><h3>Support Israel</h3><span class="ext-cat-tag">Action</span></div>
-      <div class="ext-g">
-        <div class="ext-c">
-          <p class="ext-name">FIDF — Friends of the IDF</p>
-          <p class="ext-d">Provides support, welfare, and educational programs for soldiers of the Israel Defense Forces and their families. Direct, vetted, effective.</p>
-          <p class="ext-use">Use for: supporting IDF soldiers and families</p>
-          <a href="https://support.fidf.org" target="_blank" rel="noopener" class="ext-lnk">Visit fidf.org →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">Magen David Adom</p>
-          <p class="ext-d">Israel's national emergency medical, disaster, and blood bank service. First responders on the ground. One of the most direct ways to support Israeli civilians.</p>
-          <p class="ext-use">Use for: emergency medical support in Israel</p>
-          <a href="https://secure.afmda.org" target="_blank" rel="noopener" class="ext-lnk">Visit afmda.org →</a>
-        </div>
-        <div class="ext-c">
-          <p class="ext-name">ZAKA</p>
-          <p class="ext-d">Volunteer organization providing emergency response, search and rescue, and dignified treatment of the deceased in Israel. Critical work. Deeply necessary.</p>
-          <p class="ext-use">Use for: search and rescue, emergency response support</p>
-          <a href="https://give.zakaworld.org" target="_blank" rel="noopener" class="ext-lnk">Visit zakaworld.org →</a>
-        </div>
-      </div>
-    </div>
+<div class="ext-cat fu">
+  <div class="ext-cat-hd">
+    <h3>Core Text Libraries</h3>
+    <span class="ext-cat-tag">Start Here</span>
   </div>
+
+  <div class="ext-g">
+    <a href="https://www.sefaria.org" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Sefaria</p>
+      <p class="ext-d">Free access to 3,000 years of Jewish texts — Tanakh, Talmud, Midrash, commentaries, liturgy, and more. Hebrew and English side by side. Every text reference in our teachings links here.</p>
+      <p class="ext-use">Use for: any text reference, source sheets, classical commentators</p>
+      <span class="ext-lnk">Visit sefaria.org →</span>
+    </a>
+
+    <a href="https://www.alhatorah.org" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">AlHaTorah</p>
+      <p class="ext-d">Deep Tanakh study with Mikraot Gedolot, classical commentators, concordance tools, and 2,500 years of biblical interpretation. Better than Sefaria for serious Tanakh research.</p>
+      <p class="ext-use">Use for: Rashi, Ramban, Ibn Ezra, Tanakh topics, concordance work</p>
+      <span class="ext-lnk">Visit alhatorah.org →</span>
+    </a>
+
+    <a href="https://www.mechon-mamre.org" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Mechon Mamre</p>
+      <p class="ext-d">Clean, fast Hebrew-English Tanakh — the full Hebrew Bible parallel to the 1917 JPS English translation. Also offers MP3 recordings and downloadable text. No distractions.</p>
+      <p class="ext-use">Use for: fast Tanakh reading, Hebrew-English comparison, audio</p>
+      <span class="ext-lnk">Visit mechon-mamre.org →</span>
+    </a>
+  </div>
+</div>
+
+<div class="ext-cat fu">
+  <div class="ext-cat-hd">
+    <h3>Hebrew Language Tools</h3>
+    <span class="ext-cat-tag">Language</span>
+  </div>
+
+  <div class="ext-g">
+    <a href="https://www.pealim.com" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Pealim</p>
+      <p class="ext-d">Conjugation and meaning for more than 9,000 Hebrew words. The most practical tool for understanding how Hebrew roots work in context — essential for Torah study.</p>
+      <p class="ext-use">Use for: Hebrew verbs, roots, binyanim, conjugation, pronunciation</p>
+      <span class="ext-lnk">Visit pealim.com →</span>
+    </a>
+
+    <a href="https://www.morfix.co.il" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Morfix</p>
+      <p class="ext-d">Free Hebrew-English and English-Hebrew dictionary with audio pronunciation, inflections, synonyms, and translation. Solid for quick word lookups while reading.</p>
+      <p class="ext-use">Use for: vocabulary, pronunciation, quick definitions</p>
+      <span class="ext-lnk">Visit morfix.co.il →</span>
+    </a>
+
+    <a href="https://www.hebcal.com" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Hebcal</p>
+      <p class="ext-d">Jewish holiday calendars, Hebrew date conversion, candle-lighting and Havdalah times, Torah readings, daily learning schedules, and embeddable calendar feeds. Bookmark it.</p>
+      <p class="ext-use">Use for: Hebrew dates, holidays, parashah, Omer, candle lighting</p>
+      <span class="ext-lnk">Visit hebcal.com →</span>
+    </a>
+  </div>
+</div>
+
+<div class="ext-cat fu">
+  <div class="ext-cat-hd">
+    <h3>Learning Communities</h3>
+    <span class="ext-cat-tag">Community</span>
+  </div>
+
+  <div class="ext-g">
+    <a href="https://community.7613thechosenpath.com/share/8qvkIQSVIf0CcolS" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">7613: The Chosen Path</p>
+      <p class="ext-d">A guided community for people leaving Christianity, exploring Torah as Noahides, or deepening Jewish learning. Members ask rabbis questions directly, study Tanakh from a Jewish perspective, and attend weekly Torah study.</p>
+      <p class="ext-use">Use for: community, direct rabbi Q&amp;A, Noahide and Torah learning</p>
+      <span class="ext-lnk">Visit 7613 →</span>
+    </a>
+
+    <a href="https://www.ytava.org" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Yeshivat Tikkunei Ava</p>
+      <p class="ext-d">Grade-level Torah study, family Pirkei Avot, Tanakh curriculum, and Hebrew reading for children and adults. Especially useful for families beginning the journey and wanting structured learning for their kids.</p>
+      <p class="ext-use">Use for: children's Torah education, family study, Hebrew reading</p>
+      <span class="ext-lnk">Visit ytava.org →</span>
+    </a>
+
+    <a href="https://www.chabad.org" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Chabad.org</p>
+      <p class="ext-d">Deep library of Jewish texts, weekly parashah with Rashi in English, holiday guides, and halachic resources. We don't endorse every theological position but the textual library is excellent.</p>
+      <p class="ext-use">Use for: Rashi, weekly parashah, Jewish calendar, basic commentary</p>
+      <span class="ext-lnk">Visit chabad.org →</span>
+    </a>
+  </div>
+</div>
+
+<div class="ext-cat fu">
+  <div class="ext-cat-hd">
+    <h3>Advanced Study Tools</h3>
+    <span class="ext-cat-tag">For the Deeper Dive</span>
+  </div>
+
+  <div class="ext-g">
+    <a href="https://www.torahcalc.com" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">TorahCalc</p>
+      <p class="ext-d">Tools for Torah study including unit conversions, gematria, calendar conversions, molad calculations, and more. Nerdy but genuinely useful for anyone going deep into the text and its numeric patterns.</p>
+      <p class="ext-use">Use for: gematria, halachic units, Hebrew calendar, molad, conversions</p>
+      <span class="ext-lnk">Visit torahcalc.com →</span>
+    </a>
+
+    <a href="https://www.myjewishlearning.com" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">My Jewish Learning</p>
+      <p class="ext-d">Accessible introductions to Jewish concepts, holidays, history, and practice. Good entry point before going deeper with Sefaria or AlHaTorah.</p>
+      <p class="ext-use">Use for: introductory Jewish concepts, holidays, history, practice</p>
+      <span class="ext-lnk">Visit myjewishlearning.com →</span>
+    </a>
+
+    <a href="https://hebrew-academy.org.il/en" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Academy of the Hebrew Language</p>
+      <p class="ext-d">The official authority on modern Hebrew grammar, spelling, transliteration, and terminology. More reference than daily use, but authoritative when questions about Hebrew standards come up.</p>
+      <p class="ext-use">Use for: Hebrew standards, spelling, transliteration questions</p>
+      <span class="ext-lnk">Visit hebrew-academy.org.il →</span>
+    </a>
+  </div>
+</div>
+
+<div class="ext-cat fu">
+  <div class="ext-cat-hd">
+    <h3>Support Israel</h3>
+    <span class="ext-cat-tag">Action</span>
+  </div>
+
+  <div class="ext-g">
+    <a href="https://support.fidf.org" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">FIDF — Friends of the IDF</p>
+      <p class="ext-d">Provides support, welfare, and educational programs for soldiers of the Israel Defense Forces and their families. Direct, vetted, effective.</p>
+      <p class="ext-use">Use for: supporting IDF soldiers and families</p>
+      <span class="ext-lnk">Visit fidf.org →</span>
+    </a>
+
+    <a href="https://secure.afmda.org" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">Magen David Adom</p>
+      <p class="ext-d">Israel's national emergency medical, disaster, and blood bank service. First responders on the ground. One of the most direct ways to support Israeli civilians.</p>
+      <p class="ext-use">Use for: emergency medical support in Israel</p>
+      <span class="ext-lnk">Visit afmda.org →</span>
+    </a>
+
+    <a href="https://give.zakaworld.org" target="_blank" rel="noopener" class="ext-c">
+      <p class="ext-name">ZAKA</p>
+      <p class="ext-d">Volunteer organization providing emergency response, search and rescue, and dignified treatment of the deceased in Israel. Critical work. Deeply necessary.</p>
+      <p class="ext-use">Use for: search and rescue, emergency response support</p>
+      <span class="ext-lnk">Visit zakaworld.org →</span>
+    </a>
+  </div>
+</div>
 </section>
 
 <!-- STUDY GUIDES -->
