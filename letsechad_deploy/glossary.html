@@ -82,14 +82,6 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .pg-hero h1{color:#fff;margin-bottom:1rem}
 .pg-hero p{font-family:var(--serif);font-style:italic;color:rgba(255,255,255,.45);font-size:1rem;max-width:560px;margin:0 auto}
 
-/* STICKY SEARCH */
-.gloss-search-wrap{background:var(--ink2);border-bottom:1px solid rgba(191,155,44,.1);position:sticky;top:78px;z-index:100;padding:.75rem 2rem}
-.gloss-search-inner{max-width:1100px;margin:0 auto;position:relative}
-.gloss-search{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(191,155,44,.2);border-radius:2px;padding:.65rem 1rem .65rem 2.5rem;font-size:.84rem;font-family:var(--sans);color:#fff;outline:none;transition:border-color var(--t)}
-.gloss-search::placeholder{color:rgba(255,255,255,.3)}
-.gloss-search:focus{border-color:var(--gold)}
-.gloss-search-icon{position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.3);font-size:.85rem;pointer-events:none}
-.gloss-search-count{position:absolute;right:.75rem;top:50%;transform:translateY(-50%);font-size:.65rem;color:rgba(255,255,255,.25);letter-spacing:.06em}
 
 /* CATEGORY CARDS */
 .cat-shelf{background:var(--cream);border-bottom:1px solid var(--bdr);padding:2rem 0}
@@ -122,13 +114,6 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .term-flag{display:inline-block;font-size:.55rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.18rem .5rem;border-radius:1px;margin-bottom:.4rem}
 .flag-caution{background:rgba(191,155,44,.12);color:var(--gold);border:1px solid var(--bdr)}
 .flag-christian{background:rgba(62,44,20,.08);color:var(--bark);border:1px solid rgba(62,44,20,.18)}
-
-/* SEARCH HIDING */
-.gloss-section.search-hide{display:none}
-
-/* NO RESULTS */
-.no-results{display:none;text-align:center;padding:4rem 2rem;color:var(--stone);font-family:var(--serif);font-size:1.1rem;font-style:italic}
-.no-results.show{display:block}
 
 /* BACK TO TOP */
 .back-top{display:inline-flex;align-items:center;gap:.4rem;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:1.5rem;opacity:.6;transition:opacity var(--t);cursor:pointer}
@@ -202,16 +187,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
       <span style="display:block;width:24px;height:1px;background:var(--gold);opacity:.5;margin-top:.55rem"></span>Key Terms<span style="display:block;width:24px;height:1px;background:var(--gold);opacity:.5;margin-top:.55rem"></span>
     </p>
     <h1 class="sh sh-lg" style="margin-bottom:.9rem">Glossary</h1>
-    <p>Key terms used across L'ets Echad teachings, defined and sourced in Torah and Tanakh. Search any term, jump to a category, or scroll the whole library.</p>
-  </div>
-</div>
-
-<!-- STICKY SEARCH -->
-<div class="gloss-search-wrap">
-  <div class="gloss-search-inner">
-    <span class="gloss-search-icon">⌕</span>
-    <input type="text" class="gloss-search" id="glossSearch" placeholder="Search any term…" autocomplete="off">
-    <span class="gloss-search-count" id="searchCount"></span>
+    <p>Key terms used across L'ets Echad teachings, defined and sourced in Torah and Tanakh. Browse by category or scroll the whole library.</p>
   </div>
 </div>
 
@@ -237,7 +213,6 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 <!-- GLOSSARY BODY -->
 <div class="gloss-body">
   <div class="Wsm">
-    <div class="no-results" id="noResults">No terms found for that search.</div>
 <section class="gloss-section" id="panel-core">
       <div class="gloss-section-hd">
         <p class="gloss-section-title">L'ets Echad Core Terms</p>
@@ -631,44 +606,6 @@ mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   document.body.style.overflow='';
 }));
 
-const searchInput=document.getElementById('glossSearch');
-const searchCount=document.getElementById('searchCount');
-const noResults=document.getElementById('noResults');
-
-searchInput.addEventListener('input',function(){
-  const q=this.value.trim().toLowerCase();
-  const sections=document.querySelectorAll('.gloss-section');
-  const allTerms=document.querySelectorAll('.term-c');
-
-  if(!q){
-    allTerms.forEach(c=>c.classList.remove('hidden'));
-    sections.forEach(s=>s.classList.remove('search-hide'));
-    searchCount.textContent='';
-    noResults.classList.remove('show');
-    return;
-  }
-
-  let total=0;
-
-  sections.forEach(s=>{
-    const terms=s.querySelectorAll('.term-c');
-    let hits=0;
-    terms.forEach(c=>{
-      const match=c.textContent.toLowerCase().includes(q);
-      c.classList.toggle('hidden',!match);
-      if(match){hits++;total++;}
-    });
-    s.classList.toggle('search-hide',hits===0);
-  });
-
-  if(total>0){
-    searchCount.textContent=total+' result'+(total===1?'':'s');
-    noResults.classList.remove('show');
-  } else {
-    searchCount.textContent='';
-    noResults.classList.add('show');
-  }
-});
 </script>
 <script src="logo.js"></script>
 <script>
