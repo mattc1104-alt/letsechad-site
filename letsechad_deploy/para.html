@@ -1092,5 +1092,13 @@ if (window.LOGO) {
 }
 </script>
 <script src="logo.js" onerror="/* logo.js not found */"></script>
+<script>
+if (window.LOGO) {
+  ['site-logo', 'footer-logo'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.src = window.LOGO;
+  });
+}
+</script>
 </body>
 </html>
