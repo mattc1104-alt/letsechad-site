@@ -195,11 +195,11 @@ a.tc:hover{border-color:var(--gold);box-shadow:0 4px 24px rgba(0,0,0,.07)}
     <div class="search-row">
       <label for="tsearch" class="sr">Search teachings</label>
       <input id="tsearch" class="search-in" type="search" placeholder="Search teachings…" autocomplete="off">
-      <span class="t-count" id="tcount">18 teachings</span>
+      <span class="t-count" id="tcount">20 teachings</span>
     </div>
     <div class="t-g-wrap" id="tgrid">
 
-      <a href="para.html" class="tc fu" data-book="foundational""bamidbar">
+      <a href="teachings/parshat-bamidbar.html" class="tc fu" data-book="foundational bamidbar">
         <span class="tc-tag">Bamidbar · Numbers · Foundational Teaching</span>
         <h2 class="tc-t">Who Is Ephraim?</h2>
         <p class="tc-d">Ephraim is a prophetic title — not just a tribe. It covers scattered descendants who lost their identity, and Gentiles grafted into covenant. It does not matter how many generations ago they were scattered or what path they took through the nations. The defining characteristic is return.</p>
@@ -449,7 +449,8 @@ let curF='all',curQ='';
 function render(){
   let n=0;
   cards.forEach(c=>{
-    const bookMatch=curF==='all'||c.dataset.book===curF;
+    const tags=(c.dataset.book || '').split(/\s+/);
+const bookMatch=curF==='all'||tags.includes(curF);
     const txt=(c.innerText||'').toLowerCase();
     const qMatch=!curQ||txt.includes(curQ.toLowerCase());
     const show=bookMatch&&qMatch;
