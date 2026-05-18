@@ -317,14 +317,23 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 @media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
 @media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.burger{display:flex}.pull-dark{margin:3rem -1.25rem}}
 .table-wrap{
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
   margin:1.8rem 0 1.2rem;
 }
 
-.er-table{
-  min-width:680px;
+.table-wrap .er-table{
+  width:100%;
   margin:0;
+}
+
+@media(max-width:700px){
+  .table-wrap{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .table-wrap .er-table{
+    min-width:680px;
+  }
 }
 
 @media(max-width:600px){
