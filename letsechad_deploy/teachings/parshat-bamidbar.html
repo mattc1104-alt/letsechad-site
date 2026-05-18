@@ -96,6 +96,53 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .pull-dark{margin:3rem -2rem;padding:2.5rem 2rem;background:var(--ink2);text-align:center}
 .pull-dark p{font-family:var(--serif);font-size:1.3rem;font-style:italic;color:rgba(255,255,255,.82);line-height:1.55;margin-bottom:0}
 .pull-dark .pull-attr{font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);display:block;margin-top:.8rem}
+
+/* Question callout */
+.question-callout{
+  position:relative;
+  margin:1.6rem 0 2.6rem;
+  padding:2rem 2.2rem;
+  border:1px solid var(--bdr2);
+  border-left:5px solid var(--gold);
+  background:
+    linear-gradient(90deg, rgba(191,155,44,.10) 0%, rgba(191,155,44,.025) 70%),
+    var(--parch);
+  box-shadow:0 14px 35px rgba(62,44,20,.06);
+}
+
+.question-callout::after{
+  content:'?';
+  position:absolute;
+  right:1.4rem;
+  top:.35rem;
+  font-family:var(--serif);
+  font-size:5rem;
+  line-height:1;
+  color:rgba(191,155,44,.13);
+  pointer-events:none;
+}
+
+.question-label{
+  font-family:var(--sans);
+  font-size:.6rem;
+  font-weight:700;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:block;
+  margin-bottom:.65rem;
+}
+
+.t-body-inner .question-callout p{
+  position:relative;
+  z-index:2;
+  font-family:var(--serif);
+  font-size:clamp(1.75rem,4vw,2.35rem);
+  line-height:1.15;
+  color:var(--bark);
+  margin-bottom:0;
+}  
+  
 /* Thesis */
 .thesis{
   margin:2.6rem 0;
@@ -534,8 +581,16 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 
   <p class="thesis-body">
     This includes the descendants of those from all twelve tribes who have lost their identity, as well as those who understand themselves as grafted into the G-d of Abraham, Isaac, and Jacob.
-    Ephraim carries a promise: it does not matter how many generations ago they were scattered, or what path they took through the nations.</p>
-    <p class="thesis-destination">What matters is the destination. <strong> Return.</strong></p>
+  </p>
+
+  <div class="thesis-promise">
+    <p>
+      Ephraim carries a promise: it does not matter how many generations ago they were scattered, or what path they took through the nations.
+    </p>
+
+    <p class="thesis-destination">
+      What matters is the destination. <strong>Return.</strong>
+    </p>
 
     <div class="return-list">
       <span>Return to HaShem.</span>
