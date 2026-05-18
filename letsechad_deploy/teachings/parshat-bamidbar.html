@@ -101,6 +101,31 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .thesis-label{font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
 .thesis-main{font-family:var(--serif);font-size:1.08rem;color:var(--bark);line-height:1.85;margin-bottom:1rem}
 .thesis-sub{font-family:var(--serif);font-size:.98rem;color:var(--stone);font-style:italic;line-height:1.8;margin-bottom:0}
+  .question-callout{
+  margin:1.5rem 0 2rem;
+  padding:1.35rem 1.6rem;
+  border-left:4px solid var(--gold);
+  background:rgba(191,155,44,.06);
+}
+
+.question-label{
+  font-family:var(--sans);
+  font-size:.58rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:block;
+  margin-bottom:.55rem;
+}
+
+.question-callout p{
+  font-family:var(--serif);
+  font-size:1.65rem;
+  line-height:1.25;
+  color:var(--bark);
+  margin-bottom:0;
+}
 /* Four points */
 .four-points{margin:1.8rem 0 2.2rem;display:flex;flex-direction:column;gap:.5rem;counter-reset:pt}
 .pt-item{display:flex;gap:1rem;align-items:flex-start;padding:.65rem 1rem;border-left:2px solid var(--bdr2)}
@@ -149,13 +174,121 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .before-exile{margin:2rem 0;padding:1.5rem 1.8rem;border-left:4px solid var(--gold);background:rgba(191,155,44,.04)}
 .before-exile p{font-family:var(--serif);font-size:1.08rem;color:var(--bark);line-height:1.75;margin-bottom:0}
 /* Final call */
-.final-call{margin:3.5rem 0 0;padding:2.8rem 2rem;background:var(--ink2);text-align:center}
-.fc-label{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.5rem}
-.fc-q{font-family:var(--serif);font-size:1.15rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:.3rem}
-.fc-main{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:#fff;margin:1.2rem 0 1.8rem;line-height:1.35}
-.fc-returns{display:flex;flex-direction:column;gap:.4rem;margin-bottom:2rem}
-.fc-r{font-family:var(--serif);font-size:1.08rem;color:rgba(255,255,255,.65);line-height:1.6}
-.fc-stick{font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--gold);letter-spacing:.04em}
+.final-call{
+  position:relative;
+  overflow:hidden;
+  margin:4.5rem -2rem 0;
+  padding:4rem 2.4rem;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 35%, rgba(191,155,44,.16) 0%, transparent 62%),
+    linear-gradient(160deg, var(--ink) 0%, var(--ink2) 55%, #070503 100%);
+  border:1px solid rgba(191,155,44,.45);
+  border-top:4px solid var(--gold);
+  text-align:center;
+  box-shadow:0 28px 70px rgba(0,0,0,.28);
+}
+
+.final-call::before{
+  content:'';
+  position:absolute;
+  inset:1rem;
+  border:1px solid rgba(191,155,44,.18);
+  pointer-events:none;
+}
+
+.final-call::after{
+  content:'✶';
+  position:absolute;
+  top:1.35rem;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:var(--serif);
+  font-size:1.1rem;
+  color:rgba(191,155,44,.55);
+}
+
+.final-call .fc-label{
+  position:relative;
+  z-index:2;
+  font-family:var(--sans);
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold2);
+  display:block;
+  margin-bottom:2rem;
+}
+
+.t-body-inner .final-call .fc-q{
+  position:relative;
+  z-index:2;
+  font-family:var(--serif);
+  font-size:1.05rem;
+  color:rgba(255,255,255,.46);
+  line-height:1.7;
+  margin-bottom:.45rem;
+}
+
+.t-body-inner .final-call .fc-main{
+  position:relative;
+  z-index:2;
+  font-family:var(--serif);
+  font-size:clamp(2rem,5vw,3.15rem);
+  font-weight:400;
+  color:#fff;
+  line-height:1.1;
+  margin:2rem auto 2.4rem;
+  max-width:560px;
+  text-shadow:0 2px 25px rgba(191,155,44,.22);
+}
+
+.final-call .fc-returns{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  gap:.65rem;
+  margin:0 auto 2.4rem;
+  max-width:420px;
+}
+
+.final-call .fc-r{
+  font-family:var(--serif);
+  font-size:1.18rem;
+  color:rgba(255,255,255,.86);
+  line-height:1.45;
+  padding:.55rem 1rem;
+  border-top:1px solid rgba(191,155,44,.18);
+  border-bottom:1px solid rgba(191,155,44,.08);
+  background:rgba(255,255,255,.025);
+}
+
+.t-body-inner .final-call .fc-stick{
+  position:relative;
+  z-index:2;
+  font-family:var(--serif);
+  font-size:1.25rem;
+  font-style:italic;
+  color:var(--gold2);
+  letter-spacing:.04em;
+  margin:0;
+}
+
+@media(max-width:600px){
+  .final-call{
+    margin:3.5rem -1.25rem 0;
+    padding:3.4rem 1.4rem;
+  }
+
+  .t-body-inner .final-call .fc-main{
+    font-size:2.15rem;
+  }
+
+  .final-call .fc-r{
+    font-size:1.05rem;
+  }
+}
 /* Divider */
 .s-div{display:flex;align-items:center;gap:1rem;margin:3.5rem 0}
 .s-div::before,.s-div::after{content:'';flex:1;height:1px;background:var(--bdr)}
@@ -175,9 +308,31 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
 .ft-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
 .ft-verse{font-family:var(--serif);font-size:.8rem;font-style:italic;color:rgba(255,255,255,.2)}
+  .t-meta{color:rgba(255,255,255,.38)}
+.nav-logo-sub{color:rgba(255,255,255,.42)}
+.ft-copy{color:rgba(255,255,255,.34)}
+.ft-verse{color:rgba(255,255,255,.34)}
+.ft-col a{color:rgba(255,255,255,.42)}
+.ft-tag{color:rgba(255,255,255,.38)}
 @media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
 @media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.burger{display:flex}.pull-dark{margin:3rem -1.25rem}}
-@media(max-width:600px){.ft-grid{grid-template-columns:1fr}.t-body{padding:3.5rem 0 5rem}.W{padding:0 1.25rem}.t-body-inner{padding:0 1.25rem}.er-table td:nth-child(4){display:none}.er-table th:nth-child(4){display:none}}
+.table-wrap{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:1.8rem 0 1.2rem;
+}
+
+.er-table{
+  min-width:680px;
+  margin:0;
+}
+
+@media(max-width:600px){
+  .ft-grid{grid-template-columns:1fr}
+  .t-body{padding:3.5rem 0 5rem}
+  .W{padding:0 1.25rem}
+  .t-body-inner{padding:0 1.25rem}
+}
 </style>
 </head>
 <body>
@@ -198,7 +353,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
       <a href="../index.html#connect" class="nav-a">Contact</a>
       <a href="../support.html" class="nav-a nav-give">Give</a>
     </div>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mob"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <nav class="mob" id="mob" aria-label="Mobile">
@@ -216,7 +371,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
     <span class="t-eyebrow">Bamidbar &middot; Numbers &middot; Foundational Teaching</span>
     <h1 class="t-title">Who Is Ephraim?</h1>
     <p class="t-deck">The defining mark of Ephraim is not bloodline speculation. It is return.</p>
-    <p class="t-meta">Matti Kahana &middot; Shabbat 5/17/2026 &middot; Congregation Echad &middot; Numbers 1:1&ndash;4:20 &middot; 1 Samuel 20:18&ndash;42</p>
+    <p class="t-meta">Matti Kahana &middot; Shabbat 5/16/2026 &middot; Congregation Echad &middot; Numbers 1:1&ndash;4:20 &middot; 1 Samuel 20:18&ndash;42</p>
   </div>
 </header>
 
@@ -265,8 +420,11 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 
     <h2>The Question and the Thesis</h2>
 
-    <p><strong>The question: Who is Ephraim?</strong></p>
-
+<div class="question-callout">
+  <span class="question-label">The Question</span>
+  <p>Who is Ephraim?</p>
+</div>
+    
     <div class="thesis">
       <span class="thesis-label">Thesis</span>
       <p class="thesis-main">Ephraim is a prophetic title that covers everyone lost in exile, scattered among the nations, cut off from covenant, and who is now being called back to Torah and G-d. This includes the descendants of those from all twelve tribes who have lost their identity, as well as those who understand themselves as grafted into the G-d of Abraham, Isaac, and Jacob.</p>
@@ -282,10 +440,10 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
       <div class="pt-item"><p><strong>Point 4</strong> &mdash; Return is the defining characteristic</p></div>
     </div>
 
-    <div class="point-header">
-      <span class="point-num">Point Three</span>
-      <span class="point-title">Grafted In</span>
-    </div>
+<h2 class="point-header">
+  <span class="point-num">Point Three</span>
+  <span class="point-title">Grafted In</span>
+</h2>
 
     <p>Grafting in is a very common theological belief, but depending on who you talk to it has vastly different meanings. Throughout Christianity there are at least seven variations &mdash; and several of them are likely represented here today. Instead of focusing on the olive tree analogy, which has historically generated those variations, let us go to Torah, the source.</p>
 
@@ -296,9 +454,30 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
       <span class="ref">Exodus 12:37&ndash;38</span>
     </blockquote>
 
-    <p>The <em>erev rav</em> &mdash; the mixed multitude. That is all Torah tells us explicitly about this group that attached itself to Israel. A few verses later comes the mitzvah of Pesach, and with it four identity terms that describe who can and cannot eat at the table:</p>
+    <p>The <em>erev rav</em> &mdash; the mixed multitude. That is all Torah tells us explicitly about this group that attached itself to Israel. A few verses later comes the mitzvah of Pesach, and with it Torah gives four identity terms that describe who can and cannot eat at the table:</p>
 
-    <table class="er-table">
+<blockquote>
+  <p><strong>43</strong> And Adonai said unto Moses and Aaron, This is the ordinance of the Passover: There shall no Foreigner <em>(nekar)</em> eat thereof.</p>
+
+  <p><strong>44</strong> But every man's servant <em>(aved)</em> that is bought for money, when thou hast circumcised him, then shall he eat thereof.</p>
+
+  <p><strong>45</strong> A Sojourner <em>(toshav)</em> and an hired servant shall not eat thereof.</p>
+
+  <p><strong>46</strong> In one house shall it be eaten; thou shalt not carry forth ought of the flesh abroad out of the house; neither shall ye break a bone thereof.</p>
+
+  <p><strong>47</strong> All the congregation of Israel shall keep it.</p>
+
+  <p><strong>48</strong> And when a Stranger <em>(ger)</em> shall sojourn with thee, and will keep the Passover to Adonai, let all his males be circumcised, and then let him come near and keep it; and he shall be as one that is born in the land: for no uncircumcised person shall eat thereof.</p>
+
+  <p><strong>49</strong> One law shall be to him that is native-born, and unto the stranger <em>(ger)</em> that dwells among you.</p>
+
+  <span class="ref">Exodus 12:43&ndash;49</span>
+</blockquote>
+
+<p>That passage gives us the categories:</p>
+
+<table class="er-table">
+      <table class="er-table">
       <thead>
         <tr><th>Hebrew</th><th>Translation</th><th>Pesach</th><th>Status</th></tr>
       </thead>
@@ -329,7 +508,8 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
         </tr>
       </tbody>
     </table>
-
+</div>
+    
     <div class="anchor-pair">
       <p>Proximity to Israel is not the same as belonging to Israel.</p>
       <p>There is no stranger banner. There is no separate allotment.</p>
@@ -346,10 +526,10 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 
     <p>The Gentiles who turn toward G-d and take hold of the covenant are gathered alongside the outcasts of Israel &mdash; the natural branches that were cut off and scattered. They are part of the same return. <strong>That is Ephraim.</strong></p>
 
-    <div class="point-header">
-      <span class="point-num">Point Two</span>
-      <span class="point-title">Descendants Without Identity</span>
-    </div>
+<h2 class="point-header">
+  <span class="point-num">Point Two</span>
+  <span class="point-title">Descendants Without Identity</span>
+</h2>
 
     <p>Telling the difference between a Gentile and someone scattered from the Northern Kingdom is very difficult today. There is no DNA test. No tradition passed from father to son. No physical characteristics we can examine. The only way we know the scattered descendants exist is because of the Tanakh &mdash; because G-d promises He will remember them and return them.</p>
 
@@ -394,10 +574,10 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 
     <p>This is the promise for the descendants from all twelve tribes who lost their identity. And it is the prophecy Ezekiel 37 expounds upon: Judah and Ephraim joined together as one stick in His hand.</p>
 
-    <div class="point-header">
-      <span class="point-num">Point One</span>
-      <span class="point-title">Ephraim as a Prophetic Title</span>
-    </div>
+<h2 class="point-header">
+  <span class="point-num">Point One</span>
+  <span class="point-title">Ephraim as a Prophetic Title</span>
+</h2>
 
     <p>To understand who Ephraim is, we need to see how the name travels through Scripture.</p>
 
@@ -441,10 +621,10 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 
     <p>The fruitfulness in exile, the scattering among the nations, the ultimate harvest &mdash; it was all in the name from the beginning. Jacob knew what he was doing when he laid his right hand on Ephraim.</p>
 
-    <div class="point-header">
-      <span class="point-num">Point Four</span>
-      <span class="point-title">Return Is the Defining Characteristic</span>
-    </div>
+<h2 class="point-header">
+  <span class="point-num">Point Four</span>
+  <span class="point-title">Return Is the Defining Characteristic</span>
+</h2>
 
     <div class="before-exile">
       <p>Return was written into the covenant before the exile. Before the kingdom split. Before Ephraim was cut off. Deuteronomy 30 already promised that after blessing and curse, after scattering among the nations, return would still be possible.</p>
