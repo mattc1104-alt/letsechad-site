@@ -118,12 +118,12 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
       </div>
     </a>
     <div class="nav-links">
-      <a href="../index.html#start" class="nav-a">Start Here</a>
-      <a href="../teachings.html" class="nav-a cur">Teachings</a>
-      <a href="../about.html" class="nav-a">About</a>
-      <a href="../resources.html" class="nav-a">Resources</a>
-      <a href="../index.html#connect" class="nav-a">Contact</a>
-      <a href="../support.html" class="nav-a nav-give">Give</a>
+      <a href="../index.html#start" class="nav-a">Comienza aquí</a>
+      <a href="../teachings.html" class="nav-a cur">Enseñanzas</a>
+      <a href="../about.html" class="nav-a">Acerca de</a>
+      <a href="../resources.html" class="nav-a">Recursos</a>
+      <a href="../index.html#connect" class="nav-a">Contacto</a>
+      <a href="../support.html" class="nav-a nav-give">Donar</a>
     </div>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -131,17 +131,17 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
   </div>
 </nav>
 <nav class="mob" id="mob" aria-label="Mobile">
-  <a href="../index.html#start" class="mob-a">Start Here</a>
-  <a href="../teachings.html" class="mob-a">Teachings</a>
-  <a href="../about.html" class="mob-a">About</a>
-  <a href="../resources.html" class="mob-a">Resources</a>
-  <a href="../index.html#connect" class="mob-a">Contact</a>
-  <a href="../support.html" class="mob-a">Give</a>
+  <a href="../index.html#start" class="mob-a">Comienza aquí</a>
+  <a href="../teachings.html" class="mob-a">Enseñanzas</a>
+  <a href="../about.html" class="mob-a">Acerca de</a>
+  <a href="../resources.html" class="mob-a">Recursos</a>
+  <a href="../index.html#connect" class="mob-a">Contacto</a>
+  <a href="../support.html" class="mob-a">Donar</a>
 </nav>
 
 <header class="t-hero">
   <div class="t-hero-in">
-    <a href="../teachings.html" class="t-back">All Teachings</a>
+    <a href="../teachings.html" class="t-back">Todas las enseñanzas</a>
     <span class="t-tag">Devarim &middot; Eikev</span>
     <h1 class="t-title">Shema, Shomer, Asah</h1>
     <p class="t-meta">Matti Kahana &middot; Shabbat 8/16/2026</p>
@@ -302,4 +302,4 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 <div class="closing">
   <p>Kol Tuv &mdash; Matti Kahana</p>
 </div>
-</div> </main> <footer class="footer" role="contentinfo"> <div class="W"> <div class="ft-grid"> <div> <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo"> <p class="ft-tag">"En una vara &mdash; Ezekiel 37:19"<br>Un ministerio de reunificación.</p> <p class="ft-url">letsechad.com</p> </div> <div class="ft-col"> <h4>Ministerio</h4> <a href="../about.html">Acerca de L'ets Echad</a> <a href="../about.html#mission">Nuestra misión</a> <a href="../about.html#matti">Acerca de Matti</a> <a href="../index.html#connect">Contacto</a> </div> <div class="ft-col"> <h4>Contenido</h4> <a href="../teachings.html">Todas las enseñanzas</a> <a href="../index.html#start">Comienza aquí</a> <a href="../resources.html">Recursos</a> </div> <div class="ft-col"> <h4>Apoyo</h4> <a href="../support.html">Donar a L'ets Echad</a> <a href="https://support.fidf.org" target="_blank" rel="noopener">FIDF</a> <a href="https://secure.afmda.org" target="_blank" rel="noopener">Magen David Adom</a> <a href="https://give.zakaworld.org" target="_blank" rel="noopener">ZAKA</a> </div> </div> <div class="ft-bottom"> <p class="ft-copy">&copy; 2026 L'ets Echad &middot; <a href="mailto:matti@letsechad.com" style="color:inherit">matti@letsechad.com</a> &middot; <a href="../privacy.html" style="color:inherit">Privacidad</a></p> <p class="ft-verse">"Serán uno en Mi mano." &mdash; Ezekiel 37:19</p> </div> </div> </footer> <script> const nav=document.getElementById('nav'); window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>40),{passive:true}); const burger=document.getElementById('burger'),mob=document.getElementById('mob'); burger.addEventListener('click',()=>{ const o=mob.classList.toggle('open'); burger.classList.toggle('x',o); burger.setAttribute('aria-expanded',o); document.body.style.overflow=o?'hidden':''; }); mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ mob.classList.remove('open');burger.classList.remove('x'); burger.setAttribute('aria-expanded','false');document.body.style.overflow=''; })); </script> <script src="../logo.js"></script> <script> (function(){ if(!window.LOGO)return; document.querySelectorAll('img').forEach(function(i){ if(i.src&&i.src.indexOf('LOGO_SRC')!==-1)i.src=window.LOGO; }); })(); </script> </body> </html>
+</div> </main> <footer class="footer" role="contentinfo"> <div class="W"> <div class="ft-grid"> <div> <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo"> <p class="ft-tag">"En una vara &mdash; Ezekiel 37:19"<br>Un ministerio de reunificación.</p> <p class="ft-url">letsechad.com</p> </div> <div class="ft-col"> <h4>Ministerio</h4> <a href="../about.html">Acerca de L'ets Echad</a> <a href="../about.html#mission">Nuestra misión</a> <a href="../about.html#matti">Acerca de Matti</a> <a href="../index.html#connect">Contacto</a> </div> <div class="ft-col"> <h4>Contenido</h4> <a href="../teachings.html">Todas las enseñanzas</a> <a href="../index.html#start">Comienza aquí</a> <a href="../resources.html">Recursos</a> </div> <div class="ft-col"> <h4>Apoyo</h4> <a href="../support.html">Donar a L'ets Echad</a> <a href="https://support.fidf.org" target="_blank" rel="noopener">FIDF</a> <a href="https://secure.afmda.org" target="_blank" rel="noopener">Magen David Adom</a> <a href="https://give.zakaworld.org" target="_blank" rel="noopener">ZAKA</a> </div> </div> <div class="ft-bottom"> <p class="ft-copy">&copy; 2026 L'ets Echad &middot; <a href="mailto:matti@letsechad.com" style="color:inherit">matti@letsechad.com</a> &middot; <a href="../privacy.html" style="color:inherit">Privacidad</a></p> <p class="ft-verse">"Serán una en Mi mano." &mdash; Ezekiel 37:19</p> </div> </div> </footer> <script> const nav=document.getElementById('nav'); window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>40),{passive:true}); const burger=document.getElementById('burger'),mob=document.getElementById('mob'); burger.addEventListener('click',()=>{ const o=mob.classList.toggle('open'); burger.classList.toggle('x',o); burger.setAttribute('aria-expanded',o); document.body.style.overflow=o?'hidden':''; }); mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ mob.classList.remove('open');burger.classList.remove('x'); burger.setAttribute('aria-expanded','false');document.body.style.overflow=''; })); </script> <script src="../logo.js"></script> <script> (function(){ if(!window.LOGO)return; document.querySelectorAll('img').forEach(function(i){ if(i.src&&i.src.indexOf('LOGO_SRC')!==-1)i.src=window.LOGO; }); })(); </script> </body> </html>
