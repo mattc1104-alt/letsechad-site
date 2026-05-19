@@ -14,7 +14,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <style>
 /* ── Reset ───────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -48,12 +53,6 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 a:focus-visible,button:focus-visible{
   outline:2px solid var(--gold2);outline-offset:4px;border-radius:2px;
 }
-<link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 /* ── Reduced motion ───────────────────────────── */
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -392,21 +391,122 @@ a:focus-visible,button:focus-visible{
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--bdr)}
 .divider span{font-family:var(--serif);color:var(--gold);font-size:.95rem;opacity:.55}
 
-/* ── Closing ─────────────────────────────────── */
-.closing{background:var(--ink3);padding:6rem 2rem 7rem;text-align:center;position:relative}
+/* ── Closing: Bamidbar-style card ───────────────── */
+.closing{
+  background:var(--parch);
+  padding:1rem 2rem 6rem;
+  text-align:center;
+  position:relative;
+}
+
 .closing::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.45;
+  display:none;
 }
-.closing-inner{max-width:500px;margin:0 auto}
+
+.closing-inner{
+  position:relative;
+  overflow:hidden;
+  max-width:860px;
+  margin:0 auto;
+  padding:4.4rem 2.6rem 4rem;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 35%, rgba(191,155,44,.16) 0%, transparent 62%),
+    linear-gradient(160deg, var(--ink) 0%, var(--ink2) 55%, #070503 100%);
+  border:1px solid rgba(191,155,44,.45);
+  border-top:4px solid var(--gold);
+  box-shadow:0 28px 70px rgba(0,0,0,.28);
+}
+
+.closing-inner::before{
+  content:'';
+  position:absolute;
+  inset:1rem;
+  border:1px solid rgba(191,155,44,.18);
+  pointer-events:none;
+}
+
+.closing-inner::after{
+  content:'✶';
+  position:absolute;
+  top:1.35rem;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:var(--serif);
+  font-size:1.1rem;
+  color:rgba(191,155,44,.55);
+}
+
 .shema-display{
-  font-family:var(--serif);font-size:clamp(1.3rem,4vw,2.1rem);
-  line-height:1.8;color:rgba(255,255,255,.9);margin-bottom:2.5rem;
+  position:relative;
+  z-index:2;
+  font-family:var(--serif);
+  line-height:1.55;
+  color:rgba(255,255,255,.9);
+  margin:0 auto 2.6rem;
 }
-.shema-display strong{color:var(--gold2);font-weight:400}
-.shema-display em{color:rgba(255,255,255,.45);font-style:normal;font-size:.7em;display:block;letter-spacing:.06em;margin-top:.2rem}
-.closing-words{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.5);line-height:2;margin-bottom:2.5rem}
-.kol{font-family:var(--serif);font-size:.9rem;font-style:italic;color:rgba(255,255,255,.2)}
+
+.shema-display strong{
+  display:block;
+  font-size:clamp(1.55rem,4vw,2.35rem);
+  font-weight:400;
+  color:var(--gold2);
+  margin-top:.35rem;
+}
+
+.shema-display em{
+  display:block;
+  font-size:clamp(.95rem,2vw,1.15rem);
+  font-style:normal;
+  letter-spacing:.06em;
+  color:rgba(255,255,255,.42);
+  margin:.1rem 0 .75rem;
+}
+
+.closing-words{
+  position:relative;
+  z-index:2;
+  max-width:560px;
+  margin:0 auto 2rem;
+  font-family:var(--serif);
+  font-size:clamp(1.05rem,2vw,1.25rem);
+  font-style:italic;
+  color:rgba(255,255,255,.58);
+  line-height:1.9;
+}
+
+.closing-words:last-of-type{
+  color:rgba(255,255,255,.82);
+  font-size:clamp(1.15rem,2.3vw,1.45rem);
+  margin-top:2.4rem;
+}
+
+.kol{
+  position:relative;
+  z-index:2;
+  font-family:var(--serif);
+  font-size:.9rem;
+  font-style:italic;
+  color:rgba(255,255,255,.22);
+  margin:2.4rem 0 0;
+}
+
+@media(max-width:600px){
+  .closing{
+    padding:0 1rem 4.5rem;
+  }
+
+  .closing-inner{
+    padding:3.8rem 1.4rem 3.3rem;
+  }
+
+  .shema-display strong{
+    font-size:1.75rem;
+  }
+
+  .closing-words{
+    font-size:1.05rem;
+  }
+}
 
 /* ── Footer ──────────────────────────────────── */
 .footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.1);padding:4rem 0 0}
@@ -1039,29 +1139,32 @@ a:focus-visible,button:focus-visible{
 </section>
 
 <footer class="footer" role="contentinfo">
-  <div class="W">
+  <div class="ft-W">
     <div class="ft-grid">
-      <div>
-        <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo">
-        <p class="ft-tag">"En Una Vara — Ezequiel 37:19"<br>Un ministerio de reunificación.</p>
+      <div class="ft-brand">
+        <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo" id="footer-logo">
+        <p class="ft-tagline">"En una sola vara - Ezequiel 37:19"<br>Un ministerio de reunificación.</p>
         <p class="ft-url">letsechad.com</p>
       </div>
+
       <div class="ft-col">
         <h4>Ministerio</h4>
         <a href="about.html">Acerca de L'ets Echad</a>
-        <a href="about.html#mission">Nuestra Misión</a>
+        <a href="about.html#mission">Nuestra misión</a>
         <a href="about.html#matti">Acerca de Matti</a>
-        <a href="about.html#matti">Invitar a Hablar</a>
+        <a href="about.html#matti">Invitar a Matti a enseñar</a>
         <a href="index.html#connect">Contacto</a>
       </div>
+
       <div class="ft-col">
         <h4>Contenido</h4>
-        <a href="teachings.html">Todas las Enseñanzas</a>
-        <a href="index.html#start">Comenzar Aquí</a>
+        <a href="teachings.html">Todas las enseñanzas</a>
+        <a href="index.html#start">Comenzar aquí</a>
         <a href="resources.html">Recursos</a>
         <a href="glossary.html">Glosario</a>
-        <a href="resources.html#faq">Preguntas Frecuentes</a>
+        <a href="resources.html#faq">Preguntas frecuentes</a>
       </div>
+
       <div class="ft-col">
         <h4>Apoyo</h4>
         <a href="support.html">Donar a L'ets Echad</a>
@@ -1071,9 +1174,14 @@ a:focus-visible,button:focus-visible{
         <a href="https://give.zakaworld.org" target="_blank" rel="noopener">ZAKA</a>
       </div>
     </div>
+
     <div class="ft-bottom">
-      <p class="ft-copy">© 2026 L'ets Echad · <a href="mailto:matti@letsechad.com" style="color:inherit">matti@letsechad.com</a> · <a href="privacy.html" style="color:inherit">Privacidad</a></p>
-      <p class="ft-verse">"Serán una en mi mano." — Ezequiel 37:19</p>
+      <p class="ft-copy">
+        © 2026 L'ets Echad ·
+        <a href="mailto:matti@letsechad.com" style="color:inherit">matti@letsechad.com</a> ·
+        <a href="privacy.html" style="color:inherit">Privacidad</a>
+      </p>
+      <p class="ft-verse">"Serán una sola vara en Mi mano." - Ezequiel 37:19</p>
     </div>
   </div>
 </footer>
