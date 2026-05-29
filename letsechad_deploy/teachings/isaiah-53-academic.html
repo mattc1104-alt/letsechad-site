@@ -85,6 +85,13 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .s-div span{font-family:var(--serif);color:var(--gold);font-size:1rem;opacity:.5}
 .closing{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--bdr)}
 .closing p{font-family:var(--serif);font-style:italic;color:var(--stone)}
+/* Layout */
+.W{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 2rem;
+}  
 /* Footer */
 .footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.12);padding:4rem 0 0}
 .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
@@ -99,7 +106,13 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .ft-verse{font-family:var(--serif);font-size:.8rem;font-style:italic;color:rgba(255,255,255,.2)}
 @media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
 @media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.burger{display:flex}}
-@media(max-width:600px){.ft-grid{grid-template-columns:1fr}.t-body{padding:3rem 0 4rem}.t-body-inner{padding:0 1.25rem}.t-body-inner p{text-align:left}}
+@media(max-width:600px){
+  .W{padding:0 1.25rem}
+  .ft-grid{grid-template-columns:1fr}
+  .t-body{padding:3rem 0 4rem}
+  .t-body-inner{padding:0 1.25rem}
+  .t-body-inner p{text-align:left}
+}
 </style>
 </head>
 <body>
