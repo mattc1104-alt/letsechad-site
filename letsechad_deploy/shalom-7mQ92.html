@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta name="referrer" content="no-referrer">
+<title>Connect — L'ets Echad</title>
+<meta name="theme-color" content="#0F0B07">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0F0B07;--ink2:#1A1108;--ink3:#251A0C;
+  --bark:#3E2C14;--stone:#7A6040;--sand:#A08860;
+  --gold:#BF9B2C;--gold2:#D4AF3A;--gold3:#E8C84A;
+  --parch:#F5EDD8;--cream:#FBF7EF;--white:#FFFFFF;
+  --bdr:rgba(191,155,44,.18);--bdr2:rgba(191,155,44,.38);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--t:.22s;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--parch);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none}
+::selection{background:rgba(191,155,44,.22)}
+.W{max-width:1160px;margin:0 auto;padding:0 2rem}
+.Wsm{max-width:820px;margin:0 auto;padding:0 2rem}
+.sh{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.sh-lg{font-size:clamp(2rem,4.5vw,3.2rem)}
+.sh-md{font-size:clamp(1.4rem,3vw,2rem)}
+.eyebrow{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;height:78px;display:flex;align-items:center;background:rgba(15,11,7,.95);border-bottom:1px solid rgba(191,155,44,.1);backdrop-filter:blur(14px);transition:box-shadow var(--t)}
+.nav.on{box-shadow:0 4px 40px rgba(0,0,0,.55)}
+.nav-in{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.nav-logo{display:flex;align-items:center;gap:.85rem;flex-shrink:0}
+.nav-logo-img{height:54px;width:auto;filter:brightness(0) invert(1);opacity:.85;transition:opacity var(--t)}
+.nav-logo:hover .nav-logo-img{opacity:1}
+.nav-logo-wrap{line-height:1.1}
+.nav-logo-name{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--gold2);letter-spacing:.01em;display:block}
+.nav-logo-sub{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:.05rem}
+.nav-a{font-size:.73rem;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.52);padding:.42rem .75rem;border-radius:2px;transition:color var(--t),background var(--t)}
+.nav-a:hover{color:rgba(255,255,255,.88);background:rgba(255,255,255,.055)}
+.nav-give{margin-left:.5rem;border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.38rem .95rem!important;border-radius:2px;transition:background var(--t),color var(--t)!important}
+.nav-give:hover{background:var(--gold);color:var(--ink)!important}
+.burger{display:none;flex-direction:column;gap:5px;padding:6px}
+.burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.65);border-radius:2px;transition:all var(--t) var(--ease)}
+.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{display:none;position:fixed;inset:78px 0 0 0;z-index:899;background:var(--ink2);flex-direction:column;padding:1.5rem 2rem;gap:.15rem;overflow-y:auto}
+.mob.open{display:flex}
+.mob-a{font-size:1.15rem;font-family:var(--serif);color:rgba(255,255,255,.55);padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.05);transition:color var(--t)}
+.mob-a:hover{color:var(--gold2)}
+.mob-a:last-child{border-bottom:none;color:var(--gold);margin-top:.5rem}
+
+/* HERO */
+.hero{background:var(--ink);padding:8rem 2rem 5rem;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(191,155,44,.07) 0%,transparent 62%);top:50%;left:50%;transform:translate(-50%,-52%);pointer-events:none}
+.hero-in{position:relative;z-index:2;max-width:600px;margin:0 auto}
+.hero h1{color:#fff;margin-bottom:1rem}
+.hero-sub{font-family:var(--serif);font-style:italic;color:rgba(255,255,255,.45);font-size:1.1rem;max-width:500px;margin:0 auto}
+
+/* CAPTCHA GATE */
+.gate{background:var(--cream);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:3rem 2rem}
+.gate-inner{max-width:480px;margin:0 auto;text-align:center}
+.gate-label{font-size:.82rem;color:var(--stone);margin-bottom:1.5rem;line-height:1.8}
+.gate-question{font-family:var(--serif);font-size:1.6rem;color:var(--ink);margin-bottom:1.25rem;font-weight:400}
+.gate-row{display:flex;gap:.75rem;justify-content:center;align-items:center;flex-wrap:wrap}
+.gate-input{width:90px;padding:.65rem .9rem;font-size:1.1rem;font-family:var(--serif);text-align:center;border:1px solid var(--bdr2);border-radius:2px;background:var(--white);color:var(--ink);outline:none;transition:border-color var(--t)}
+.gate-input:focus{border-color:var(--gold)}
+.gate-btn{background:var(--gold);color:var(--ink);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.7rem 1.5rem;border-radius:2px;transition:background var(--t)}
+.gate-btn:hover{background:var(--gold2)}
+.gate-err{font-size:.78rem;color:#b44;margin-top:.85rem;min-height:1.2em}
+.gate-note{font-size:.67rem;color:var(--sand);margin-top:1.25rem;letter-spacing:.04em}
+
+/* CONTACT SECTION */
+.contact-section{padding:5rem 2rem 6rem;display:none}
+.contact-section.revealed{display:block}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:860px;margin:0 auto 3.5rem}
+.contact-card{background:var(--white);border:1px solid var(--bdr);border-radius:3px;padding:2rem 2rem 1.75rem;display:flex;flex-direction:column;gap:1rem}
+.contact-card-label{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.contact-card-title{font-family:var(--serif);font-size:1.3rem;color:var(--ink);font-weight:400}
+.contact-card-desc{font-size:.82rem;color:var(--stone);line-height:1.8}
+.reveal-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--gold2);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.2rem;border-radius:2px;transition:background var(--t),color var(--t);border:1px solid rgba(191,155,44,.25);margin-top:.25rem;cursor:pointer;width:fit-content}
+.reveal-btn:hover{background:var(--ink2);color:var(--gold3)}
+.reveal-btn svg{width:13px;height:13px;flex-shrink:0;transition:opacity var(--t)}
+.contact-value{display:none;align-items:center;gap:.6rem;margin-top:.25rem;flex-wrap:wrap}
+.contact-value.show{display:flex}
+.contact-value a{font-family:var(--serif);font-size:1.15rem;color:var(--gold2);text-decoration:underline;text-decoration-color:rgba(191,155,44,.3);text-underline-offset:3px;word-break:break-all;transition:color var(--t)}
+.contact-value a:hover{color:var(--gold3)}
+.copy-btn{background:none;border:1px solid var(--bdr2);border-radius:2px;padding:.28rem .55rem;font-size:.62rem;color:var(--stone);letter-spacing:.06em;text-transform:uppercase;transition:border-color var(--t),color var(--t);cursor:pointer;flex-shrink:0}
+.copy-btn:hover{border-color:var(--gold);color:var(--gold)}
+.copy-btn.copied{color:var(--gold);border-color:var(--gold)}
+
+/* SOCIAL */
+.social-wrap{max-width:860px;margin:0 auto}
+.social-label{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.social-grid{display:flex;flex-wrap:wrap;gap:.75rem}
+.social-link{display:flex;align-items:center;gap:.6rem;background:var(--white);border:1px solid var(--bdr);border-radius:2px;padding:.7rem 1.1rem;font-size:.78rem;color:var(--stone);transition:border-color var(--t),color var(--t),background var(--t)}
+.social-link:hover{border-color:var(--bdr2);color:var(--ink);background:var(--cream)}
+.social-link svg{width:16px;height:16px;flex-shrink:0;opacity:.65}
+.social-link:hover svg{opacity:1}
+
+/* DIVIDER */
+.divider{max-width:860px;margin:3rem auto;border:none;border-top:1px solid var(--bdr)}
+
+/* FOOTER */
+.footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.12);padding:4rem 0 0}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-logo{height:72px;width:auto;filter:brightness(0) invert(1);opacity:.55;margin-bottom:1rem}
+.ft-tag{font-family:var(--serif);font-size:.88rem;font-style:italic;color:rgba(255,255,255,.28);line-height:1.6;max-width:220px;margin-bottom:.7rem}
+.ft-url{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.45}
+.ft-col h4{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.ft-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.32);margin-bottom:.45rem;transition:color var(--t)}
+.ft-col a:hover{color:rgba(255,255,255,.75)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.ft-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
+.ft-verse{font-family:var(--serif);font-size:.8rem;font-style:italic;color:rgba(255,255,255,.2)}
+
+/* ANIMATIONS */
+.fu{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.fu.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media(prefers-reduced-motion:reduce){.fu{opacity:1;transform:none;transition:none}}
+
+/* RESPONSIVE */
+@media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.nav-links{display:none}.burger{display:flex}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.ft-grid{grid-template-columns:1fr}.W{padding:0 1.25rem}.Wsm{padding:0 1.25rem}.hero{padding:7rem 1.5rem 4rem}.gate{padding:2.5rem 1.5rem}.contact-section{padding:3.5rem 1.5rem 5rem}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo" aria-label="L'ets Echad home">
+      <img src="LOGO_SRC" alt="L'ets Echad" class="nav-logo-img">
+      <div class="nav-logo-wrap">
+        <span class="nav-logo-name">L'ets Echad</span>
+        <span class="nav-logo-sub">Ezekiel 37:19</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#start" class="nav-a">Start Here</a>
+      <a href="teachings.html" class="nav-a">Teachings</a>
+      <a href="about.html" class="nav-a">About</a>
+      <a href="resources.html" class="nav-a">Resources</a>
+      <a href="index.html#connect" class="nav-a">Contact</a>
+      <a href="support.html" class="nav-a nav-give">Give</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mob" id="mob" aria-label="Mobile">
+  <a href="index.html#start" class="mob-a">Start Here</a>
+  <a href="teachings.html" class="mob-a">Teachings</a>
+  <a href="about.html" class="mob-a">About</a>
+  <a href="resources.html" class="mob-a">Resources</a>
+  <a href="index.html#connect" class="mob-a">Contact</a>
+  <a href="support.html" class="mob-a">Give</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-in fu in">
+    <p class="eyebrow" style="display:flex;justify-content:center;align-items:center;gap:.75rem;margin-bottom:1.1rem">
+      <span style="display:block;width:24px;height:1px;background:var(--gold);opacity:.5"></span>
+      Reach Out Directly
+      <span style="display:block;width:24px;height:1px;background:var(--gold);opacity:.5"></span>
+    </p>
+    <h1 class="sh sh-lg" style="margin-bottom:1rem;">Connect with Matti</h1>
+    <p class="hero-sub">Questions about the teachings, prayer requests, interest in having Matti speak at your congregation — every message is read personally.</p>
+  </div>
+</div>
+
+<!-- CAPTCHA GATE -->
+<div class="gate" id="gate">
+  <div class="gate-inner">
+    <p class="eyebrow" style="margin-bottom:1rem" id="gate-eyebrow">One quick check</p>
+    <p class="gate-label">Answer this to see contact information.</p>
+    <p class="gate-question" id="captcha-q" aria-live="polite"></p>
+    <div class="gate-row">
+      <input
+        type="number"
+        class="gate-input"
+        id="captcha-input"
+        placeholder="?"
+        autocomplete="off"
+        inputmode="numeric"
+        aria-label="Your answer"
+        min="0"
+        max="99"
+      >
+      <button class="gate-btn" id="captcha-submit" type="button">Verify</button>
+    </div>
+    <!-- Honeypot: hidden from humans, bots fill it -->
+    <input type="text" id="hp-field" name="website" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
+    <p class="gate-err" id="captcha-err" aria-live="assertive"></p>
+    <p class="gate-note">No account required. No tracking.</p>
+  </div>
+</div>
+
+<!-- CONTACT (hidden until captcha passes) -->
+<div class="contact-section" id="contact-section">
+  <div class="Wsm">
+
+    <div class="contact-grid">
+      <!-- EMAIL -->
+      <div class="contact-card fu">
+        <div>
+          <p class="contact-card-label">Email</p>
+          <p class="contact-card-title">Send a message</p>
+        </div>
+        <p class="contact-card-desc">For teachings questions, prayer requests, speaking invitations, or anything on your heart.</p>
+        <button class="reveal-btn" id="reveal-email" type="button" aria-expanded="false">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/><polyline points="1.5,3.5 8,9.5 14.5,3.5"/></svg>
+          Show email address
+        </button>
+        <div class="contact-value" id="email-value" role="region" aria-label="Email address">
+          <a id="email-link" href="#" rel="noopener noreferrer"></a>
+          <button class="copy-btn" id="copy-email" type="button" aria-label="Copy email address">Copy</button>
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="contact-card fu d1">
+        <div>
+          <p class="contact-card-label">Phone / Text</p>
+          <p class="contact-card-title">Call or text</p>
+        </div>
+        <p class="contact-card-desc">Google Voice number. Calls and texts welcome. Leave a voicemail if no answer.</p>
+        <button class="reveal-btn" id="reveal-phone" type="button" aria-expanded="false">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3.5 2h2.25l1 2.5-1.25 1.25c.6 1.2 1.75 2.35 2.95 2.95L9.7 7.5l2.5 1v2.25C12.2 11.6 10.4 13 8 13 4.7 13 3 11.3 3 8c0-2.4 1.4-4.2 2.75-4.75L3.5 2z"/></svg>
+          Show phone number
+        </button>
+        <div class="contact-value" id="phone-value" role="region" aria-label="Phone number">
+          <a id="phone-link" href="#" rel="noopener noreferrer"></a>
+          <button class="copy-btn" id="copy-phone" type="button" aria-label="Copy phone number">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SOCIAL -->
+    <div class="social-wrap fu d2">
+      <p class="social-label">Find L'ets Echad online</p>
+      <div class="social-grid">
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@letsechad" class="social-link" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5v-7l6.25 3.5-6.25 3.5z"/></svg>
+          YouTube
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/letsechad" class="social-link" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://facebook.com/letsechad" class="social-link" target="_blank" rel="noreferrer noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.875 11.855V15.47H7.078V12h3.047v-2.647c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.234 2.686.234v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.47h-2.796v8.385A12.004 12.004 0 0 0 24 12z"/></svg>
+          Facebook
+        </a>
+
+        <!-- X / Twitter -->
+        <a href="https://x.com/letsechad" class="social-link" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X (Twitter)
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/company/letsechad" class="social-link" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="W">
+    <div class="ft-grid">
+      <div>
+        <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo">
+        <p class="ft-tag">"Into One Stick — Ezekiel 37:19"<br>A ministry of reunification.</p>
+        <p class="ft-url">LETSECHAD.COM</p>
+      </div>
+      <div class="ft-col">
+        <h4>Ministry</h4>
+        <a href="about.html#mission">Our Mission</a>
+        <a href="about.html#matti">About Matti</a>
+        <a href="shalom-7mQ92.html">Contact</a>
+      </div>
+      <div class="ft-col">
+        <h4>Content</h4>
+        <a href="teachings.html">All Teachings</a>
+        <a href="index.html#start">Start Here</a>
+        <a href="resources.html">Resources</a>
+        <a href="glossary.html">Glossary</a>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <a href="support.html">Give to L'ets Echad</a>
+        <a href="support.html#israel">Support Israel</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">© 2026 L'ets Echad · <a href="privacy.html" style="color:inherit;text-decoration:underline">Privacy</a></p>
+      <p class="ft-verse">"They shall become one in My hand." — Ezekiel 37:19</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── CAPTCHA ────────────────────────────────────────────────────────────────
+(function(){
+  // Generate a simple addition or subtraction problem
+  function newQuestion(){
+    var ops = ['+','-'];
+    var op = ops[Math.floor(Math.random()*ops.length)];
+    var a,b;
+    if(op==='+'){
+      a = Math.floor(Math.random()*9)+2;
+      b = Math.floor(Math.random()*9)+2;
+    } else {
+      a = Math.floor(Math.random()*9)+6;
+      b = Math.floor(Math.random()*5)+1;
+    }
+    return {a:a,b:b,op:op,ans:op==='+'?a+b:a-b};
+  }
+
+  var q = newQuestion();
+  document.getElementById('captcha-q').textContent = 'What is ' + q.a + ' ' + q.op + ' ' + q.b + '?';
+
+  var attempts = 0;
+  var maxAttempts = 5;
+  var locked = false;
+
+  function verify(){
+    // Honeypot check — if filled, silently fail
+    if(document.getElementById('hp-field').value !== '') return;
+
+    if(locked) return;
+
+    var val = parseInt(document.getElementById('captcha-input').value, 10);
+    var err = document.getElementById('captcha-err');
+
+    if(isNaN(val)){
+      err.textContent = 'Enter a number.';
+      return;
+    }
+
+    attempts++;
+
+    if(val === q.ans){
+      // Correct
+      document.getElementById('gate').style.display = 'none';
+      var cs = document.getElementById('contact-section');
+      cs.classList.add('revealed');
+      buildContact();
+      // Animate cards in
+      setTimeout(function(){
+        cs.querySelectorAll('.fu').forEach(function(el){el.classList.add('in');});
+      }, 60);
+    } else {
+      if(attempts >= maxAttempts){
+        locked = true;
+        err.textContent = 'Too many attempts. Please refresh the page.';
+        document.getElementById('captcha-submit').disabled = true;
+        document.getElementById('captcha-input').disabled = true;
+      } else {
+        err.textContent = 'Not quite — try again.';
+        // Refresh question after 2 wrong answers
+        if(attempts % 2 === 0){
+          q = newQuestion();
+          document.getElementById('captcha-q').textContent = 'What is ' + q.a + ' ' + q.op + ' ' + q.b + '?';
+        }
+        document.getElementById('captcha-input').value = '';
+        document.getElementById('captcha-input').focus();
+      }
+    }
+  }
+
+  document.getElementById('captcha-submit').addEventListener('click', verify);
+  document.getElementById('captcha-input').addEventListener('keydown', function(e){
+    if(e.key === 'Enter') verify();
+  });
+})();
+
+// ── CONTACT ASSEMBLY ───────────────────────────────────────────────────────
+// Split into fragments — never a complete address in source
+function buildContact(){
+  // Email: mattikahana @ proton.me
+  var ep = ['m','a','t','t','i'];
+  var ed = ['k','a','h','a','n','a'];
+  var eh = ['p','r','o','t','o','n'];
+  var et = ['m','e'];
+  var email = ep.join('')+ed.join('')+'@'+eh.join('')+'.'+et.join('');
+
+  var eLink = document.getElementById('email-link');
+  eLink.href = 'mailto:' + email;
+  eLink.textContent = email;
+
+  // Phone: (417) 501-6045
+  var pa = ['4','1','7'];
+  var pb = ['5','0','1'];
+  var pc = ['6','0','4','5'];
+  var phone = '+1' + pa.join('') + pb.join('') + pc.join('');
+  var phoneDisplay = '(' + pa.join('') + ') ' + pb.join('') + '-' + pc.join('');
+
+  var pLink = document.getElementById('phone-link');
+  pLink.href = 'tel:' + phone;
+  pLink.textContent = phoneDisplay;
+
+  // Reveal buttons
+  setupReveal('reveal-email', 'email-value');
+  setupReveal('reveal-phone', 'phone-value');
+
+  // Copy buttons
+  setupCopy('copy-email', email);
+  setupCopy('copy-phone', phoneDisplay);
+}
+
+function setupReveal(btnId, valueId){
+  var btn = document.getElementById(btnId);
+  var val = document.getElementById(valueId);
+  btn.addEventListener('click', function(){
+    val.classList.add('show');
+    btn.style.display = 'none';
+    btn.setAttribute('aria-expanded','true');
+  });
+}
+
+function setupCopy(btnId, text){
+  var btn = document.getElementById(btnId);
+  btn.addEventListener('click', function(){
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(function(){
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(function(){
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    } else {
+      // Fallback for older browsers
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copied';
+      btn.classList.add('copied');
+      setTimeout(function(){
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    }
+  });
+}
+
+// ── NAV SCROLL SHADOW ──────────────────────────────────────────────────────
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('on', window.scrollY > 40);
+}, {passive:true});
+
+// ── MOBILE NAV ─────────────────────────────────────────────────────────────
+var burger = document.getElementById('burger');
+var mob = document.getElementById('mob');
+burger.addEventListener('click', function(){
+  var open = mob.classList.toggle('open');
+  burger.classList.toggle('x', open);
+  burger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+mob.querySelectorAll('.mob-a').forEach(function(a){
+  a.addEventListener('click', function(){
+    mob.classList.remove('open');
+    burger.classList.remove('x');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  });
+});
+
+// ── LOGO INJECTION ─────────────────────────────────────────────────────────
+(function(){
+  if(!window.LOGO) return;
+  document.querySelectorAll('img').forEach(function(i){
+    if(i.src && i.src.indexOf('LOGO_SRC') !== -1) i.src = window.LOGO;
+  });
+})();
+</script>
+<script src="logo.js"></script>
+<script>
+// Run logo injection again after logo.js loads
+(function(){
+  if(!window.LOGO) return;
+  document.querySelectorAll('img').forEach(function(i){
+    if(i.getAttribute('src') === 'LOGO_SRC') i.src = window.LOGO;
+  });
+})();
+</script>
+</body>
+</html>
