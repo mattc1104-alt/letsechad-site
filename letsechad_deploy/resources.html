@@ -184,12 +184,30 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .guide-d{font-size:.77rem;color:var(--stone);line-height:1.7;margin-bottom:1rem}
 .guide-soon{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sand)}
 .guide-c {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.guide-c > span:last-child {
+.guide-d {
+  margin-bottom: 1.25rem;
+}
+
+.guide-btn {
   margin-top: auto;
+  align-self: flex-start;
+  display: inline-block;
+  padding: .55rem 1.25rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 /* CATEGORY CARDS */
 .cat-grid{
