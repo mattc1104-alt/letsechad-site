@@ -4,11 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Give — L'ets Echad | Support the Ministry & Israel</title>
+<link rel="canonical" href="https://letsechad.com/support.html">
+<meta property="og:image" content="https://letsechad.com/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L'ets Echad — One Stick in His Hand. Ezekiel 37:19">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Give — L'ets Echad | Support the Ministry &amp; Israel">
+<meta name="twitter:description" content="Support L'ets Echad — a Torah teaching ministry focused on the reunification of Judah and Ephraim. Give to the ministry or support Israel through FIDF, Magen David Adom, and ZAKA.">
+<meta name="twitter:image" content="https://letsechad.com/og-share.jpg">
 <meta name="description" content="Support L'ets Echad — a Torah teaching ministry focused on the reunification of Judah and Ephraim. Give to the ministry or support Israel through FIDF, Magen David Adom, and ZAKA.">
 <meta property="og:title" content="Give — L'ets Echad | Support the Ministry & Israel">
 <meta property="og:description" content="Support L'ets Echad — a Torah teaching ministry focused on the reunification of Judah and Ephraim. Give to the ministry or support Israel through FIDF, Magen David Adom, and ZAKA.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://letsechad.com">
+<meta property="og:url" content="https://letsechad.com/support.html">
 <meta name="theme-color" content="#0F0B07">
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
@@ -172,12 +181,22 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 @media(max-width:860px){.give-g{grid-template-columns:1fr;gap:3rem}.give-cta-box{position:static}.israel-g,.trans-g{grid-template-columns:1fr}.amt-g{grid-template-columns:repeat(2,1fr)}}
 
 </style>
+<style id="a11y-pass">
+:root{--goldtxt:#7E6410}
+.eyebrow{color:var(--goldtxt)}
+.footer .eyebrow,.give-cta-box .eyebrow,.mob .eyebrow,.pg-hero .eyebrow{color:var(--gold2)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #7E6410;outline-offset:2px}
+.nav a:focus-visible,.mob a:focus-visible,.footer a:focus-visible{outline-color:var(--gold2)}
+.skipl{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--gold3);padding:.8rem 1.2rem;z-index:2000;font-family:var(--sans)}
+.skipl:focus{left:0}
+</style>
 </head>
 <body>
+<a class="skipl" href="#israel">Skip to content</a>
 <nav class="nav" id="nav" role="navigation" aria-label="Main">
   <div class="nav-in">
     <a href="index.html" class="nav-logo" aria-label="L'ets Echad home">
-      <img src="LOGO_SRC" alt="L'ets Echad" class="nav-logo-img">
+      <img src="logo.png" alt="L'ets Echad" class="nav-logo-img">
       <div class="nav-logo-wrap">
         <span class="nav-logo-name">L'ets Echad</span>
         <span class="nav-logo-sub">Ezekiel 37:19</span>
@@ -186,6 +205,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
     <div class="nav-links">
       <a href="index.html#start" class="nav-a">Start Here</a>
       <a href="teachings.html" class="nav-a">Teachings</a>
+      <a href="foundation.html" class="nav-a">Free Course</a>
       <a href="about.html" class="nav-a">About</a>
       <a href="resources.html" class="nav-a">Resources</a>
       <a href="index.html#connect" class="nav-a">Contact</a>
@@ -199,6 +219,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 <nav class="mob" id="mob" aria-label="Mobile">
   <a href="index.html#start" class="mob-a">Start Here</a>
   <a href="teachings.html" class="mob-a">Teachings</a>
+  <a href="foundation.html" class="mob-a">Free Course</a>
   <a href="about.html" class="mob-a">About</a>
   <a href="resources.html" class="mob-a">Resources</a>
   <a href="index.html#connect" class="mob-a">Contact</a>
@@ -300,7 +321,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
   <div class="W">
     <div class="ft-grid">
       <div>
-        <img src="LOGO_SRC" alt="L'ets Echad" class="ft-logo">
+        <img src="logo.png" alt="L'ets Echad" class="ft-logo">
         <p class="ft-tag">"Into One Stick — Ezekiel 37:19"<br>A ministry of reunification.</p>
         <p class="ft-url">letsechad.com</p>
       </div>
@@ -354,15 +375,6 @@ const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.targ
 document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
 if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)
   document.querySelectorAll('.fu').forEach(el=>el.classList.add('in'));}
-</script>
-<script src="logo.js"></script>
-<script>
-(function(){
-  if(!window.LOGO) return;
-  document.querySelectorAll('img').forEach(function(i){
-    if(i.src && i.src.indexOf('LOGO_SRC') !== -1) i.src = window.LOGO;
-  });
-})();
 </script>
 </body>
 </html>

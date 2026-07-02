@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /SETUP-GUIDE.html
+Disallow: /teaching-template.html
+
+Sitemap: https://letsechad.com/sitemap.xml
