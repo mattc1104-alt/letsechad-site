@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Glossary · L'ets Echad | Key Terms for Torah and Two-House Study</title>
 <link rel="canonical" href="https://letsechad.com/glossary.html">
-<meta property="og:description" content="A comprehensive glossary of terms used in Torah study, two-house theology, Jewish practice, and the L'ets Echad teaching framework. Sourced from Torah and Tanakh.">
+<meta property="og:description" content="A comprehensive glossary of terms used in Torah study, two-house theology, Jewish practice, and the L'ets Echad teaching framework. Grounded in Torah and Tanakh, with careful attention to Jewish tradition and Christian-background language.">
 <meta property="og:image" content="https://letsechad.com/og-share.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="L'ets Echad — One Stick in His Hand. Ezekiel 37:19">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Glossary · L'ets Echad | Key Terms for Torah and Two-House Study">
-<meta name="twitter:description" content="A comprehensive glossary of terms used in Torah study, two-house theology, Jewish practice, and the L'ets Echad teaching framework. Sourced from Torah and Tanakh.">
+<meta name="twitter:description" content="A comprehensive glossary of terms used in Torah study, two-house theology, Jewish practice, and the L'ets Echad teaching framework. Grounded in Torah and Tanakh, with careful attention to Jewish tradition and Christian-background language.">
 <meta name="twitter:image" content="https://letsechad.com/og-share.jpg">
-<meta name="description" content="A comprehensive glossary of terms used in Torah study, two-house theology, Jewish practice, and the L'ets Echad teaching framework. Sourced from Torah and Tanakh.">
+<meta name="description" content="A comprehensive glossary of terms used in Torah study, two-house theology, Jewish practice, and the L'ets Echad teaching framework. Grounded in Torah and Tanakh, with careful attention to Jewish tradition and Christian-background language.">
 <meta property="og:title" content="Glossary · L'ets Echad">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://letsechad.com/glossary.html">
@@ -31,7 +31,7 @@
 :root{
   --ink:#0F0B07;--ink2:#1A1108;--ink3:#251A0C;
   --bark:#3E2C14;--stone:#7A6040;--sand:#A08860;
-  --gold:#BF9B2C;--gold2:#D4AF3A;
+  --gold:#BF9B2C;--gold2:#D4AF3A;--gold3:#E8C84A;
   --parch:#F5EDD8;--cream:#FBF7EF;--white:#FFFFFF;
   --bdr:rgba(191,155,44,.18);--bdr2:rgba(191,155,44,.38);
   --serif:'Cormorant Garamond',Georgia,serif;
@@ -74,6 +74,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .mob.open{display:flex}
 .mob-a{font-size:1.15rem;font-family:var(--serif);color:rgba(255,255,255,.55);padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.05);transition:color var(--t)}
 .mob-a:hover{color:var(--gold2)}
+.mob-a.cur{color:var(--gold2)}
 .mob-a:last-child{border-bottom:none;color:var(--gold);margin-top:.5rem}
 
 /* FOOTER */
@@ -105,6 +106,16 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .cat-card-n{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
 .cat-card-t{font-family:var(--serif);font-size:.9rem;color:var(--ink);line-height:1.25;display:block}
 
+/* SEARCH */
+.gloss-search-wrap{background:var(--cream);border-bottom:1px solid var(--bdr);padding:1.1rem 2rem}
+.gloss-search{max-width:1100px;margin:0 auto}
+#glossSearch{width:100%;font-family:var(--sans);font-size:.9rem;color:var(--ink);background:var(--white);border:1px solid var(--bdr2);border-radius:2px;padding:.72rem 1rem;transition:border-color var(--t)}
+#glossSearch:focus{border-color:var(--gold)}
+#glossSearch::placeholder{color:var(--stone);opacity:.7}
+.gloss-count{font-size:.72rem;color:var(--stone);margin-top:.5rem;display:none}
+.gloss-count.show{display:block}
+.gloss-section.hidden{display:none}
+
 /* GLOSSARY BODY */
 .gloss-body{padding:4rem 0 6rem}
 
@@ -117,7 +128,8 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 
 /* TERM GRID */
 .term-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr)}
-.term-c{background:var(--white);padding:1.4rem 1.6rem;transition:background var(--t)}
+.term-c{background:var(--white);padding:1.4rem 1.6rem;transition:background var(--t);scroll-margin-top:110px}
+.term-c:target{background:var(--parch);outline:1px solid var(--bdr2)}
 .term-c:hover{background:var(--cream)}
 .term-c.hidden{display:none}
 .term-heb{font-family:var(--serif);font-size:1.2rem;color:var(--gold2);display:block;line-height:1;margin-bottom:.15rem}
@@ -166,12 +178,238 @@ button{cursor:pointer;font-family:var(--sans);border:none;background:none}
 .eyebrow{color:var(--goldtxt)}
 .footer .eyebrow,.mob .eyebrow,.pg-hero .eyebrow{color:var(--gold2)}
 .term-ref{color:var(--stone)}
+.cat-card-n{color:var(--goldtxt)}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #7E6410;outline-offset:2px}
 .nav a:focus-visible,.mob a:focus-visible,.footer a:focus-visible{outline-color:var(--gold2)}
 .skipl{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--gold3);padding:.8rem 1.2rem;z-index:2000;font-family:var(--sans)}
 .term-heb{color:var(--goldtxt)}
 .skipl:focus{left:0}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://letsechad.com/glossary.html",
+      "url": "https://letsechad.com/glossary.html",
+      "name": "Glossary · L'ets Echad | Key Terms for Torah and Two-House Study",
+      "description": "A comprehensive glossary of terms used in Torah study, two-house theology, Jewish practice, and the L'ets Echad teaching framework. Grounded in Torah and Tanakh, with careful attention to Jewish tradition and Christian-background language.",
+      "inLanguage": "en",
+      "dateModified": "2026-07-02",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://letsechad.com/#website",
+        "url": "https://letsechad.com/",
+        "name": "L'ets Echad",
+        "description": "A ministry of reunification. One stick in His hand. Ezekiel 37:19.",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://letsechad.com/#org",
+          "name": "L'ets Echad",
+          "url": "https://letsechad.com/",
+          "logo": "https://letsechad.com/logo.png",
+          "founder": {"@type": "Person", "name": "Matti Kahana"}
+        }
+      },
+      "breadcrumb": {"@id": "https://letsechad.com/glossary.html#breadcrumb"},
+      "mainEntity": {"@id": "https://letsechad.com/glossary.html#termset"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://letsechad.com/glossary.html#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsechad.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://letsechad.com/resources.html"},
+        {"@type": "ListItem", "position": 3, "name": "Glossary", "item": "https://letsechad.com/glossary.html"}
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://letsechad.com/glossary.html#termset",
+      "name": "L'ets Echad Glossary of Torah and Two-House Terms",
+      "url": "https://letsechad.com/glossary.html",
+      "description": "175 terms covering Torah and Tanakh study, the two-house framework of Judah and Ephraim, return and exile, Jewish practice, and discernment.",
+      "hasDefinedTerm": [
+        {"@type": "DefinedTerm", "name": "L'ets Echad", "alternateName": "לְעֵץ אֶחָד", "description": "Into one stick. From Ezekiel 37:17. HaShem takes the stick of Judah and the stick of Ephraim in His hand and they become one. A divided house, reunified."},
+        {"@type": "DefinedTerm", "name": "Echad", "alternateName": "אֶחָד", "description": "One. Single, whole, united. In the Shema, the declaration that HaShem is one: unique, indivisible, unmatched."},
+        {"@type": "DefinedTerm", "name": "Etz"},
+        {"@type": "DefinedTerm", "name": "Judah / House of Judah", "alternateName": "יְהוּדָה", "description": "The tribe that gave its name to the Southern Kingdom. Judah preserved Torah through exile. In Ezekiel 37, the stick of Judah becomes one with the stick of Ephraim."},
+        {"@type": "DefinedTerm", "name": "Ephraim / House of Ephraim", "alternateName": "אֶפְרַיִם", "description": "The prophetic name for the scattered Northern Kingdom of Israel: all who were exiled and lost their identity. A prophetic pattern of return, not a genetic claim."},
+        {"@type": "DefinedTerm", "name": "House of Judah", "alternateName": "בֵּית יְהוּדָה"},
+        {"@type": "DefinedTerm", "name": "House of Israel"},
+        {"@type": "DefinedTerm", "name": "Northern Kingdom"},
+        {"@type": "DefinedTerm", "name": "Southern Kingdom"},
+        {"@type": "DefinedTerm", "name": "Two Sticks", "description": "The prophetic act of Ezekiel 37:15-19. Two sticks, one for Judah, one for Joseph and Ephraim, joined into one in HaShem's hand. The central prophetic image of L'ets Echad."},
+        {"@type": "DefinedTerm", "name": "One Stick"},
+        {"@type": "DefinedTerm", "name": "Israel"},
+        {"@type": "DefinedTerm", "name": "Covenant", "alternateName": "בְּרִית"},
+        {"@type": "DefinedTerm", "name": "Teshuvah", "alternateName": "תְּשׁוּבָה", "description": "Usually translated repentance. Too small. From the root shuv, to turn or return: the deliberate act of turning away from the wrong direction and walking back toward HaShem, Torah, and covenant."},
+        {"@type": "DefinedTerm", "name": "Shuv"},
+        {"@type": "DefinedTerm", "name": "Return"},
+        {"@type": "DefinedTerm", "name": "Scattering"},
+        {"@type": "DefinedTerm", "name": "Ingathering"},
+        {"@type": "DefinedTerm", "name": "Restoration"},
+        {"@type": "DefinedTerm", "name": "Reunification"},
+        {"@type": "DefinedTerm", "name": "Lo-Ammi"},
+        {"@type": "DefinedTerm", "name": "Ammi"},
+        {"@type": "DefinedTerm", "name": "Remnant"},
+        {"@type": "DefinedTerm", "name": "Ger", "alternateName": "גֵּר"},
+        {"@type": "DefinedTerm", "name": "Goyim / Gentile"},
+        {"@type": "DefinedTerm", "name": "Noahide", "alternateName": "בֶּן נֹחַ", "description": "A non-Jew who accepts the seven laws given to all humanity through Noah, recognizes the G-d of Israel, and lives accordingly. A recognized righteous status in Jewish tradition."},
+        {"@type": "DefinedTerm", "name": "Torah", "alternateName": "תּוֹרָה", "description": "Usually translated law. Too small, and misleading. From a root meaning to teach, to instruct, to point the way. The five books of Moses: HaShem's instruction for how to live as His covenant people."},
+        {"@type": "DefinedTerm", "name": "Tanakh", "description": "The complete Hebrew Bible: Torah, Nevi'im (Prophets), and Ketuvim (Writings). Not old, not superseded, not preliminary. The primary text."},
+        {"@type": "DefinedTerm", "name": "Chumash"},
+        {"@type": "DefinedTerm", "name": "Nevi'im"},
+        {"@type": "DefinedTerm", "name": "Ketuvim"},
+        {"@type": "DefinedTerm", "name": "Parashah"},
+        {"@type": "DefinedTerm", "name": "Parashat Hashavua"},
+        {"@type": "DefinedTerm", "name": "Aliyah"},
+        {"@type": "DefinedTerm", "name": "Haftarah"},
+        {"@type": "DefinedTerm", "name": "Mikra"},
+        {"@type": "DefinedTerm", "name": "Mitzvah / Mitzvot"},
+        {"@type": "DefinedTerm", "name": "Halakhah"},
+        {"@type": "DefinedTerm", "name": "Aggadah"},
+        {"@type": "DefinedTerm", "name": "Midrash"},
+        {"@type": "DefinedTerm", "name": "Peshat"},
+        {"@type": "DefinedTerm", "name": "Remez"},
+        {"@type": "DefinedTerm", "name": "Derash"},
+        {"@type": "DefinedTerm", "name": "Sod"},
+        {"@type": "DefinedTerm", "name": "High-Context Reading"},
+        {"@type": "DefinedTerm", "name": "Prooftext"},
+        {"@type": "DefinedTerm", "name": "Hebrew Root / Shoresh"},
+        {"@type": "DefinedTerm", "name": "Oral Torah"},
+        {"@type": "DefinedTerm", "name": "Mesorah"},
+        {"@type": "DefinedTerm", "name": "Minhag"},
+        {"@type": "DefinedTerm", "name": "Rabbinic Judaism"},
+        {"@type": "DefinedTerm", "name": "Geulah"},
+        {"@type": "DefinedTerm", "name": "Galut / Exile"},
+        {"@type": "DefinedTerm", "name": "Diaspora"},
+        {"@type": "DefinedTerm", "name": "Circumcised Heart"},
+        {"@type": "DefinedTerm", "name": "Stiff-Necked"},
+        {"@type": "DefinedTerm", "name": "Backsliding / Meshuvah"},
+        {"@type": "DefinedTerm", "name": "Divorce"},
+        {"@type": "DefinedTerm", "name": "Lo-Ruhamah"},
+        {"@type": "DefinedTerm", "name": "Ruhamah"},
+        {"@type": "DefinedTerm", "name": "Idolatry"},
+        {"@type": "DefinedTerm", "name": "Apostasy"},
+        {"@type": "DefinedTerm", "name": "Captivity / Return from Captivity"},
+        {"@type": "DefinedTerm", "name": "Jew / Jewish"},
+        {"@type": "DefinedTerm", "name": "Judahite"},
+        {"@type": "DefinedTerm", "name": "Israelite"},
+        {"@type": "DefinedTerm", "name": "Hebrew"},
+        {"@type": "DefinedTerm", "name": "Ephraimite", "description": "In the prophetic sense, someone who recognizes himself in the story of the scattered Northern Kingdom and hears the call to return. Not a genetic claim. Not a tribal certificate. A pattern of recognition."},
+        {"@type": "DefinedTerm", "name": "Lost Tribes", "description": "The ten northern tribes scattered by Assyria in 722 BCE. Lost to history and to their own identity, not lost to HaShem."},
+        {"@type": "DefinedTerm", "name": "Ger Toshav"},
+        {"@type": "DefinedTerm", "name": "Ger Tzedek / Conversion"},
+        {"@type": "DefinedTerm", "name": "Erev Rav / Mixed Multitude"},
+        {"@type": "DefinedTerm", "name": "Tribal Identity"},
+        {"@type": "DefinedTerm", "name": "Prophetic Identity"},
+        {"@type": "DefinedTerm", "name": "Messianic"},
+        {"@type": "DefinedTerm", "name": "Hebrew Roots Movement", "description": "A diverse movement of mostly Christian-background people returning to Torah study and practice. Wide and uneven: some teachers careful and text-grounded, others speculative. Test every teacher and claim against Torah and Tanakh directly."},
+        {"@type": "DefinedTerm", "name": "Karaism / Karaite"},
+        {"@type": "DefinedTerm", "name": "Torah-Observant"},
+        {"@type": "DefinedTerm", "name": "Klal Yisrael"},
+        {"@type": "DefinedTerm", "name": "Am Yisrael"},
+        {"@type": "DefinedTerm", "name": "Church / Ecclesia"},
+        {"@type": "DefinedTerm", "name": "Kingdom"},
+        {"@type": "DefinedTerm", "name": "Salvation"},
+        {"@type": "DefinedTerm", "name": "Grace", "description": "In the Tanakh, grace is not the opposite of Torah. It is the reason Torah exists. Two Hebrew words carry what English flattens into one: chen, favor freely given, and chesed, covenant loyalty."},
+        {"@type": "DefinedTerm", "name": "Faith"},
+        {"@type": "DefinedTerm", "name": "Law"},
+        {"@type": "DefinedTerm", "name": "Fulfilled / Abolished"},
+        {"@type": "DefinedTerm", "name": "New Covenant / Brit Chadashah", "description": "From Jeremiah 31:31-33. HaShem promises a renewed covenant with the house of Israel and the house of Judah. The Torah does not change. The people do."},
+        {"@type": "DefinedTerm", "name": "Old Covenant"},
+        {"@type": "DefinedTerm", "name": "Clean / Unclean (Tahor / Tamei)"},
+        {"@type": "DefinedTerm", "name": "Legalism"},
+        {"@type": "DefinedTerm", "name": "Chosen / Election"},
+        {"@type": "DefinedTerm", "name": "Tikkun"},
+        {"@type": "DefinedTerm", "name": "Avodah"},
+        {"@type": "DefinedTerm", "name": "Shachah"},
+        {"@type": "DefinedTerm", "name": "Yirah"},
+        {"@type": "DefinedTerm", "name": "Ahavah"},
+        {"@type": "DefinedTerm", "name": "Emunah"},
+        {"@type": "DefinedTerm", "name": "Bitachon"},
+        {"@type": "DefinedTerm", "name": "Chesed"},
+        {"@type": "DefinedTerm", "name": "Kadosh"},
+        {"@type": "DefinedTerm", "name": "Kedushah / Holiness"},
+        {"@type": "DefinedTerm", "name": "Korban", "alternateName": "קָרְבָּן", "description": "Usually translated sacrifice. Too small. From the root karav, to draw near. A korban is not primarily about death or punishment. It is about drawing near to HaShem."},
+        {"@type": "DefinedTerm", "name": "Shema", "alternateName": "שְׁמַע", "description": "Hear, O Israel. The foundational declaration of Israel's covenant with HaShem. In Hebrew, hearing implies response and obedience: to shema is to hear in a way that changes how you live."},
+        {"@type": "DefinedTerm", "name": "Mishkan"},
+        {"@type": "DefinedTerm", "name": "Beit HaMikdash"},
+        {"@type": "DefinedTerm", "name": "Kohen / Priest"},
+        {"@type": "DefinedTerm", "name": "Shabbat", "alternateName": "שַׁבָּת", "description": "The seventh day, sunset Friday to nightfall Saturday. The only day HaShem names and sanctifies at creation, and the covenant sign between HaShem and Israel."},
+        {"@type": "DefinedTerm", "name": "Erev Shabbat"},
+        {"@type": "DefinedTerm", "name": "Havdalah"},
+        {"@type": "DefinedTerm", "name": "Moed / Moedim"},
+        {"@type": "DefinedTerm", "name": "Pesach"},
+        {"@type": "DefinedTerm", "name": "Shavuot"},
+        {"@type": "DefinedTerm", "name": "Yom Teruah"},
+        {"@type": "DefinedTerm", "name": "Yom Kippur"},
+        {"@type": "DefinedTerm", "name": "Sukkot"},
+        {"@type": "DefinedTerm", "name": "Rosh Chodesh"},
+        {"@type": "DefinedTerm", "name": "Kashrut / Kosher"},
+        {"@type": "DefinedTerm", "name": "Tzitzit"},
+        {"@type": "DefinedTerm", "name": "Mezuzah"},
+        {"@type": "DefinedTerm", "name": "Counting the Omer"},
+        {"@type": "DefinedTerm", "name": "Zmanim"},
+        {"@type": "DefinedTerm", "name": "Tefillin"},
+        {"@type": "DefinedTerm", "name": "Abraham"},
+        {"@type": "DefinedTerm", "name": "Isaac"},
+        {"@type": "DefinedTerm", "name": "Jacob / Israel"},
+        {"@type": "DefinedTerm", "name": "Joseph"},
+        {"@type": "DefinedTerm", "name": "Jeroboam"},
+        {"@type": "DefinedTerm", "name": "Rehoboam"},
+        {"@type": "DefinedTerm", "name": "Elijah"},
+        {"@type": "DefinedTerm", "name": "Hosea"},
+        {"@type": "DefinedTerm", "name": "Jeremiah"},
+        {"@type": "DefinedTerm", "name": "Ezekiel"},
+        {"@type": "DefinedTerm", "name": "Jerusalem / Zion"},
+        {"@type": "DefinedTerm", "name": "Samaria"},
+        {"@type": "DefinedTerm", "name": "Assyria"},
+        {"@type": "DefinedTerm", "name": "Land of Israel / Eretz Israel"},
+        {"@type": "DefinedTerm", "name": "Exegesis"},
+        {"@type": "DefinedTerm", "name": "Eisegesis"},
+        {"@type": "DefinedTerm", "name": "Literary Context"},
+        {"@type": "DefinedTerm", "name": "Historical Context"},
+        {"@type": "DefinedTerm", "name": "Covenant Context"},
+        {"@type": "DefinedTerm", "name": "Intertextuality"},
+        {"@type": "DefinedTerm", "name": "Machloket"},
+        {"@type": "DefinedTerm", "name": "Machloket L'Shem Shamayim"},
+        {"@type": "DefinedTerm", "name": "Confirmation Bias"},
+        {"@type": "DefinedTerm", "name": "Cognitive Dissonance"},
+        {"@type": "DefinedTerm", "name": "Primary Source"},
+        {"@type": "DefinedTerm", "name": "Testing Claims"},
+        {"@type": "DefinedTerm", "name": "Genetic Fallacy"},
+        {"@type": "DefinedTerm", "name": "Messiah / Christ", "description": "Mashiach means anointed one. The prophets speak of a future anointed leader from David's line who will restore Israel and reign in righteousness. Claims about fulfillment are tested against the promises themselves."},
+        {"@type": "DefinedTerm", "name": "New Testament"},
+        {"@type": "DefinedTerm", "name": "Replacement Theology / Supersessionism", "description": "The belief that the Church replaced Israel as HaShem's covenant people. The Tanakh does not support it. Leviticus 26:44: even in exile, HaShem will not reject Israel or break His covenant."},
+        {"@type": "DefinedTerm", "name": "Paul / Pauline Theology"},
+        {"@type": "DefinedTerm", "name": "Grace vs. Law"},
+        {"@type": "DefinedTerm", "name": "Fulfillment Theology"},
+        {"@type": "DefinedTerm", "name": "Dispensationalism"},
+        {"@type": "DefinedTerm", "name": "Leaving Christianity / Deconstruction"},
+        {"@type": "DefinedTerm", "name": "Pharisee / Pharisaic"},
+        {"@type": "DefinedTerm", "name": "Grafted In", "description": "Language many bring from a Christian background for being joined to Israel's covenant community. The entry point has always been the same: Torah and covenant. Not culture, not aesthetics, not heritage claims."},
+        {"@type": "DefinedTerm", "name": "Bloodline Obsession"},
+        {"@type": "DefinedTerm", "name": "Tribal Speculation"},
+        {"@type": "DefinedTerm", "name": "Antisemitism"},
+        {"@type": "DefinedTerm", "name": "Appropriation"},
+        {"@type": "DefinedTerm", "name": "Pretending to Be Jewish"},
+        {"@type": "DefinedTerm", "name": "Syncretism"},
+        {"@type": "DefinedTerm", "name": "Strange Fire"},
+        {"@type": "DefinedTerm", "name": "Adding to / Taking From Torah"},
+        {"@type": "DefinedTerm", "name": "Private Revelation"},
+        {"@type": "DefinedTerm", "name": "Untested Prophecy"},
+        {"@type": "DefinedTerm", "name": "Spiritual Manipulation"},
+        {"@type": "DefinedTerm", "name": "Genetic Certainty"},
+        {"@type": "DefinedTerm", "name": "Anti-Judaism"},
+        {"@type": "DefinedTerm", "name": "False Humility"}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body id="categories">
 <a class="skipl" href="#panel-core">Skip to content</a>
@@ -204,7 +442,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   <a href="teachings.html" class="mob-a">Teachings</a>
   <a href="foundation.html" class="mob-a">Free Course</a>
   <a href="about.html" class="mob-a">About</a>
-  <a href="resources.html" class="mob-a">Resources</a>
+  <a href="resources.html" class="mob-a cur">Resources</a>
   <a href="index.html#connect" class="mob-a">Contact</a>
   <a href="support.html" class="mob-a">Give</a>
 </nav>
@@ -214,7 +452,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <p class="eyebrow" style="justify-content:center;display:flex;gap:.75rem;margin-bottom:1.1rem">
       <span style="display:block;width:24px;height:1px;background:var(--gold);opacity:.5;margin-top:.55rem"></span>Key Terms<span style="display:block;width:24px;height:1px;background:var(--gold);opacity:.5;margin-top:.55rem"></span>
     </p>
-    <h1 class="sh sh-lg" style="margin-bottom:.9rem">Glossary</h1>
+    <h1 class="sh sh-lg" style="margin-bottom:.9rem">Torah &amp; Two-House Glossary</h1>
     <p>Key terms used across L'ets Echad teachings, defined and sourced in Torah and Tanakh. Browse by category or scroll the whole library.</p>
   </div>
 </div>
@@ -238,19 +476,27 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   </div>
 </div>
 
+<!-- SEARCH -->
+<div class="gloss-search-wrap">
+  <div class="gloss-search">
+    <input id="glossSearch" type="search" placeholder="Search the glossary — term, Hebrew, or meaning..." aria-label="Search glossary terms">
+    <p class="gloss-count" id="glossCount" role="status" aria-live="polite"></p>
+  </div>
+</div>
+
 <!-- GLOSSARY BODY -->
 <div class="gloss-body">
   <div class="Wsm">
 <section class="gloss-section" id="panel-core">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">L'ets Echad Core Terms</p>
+        <h2 class="gloss-section-title">L'ets Echad Core Terms</h2>
         <p class="gloss-section-desc">The foundational vocabulary of the ministry. These terms appear in nearly every teaching. Start here.</p>
       </div>
       <div class="term-grid">
      <div class="term-c"><span class="term-heb">לְעֵץ אֶחָד</span><span class="term-name">L'ets Echad</span><span class="term-trans">"Into One Stick"</span><p class="term-def">The name comes straight from Ezekiel 37:17. The lamed prefix means "into" or "for." <em>Etz</em> means "stick" or "tree." <em>Echad</em> means "one." Into one stick. That is what HaShem does with the stick of Judah and the stick of Ephraim. He takes them both in His hand and they become one. Not two sticks held together. One. A divided house, reunified. A broken family, restored. Two thousand years of separation, ended. That is the mission. That is the name.</p><span class="term-ref">Ezekiel 37:17, 19</span></div>
         <div class="term-c"><span class="term-heb">אֶחָד</span><span class="term-name">Echad</span><span class="term-trans">"One"</span><p class="term-def">Echad means one. Single, whole, united. The word itself is simple. The thing being described tells you what kind of oneness is meant: one person, one day, one people, one cluster, one nation. In the Shema, אֲדֹנָי אֶחָד declares that HaShem is one. Unique, indivisible, unmatched. Echad carries the weight of wholeness. Not divided. Not rivaled. Not one among others. Simply and wholly one.</p><span class="term-ref">Deuteronomy 6:4 · Ezekiel 37:19</span></div>
         <div class="term-c"><span class="term-heb">עֵץ</span><span class="term-name">Etz</span><span class="term-trans">"Stick" or "tree"</span><p class="term-def">The word HaShem uses in Ezekiel 37:16–19 for the sticks of Judah and Ephraim. The same word means tree elsewhere in Scripture, as in the tree of life and the tree of knowledge. The stick is not merely symbolic. It is a physical object used as a prophetic sign. Ezekiel holds it. HaShem takes it.</p><span class="term-ref">Ezekiel 37:16–19 · Genesis 2:9</span></div>
-        <div class="term-c"><span class="term-heb">יְהוּדָה</span><span class="term-name">Judah / House of Judah</span><span class="term-trans">"Praised"</span><p class="term-def">The fourth son of Jacob and Leah. The tribe that gave its name to the Southern Kingdom. After the split in 1 Kings 12, Judah, along with Benjamin and Levi, remained under the Davidic throne. The Jewish people today descend primarily from the Southern Kingdom. Judah preserved Torah through exile. Judah said the Shema in the camps. Judah is still here. In Ezekiel 37, the stick of Judah becomes one with the stick of Ephraim.</p><span class="term-ref">Genesis 49:8 · 1 Kings 12 · Ezekiel 37:16</span></div>
+        <div class="term-c"><span class="term-heb">יְהוּדָה</span><span class="term-name">Judah / House of Judah</span><span class="term-trans">"Praised"</span><p class="term-def">The fourth son of Jacob and Leah. The tribe that gave its name to the Southern Kingdom. After the split in 1 Kings 12, Judah, along with Benjamin and Levi, remained under the Davidic throne. The Jewish people today carry the covenant identity the Southern Kingdom preserved, together with the converts joined to Judah across the generations. Judah preserved Torah through exile. Judah said the Shema in the camps. Judah is still here. In Ezekiel 37, the stick of Judah becomes one with the stick of Ephraim.</p><span class="term-ref">Genesis 49:8 · 1 Kings 12 · Ezekiel 37:16</span></div>
         <div class="term-c"><span class="term-heb">אֶפְרַיִם</span><span class="term-name">Ephraim / House of Ephraim</span><span class="term-trans">"Doubly fruitful"</span><p class="term-def">Son of Joseph, born in Egypt. Received the greater blessing from Jacob (Genesis 48). Ephraim's tribe led the Northern Kingdom after the split, making Ephraim the prophetic name for all ten northern tribes. In the prophets, Ephraim is the scattered house of Israel. All who were exiled and lost their identity. Ephraim names a prophetic pattern of return, not a genetic claim.</p><span class="term-ref">Genesis 48 · Hosea 5:3 · Ezekiel 37:16</span></div>
         <div class="term-c"><span class="term-heb">בֵּית יְהוּדָה</span><span class="term-name">House of Judah</span><span class="term-trans">"The household of Judah"</span><p class="term-def">The Southern Kingdom. Judah, Benjamin, and Levi, and by extension the Jewish people. The prophets set it against the House of Israel, the House of Ephraim. HaShem addresses both houses separately and promises to reunite them (Jeremiah 31, Ezekiel 37). The House of Judah does not replace all Israel. It is one half of a whole.</p><span class="term-ref">Jeremiah 31:27 · Ezekiel 37:16</span></div>
         <div class="term-c"><span class="term-heb">בֵּית יִשְׂרָאֵל</span><span class="term-name">House of Israel</span><span class="term-trans">"The household of Israel"</span><p class="term-def">In the prophets, "House of Israel" can mean the whole covenant people, or in some contexts the Northern Kingdom specifically. Context decides. It often stands in for the House of Ephraim when the prophets address the scattered northern tribes and their exiled descendants. In Ezekiel 37:11, "the whole house of Israel" folds the scattered northern house into the full restoration of Israel. Read carefully. The same phrase carries different weight depending on who is addressed, and when.</p><span class="term-ref">Ezekiel 37:11 · Hosea 1:6</span></div>
@@ -271,9 +517,9 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
        <div class="term-c"><span class="term-heb">לֹא עַמִּי</span><span class="term-name">Lo-Ammi</span><span class="term-trans">"Not My people"</span><p class="term-def">The name HaShem commands Hosea to give his third child (Hosea 1:9). A covenant rejection. A disowning declaration inside Hosea's larger divorce-and-restoration frame. "You are not My people and I am not your G-d." This was not the end of the story. Hosea 2 promises the reversal at once. Lo-Ammi precedes Ammi. The declaration of rejection precedes the declaration of return.</p><span class="term-ref">Hosea 1:9 · Hosea 2:25</span></div>
 <div class="term-c"><span class="term-heb">עַמִּי</span><span class="term-name">Ammi</span><span class="term-trans">"My people"</span><p class="term-def">The reversal of Lo-Ammi. Hosea 2:25: "I will say to Lo-Ammi, 'You are My people,' and he will say, 'My G-d.'" The moment of restoration. HaShem reclaiming what He declared not-His. Ammi is the destination Lo-Ammi was always pointing toward. The exile was not abandonment. It was the condition from which return is possible.</p><span class="term-ref">Hosea 2:25</span></div>
         <div class="term-c"><span class="term-heb">שְׁאֵרִית</span><span class="term-name">Remnant</span><span class="term-trans">"What remains"</span><p class="term-def">Those who stay loyal to HaShem when the majority turns away. Not a racial category. Not a lineage guarantee. A covenant category, defined by faithfulness. The word follows a pattern across the prophets. Israel falls into idolatry. The nation is judged. A portion survives. Not because they were lucky, because they did not abandon HaShem or His Torah. That portion is the remnant. Elijah thought he was the last one standing after Carmel. HaShem corrected him to his face: "I have kept for myself seven thousand in Israel, all the knees that have not bowed to Baal" (1 Kings 19:18). The remnant exists even when no one can see them. HaShem knows who they are.</p><span class="term-ref">1 Kings 19:18 · Isaiah 10:20-21 · Zechariah 13:9</span></div>
-        <div class="term-c"><span class="term-heb">גֵּר</span><span class="term-name">Ger</span><span class="term-trans">"Sojourner" or "stranger dwelling among"</span><p class="term-def">In Torah, ger is a broad term for a sojourner or foreigner dwelling among Israel. The ger comes under Israel's protection and Israel's covenant obligations. Torah commands Israel to love the ger, because Israel was once gerim in Egypt. The ger who commits fully, circumcised, dwelling permanently among Israel, becomes as a native born. No separate banner. No separate inheritance. Grafted into the tribal structure of Israel itself. Later Jewish tradition distinguishes categories such as ger toshav and ger tzedek. The ger is welcomed on HaShem's terms.</p><span class="term-ref">Leviticus 19:34 · Deuteronomy 10:19 · Numbers 15:15–16 · Ezekiel 47:22–23</span></div>
+        <div class="term-c"><span class="term-heb">גֵּר</span><span class="term-name">Ger</span><span class="term-trans">"Sojourner" or "stranger dwelling among"</span><p class="term-def">In Torah, ger is a broad term for a sojourner or foreigner dwelling among Israel. The ger comes under Israel's protection and Israel's covenant obligations. Torah commands Israel to love the ger, because Israel was once gerim in Egypt. Torah uses ger in more than one way, so context decides. Some commands place the ger as a native born (Exodus 12:48, Numbers 15:15–16). Others distinguish him from native-born Israel. Later Jewish tradition distinguishes categories such as ger toshav and ger tzedek. The point is not category confusion. The point is that HaShem makes room for the outsider who attaches himself to His people, on His terms.</p><span class="term-ref">Leviticus 19:34 · Deuteronomy 10:19 · Numbers 15:15–16 · Ezekiel 47:22–23</span></div>
         <div class="term-c"><span class="term-heb">גּוֹיִם</span><span class="term-name">Goyim / Gentile</span><span class="term-trans">"Nations" or "peoples"</span><p class="term-def">Goy (singular) and goyim (plural) simply mean "nation" or "people." Not inherently pejorative. Abraham's descendants would become a great goy (Genesis 12:2). Israel is called a goy kadosh, a holy nation (Exodus 19:6). In rabbinic usage, goyim often means non-Jews. Here we use it in the biblical sense: the nations among whom Ephraim was scattered.</p><span class="term-ref">Genesis 12:2 · Exodus 19:6 · Deuteronomy 4:6</span></div>
-        <div class="term-c"><span class="term-heb">בֶּן נֹחַ</span><span class="term-name">Noahide</span><span class="term-trans">"Son of Noah"</span><p class="term-def">A non-Jew who accepts the seven laws given to all humanity through Noah, recognizes the G-d of Israel, and lives accordingly. Not a full Torah-obligated Israelite covenant status, but a recognized righteous status in Jewish tradition. Many in this community identify as Noahide while also sensing an Ephraimite pull. The two are not mutually exclusive.</p><span class="term-ref">Genesis 9 · Sanhedrin 56a–60a</span></div>
+        <div class="term-c"><span class="term-heb">בֶּן נֹחַ</span><span class="term-name">Noahide</span><span class="term-trans">"Son of Noah"</span><p class="term-def">A non-Jew who accepts the seven laws given to all humanity through Noah, recognizes the G-d of Israel, and lives accordingly. Not a full Torah-obligated Israelite covenant status, but a recognized righteous status in Jewish tradition. Many in this community identify as Noahide while also sensing an Ephraimite pull. That pull is real. Handle it slowly and humbly, without collapsing the categories. Noahide, ger, convert, and Jew are not interchangeable.</p><span class="term-ref">Genesis 9 · Sanhedrin 56a–60a</span></div>
       </div>
 <div class="return-links">
   <a href="resources.html" class="return-link">← Back to Resources</a>
@@ -284,7 +530,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- TORAH & TANAKH -->
     <section class="gloss-section" id="panel-tanakh">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Torah &amp; Tanakh Basics</p>
+        <h2 class="gloss-section-title">Torah &amp; Tanakh Basics</h2>
         <p class="gloss-section-desc">For people coming from Christian backgrounds or new to Hebrew Bible study. These terms appear constantly. Know what they actually mean.</p>
       </div>
       <div class="term-grid">
@@ -302,14 +548,17 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
         <div class="term-c"><span class="term-heb">הֲלָכָה</span><span class="term-name">Halakhah</span><span class="term-trans">"The way of walking"</span><p class="term-def">Jewish law as it is practiced. The application of Torah commandments to daily life. From the root הלך (halakh), to walk. Halakhah is literally the way you walk. It is the accumulated body of Torah application developed through rabbinic tradition. Hold Torah as primary. Draw on halakhah where it illuminates the text. Do not treat it as equal to Torah itself.</p></div>
         <div class="term-c"><span class="term-heb">אַגָּדָה</span><span class="term-name">Aggadah</span><span class="term-trans">"Telling," narrative and homiletical tradition</span><p class="term-def">The non-legal rabbinic literature. Stories, parables, legends, ethical teachings, and interpretations that do not carry the binding force of halakhah. Aggadah often lights up the spirit of a text where strict legal analysis cannot. Draw on it where it serves the text. Test it against Torah.</p></div>
         <div class="term-c"><span class="term-heb">מִדְרָשׁ</span><span class="term-name">Midrash</span><span class="term-trans">"Investigation" or "searching"</span><p class="term-def">A method and a body of literature that explores Scripture through creative interpretation, stories, and homiletical teaching. Midrash fills gaps in the narrative, draws out implications, and makes the text speak to new situations. Use it to illuminate the plain meaning (peshat). Never to override it.</p></div>
-        <div class="term-c"><span class="term-name">Peshat</span><span class="term-trans">"Plain meaning"</span><p class="term-def">The literal, contextual meaning of the text. The first and primary level. Pshat is the foundation. What does the text actually say, in context, to its original audience? Every other level (remez, derash, sod) builds on a sound peshat, or it builds on a crack.</p></div>
-        <div class="term-c"><span class="term-name">Remez</span><span class="term-trans">"Hint" or "allusion"</span><p class="term-def">The second level. Reading the text for its allusive or allegorical sense. Remez finds the connections between texts that share vocabulary, images, or themes. It helps you see how the prophets quote and echo the Torah.</p></div>
-        <div class="term-c"><span class="term-name">Derash</span><span class="term-trans">"Seek" or "expound"</span><p class="term-def">The third level. Homiletical application. How does this text speak to us now? What does HaShem intend us to do with it? Derash is where teaching lives. It must always flow from a solid peshat, not replace it.</p></div>
-        <div class="term-c"><span class="term-name">Sod</span><span class="term-trans">"Secret" or "mystery"</span><p class="term-def">The fourth level. Mystical or hidden meaning, associated with Kabbalah. Approach sod with caution. The mystical layer of Torah is real and easily abused. We do not teach from sod without a solid peshat and derash already in place.</p></div>
+        <div class="term-c"><span class="term-heb">פְּשָׁט</span><span class="term-name">Peshat</span><span class="term-trans">"Plain meaning"</span><p class="term-def">The literal, contextual meaning of the text. The first and primary level. Pshat is the foundation. What does the text actually say, in context, to its original audience? Every other level (remez, derash, sod) builds on a sound peshat, or it builds on a crack.</p></div>
+        <div class="term-c"><span class="term-heb">רֶמֶז</span><span class="term-name">Remez</span><span class="term-trans">"Hint" or "allusion"</span><p class="term-def">The second level. Reading the text for its allusive or allegorical sense. Remez finds the connections between texts that share vocabulary, images, or themes. It helps you see how the prophets quote and echo the Torah.</p></div>
+        <div class="term-c"><span class="term-heb">דְּרָשׁ</span><span class="term-name">Derash</span><span class="term-trans">"Seek" or "expound"</span><p class="term-def">The third level. Homiletical application. How does this text speak to us now? What does HaShem intend us to do with it? Derash is where teaching lives. It must always flow from a solid peshat, not replace it.</p></div>
+        <div class="term-c"><span class="term-heb">סוֹד</span><span class="term-name">Sod</span><span class="term-trans">"Secret" or "mystery"</span><p class="term-def">The fourth level. Mystical or hidden meaning, associated with Kabbalah. Approach sod with caution. The mystical layer of Torah is real and easily abused. We do not teach from sod without a solid peshat and derash already in place.</p></div>
         <div class="term-c"><span class="term-name">High-Context Reading</span><p class="term-def">Reading the Torah as a document written for an audience that already knows the framework. Its history, vocabulary, covenant context, and literary conventions. High-context reading assumes the text does not explain everything, because the original audience did not need the explanation. Modern Western readers have to learn to read Torah as insiders, not outsiders.</p></div>
         <div class="term-c"><span class="term-name">Prooftext</span><p class="term-def">A single verse pulled out of context to prop up a doctrine. Proof-texting is one of the most common errors in both Christian and Two-House teaching. Read the text in its literary, historical, and covenant context before you draw a single conclusion. One verse does not make a doctrine.</p></div>
-        <div class="term-c"><span class="term-name">Hebrew Root</span><p class="term-def">Hebrew is a root-based language. Most words grow from a three-letter root (shoresh) that carries a core meaning. Find the root and you unlock the word's full range. The root שׁוּב (shuv) underlies teshuvah, meshuvah (backsliding), and shivah (return of captives). Root study sits at the center of how we read.</p></div>
+        <div class="term-c"><span class="term-heb">שֹׁרֶשׁ</span><span class="term-name">Hebrew Root / Shoresh</span><p class="term-def">Hebrew is a root-based language. Most words grow from a three-letter root (shoresh) that carries a core meaning. Find the root and you unlock the word's full range. The root שׁוּב (shuv) underlies teshuvah, meshuvah (backsliding), and shivah (return of captives). Root study sits at the center of how we read.</p></div>
         <div class="term-c"><span class="term-name">Oral Torah</span><p class="term-def">The body of interpretation and application passed down orally alongside the written Torah, later codified in the Mishnah and Talmud. Jewish tradition holds it was given at Sinai. We respect the Oral Torah as a serious body of wisdom and hold the Written Torah, the Tanakh, as primary and non-overridable. This is why we have both. The written Torah guards against the bad teacher. The living teacher guards against the misread text.</p></div>
+        <div class="term-c"><span class="term-heb">מְסוֹרָה</span><span class="term-name">Mesorah</span><span class="term-trans">"Transmission, handed-down tradition"</span><p class="term-def">The transmitted tradition. How the text, its letters, its reading, and its practice were handed from one generation to the next. A scroll cannot pronounce itself, divide its own words, or apply itself to a new case. Someone carried all of that, generation after generation, and that someone was Judah. Receive the mesorah with respect. Test it against the text. Keep what illuminates.</p><span class="term-ref">Deuteronomy 17:8–11 · Avot 1:1</span></div>
+        <div class="term-c"><span class="term-heb">מִנְהָג</span><span class="term-name">Minhag</span><span class="term-trans">"Custom"</span><p class="term-def">A custom. A practice that grew up within a community, distinct from halakhah and distinct from Torah command. Lighting two Shabbat candles is minhag. Kindling no fire on Shabbat is Torah. Knowing which is which keeps you honest. Minhag deserves respect as the texture of a living community. Do not confuse it with commandment. Do not despise it as if it were a crime.</p><span class="term-ref">Exodus 35:3 · Proverbs 1:8</span></div>
+        <div class="term-c"><span class="term-name">Rabbinic Judaism</span><p class="term-def">The Judaism of the rabbis. The living tradition that carried Torah, the calendar, the Hebrew language, and covenant memory from the destruction of the Temple to today. Critics define it as an invention that buried the Bible. Define it honestly instead: the continuation of the Pharisaic schools, the people who preserved the text you are reading and the Shabbat you are learning to keep. Disagree where the text requires. Despise nothing. You cannot reunite with Judah while despising the tradition Judah lives by.</p><span class="term-ref">Avot 1:1 · Zechariah 8:23</span></div>
       </div>
       <div class="return-links">
   <a href="resources.html" class="return-link">← Back to Resources</a>
@@ -320,7 +569,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- RETURN & EXILE -->
     <section class="gloss-section" id="panel-return">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Return &amp; Exile Terms</p>
+        <h2 class="gloss-section-title">Return &amp; Exile Terms</h2>
         <p class="gloss-section-desc">Central to the message. These terms describe the condition of the scattered and the promised path home.</p>
       </div>
       <div class="term-grid">
@@ -346,7 +595,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- IDENTITY -->
     <section class="gloss-section" id="panel-identity">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Identity Terms</p>
+        <h2 class="gloss-section-title">Identity Terms</h2>
         <p class="gloss-section-desc">These terms define who is who in the two-house framework. Precision here prevents confusion and avoids harmful claims.</p>
       </div>
       <div class="term-grid">
@@ -357,12 +606,16 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
         <div class="term-c"><span class="term-name">Ephraimite</span><p class="term-def">Ephraim is the prophetic name for the scattered Northern Kingdom. The ten tribes exiled by Assyria in 722 BCE who lost their land, their identity, and their connection to covenant community. An Ephraimite, in the prophetic sense, is someone who recognizes himself in that story. Not a genetic claim. Not a tribal certificate. A pattern of recognition. Hearing the call to return. Turning toward Torah. Turning toward HaShem. Turning toward the covenant that was never cancelled. Turning toward Judah as the brother who kept the flame alive. Jeremiah 31:18-19 describes it: Ephraim hears, is ashamed, strikes his thigh, and says "bring me back and I will return." That moment of recognition, "I have been away, I know where home is, and I want to go back," is the beginning of Ephraimite return.</p></div>
         <div class="term-c"><span class="term-name">Lost Tribes</span><p class="term-def">The popular term for the ten northern tribes scattered by Assyria in 722 BCE. "Lost" means lost to history and to their own identity. Not lost to HaShem. Amos 9:9 says HaShem sifts them but not one kernel falls to the ground. The "lost tribes" framework is the two-house framework. Use it carefully. Genetic claims about which peoples descend from which tribes are speculative and often harmful.</p><span class="term-ref">2 Kings 17 · Amos 9:9</span></div>
         <div class="term-c"><span class="term-heb">גֵּר תּוֹשָׁב</span><span class="term-name">Ger Toshav</span><span class="term-trans">"Dwelling sojourner"</span><p class="term-def">A foreigner who lives among Israel and accepts certain basic obligations, historically tied to the Noahide laws. Distinct from the ger who fully joins Israel. Torah welcomes and protects the ger toshav without requiring full Israelite covenant obligations. Knowing this category helps people in the early stages of return find their place without pressure.</p><span class="term-ref">Leviticus 25:47 · Numbers 35:15</span></div>
+        <div class="term-c"><span class="term-heb">גֵּר צֶדֶק</span><span class="term-name">Ger Tzedek / Conversion</span><span class="term-trans">"Righteous convert"</span><p class="term-def">A non-Jew who fully converts to Judaism under Jewish law and joins the House of Judah completely. Conversion is real, honored, and demanding. Ruth is the model: "your people shall be my people, and your G-d my G-d." But conversion is not the required path for Ephraimite return, and Ephraimite return is not a shortcut to Jewish identity. Some are called to convert. Most are called to return as who they are. Neither path is pretend, and neither is a costume.</p><span class="term-ref">Ruth 1:16 · Isaiah 56:6–7</span></div>
         <div class="term-c"><span class="term-heb">עֵרֶב רַב</span><span class="term-name">Erev Rav / Mixed Multitude</span><span class="term-trans">"The great mixture"</span><p class="term-def">The non-Israelite people who left Egypt with Israel during the Exodus (Exodus 12:38). They came out with Israel, but their loyalty proved mixed. Some rabbinic sources tie them to the golden calf. Handle this term carefully. Do not pin it on people today as a label. The Exodus always included non-Israelites who joined themselves to HaShem's people.</p><span class="term-ref">Exodus 12:38 · Numbers 11:4</span></div>
         <div class="term-c"><span class="term-name">Tribal Identity</span><p class="term-def">The claim to belong to a specific tribe of Israel. Approach these claims cautiously. The text does not require genetic certainty for Ephraimite identity. The prophets describe Ephraim by pattern of response, not by DNA. Obsession with proving tribal identity by genealogy is a distraction from the actual work of return.</p></div>
         <div class="term-c"><span class="term-name">Prophetic Identity</span><p class="term-def">Identity defined by the prophetic pattern HaShem describes. Not genetics, genealogy, or cultural heritage. Recognition, response, return. Jeremiah 31:18–19 describes Ephraim hearing, being ashamed, turning, and returning. That pattern, not a blood test, is how Ephraimite identity is understood here.</p><span class="term-ref">Jeremiah 31:18–19</span></div>
-        <div class="term-c"><span class="term-name">Messianic</span><p class="term-def">A broad term for people who hold belief in Yeshua / Jesus as Messiah while keeping Jewish or Torah-observant practice and identity. Messianic communities vary widely in theology and practice. L'ets Echad teaches in Messianic contexts while staying in Torah and Tanakh, neither requiring nor denying Messianic belief.</p></div>
+        <div class="term-c"><span class="term-name">Messianic</span><p class="term-def">A broad term for people who hold belief in Yeshua / Jesus as Messiah while keeping Jewish or Torah-observant practice and identity. Messianic communities vary widely in theology and practice. L'ets Echad teaches in Messianic contexts while staying in Torah and Tanakh, neither requiring nor denying Messianic belief. One boundary holds: nothing here is taught from Christological claims as authority. Messianic claims are tested against the Tanakh, not used to reinterpret it.</p></div>
         <div class="term-c"><span class="term-name">Hebrew Roots Movement</span><p class="term-def">A diverse movement of mostly Christian-background people returning to Torah study and practice. The emphasis on Torah observance, the Hebrew language, and the Jewish roots of Scripture is valuable, and largely a correct repair to Christianity's drift from its covenant foundations. The movement is wide and uneven. Some teachers are careful and text-grounded. Others are speculative, doctrinally unstable, and prone to tribal identity claims, private revelation, and anti-Jewish sentiment dressed as Torah observance. We share the return to Torah and hold the Tanakh as primary. Not as background to NT texts. Not as confirmation of existing Christian theology. As the primary revelation of HaShem's covenant with Israel. Test every teacher and every claim against Torah and Tanakh directly.</p><span class="term-ref">Deuteronomy 13:1–5 · Isaiah 8:20</span></div>
+        <div class="term-c"><span class="term-heb">קָרָאִים</span><span class="term-name">Karaism / Karaite</span><span class="term-trans">"Readers of Scripture"</span><p class="term-def">A movement, formalized in the medieval period, that accepts the written Tanakh and rejects rabbinic tradition as authority. It matters here because its instinct is alive in Two-House spaces: the reflex that says the rabbis corrupted everything, keep the text and drop the tradition. We do not take that road. The written Torah guards against the bad teacher. The living teacher guards against the misread text. Rejecting Judah's tradition wholesale is not purity. It is supersessionism with a Hebrew accent.</p><span class="term-ref">Deuteronomy 17:8–11</span></div>
         <div class="term-c"><span class="term-name">Torah-Observant</span><p class="term-def">Living in line with Torah's commandments. Keeping Shabbat, the moedim, kashrut, tzitzit, and the other mitzvot. Torah observance is the practical expression of covenant return. It is not a checklist for salvation. It is the natural shape of covenant life. Who you are leads to what you do.</p></div>
+        <div class="term-c"><span class="term-heb">כְּלַל יִשְׂרָאֵל</span><span class="term-name">Klal Yisrael</span><span class="term-trans">"The whole of Israel"</span><p class="term-def">The whole community of Israel, across tribes, opinions, and generations. The term carries responsibility: what one part does affects the whole. In the two-house frame, klal Yisrael is what the reunification restores. Not Judah alone. Not Ephraim alone. The whole house of Israel, one stick in His hand.</p><span class="term-ref">Ezekiel 37:11 · Ezekiel 37:19</span></div>
+        <div class="term-c"><span class="term-heb">עַם יִשְׂרָאֵל</span><span class="term-name">Am Yisrael</span><span class="term-trans">"The people of Israel"</span><p class="term-def">Israel as a people. Am is kin-language, a family before it is a nation-state or an institution. "Am Yisrael chai," the people of Israel live, is not a slogan. After every empire that scattered and burned them, they are still here. Jeremiah 31:35–36 ties their survival to the fixed order of sun, moon, and stars. The stars still shine. The people still live.</p><span class="term-ref">Exodus 19:5–6 · Jeremiah 31:35–36</span></div>
       </div>
       <div class="return-links">
   <a href="resources.html" class="return-link">← Back to Resources</a>
@@ -373,7 +626,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- TERMS TO HANDLE CAREFULLY -->
     <section class="gloss-section" id="panel-careful">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Terms That Need Careful Definition</p>
+        <h2 class="gloss-section-title">Terms That Need Careful Definition</h2>
         <p class="gloss-section-desc">Words that carry heavy theological freight, used very differently in Jewish, Christian, and Two-House contexts. Define these before you use them.</p>
       </div>
       <div class="term-grid">
@@ -390,6 +643,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
         <div class="term-c"><span class="term-name">Clean / Unclean (Tahor / Tamei)</span><p class="term-def">Ritual purity categories in Torah. Tahor (clean, pure) and tamei (unclean, impure) describe a person's status in relation to the sanctuary and certain covenant activities. Not moral categories in themselves. A tamei person has not sinned. These categories govern contact with the holy and require the Torah's sacrificial and priestly system to apply correctly. Much harm has been done to women shamed by bad translations of tum'ah. The text does not shame. It distinguishes.</p><span class="term-ref">Leviticus 11 · Numbers 19</span></div>
         <div class="term-c"><span class="term-name">Legalism</span><p class="term-def">Legalism is a Greek concept, not a Hebrew one. It pictures HaShem holding scales. Merit on one side, guilt on the other. Perform enough works, tip the balance, win. That is transactional religion. The Torah does not teach it. Torah obedience is relational, not transactional. HaShem introduces Himself before He gives a single command: "I am HaShem your G-d who brought you out of Egypt" (Exodus 20:2). The commandments follow the relationship. They do not create it. Keeping Shabbat is not earning points. It is showing up to a standing appointment with the King. Keeping the dietary laws is not working for favor. It is living inside the covenant. The real danger is the opposite of legalism. Performing the mitzvot without love. Deuteronomy 6:5 sets the foundation. Heart first. Everything else flows from there.</p><span class="term-ref">Exodus 20:2 · Deuteronomy 6:5 · Deuteronomy 6:20–25</span></div>
         <div class="term-c"><span class="term-name">Chosen / Election</span><p class="term-def">HaShem's selection of Israel to be His covenant people. Not because of Israel's greatness (Deuteronomy 7:7) but because of His love and His oath to the fathers. Chosenness carries responsibility, not privilege alone. To be chosen is to be chosen for something. To be a kingdom of priests. To carry the Torah. To be a light to the nations. Chosenness without obligation is a distortion of the word.</p><span class="term-ref">Deuteronomy 7:6–8 · Exodus 19:5–6</span></div>
+        <div class="term-c"><span class="term-heb">תִּקּוּן</span><span class="term-name">Tikkun</span><span class="term-trans">"Repair, mending"</span><p class="term-def">Repair. In popular usage, tikkun olam covers everything from social activism to mystical repair of creation. Handle it with care, because vague spiritual energy is not a Torah category. The Tanakh's picture of repair is concrete: teshuvah, justice in the gate, freeing the oppressed, restoring what was broken. Repair is labor inside the covenant, done with your hands and your habits. Test any tikkun teaching against the plain text before you build on it.</p><span class="term-ref">Amos 5:15 · Isaiah 58:6–12</span></div>
       </div>
       <div class="return-links">
   <a href="resources.html" class="return-link">← Back to Resources</a>
@@ -400,7 +654,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- WORSHIP & SERVICE -->
     <section class="gloss-section" id="panel-worship">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Hebrew Worship &amp; Service Terms</p>
+        <h2 class="gloss-section-title">Hebrew Worship &amp; Service Terms</h2>
         <p class="gloss-section-desc">English flattens these words into synonyms. Hebrew keeps them distinct. Understanding the difference changes how you read every worship passage.</p>
       </div>
       <div class="term-grid">
@@ -428,7 +682,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- TIME & PRACTICE -->
     <section class="gloss-section" id="panel-time">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Jewish Time &amp; Practice Terms</p>
+        <h2 class="gloss-section-title">Jewish Time &amp; Practice Terms</h2>
         <p class="gloss-section-desc">For people beginning to live Torah. These terms help you enter HaShem's calendar and the rhythm of covenant life.</p>
       </div>
       <div class="term-grid">
@@ -458,7 +712,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- PEOPLE & PLACES -->
     <section class="gloss-section" id="panel-people">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">People &amp; Places</p>
+        <h2 class="gloss-section-title">People &amp; Places</h2>
         <p class="gloss-section-desc">The key figures and locations in the two-house story. Know who is who and where things happened.</p>
       </div>
       <div class="term-grid">
@@ -468,7 +722,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
         <div class="term-c"><span class="term-heb">יוֹסֵף</span><span class="term-name">Joseph</span><p class="term-def">Son of Jacob and Rachel. Sold into Egypt by his brothers, raised to Pharaoh's right hand. Father of Ephraim and Manasseh. Joseph's story is the prophetic picture of the two-house reunion. Separated from his brothers. Operating in a foreign nation. Unknown to them. Until the moment of revelation. "I am Joseph, is my father still alive?" (Genesis 45:3) That question is still echoing. Ephraim has been in the nations, unknown to his brothers. The reunion is coming. Ezekiel 37:16 calls the northern stick "the stick of Joseph" for a reason.</p><span class="term-ref">Genesis 37–50 · Genesis 45:3 · Ezekiel 37:16</span></div>
         <div class="term-c"><span class="term-heb">יָרָבְעָם</span><span class="term-name">Jeroboam</span><p class="term-def">The first king of the Northern Kingdom after the split (1 Kings 12). His sin, setting up golden calves at Bethel and Dan to keep the northern tribes from going up to Jerusalem to worship, became the defining covenant catastrophe of the north. "The sin of Jeroboam" runs through Kings as the measure of Israel's kings. He replaced the worship. He replaced the priesthood. He replaced the calendar.</p><span class="term-ref">1 Kings 12:28 · 1 Kings 13:34</span></div>
         <div class="term-c"><span class="term-heb">רְחַבְעָם</span><span class="term-name">Rehoboam</span><p class="term-def">Son of Solomon, whose foolish choice to increase the burden on the northern tribes (1 Kings 12:14) triggered the split of the kingdom. The division was from HaShem (1 Kings 12:24), as prophesied through Ahijah. Rehoboam stands for the failure of the united kingdom's leadership to hold the whole house together.</p><span class="term-ref">1 Kings 12</span></div>
-        <div class="term-c"><span class="term-heb">אֵלִיָּהוּ</span><span class="term-name">Elijah</span><p class="term-def">The great prophet of the Northern Kingdom under Ahab. His contest with the prophets of Baal on Mount Carmel (1 Kings 18) is a landmark in Israel's covenant history. Malachi 4:5 promises Elijah's return before the great day of HaShem. L'ets Echad teaches his significance for the two-house story in Ki Tisa.</p><span class="term-ref">1 Kings 17–19 · Malachi 4:5</span></div>
+        <div class="term-c"><span class="term-heb">אֵלִיָּהוּ</span><span class="term-name">Elijah</span><p class="term-def">The great prophet of the Northern Kingdom under Ahab. His contest with the prophets of Baal on Mount Carmel (1 Kings 18) is a landmark in Israel's covenant history. Malachi 3:23 (4:5 in most English Bibles) promises Elijah's return before the great day of HaShem. L'ets Echad teaches his significance for the two-house story in Ki Tisa.</p><span class="term-ref">1 Kings 17–19 · Malachi 3:23</span></div>
         <div class="term-c"><span class="term-heb">הוֹשֵׁעַ</span><span class="term-name">Hosea</span><p class="term-def">The prophet whose life became the message. HaShem commanded Hosea to marry a woman who would be unfaithful, and to take her back after she left, a living picture of His relationship with the Northern Kingdom. Hosea 1–3 is the foundational two-house return text. "My people" and "Not my people" are Hosea's categories.</p><span class="term-ref">Hosea 1–14</span></div>
         <div class="term-c"><span class="term-heb">יִרְמְיָהוּ</span><span class="term-name">Jeremiah</span><p class="term-def">The prophet of the Southern Kingdom during the Babylonian exile. His book carries some of the most explicit promises of Ephraim's return (Jeremiah 31:18–19) and the brit chadashah (31:31–33). Jeremiah's "Book of Consolation," chapters 30–33, is essential two-house reading.</p><span class="term-ref">Jeremiah 30–33</span></div>
         <div class="term-c"><span class="term-heb">יְחֶזְקֵאל</span><span class="term-name">Ezekiel</span><p class="term-def">The prophet of the exile. Ezekiel prophesied among the Babylonian exiles and saw visions of HaShem's glory, Israel's restoration, and the rebuilt Temple. Ezekiel 37, the dry bones and the two sticks, is the central prophetic text of L'ets Echad. Ezekiel 36–39 is the most sustained prophetic treatment of the full restoration of both houses.</p><span class="term-ref">Ezekiel 36–39</span></div>
@@ -486,7 +740,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- STUDY & DISCERNMENT -->
     <section class="gloss-section" id="panel-study">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Study &amp; Discernment Terms</p>
+        <h2 class="gloss-section-title">Study &amp; Discernment Terms</h2>
         <p class="gloss-section-desc">How to read, how to think, and how to test claims. Essential for anyone engaging with Torah seriously.</p>
       </div>
       <div class="term-grid">
@@ -513,14 +767,14 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- CHRISTIAN BACKGROUND -->
     <section class="gloss-section" id="panel-christian">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Christian Background Terms</p>
+        <h2 class="gloss-section-title">Christian Background Terms</h2>
         <p class="gloss-section-desc">Many people arrive carrying these terms. This section defines them plainly and shows how we use or avoid them. Not combative. Just precise.</p>
       </div>
       <div class="term-grid">
-        <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">Messiah / Christ</span><p class="term-def">Mashiach in Hebrew means "anointed one." Kings and priests were anointed. The prophets speak of a future anointed leader from David's line who will restore Israel and reign in righteousness (Isaiah 9, 11 · Jeremiah 23:5 · Ezekiel 37:24–25). L'ets Echad teaches the Messianic promises from Torah and Tanakh without adjudicating Christological claims. Who fulfills those promises is a question we leave with the text and with each learner.</p><span class="term-ref">Isaiah 11 · Jeremiah 23:5 · Ezekiel 37:24–25</span></div>
+        <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">Messiah / Christ</span><p class="term-def">Mashiach in Hebrew means "anointed one." Kings and priests were anointed. The prophets speak of a future anointed leader from David's line who will restore Israel and reign in righteousness (Isaiah 9, 11 · Jeremiah 23:5 · Ezekiel 37:24–25). L'ets Echad teaches the Messianic promises from Torah and Tanakh without adjudicating Christological claims. Claims about fulfillment are tested against the promises themselves. The Tanakh defines the role before anyone names a candidate.</p><span class="term-ref">Isaiah 11 · Jeremiah 23:5 · Ezekiel 37:24–25</span></div>
         <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">New Testament</span><p class="term-def">The collection of first-century CE texts about Yeshua / Jesus and the early community. L'ets Echad does not teach from the New Testament. Not because we deny it exists, but because our framework is Torah and Tanakh. When NT texts come up, we go back to the Tanakh sources those texts are drawing from.</p></div>
         <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">Replacement Theology / Supersessionism</span><p class="term-def">The belief that the Church replaced Israel as HaShem's covenant people. That the promises made to Abraham, Isaac, and Jacob transferred to a new entity when Israel failed. The Tanakh does not support it. Leviticus 26:44 is unambiguous. Even at the bottom of covenant failure, even in exile among enemies, HaShem will not reject Israel or break His covenant with them. The promises are not transferable. They were sworn by oath to specific people and their descendants. Jeremiah 31:35-36 ties the survival of Israel as a nation to the fixed order of the sun, moon, and stars. If those cease, then Israel ceases. They have not ceased. Replacement theology requires HaShem to break His own oath.</p><span class="term-ref">Leviticus 26:44 · Jeremiah 31:35–36 · Genesis 17:7 · Isaiah 49:15–16</span></div>
-        <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">Paul / Pauline Theology</span><p class="term-def">Paul (Shaul) is a first-century Jewish teacher whose letters are part of the NT. He gets cited constantly in debates about Torah's relevance. L'ets Echad does not adjudicate Paul's theology. When Pauline texts are raised, we go back to the Torah and Tanakh sources Paul himself was drawing from, and read them carefully in context before drawing conclusions about his meaning.</p></div>
+        <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">Paul / Pauline Theology</span><p class="term-def">Paul (Shaul) is a first-century Jewish figure whose letters are part of the NT. They get cited constantly in debates about Torah's relevance. L'ets Echad does not adjudicate Paul's theology. When Pauline texts are raised, we go back to the Torah and Tanakh sources Paul himself was drawing from, and read them carefully in context before drawing conclusions about his meaning.</p></div>
         <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">Grace vs. Law</span><p class="term-def">Translating Torah as "law" is one of the most consequential mistranslations in history. The Greek nomos and the Latin lex carry the weight of legal code, enforcement, penalty. That framing shapes everything after it, and it misses the point. Torah comes from the root yarah, to instruct, to point the way. It is teaching. The path HaShem laid out for His people to walk in relationship with Him. Psalm 119:97 catches the Hebrew posture: "How I love your Torah. It is my meditation all the day." You do not meditate all day on a legal code. You meditate on instruction you love. When Moses delivered it at Sinai, Israel was already redeemed. The commands followed the relationship. Torah is not the means of earning HaShem's favor. It is what life inside His favor looks like.</p></div>
         <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">Fulfillment Theology</span><p class="term-def">The view that Yeshua "fulfilled" Torah in a way that makes it no longer binding. Torah was not fulfilled away. Deuteronomy 4:2 commands Israel not to add to or subtract from what HaShem commanded. Isaiah 40:8: His word stands forever. The prophets promise Torah on the heart. Not Torah replaced.</p><span class="term-ref">Deuteronomy 4:2 · Isaiah 40:8 · Jeremiah 31:33</span></div>
         <div class="term-c"><span class="term-flag flag-christian">Christian Context</span><span class="term-name">Dispensationalism</span><p class="term-def">A theological system that splits history into eras, "dispensations," in which HaShem deals with humanity differently. In it, Israel and the Church are separate and distinct. We hold the opposite. One covenant people. One covenant. One Torah. Not separate administrations with separate covenants.</p></div>
@@ -537,7 +791,7 @@ The covenants build on each other. The Abrahamic covenant (Genesis 17) promises 
     <!-- ERRORS & DANGERS -->
     <section class="gloss-section" id="panel-errors">
       <div class="gloss-section-hd">
-        <p class="gloss-section-title">Errors &amp; Dangers</p>
+        <h2 class="gloss-section-title">Errors &amp; Dangers</h2>
         <p class="gloss-section-desc">Things that go wrong in Two-House communities and beyond. Named here so they can be recognized and avoided.</p>
       </div>
       <div class="term-grid">
@@ -627,6 +881,45 @@ mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   burger.setAttribute('aria-expanded','false');
   document.body.style.overflow='';
 }));
+
+/* TERM ANCHOR IDS — every term gets a linkable id, e.g. glossary.html#teshuvah */
+const slugCounts={};
+document.querySelectorAll('.term-c').forEach(c=>{
+  const n=c.querySelector('.term-name');
+  if(!n)return;
+  let s=n.textContent.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+  if(!s)return;
+  if(slugCounts[s]){slugCounts[s]++;s=s+'-'+slugCounts[s];}else{slugCounts[s]=1;}
+  c.id=s;
+});
+if(location.hash){
+  const target=document.getElementById(location.hash.slice(1));
+  if(target)setTimeout(()=>target.scrollIntoView({block:'start'}),0);
+}
+
+/* GLOSSARY SEARCH */
+const gSearch=document.getElementById('glossSearch');
+const gCount=document.getElementById('glossCount');
+const gSections=[...document.querySelectorAll('.gloss-section')];
+const gTerms=[...document.querySelectorAll('.term-c')].map(el=>({el,txt:el.textContent.toLowerCase()}));
+gSearch.addEventListener('input',()=>{
+  const q=gSearch.value.trim().toLowerCase();
+  if(!q){
+    gTerms.forEach(t=>t.el.classList.remove('hidden'));
+    gSections.forEach(s=>s.classList.remove('hidden'));
+    gCount.classList.remove('show');
+    return;
+  }
+  let n=0;
+  gTerms.forEach(t=>{
+    const hit=t.txt.includes(q);
+    t.el.classList.toggle('hidden',!hit);
+    if(hit)n++;
+  });
+  gSections.forEach(s=>s.classList.toggle('hidden',!s.querySelector('.term-c:not(.hidden)')));
+  gCount.textContent=n===0?'No terms match. Try a shorter search.':n+(n===1?' term':' terms');
+  gCount.classList.add('show');
+});
 
 </script>
 </body>
