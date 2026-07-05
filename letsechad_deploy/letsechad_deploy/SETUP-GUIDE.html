@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>L'ets Echad — CMS Setup Guide</title>
+<link rel="canonical" href="https://letsechad.com/SETUP-GUIDE.html">
+<meta property="og:title" content="L'ets Echad — CMS Setup Guide">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://letsechad.com/SETUP-GUIDE.html">
+<meta property="og:image" content="https://letsechad.com/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L'ets Echad — One Stick in His Hand. Ezekiel 37:19">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="L'ets Echad — CMS Setup Guide">
+<meta name="twitter:image" content="https://letsechad.com/og-share.jpg">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#f5f0e8;color:#1a1108;line-height:1.7;font-size:16px}
+.wrap{max-width:780px;margin:0 auto;padding:3rem 2rem 5rem}
+h1{font-family:Georgia,serif;font-size:2.2rem;font-weight:400;color:#3e2c14;margin-bottom:.4rem}
+.subtitle{color:#7a6040;font-size:.95rem;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(191,155,44,.3)}
+h2{font-family:Georgia,serif;font-size:1.35rem;font-weight:400;color:#3e2c14;margin:2.5rem 0 .75rem;padding-top:2rem;border-top:1px solid rgba(191,155,44,.2)}
+h2:first-of-type{border-top:none;padding-top:0}
+h3{font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#bf9b2c;margin:1.5rem 0 .5rem}
+p{margin-bottom:1rem;color:#3e2c14}
+ol,ul{padding-left:1.4rem;margin-bottom:1rem}
+li{margin-bottom:.5rem;color:#3e2c14}
+code{font-family:monospace;font-size:.88rem;background:#e8e0cc;padding:.15rem .4rem;border-radius:3px;color:#3e2c14}
+pre{background:#1a1108;color:#e8c84a;padding:1.2rem 1.5rem;border-radius:4px;overflow-x:auto;margin:1rem 0 1.5rem;font-size:.85rem;line-height:1.6}
+.step{background:#fff;border:1px solid rgba(191,155,44,.25);border-radius:4px;padding:1.5rem 1.8rem;margin-bottom:1.5rem}
+.step-num{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#bf9b2c;display:block;margin-bottom:.4rem}
+.step h3{margin:0 0 .75rem;font-size:1rem;text-transform:none;letter-spacing:0;color:#1a1108}
+.note{background:rgba(191,155,44,.08);border-left:3px solid #bf9b2c;padding:.75rem 1rem;margin:1rem 0;font-size:.9rem}
+.files{background:#1a1108;border-radius:4px;padding:1.2rem 1.5rem;margin:1rem 0}
+.files p{color:#a08860;font-size:.82rem;margin:0 0 .4rem;font-family:monospace}
+.files p.dir{color:#d4af3a}
+.files p.new{color:#6b4}
+.tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.2rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.tag.fixed{background:rgba(100,180,100,.15);color:#3a7a3a;border:1px solid rgba(100,180,100,.3)}
+.tag.new{background:rgba(191,155,44,.15);color:#8a6a10;border:1px solid rgba(191,155,44,.3)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>L'ets Echad — CMS Setup Guide</h1>
+  <p class="subtitle">Option A: Decap CMS with GitHub backend &mdash; individual teaching pages, no build step required</p>
+
+  <h2>What's in this package</h2>
+  <div class="files">
+    <p class="dir">letsechad-site/</p>
+    <p>&nbsp;&nbsp;index.html</p>
+    <p>&nbsp;&nbsp;about.html</p>
+    <p>&nbsp;&nbsp;teachings.html <span style="color:#6b4">← fixed (Va'era added, broken arrows removed)</span></p>
+    <p>&nbsp;&nbsp;resources.html</p>
+    <p>&nbsp;&nbsp;support.html</p>
+    <p>&nbsp;&nbsp;privacy.html</p>
+    <p>&nbsp;&nbsp;logo.js</p>
+    <p>&nbsp;&nbsp;netlify.toml <span style="color:#d4af3a">← new</span></p>
+    <p>&nbsp;&nbsp;teaching-template.html <span style="color:#d4af3a">← new (use this to manually create pages for existing teachings)</span></p>
+    <p class="dir">&nbsp;&nbsp;admin/ <span style="color:#d4af3a">← new</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;index.html</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;config.yml <span style="color:#a08860">← edit this first (your GitHub username)</span></p>
+    <p class="dir">&nbsp;&nbsp;teachings/ <span style="color:#d4af3a">← new (CMS writes Markdown files here)</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;(empty — CMS fills this when you publish)</p>
+  </div>
+
+  <h2>One-time setup (30–45 minutes)</h2>
+
+  <div class="step">
+    <span class="step-num">Step 1</span>
+    <h3>Create the GitHub repo</h3>
+    <ol>
+      <li>Go to <strong>github.com</strong> and sign in</li>
+      <li>Click <strong>New repository</strong> (the + icon, top right)</li>
+      <li>Name it <code>letsechad-site</code></li>
+      <li>Set it to <strong>Public</strong> (Decap CMS free tier requires public repos)</li>
+      <li>Don't add README or .gitignore — leave it empty</li>
+      <li>Click <strong>Create repository</strong></li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <span class="step-num">Step 2</span>
+    <h3>Edit admin/config.yml — replace YOUR_GITHUB_USERNAME</h3>
+    <p>Open <code>admin/config.yml</code> and change the first two lines to match your actual GitHub username and repo name:</p>
+    <pre>backend:
+  name: github
+  repo: YOUR_ACTUAL_USERNAME/letsechad-site
+  branch: main</pre>
+    <p>Save the file.</p>
+  </div>
+
+  <div class="step">
+    <span class="step-num">Step 3</span>
+    <h3>Push the files to GitHub</h3>
+    <p>If you have Git installed, open Terminal/Command Prompt in the site folder and run:</p>
+    <pre>git init
+git add .
+git commit -m "Initial site with CMS"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/letsechad-site.git
+git push -u origin main</pre>
+    <p>Or use <strong>GitHub Desktop</strong> (easier): File → Add Local Repository → drag the folder in → Publish Repository.</p>
+  </div>
+
+  <div class="step">
+    <span class="step-num">Step 4</span>
+    <h3>Connect GitHub to Netlify</h3>
+    <ol>
+      <li>Log into <strong>netlify.com</strong></li>
+      <li>Go to <strong>Sites</strong> → find your letsechad site → <strong>Site configuration</strong></li>
+      <li>Under <strong>Build &amp; deploy → Repository</strong>, click <strong>Link to a repository</strong></li>
+      <li>Choose GitHub → authorize → select <code>letsechad-site</code></li>
+      <li>Build command: leave blank. Publish directory: <code>.</code> (a single dot)</li>
+      <li>Click <strong>Deploy site</strong></li>
+    </ol>
+    <div class="note">After this, every time you push to GitHub (or CMS publishes), Netlify auto-deploys. You never drag-and-drop again.</div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">Step 5</span>
+    <h3>Set up GitHub OAuth for the CMS editor</h3>
+    <p>Decap CMS needs permission to write to your repo. Do this once:</p>
+    <ol>
+      <li>Go to <strong>github.com → Settings → Developer settings → OAuth Apps → New OAuth App</strong></li>
+      <li>Fill in:
+        <ul>
+          <li>Application name: <code>L'ets Echad CMS</code></li>
+          <li>Homepage URL: <code>https://letsechad.netlify.app</code></li>
+          <li>Authorization callback URL: <code>https://api.netlify.com/auth/done</code></li>
+        </ul>
+      </li>
+      <li>Click <strong>Register application</strong></li>
+      <li>Copy the <strong>Client ID</strong> and generate a <strong>Client Secret</strong></li>
+    </ol>
+    <p>Then in Netlify:</p>
+    <ol>
+      <li>Site configuration → <strong>Access control → OAuth → Install provider</strong></li>
+      <li>Provider: GitHub. Paste your Client ID and Client Secret.</li>
+      <li>Save.</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <span class="step-num">Step 6</span>
+    <h3>Test the CMS editor</h3>
+    <p>Go to: <code>https://letsechad.netlify.app/admin</code></p>
+    <p>Click <strong>Login with GitHub</strong>. You should see a Decap CMS dashboard with a "Teachings" collection.</p>
+    <div class="note">If you get a login error, double-check the OAuth callback URL in Step 5 — it must be exactly <code>https://api.netlify.com/auth/done</code>.</div>
+  </div>
+
+  <h2>How to publish a new teaching</h2>
+
+  <div class="step">
+    <span class="step-num">Publishing workflow</span>
+    <h3>In the CMS editor</h3>
+    <ol>
+      <li>Go to <code>letsechad.netlify.app/admin</code> → Teachings → New Teaching</li>
+      <li>Fill in: Title, Parashah Tag, Book, Scripture References, Card Summary, Full Teaching body</li>
+      <li>Click <strong>Publish</strong></li>
+      <li>Netlify deploys in ~30 seconds — the Markdown file is saved to your <code>teachings/</code> folder in GitHub</li>
+    </ol>
+    <div class="note"><strong>Important:</strong> The CMS saves a Markdown file. It does not automatically create the HTML page visitors read. See "Creating the teaching HTML page" below.</div>
+  </div>
+
+  <h2>Creating the teaching HTML page</h2>
+  <p>When you publish a new teaching through the CMS, a <code>.md</code> file gets saved to <code>teachings/</code>. You also need to create a matching <code>.html</code> page in that same folder so visitors can read the full teaching.</p>
+  <p>Use the included <code>teaching-template.html</code>. Duplicate it, rename it to match your teaching slug (e.g. <code>teachings/parshat-vayera.html</code>), then replace these placeholders:</p>
+  <ul>
+    <li><code>TEACHING_TITLE</code> — full title</li>
+    <li><code>TEACHING_TAG</code> — e.g. Shemot · Va'era</li>
+    <li><code>TEACHING_REFS</code> — scripture references</li>
+    <li><code>TEACHING_BODY</code> — the teaching content as HTML paragraphs</li>
+  </ul>
+  <p>Then add a card to <code>teachings.html</code> pointing to that page. See the existing card format.</p>
+
+  <h2>Fixes in this release</h2>
+  <ul>
+    <li><strong>teachings.html</strong> — Broken "→" arrows removed. All 12 cards now display cleanly without implying a dead link. <span class="tag fixed">fixed</span></li>
+    <li><strong>Va'era card added</strong> — Shemot · Va'era teaching card added to the teachings page. <span class="tag new">new</span></li>
+    <li><strong>Card styling</strong> — Cards now have background, border, and hover state. Cleaner on all screen sizes. <span class="tag fixed">fixed</span></li>
+    <li><strong>admin/ folder</strong> — Decap CMS editor. Access at /admin after setup. <span class="tag new">new</span></li>
+    <li><strong>netlify.toml</strong> — Tells Netlify the publish directory is root. Required for GitHub-connected deploys. <span class="tag new">new</span></li>
+    <li><strong>teaching-template.html</strong> — Styled individual teaching page. Use for every new teaching. <span class="tag new">new</span></li>
+  </ul>
+
+  <h2>Questions &amp; next steps</h2>
+  <p>Once this is live, the next logical step is linking the existing 12 cards to individual teaching pages. You have the drashot in your project files — I can build those HTML pages from the Word documents whenever you're ready.</p>
+</div>
+</body>
+</html>
