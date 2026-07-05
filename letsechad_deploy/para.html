@@ -578,6 +578,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .skipl{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--gold3);padding:.8rem 1.2rem;z-index:2000;font-family:var(--sans)}
 .skipl:focus{left:0}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Para: Uncovered", "description": "You are standing between what you left and what you haven't found yet. That feeling has a name in Torah. And it is not shame.", "url": "https://letsechad.com/para.html", "inLanguage": "en", "author": {"@type": "Person", "name": "Matti Kahana"}, "publisher": {"@type": "Organization", "name": "L'ets Echad", "url": "https://letsechad.com"}}
+</script>
 </head>
 <body>
 
@@ -597,7 +600,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <a href="teachings.html" class="nav-a" role="listitem">Teachings</a>
       <a href="about.html" class="nav-a" role="listitem">About</a>
       <a href="resources.html" class="nav-a" role="listitem">Resources</a>
-      <a href="index.html#connect" class="nav-a" role="listitem">Contact</a>
+      <a href="shalom-7mQ92.html" class="nav-a" role="listitem">Contact</a>
       <a href="support.html" class="nav-a nav-give" role="listitem">Give</a>
     </div>
     <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mob-menu">
@@ -612,7 +615,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   <a href="foundation.html" class="mob-a">Free Course</a>
   <a href="about.html" class="mob-a">About</a>
   <a href="resources.html" class="mob-a">Resources</a>
-  <a href="index.html#connect" class="mob-a">Contact</a>
+  <a href="shalom-7mQ92.html" class="mob-a">Contact</a>
   <a href="support.html" class="mob-a">Give</a>
 </nav>
 
@@ -1180,136 +1183,4 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <div class="ft-grid">
       <div class="ft-brand">
         <img src="logo.png" alt="L'ets Echad" class="ft-logo" id="footer-logo">
-        <p class="ft-tagline">"Into One Stick — Ezekiel 37:19"<br>A ministry of reunification.</p>
-        <p class="ft-url">letsechad.com</p>
-      </div>
-
-      <div class="ft-col">
-        <h4>Ministry</h4>
-        <a href="about.html">About L'ets Echad</a>
-        <a href="about.html#mission">Our Mission</a>
-        <a href="about.html#matti">About Matti</a>
-        <a href="about.html#matti">Invite to Speak</a>
-        <a href="index.html#connect">Contact</a>
-      </div>
-
-      <div class="ft-col">
-        <h4>Content</h4>
-        <a href="teachings.html">All Teachings</a>
-        <a href="index.html#start">Start Here</a>
-        <a href="resources.html">Resources</a>
-        <a href="glossary.html">Glossary</a>
-        <a href="resources.html#faq">FAQ</a>
-      </div>
-
-      <div class="ft-col">
-        <h4>Support</h4>
-        <a href="support.html">Give to L'ets Echad</a>
-        <a href="support.html#israel">Support Israel</a>
-        <a href="https://support.fidf.org" target="_blank" rel="noopener">FIDF</a>
-        <a href="https://secure.afmda.org" target="_blank" rel="noopener">Magen David Adom</a>
-        <a href="https://give.zakaworld.org" target="_blank" rel="noopener">ZAKA</a>
-      </div>
-    </div>
-
-    <div class="ft-bottom">
-      <p class="ft-copy">
-        © 2026 L'ets Echad ·
-        <a href="mailto:matti@letsechad.com" style="color:inherit">matti@letsechad.com</a> ·
-        <a href="privacy.html" style="color:inherit">Privacy</a>
-      </p>
-      <p class="ft-verse">"They shall become one in My hand." — Ezekiel 37:19</p>
-    </div>
-  </div>
-</footer>
-
-<script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('on', window.scrollY > 40), { passive: true });
-
-const burger = document.getElementById('burger');
-const mobMenu = document.getElementById('mob-menu');
-let menuOpen = false;
-
-function setMenu(open) {
-  menuOpen = open;
-  burger.classList.toggle('x', open);
-  burger.setAttribute('aria-expanded', String(open));
-  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  mobMenu.setAttribute('aria-hidden', String(!open));
-  document.body.style.overflow = open ? 'hidden' : '';
-}
-
-burger.addEventListener('click', () => setMenu(!menuOpen));
-document.addEventListener('click', e => { if (menuOpen && !nav.contains(e.target) && !mobMenu.contains(e.target)) setMenu(false); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) setMenu(false); });
-mobMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-
-if (window.LOGO) {
-  ['site-logo', 'footer-logo'].forEach(id => { const el = document.getElementById(id); if (el) el.src = window.LOGO; });
-}
-</script>
-<script>
-if (window.LOGO) {
-  ['site-logo', 'footer-logo'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.src = window.LOGO;
-  });
-}
-</script>
-<style>
-.pv-meta{font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin:1rem 0 0}
-.pv-progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);z-index:1200}
-.pv-quiz{background:var(--parch);border-left:4px solid var(--gold);border-radius:0 5px 5px 0;padding:1.9rem;margin:2.2rem 0}
-.pv-quiz .pv-quiz-lead{font-size:1.12rem;line-height:1.7;color:#2c2313;margin:0 0 1rem}
-.pv-quiz input{position:absolute;opacity:0;pointer-events:none}
-.pv-quiz label{display:block;font-family:var(--serif);font-size:1.1rem;line-height:1.5;color:#33270f;background:#FBF7EF;border:1px solid var(--bdr2);border-radius:4px;padding:.9rem 1.2rem;margin:.55rem 0;cursor:pointer;transition:border-color .2s,background .2s}
-.pv-quiz label:hover{border-color:var(--gold)}
-.pv-quiz input:checked+label{border-color:var(--bark);background:rgba(62,44,20,.06)}
-.pv-quiz input:checked~label.pv-correct{border-color:var(--gold);background:rgba(191,155,44,.14);box-shadow:inset 0 0 0 1px var(--gold)}
-.pv-quiz .pv-quiz-reveal{display:none;margin-top:1.3rem;border-top:1px solid var(--bdr2);padding-top:1.3rem}
-.pv-quiz input:checked~.pv-quiz-reveal{display:block;animation:pvUp .5s ease both}
-.pv-quiz .pv-quiz-reveal p{font-size:1.1rem;line-height:1.7;color:#2c2313;margin:0 0 .8rem}
-.pv-quiz .pv-quiz-reveal p:last-child{margin:0}
-@keyframes pvUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-details.pv-open{margin:1.4rem 0}
-details.pv-open summary{list-style:none;display:inline-block;cursor:pointer;font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a6d13;border:1px solid var(--gold);border-radius:99px;padding:.6rem 1.4rem;transition:background .2s,color .2s;user-select:none}
-details.pv-open summary::-webkit-details-marker{display:none}
-details.pv-open summary:hover{background:var(--gold);color:#fff}
-details.pv-open[open]>summary{display:none}
-.pv-revealed{animation:pvUp .5s ease both}
-.pv-syl{display:block;font-family:var(--sans);font-size:.74rem;letter-spacing:.22em;color:var(--sand);margin-top:.3rem}
-.pv-js .pv-fx{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
-.pv-js .pv-fx.on{opacity:1;transform:none}
-.pv-js .hw .hw-heb{display:inline-block;opacity:0;transform:translateY(8px);transition:opacity .8s ease .15s,transform .8s ease .15s}
-.pv-js .hw.on .hw-heb{opacity:1;transform:none}
-.pv-next{background:var(--ink);padding:4rem 1.5rem}
-.pv-next-in{max-width:720px;margin:0 auto}
-.pv-next-done{font-family:var(--serif);font-size:1.3rem;line-height:1.6;color:#f3ead0;margin:0 0 1.8rem}
-.pv-next-lbl{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);border-top:1px solid var(--bdr2);padding-top:1.6rem;margin:0 0 .7rem}
-.pv-next-ttl{font-family:var(--serif);font-weight:500;font-size:1.7rem;line-height:1.2;color:#fff;margin:0 0 .9rem}
-.pv-next p{font-family:var(--serif);font-size:1.12rem;line-height:1.7;color:rgba(255,255,255,.72)}
-.pv-next-cta{margin-top:1.6rem}
-.pv-btn{display:inline-block;font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--gold);border-radius:99px;padding:.85rem 1.7rem;text-decoration:none;margin-right:.8rem;transition:background .2s}
-.pv-btn:hover{background:var(--gold2)}
-.pv-btn2{display:inline-block;font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid var(--bdr3);border-radius:99px;padding:.85rem 1.7rem;text-decoration:none;transition:border-color .2s,color .2s}
-.pv-btn2:hover{border-color:var(--gold);color:var(--gold2)}
-@media (prefers-reduced-motion:reduce){.pv-js .pv-fx,.pv-js .hw .hw-heb{opacity:1;transform:none;transition:none}.pv-quiz input:checked~.pv-quiz-reveal,.pv-revealed{animation:none}}
-@media(max-width:560px){.pv-quiz{padding:1.4rem}.pv-next{padding:3rem 1.2rem}.pv-btn{margin-bottom:.7rem}}
-</style>
-<script>
-(function(){
-document.body.classList.add('pv-js');
-var b=document.createElement('div');b.className='pv-progress';document.body.appendChild(b);
-function u(){var d=document.documentElement,t=d.scrollTop||document.body.scrollTop,h=d.scrollHeight-d.clientHeight;b.style.transform='scaleX('+(h>0?Math.min(1,t/h):0)+')';}
-window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();
-var els=document.querySelectorAll('article.body blockquote,.hw,.verdict,.mark,.pv-quiz,.pull-inner');
-els.forEach(function(el){el.classList.add('pv-fx');});
-if('IntersectionObserver' in window){
-var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');o.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
-els.forEach(function(el){o.observe(el);});
-}else{els.forEach(function(el){el.classList.add('on');});}
-})();
-</script>
-</body>
-</html>
+        <p class="ft-t

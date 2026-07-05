@@ -194,7 +194,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <a href="../foundation.html" class="nav-a">Free Course</a>
       <a href="../about.html" class="nav-a">About</a>
       <a href="../resources.html" class="nav-a">Resources</a>
-      <a href="../index.html#connect" class="nav-a">Contact</a>
+      <a href="../shalom-7mQ92.html" class="nav-a">Contact</a>
       <a href="../support.html" class="nav-a nav-give">Give</a>
     </div>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
@@ -208,15 +208,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   <a href="../foundation.html" class="mob-a">Free Course</a>
   <a href="../about.html" class="mob-a">About</a>
   <a href="../resources.html" class="mob-a">Resources</a>
-  <a href="../index.html#connect" class="mob-a">Contact</a>
+  <a href="../shalom-7mQ92.html" class="mob-a">Contact</a>
   <a href="../support.html" class="mob-a">Give</a>
 </nav>
 
-<header class="t-hero">
+<header class="t-hero"><span class="pv-wm" aria-hidden="true">נצבים</span>
   <div class="t-hero-in">
     <a href="../teachings.html" class="t-back">All Teachings</a>
     <span class="t-tag">Devarim &middot; Nitzavim</span>
     <h1 class="t-title">Teshuvah: Standing Before the Covenant</h1>
+<p class="pv-meta">14 min read</p>
     <p class="t-meta">Matti Kahana &middot; Shabbat 9/20/2025</p>
     <p class="t-refs">Deuteronomy 29:9&ndash;30:20 &middot; Isaiah 61:10&ndash;63:9</p>
   </div>
@@ -224,6 +225,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <main class="t-body" id="main">
   <div class="t-body-inner">
+<div class="pv-quiz"><p class="pv-lbl">Before You Read</p><p class="pv-quiz-lead">The covenant of Nitzavim is cut with the people standing there that day. And with whom else, in the text’s own words?</p><input type="radio" id="pvq1a" name="pvq1"><label for="pvq1a">With the elders and princes only</label><input type="radio" id="pvq1b" name="pvq1"><label for="pvq1b" class="pv-correct">Also with those who are not there that day</label><input type="radio" id="pvq1c" name="pvq1"><label for="pvq1c">With the generation of Sinai, retroactively</label><div class="pv-quiz-reveal"><p>“And not with you alone... but also with them that are not here with us this day.” Read that again slowly. You were in that sentence. This teaching walks the covenant of Moab, the teshuvah it makes possible, and the day called hayom.</p></div></div>
+
 
     <p>Shabbat Shalom, beloved.</p>
     <p>Today we're in Parshat Nitzavim. Which means "Standing." In the Book of Devarim.</p>
@@ -476,7 +479,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
     <div class="closing">
       <p>May each and every one of you be signed and sealed in the book of life, for a good and sweet year.</p>
-      <p>5786 &mdash; its digits add to 26. The gematria of Yod-Hei-Vav-Hei. The year of Hashem.</p>
+      <p>5786 &mdash; its digits add to 26. The gematria of Yod-Hei-Vav-Hei. The year of HaShem.</p>
       <p>Kol Tuv &mdash; Matti Kahana</p>
     </div>
 
@@ -539,7 +542,7 @@ document.querySelectorAll('.fb-form').forEach(function(f){
         <a href="../about.html">About L'ets Echad</a>
         <a href="../about.html#mission">Our Mission</a>
         <a href="../about.html#matti">About Matti</a>
-        <a href="../index.html#connect">Contact</a>
+        <a href="../shalom-7mQ92.html">Contact</a>
       </div>
       <div class="ft-col">
         <h4>Content</h4>
@@ -576,6 +579,42 @@ mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   mob.classList.remove('open');burger.classList.remove('x');
   burger.setAttribute('aria-expanded','false');document.body.style.overflow='';
 }));
+</script>
+<style>
+.pv-progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);z-index:1200}
+.pv-wm{position:absolute;top:50%;right:-4%;transform:translateY(-50%);font-family:var(--serif);font-size:12rem;line-height:1;color:rgba(191,155,44,.06);direction:rtl;pointer-events:none;user-select:none;z-index:1;white-space:nowrap}
+.pv-meta{font-family:var(--sans,system-ui);font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin:.9rem 0 0}
+.t-body-inner>p:first-of-type::first-letter{float:left;font-size:3.4em;line-height:.82;padding:.06em .12em 0 0;color:var(--bark);font-weight:500}
+.pv-quiz{background:var(--parch,#F5EDD8);border-left:4px solid var(--gold);border-radius:0 5px 5px 0;padding:1.8rem;margin:0 0 2.6rem}
+.pv-quiz .pv-quiz-lead{font-family:var(--serif);font-size:1.05rem;line-height:1.7;color:#2c2313;margin:0 0 1rem}
+.pv-quiz .pv-lbl{font-family:var(--sans,system-ui);font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#a07f16;margin:0 0 .8rem}
+.pv-quiz input{position:absolute;opacity:0;pointer-events:none}
+.pv-quiz label{display:block;font-family:var(--serif);font-size:1.02rem;line-height:1.5;color:#33270f;background:#FBF7EF;border:1px solid rgba(191,155,44,.4);border-radius:4px;padding:.85rem 1.1rem;margin:.55rem 0;cursor:pointer;transition:border-color .2s,background .2s}
+.pv-quiz label:hover{border-color:var(--gold)}
+.pv-quiz input:checked+label{border-color:var(--bark);background:rgba(62,44,20,.06)}
+.pv-quiz input:checked~label.pv-correct{border-color:var(--gold);background:rgba(191,155,44,.14);box-shadow:inset 0 0 0 1px var(--gold)}
+.pv-quiz .pv-quiz-reveal{display:none;margin-top:1.2rem;border-top:1px solid rgba(191,155,44,.35);padding-top:1.2rem}
+.pv-quiz input:checked~.pv-quiz-reveal{display:block;animation:pvUp .5s ease both}
+.pv-quiz .pv-quiz-reveal p{font-family:var(--serif);font-size:1.02rem;line-height:1.7;color:#2c2313;margin:0}
+@keyframes pvUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.pv-js .pv-fx{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.pv-js .pv-fx.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.pv-js .pv-fx{opacity:1;transform:none;transition:none}.pv-quiz input:checked~.pv-quiz-reveal{animation:none}}
+@media(max-width:560px){.pv-wm{font-size:6.5rem;right:-10%}.pv-quiz{padding:1.3rem}}
+</style>
+<script>
+(function(){
+document.body.classList.add('pv-js');
+var b=document.createElement('div');b.className='pv-progress';document.body.appendChild(b);
+function u(){var d=document.documentElement,t=d.scrollTop||document.body.scrollTop,h=d.scrollHeight-d.clientHeight;b.style.transform='scaleX('+(h>0?Math.min(1,t/h):0)+')';}
+window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();
+var els=document.querySelectorAll('.t-body-inner blockquote,.pull,.pv-quiz,.found-box,.bless,.s-div');
+els.forEach(function(el){el.classList.add('pv-fx');});
+if('IntersectionObserver' in window){
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');o.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+els.forEach(function(el){o.observe(el);});
+}else{els.forEach(function(el){el.classList.add('on');});}
+})();
 </script>
 </body>
 </html>
