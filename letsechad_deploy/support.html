@@ -191,6 +191,35 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .skipl:focus{left:0}
 </style>
 <style>
+  /* existing CSS here */
+
+  .pr-clickable {
+    cursor: pointer;
+    position: relative;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .pr-clickable:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold);
+    box-shadow: 0 14px 35px rgba(15, 11, 7, 0.12);
+  }
+
+  .pr-clickable:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+  }
+
+  .pr-clickable .pr-link2 {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+  
+<style>
 /* GIVE PAGE 2.0 */
 .gv-hero{min-height:72vh;background:var(--ink);display:grid;place-items:center;text-align:center;padding:10rem 2rem 5rem;position:relative;overflow:hidden}
 .gv-hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");opacity:.5;pointer-events:none}
@@ -339,16 +368,36 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   </div>
 </article>
 
-      <article class="pr-c fu in">
-        <span class="pr-tag">The Book</span>
-        <h3 class="pr-t">Para: Uncovered</h3>
-        <p class="pr-d">Written for anyone leaving a Christian framework and discovering Torah. The uncovering of Israel, from the calf to the return. If you are at the crossroads, this is the entry point.</p>
-        <div class="pr-ft">
-          <!-- TODO: replace # with Amazon or YouTube link -->
-          <a href="https://www.amazon.com/Para-Uncovered-Torah-Teaching-Coming/dp/B0H4VCZX9S/" class="btn btn-outline btn-sm" aria-disabled="true" onclick="return false">Get the Book — Soon</a>
-          <a href="para.html" class="pr-link2">Read the teaching →</a>
-        </div>
-      </article>
+<article
+  class="pr-c fu in pr-clickable"
+  role="link"
+  tabindex="0"
+  aria-label="Get Para: Uncovered on Amazon"
+  onclick="window.open('https://www.amazon.com/Para-Uncovered-Torah-Teaching-Coming/dp/B0H4VCZX9S/', '_blank', 'noopener,noreferrer')"
+  onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); window.open('https://www.amazon.com/Para-Uncovered-Torah-Teaching-Coming/dp/B0H4VCZX9S/', '_blank', 'noopener,noreferrer'); }"
+>
+  <span class="pr-tag">The Book</span>
+
+  <h3 class="pr-t">Para: Uncovered</h3>
+
+  <p class="pr-d">
+ There is a Hebrew word for what happened at the golden calf: para. Uncovered. Exposed. Stripped of the covenant covering meant to protect Israel. Drawing from Exodus, Hosea, Jeremiah, and the Yom Kippur liturgy, Para: Uncovered traces the danger of substitutes and HaShem’s enduring call: Come back. I will cover you again.
+  </p>
+
+  <div class="pr-ft">
+    <span class="btn btn-outline btn-sm">
+      Get the Book →
+    </span>
+
+    <a
+      href="para.html"
+      class="pr-link2"
+      onclick="event.stopPropagation();"
+    >
+      Read the teaching →
+    </a>
+  </div>
+</article>
 
       <article class="pr-c fu d2 in">
         <span class="pr-tag">Course · The Sequel</span>
