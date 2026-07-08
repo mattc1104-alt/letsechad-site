@@ -73,11 +73,43 @@
 
   .foot{margin-top:10px;text-align:center;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--stone)}
 
-  @media print{
-    @page{size:letter;margin:0}
-    html,body{background:#fff}
-    .sheet{margin:0;box-shadow:none;width:8.5in;height:11in;overflow:hidden}
-    .no-print{display:none}
+  @media print {
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    html,
+    body {
+      background: #fff;
+    }
+
+    *,
+    *::before,
+    *::after {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .sheet {
+      width: 8.5in;
+      height: 11in;
+      margin: 0;
+      box-shadow: none;
+      overflow: hidden;
+    }
+
+    .hero {
+      background-color: var(--ink) !important;
+    }
+
+    .cta-in {
+      background-color: var(--ink) !important;
+    }
+
+    .no-print {
+      display: none;
+    }
   }
   .no-print{text-align:center;color:var(--parch);font-family:var(--sans);font-size:13px;padding:14px}
 </style>
@@ -101,8 +133,8 @@
 
   <div class="body">
     <div class="mission">
-      <p>L'ets Echad is a Torah teaching ministry rooted in Ezekiel 37:19, where the stick of Judah and the stick of Ephraim become one in the hand of HaShem. The name means &ldquo;into one stick.&rdquo; We teach from the Tanakh first and meet people where they are, whatever their background or starting point. One focus drives everything. Return.
-<p><b>Return to HaShem,   Return to Torah,   Return to the Land,   Return to the Covenant.</b></p>
+      <p>L'ets Echad is a Torah teaching ministry rooted in Ezekiel 37:19, where the stick of Judah and the stick of Ephraim become one in the hand of HaShem. The name means &ldquo;into one stick.&rdquo; We teach from the Tanakh first and meet people where they are, whatever their background or starting point. One focus drives everything. Return.</p>
+      <p><b>Return to HaShem, Return to Torah, Return to the Land, Return to the Covenant.</b></p>
     </div>
 
     <div class="eyebrow"><span>Where to Begin</span></div>
