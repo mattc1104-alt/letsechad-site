@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'ets Echad — Ministry One-Pager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F0B07;--ink2:#1A1108;--ink3:#251A0C;--bark:#3E2C14;--stone:#7A6040;
+    --gold:#BF9B2C;--gold2:#D4AF3A;--gold3:#E8C84A;--golddk:#7E6410;
+    --parch:#F5EDD8;--parch2:#EDE0C0;--cream:#FBF7EF;
+    --serif:'Cormorant Garamond',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;
+    --bdr:rgba(191,155,44,.30);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#2a241d;font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+  .sheet{width:8.5in;margin:24px auto;background:var(--cream);
+    box-shadow:0 10px 60px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden}
+
+  /* ===== DARK HERO (matches homepage) ===== */
+  .hero{background:var(--ink);color:#fff;text-align:center;padding:0.26in 0.7in 0.24in;position:relative}
+  .hero::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(191,155,44,.10) 0%,transparent 62%);
+    top:44%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+  .hero-in{position:relative;z-index:2}
+  .logo{width:64px;height:64px;margin:0 auto 8px}
+  .brand{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:.02em;color:#fff;line-height:1}
+  .brand .apo{color:var(--gold2)}
+  .brand-sub{font-size:12px;color:rgba(255,255,255,.62);margin-top:4px;letter-spacing:.02em}
+
+  .h-eye{display:flex;align-items:center;justify-content:center;gap:.75rem;
+    font-size:10.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold2);margin:10px 0 7px}
+  .h-eye::before,.h-eye::after{content:"";display:block;width:28px;height:1px;background:var(--gold);opacity:.6}
+
+  .h1{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em;color:#fff;font-size:46px;margin-bottom:10px}
+  .h1 em{color:var(--gold2);font-style:italic}
+
+  .h-card{max-width:6.0in;margin:0 auto;padding:10px 22px;border:1px solid rgba(191,155,44,.28);border-radius:3px;background:rgba(255,255,255,.015)}
+  .h-verse{font-family:var(--serif);font-size:13.5px;font-style:italic;color:rgba(255,255,255,.62);line-height:1.55}
+  .h-cite{display:block;font-family:var(--sans);font-size:10px;font-style:normal;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin-top:8px;font-weight:600}
+
+  /* ===== LIGHT BODY ===== */
+  .body{padding:0.22in 0.7in 0.3in}
+
+  .mission{text-align:center;max-width:6.5in;margin:0 auto}
+  .mission p{font-family:var(--serif);font-size:16px;line-height:1.4;color:var(--ink2)}
+  .return{margin-top:8px;font-family:var(--serif);font-size:15px;font-style:italic;color:var(--bark)}
+  .return b{font-style:normal;font-weight:600;color:var(--golddk)}
+
+  .eyebrow{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--golddk);font-weight:600;text-align:center;margin:13px 0 10px;position:relative}
+  .eyebrow span{background:var(--cream);padding:0 14px;position:relative;z-index:1}
+  .eyebrow::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:var(--bdr)}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 15px}
+  .card{padding:11px 14px;background:var(--parch);border:1px solid var(--bdr);border-radius:3px;border-left:3px solid var(--gold)}
+  .card-k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:5px}
+  .card-t{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);line-height:1.08;margin-bottom:4px}
+  .card-t .sub{display:block;font-size:14.5px;font-weight:500;font-style:italic;color:var(--bark);margin-top:2px}
+  .card-d{font-size:12px;line-height:1.4;color:var(--ink2)}
+
+  .cta{margin-top:12px}
+  .cta-in{display:flex;align-items:center;gap:18px;padding:12px 16px;background:var(--ink);border-radius:4px}
+  .qr{width:98px;height:98px;flex-shrink:0;background:#fff;padding:7px;border-radius:4px}
+  .qr img{width:100%;height:100%;display:block}
+  .cta-h{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--parch);line-height:1.15}
+  .cta-url{font-size:16.5px;font-weight:600;color:var(--gold3);letter-spacing:.02em;margin-top:3px}
+  .cta-sub{font-size:12px;color:rgba(245,237,216,.72);margin-top:7px;line-height:1.5}
+  .cta-sub a{color:var(--gold2);font-weight:600}
+
+  .foot{margin-top:10px;text-align:center;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--stone)}
+
+  @media print{
+    @page{size:letter;margin:0}
+    html,body{background:#fff}
+    .sheet{margin:0;box-shadow:none;width:8.5in;height:11in;overflow:hidden}
+    .no-print{display:none}
+  }
+  .no-print{text-align:center;color:var(--parch);font-family:var(--sans);font-size:13px;padding:14px}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="hero">
+    <div class="hero-in">
+     <div class="hero-in">
+
+  <img
+    src="https://letsechad.com/logo.png"
+    alt="L'ets Echad"
+    class="logo"
+  >
+
+  <div class="brand">
+    L<span class="apo">'</span>ETS ECHAD
+  </div>
+
+  <div class="brand-sub">
+    Into one stick &middot; Ezekiel 37:19
+  </div>
+
+  <div class="h-eye">Ministry of Reunification</div>
+
+  <h1 class="h1">
+    One Stick <em>in His Hand</em>
+  </h1>
+
+      <div class="h-card">
+        <p class="h-verse">&ldquo;Behold, I am taking the stick of Joseph, which is in the hand of Ephraim, together with the tribes of Israel his companions, and I will place them upon the stick of Judah. I will make them into one stick, and <br>they will be one in My hand.&rdquo;</p>
+        <cite class="h-cite">Ezekiel 37:19</cite>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="mission">
+      <p>L'ets Echad is a Torah teaching ministry rooted in Ezekiel 37:19, where the stick of Judah and the stick of Ephraim become one in the hand of HaShem. The name means &ldquo;into one stick.&rdquo; We teach from the Tanakh first and meet people where they are, whatever their background or starting point. One focus drives everything. Return.
+<p><b>Return to HaShem,   Return to Torah,   Return to the Land,   Return to the Covenant.</b></p>
+    </div>
+
+    <div class="eyebrow"><span>Where to Begin</span></div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-k">The Site</div>
+        <div class="card-t">letsechad.com</div>
+        <div class="card-d">Twenty-two teaching pages, a 175-term glossary, a plain-answer FAQ, and free study guides. Everything in one place. Read it the same night you meet us.</div>
+      </div>
+      <div class="card">
+        <div class="card-k">The Book</div>
+        <div class="card-t">Para: Uncovered<span class="sub">A Torah teaching for those coming home</span></div>
+        <div class="card-d">For anyone leaving an inherited framework and finding Torah. On Exodus 32, Israel's exposure, and the G-d who covers again.</div>
+      </div>
+      <div class="card">
+        <div class="card-k">The Course</div>
+        <div class="card-t">The Foundation<span class="sub">Free 5-day email course</span></div>
+        <div class="card-d">Learning to read Scripture on its own terms. One idea a day, one small practice the same afternoon. Not to win arguments. To read honestly.</div>
+      </div>
+      <div class="card">
+        <div class="card-k">The Channel</div>
+        <div class="card-t">YouTube<span class="sub">@letsechad</span></div>
+        <div class="card-d">Torah and Tanakh teaching on the reunification of the House of Israel and the House of Judah. Watch, subscribe, and study along.</div>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div class="cta-in">
+        <div class="qr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAAEiCAIAAADS3EjhAAAFCElEQVR4nO3dsY4TMRRAURaloKDg/7+SgoJu+AOLlffqeSbntCiJyeyVizzZH9d1fQNK36cXAM8nM8jJDHIyg5zMICczyMkMcjKDnMwgJzPIyQxyMoOczCAnM8jJDHIyg5zMICczyMkMcq+dF//6+eOr1nGI33/+Ru+8812tVzX1FM5cVWfnb8NuBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAa5rSmQtW6iYsfOdMLUJMf6X7tpjO4JPu9vY81uBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAa5cApkrfvFfWp2YWeSY8q7TWNM/X/tZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQG5sCeZ6dGZGp21V2VsX/s5tBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQc4UyCdM3QhjGuPu7GaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkBubArnjZMPUmndmRLpbbKZu3rkjuxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5MIpkO4ekyndrS7djTB3vInmeexmkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpD7uK5reg0P0d0X033u2vPO5JhiN4OczCAnM8jJDHIyg5zMICczyMkMcjKD3NYUyJlnY3Sv7Zw5yTH1XXWfO/U/sptBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQW7sLJCpm0rOnPM489SNM2dTOt0zsptBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQe618+KpyYYz70/Z8W7zFmtTE0IduxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5LamQHZMnfbxvLtm1p97x3NTdpz5jOxmkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpAbuxFmxx1vk5k6o+LMkzO6b/LMp283g5zMICczyMkMcjKDnMwgJzPIyQxyMoPc2Fkgd7xNZu2OExVTJ6NMmVqz3QxyMoOczCAnM8jJDHIyg5zMICczyMkMcltngZx5B8qO55320Xm3p+AsEDiazCAnM8jJDHIyg5zMICczyMkMcjKDXHgjTHeSxJknWJh6eed3XrObQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUFu7CyQ590YcuZ0wvOe0drUyShrdjPIyQxyMoOczCAnM8jJDHIyg5zMICczyL12Xrzzi/uZv9bvmDpnYs3ZJ1/1zm6EgaPJDHIyg5zMICczyMkMcjKDnMwgJzPIbU2B3PGsiLX1L/1nTlScOX1y5qqm2M0gJzPIyQxyMoOczCAnM8jJDHIyg5zMILc1BbJ25i/9Z06u7MxMdCeynHlSyI6pVdnNICczyMkMcjKDnMwgJzPIyQxyMoOczCAXToGsddMYd7ypZGca48zTPs7kRhh4LJlBTmaQkxnkZAY5mUFOZpCTGeRkBrmxKZA76u5t2dHNiNxxnubMiRm7GeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkTIF8wpkTBt2tLjt2brGZ+p67z7WbQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUFubApkamZix9Tswvqd73gzy46d73lqvsRuBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAa5cArkedMJd7zH5MyncOapKs4CgRuTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQ+7iua3oN8HB2M8jJDHIyg5zMICczyMkMcjKDnMwgJzPIyQxyMoOczCAnM8jJDHIyg5zMICczyMkMcjKD3D8EIpDEmVUW5wAAAABJRU5ErkJggg==" alt="QR code to letsechad.com"></div>
+        <div>
+          <div class="cta-h">Start here.</div>
+          <div class="cta-url">letsechad.com</div>
+          <div class="cta-sub">Scan the code to open the site. Free course, teachings, glossary, and the book are all one tap away. YouTube: <a href="https://www.youtube.com/@letsechad">@letsechad</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">One stick in His hand. Ezekiel 37:19</div>
+  </div>
+
+</div>
+
+<div class="no-print">Print or save as PDF &middot; Letter size, one sheet &middot; letsechad.com</div>
+
+</body>
+</html>
