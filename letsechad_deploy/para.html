@@ -519,6 +519,142 @@ a:focus-visible,button:focus-visible{
   line-height: 1.9;
 }
   
+/* ── Syllable pronunciation hint ─────────────── */
+.pv-syl{
+  font-family:var(--sans);font-size:.6rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--sand);
+  align-self:end;
+}
+.pv-meta{
+  font-family:var(--sans);font-size:.62rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--stone);
+  margin-top:1.1rem;
+}
+
+/* ── Inline quiz ─────────────────────────────── */
+.pv-quiz{
+  margin:2rem 0;padding:1.5rem 1.7rem;
+  background:var(--parch3);border:1px solid var(--bdr2);
+  border-left:3px solid var(--gold);
+}
+.pv-quiz-lead{
+  font-family:var(--serif);font-size:1.05rem;color:var(--bark);
+  line-height:1.7;margin-bottom:1.1rem;
+}
+.pv-quiz-lead strong{color:var(--brown);font-weight:600}
+.pv-quiz input[type=radio]{
+  position:absolute;opacity:0;width:0;height:0;
+}
+.pv-quiz label{
+  display:block;position:relative;
+  font-family:var(--serif);font-size:1rem;color:var(--stone);
+  padding:.7rem 1rem .7rem 2.6rem;margin-bottom:.5rem;
+  background:rgba(255,255,255,.35);border:1px solid var(--bdr2);
+  border-radius:2px;cursor:pointer;line-height:1.5;
+  transition:background var(--t),border-color var(--t),color var(--t);
+}
+.pv-quiz label::before{
+  content:'';position:absolute;left:1rem;top:50%;transform:translateY(-50%);
+  width:1.05rem;height:1.05rem;border-radius:50%;
+  border:1.5px solid var(--sand);background:transparent;
+  transition:border-color var(--t),background var(--t);
+}
+.pv-quiz label:hover{background:rgba(255,255,255,.6);border-color:var(--bdr3)}
+.pv-quiz input:focus-visible + label{outline:3px solid var(--goldtxt);outline-offset:2px}
+.pv-quiz input:checked + label{
+  background:rgba(191,155,44,.12);border-color:var(--gold);color:var(--bark);
+}
+.pv-quiz input:checked + label::before{
+  border-color:var(--gold);background:var(--gold);
+  box-shadow:inset 0 0 0 3px var(--parch3);
+}
+/* Once a choice is made, mark the correct answer */
+.pv-quiz.answered label.pv-correct{
+  border-color:var(--gold);background:rgba(191,155,44,.16);color:var(--bark);font-weight:600;
+}
+.pv-quiz.answered label.pv-correct::after{
+  content:'\2713';position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+  color:var(--gold);font-weight:700;
+}
+/* Wrong pick the reader chose */
+.pv-quiz.answered input:checked + label:not(.pv-correct){
+  border-color:var(--brown);color:var(--brown);
+}
+.pv-quiz.answered input:checked + label:not(.pv-correct)::after{
+  content:'\2715';position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+  color:var(--brown);font-weight:700;opacity:.7;
+}
+/* Reveal stays hidden until a choice is made */
+.pv-quiz-reveal{
+  max-height:0;overflow:hidden;opacity:0;
+  transition:max-height .45s var(--ease),opacity .35s var(--ease),margin .35s var(--ease);
+  margin-top:0;
+}
+.pv-quiz.answered .pv-quiz-reveal{
+  max-height:600px;opacity:1;margin-top:1.1rem;
+}
+.pv-quiz-reveal p{
+  font-family:var(--serif);font-size:1rem;color:var(--stone);
+  line-height:1.8;margin-bottom:.7rem;
+  padding-top:1.1rem;border-top:1px solid var(--bdr2);
+}
+.pv-quiz-reveal p ~ p{padding-top:0;border-top:none}
+.pv-quiz-reveal p:last-child{margin-bottom:0}
+.pv-quiz-reveal strong{color:var(--bark);font-weight:600}
+
+/* ── Where this road continues (CTA) ─────────── */
+.pv-next{
+  background:var(--ink2);
+  padding:4.5rem 2rem 5rem;
+  border-top:1px solid var(--bdr);
+  position:relative;
+}
+.pv-next::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.4;
+}
+.pv-next-in{max-width:640px;margin:0 auto;text-align:center}
+.pv-next-done{
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(1.05rem,2vw,1.25rem);color:rgba(255,255,255,.6);
+  line-height:1.8;margin-bottom:2.4rem;
+}
+.pv-next-lbl{
+  font-family:var(--sans);font-size:.6rem;font-weight:600;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:.9rem;
+}
+.pv-next-ttl{
+  font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.2rem);
+  font-weight:300;color:#fff;line-height:1.2;margin-bottom:1rem;
+}
+.pv-next-in > p:not([class]){
+  font-family:var(--serif);font-size:clamp(1rem,1.6vw,1.15rem);
+  color:rgba(255,255,255,.68);line-height:1.8;
+  max-width:520px;margin:0 auto 2rem;
+}
+.pv-next-cta{
+  display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;align-items:center;
+}
+.pv-btn{
+  display:inline-block;font-family:var(--sans);
+  font-size:.78rem;font-weight:600;letter-spacing:.06em;
+  padding:.85rem 1.8rem;border-radius:2px;
+  background:var(--gold);color:var(--ink);
+  border:1px solid var(--gold);
+  transition:background var(--t),color var(--t),transform var(--t);
+}
+.pv-btn:hover{background:var(--gold2);transform:translateY(-1px)}
+.pv-btn2{
+  display:inline-block;font-family:var(--sans);
+  font-size:.78rem;font-weight:600;letter-spacing:.06em;
+  padding:.85rem 1.6rem;border-radius:2px;
+  background:transparent;color:var(--gold2);
+  border:1px solid var(--bdr3);
+  transition:background var(--t),color var(--t),border-color var(--t);
+}
+.pv-btn2:hover{background:rgba(191,155,44,.1);border-color:var(--gold);color:#fff}
+
 /* ── Print ───────────────────────────────────── */
 @media print{
   .nav,.burger,.mob,.hero-scroll,.footer,.act-break{display:none}
@@ -1236,6 +1372,11 @@ document.addEventListener('keydown',e=>{
     setMenu(false);
     burger.focus();
   }
+});
+
+/* Inline quizzes: reveal the answer once the reader picks an option */
+document.querySelectorAll('.pv-quiz').forEach(quiz=>{
+  quiz.addEventListener('change',()=>quiz.classList.add('answered'));
 });
 </script>
 </body>
