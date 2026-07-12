@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Test a Teaching — An Interactive Study Tool | L'ets Echad</title>
+<link rel="canonical" href="https://letsechad.com/test-a-teaching">
+<meta name="description" content="An interactive tool for testing any teaching against Scripture. Verify the claim, run the Deuteronomy 13 gates, and render your own verdict.">
+<meta property="og:title" content="Test a Teaching · L'ets Echad">
+<meta property="og:description" content="Someone handed you a teaching. Put it under the text. An interactive tool that walks you through the full test, from verification to verdict, and prints your worksheet.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://letsechad.com/test-a-teaching">
+<meta property="og:image" content="https://letsechad.com/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L'ets Echad — One Stick in His Hand. Ezekiel 37:19">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Test a Teaching · L'ets Echad">
+<meta name="twitter:description" content="An interactive tool that walks you through testing any teaching against Scripture and prints your worksheet.">
+<meta name="twitter:image" content="https://letsechad.com/og-share.jpg">
+<meta name="theme-color" content="#0F0B07">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Test a Teaching","url":"https://letsechad.com/test-a-teaching","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"An interactive tool for weighing any teaching or doctrinal claim against Torah and Tanakh, following the L'ets Echad method: verify, test in the order of authority, apply the Deuteronomy 13 gates, and render a verdict.","publisher":{"@type":"Organization","name":"L'ets Echad","url":"https://letsechad.com"}}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0F0B07;--ink2:#1A1108;--ink3:#251A0C;
+  --bark:#3E2C14;--brown:#6B4E28;
+  --stone:#7A6040;--sand:#A08860;--light:#C8AA80;
+  --gold:#BF9B2C;--gold2:#D4AF3A;--gold3:#E8C84A;--golddk:#7E6410;
+  --parch:#F5EDD8;--cream:#FBF7EF;--white:#FFFFFF;
+  --bdr:rgba(191,155,44,.18);--bdr2:rgba(191,155,44,.38);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--t:.22s;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--parch);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans);border:none;background:none}
+.W{max-width:1160px;margin:0 auto;padding:0 2rem}
+.Wsm{max-width:820px;margin:0 auto;padding:0 2rem}
+.serif{font-family:var(--serif)}
+.eyebrow{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--ink);padding:.6rem 1rem;z-index:1000;font-size:.8rem}
+.skip:focus{left:0}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;height:78px;display:flex;align-items:center;background:rgba(15,11,7,.95);border-bottom:1px solid rgba(191,155,44,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.nav-in{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.nav-logo{display:flex;align-items:center;gap:.85rem;flex-shrink:0}
+.nav-logo-img{height:54px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.nav-logo-wrap{line-height:1.1}
+.nav-logo-name{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--gold2);letter-spacing:.01em;display:block}
+.nav-logo-sub{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:.05rem}
+.nav-a{font-size:.73rem;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.52);padding:.42rem .75rem;border-radius:2px;transition:color var(--t)}
+.nav-a:hover{color:rgba(255,255,255,.88)}
+.nav-a.cur{color:var(--gold2)}
+.nav-give{margin-left:.5rem;border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.38rem .95rem!important;border-radius:2px}
+.nav-give:hover{background:var(--gold);color:var(--ink)!important}
+.burger{display:none;flex-direction:column;gap:5px;padding:6px}
+.burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.65);border-radius:2px}
+.mob{display:none;position:fixed;inset:78px 0 0 0;z-index:899;background:var(--ink2);flex-direction:column;padding:1.5rem 2rem;gap:.15rem;overflow-y:auto}
+.mob.open{display:flex}
+.mob-a{font-size:1.15rem;font-family:var(--serif);color:rgba(255,255,255,.55);padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.mob-a:last-child{border-bottom:none;color:var(--gold);margin-top:.5rem}
+/* HERO */
+.t-hero{background:var(--ink);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.t-hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(191,155,44,.07) 0%,transparent 62%);top:50%;left:50%;transform:translate(-50%,-52%);pointer-events:none}
+.t-hero-in{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.t-tag{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.2rem}
+.t-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1.5rem}
+.t-refs{font-family:var(--serif);font-style:italic;font-size:.95rem;color:rgba(255,255,255,.38)}
+.t-lede{font-family:var(--serif);font-size:1.1rem;line-height:1.8;color:rgba(255,255,255,.62);max-width:640px;margin-top:1.6rem}
+/* TOOL */
+.tool{padding:4.5rem 0 5rem}
+.tool-inner{max-width:760px;margin:0 auto;padding:0 2rem}
+.tool-inner>p.lead{font-family:var(--serif);font-size:1.08rem;line-height:1.9;color:var(--ink);margin-bottom:2.2rem}
+.step{background:var(--cream);border:1px solid var(--bdr2);border-radius:2px;padding:2rem 2rem 1.8rem;margin-bottom:1.6rem}
+.step-k{font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--golddk);display:block;margin-bottom:.55rem}
+.step h2{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--bark);line-height:1.2;margin-bottom:.8rem}
+.step p{font-family:var(--serif);font-size:1.02rem;line-height:1.8;color:var(--ink);margin-bottom:1rem}
+.step p.hint{font-size:.92rem;color:var(--stone);font-style:italic}
+.step a.vref{color:var(--golddk);border-bottom:1px dotted var(--bdr2)}
+.step a.vref:hover{color:var(--gold)}
+label.fl{display:block;font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);margin:1.1rem 0 .4rem}
+input[type=text].fi,textarea.fi{width:100%;background:#fff;border:1px solid var(--bdr2);border-radius:2px;font-family:var(--serif);font-size:1rem;padding:.7rem .9rem;color:var(--ink)}
+textarea.fi{min-height:84px;resize:vertical;line-height:1.6}
+input.fi:focus,textarea.fi:focus{outline:2px solid var(--gold);outline-offset:1px}
+.q{border-top:1px solid var(--bdr);padding-top:1.3rem;margin-top:1.3rem}
+.q:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.q-t{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--bark);margin-bottom:.35rem}
+.opts{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.opt{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.55rem 1.1rem;border:1px solid var(--bdr2);border-radius:2px;background:#fff;color:var(--brown);transition:all var(--t)}
+.opt:hover{border-color:var(--gold)}
+.opt:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.opt.sel{background:var(--bark);border-color:var(--bark);color:var(--gold3)}
+.opt.sel.bad{background:#5A1F14;border-color:#5A1F14;color:#F2D7CF}
+.opt.sel.warn{background:#6B5210;border-color:#6B5210;color:#F5EDD8}
+.flag{display:none;margin-top:.9rem;padding:.85rem 1.1rem;border-left:3px solid #8A2E1E;background:rgba(138,46,30,.06);font-family:var(--serif);font-size:.95rem;color:#5A1F14;line-height:1.6}
+.flag.on{display:block}
+.flag.gold{border-left-color:var(--gold);background:rgba(191,155,44,.06);color:var(--bark)}
+.chk{display:flex;align-items:flex-start;gap:.7rem;padding:.55rem 0;font-family:var(--serif);font-size:1rem;color:var(--ink);cursor:pointer}
+.chk input{margin-top:.35rem;accent-color:var(--gold);width:16px;height:16px;flex-shrink:0}
+.chk b{color:var(--bark);font-weight:600}
+/* RESEARCH ASSISTANT */
+.res-bar{margin-top:1.5rem;padding-top:1.4rem;border-top:1px solid var(--bdr)}
+.btn-bark{display:inline-block;background:var(--bark);color:var(--gold3);font-family:var(--sans);font-weight:500;letter-spacing:.07em;text-transform:uppercase;font-size:.72rem;border-radius:2px;padding:.78rem 1.5rem;transition:background var(--t)}
+.btn-bark:hover{background:var(--ink2)}
+.btn-bark:disabled{opacity:.55;cursor:wait}
+.btn-bark:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.res-note{font-family:var(--serif);font-size:.9rem;font-style:italic;color:var(--stone);line-height:1.7;margin-top:.8rem}
+.res{display:none;margin-top:1.4rem}
+.res.on{display:block}
+.res-card{border:1px solid var(--bdr2);border-left:3px solid var(--gold);border-radius:2px;background:#fff;padding:1.1rem 1.3rem;margin-bottom:.8rem}
+.res-card.warn{border-left-color:#8A2E1E}
+.res-k{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--golddk);display:block;margin-bottom:.45rem}
+.res-card p{font-family:var(--serif);font-size:.98rem;line-height:1.75;color:var(--ink);margin-bottom:.5rem}
+.res-card p:last-child{margin-bottom:0}
+.res-card a{color:var(--golddk);border-bottom:1px dotted var(--bdr2)}
+.res-card a:hover{color:var(--gold)}
+.heb{direction:rtl;text-align:right;font-family:var(--serif);font-size:1.25rem;line-height:2;color:var(--bark)}
+.res-err{border:1px solid var(--bdr2);border-left:3px solid #8A2E1E;border-radius:2px;background:rgba(138,46,30,.05);padding:1rem 1.2rem;font-family:var(--serif);font-size:.95rem;color:#5A1F14;line-height:1.7}
+/* ORDER OF AUTHORITY aside */
+.order{background:var(--ink2);border:1px solid rgba(191,155,44,.25);border-radius:2px;padding:2rem;margin:0 0 1.6rem}
+.order h2{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:#fff;margin-bottom:1.1rem}
+.order ol{list-style:none;counter-reset:rung}
+.order li{counter-increment:rung;display:flex;gap:1rem;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-family:var(--serif);font-size:.98rem;color:rgba(255,255,255,.65);line-height:1.55}
+.order li:last-child{border-bottom:none}
+.order li::before{content:counter(rung);font-family:var(--sans);font-size:.7rem;font-weight:600;color:var(--gold2);border:1px solid rgba(191,155,44,.4);border-radius:50%;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.2rem}
+.order li b{color:#fff;font-weight:600}
+.order p.note{font-family:var(--serif);font-size:.88rem;font-style:italic;color:rgba(255,255,255,.4);margin-top:1rem;line-height:1.7}
+/* VERDICT */
+.verdict-box{background:var(--ink);border:1px solid var(--bdr2);border-radius:2px;padding:2.4rem 2.2rem;margin-bottom:1.6rem}
+.verdict-box .step-k{color:var(--gold2)}
+.verdict-box h2{font-family:var(--serif);font-size:1.45rem;font-weight:400;color:#fff;margin-bottom:1rem}
+.points{font-family:var(--serif);font-size:1.15rem;line-height:1.75;color:rgba(255,255,255,.85);border-left:3px solid var(--gold);padding:.9rem 1.2rem;background:rgba(191,155,44,.07);margin-bottom:1.4rem}
+.points b{color:var(--gold3);font-weight:600}
+.verdict-box p.vp{font-family:var(--serif);font-size:.98rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:1.2rem}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:1.2rem}
+.vbtn{text-align:left;border:1px solid rgba(255,255,255,.16);border-radius:2px;padding:1rem 1.1rem;background:transparent;transition:all var(--t)}
+.vbtn:hover{border-color:var(--gold)}
+.vbtn:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.vbtn.sel{background:var(--gold);border-color:var(--gold)}
+.vbtn .vn{display:block;font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:.2rem}
+.vbtn .vd{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:.03em;color:rgba(255,255,255,.45);line-height:1.5}
+.vbtn.sel .vn{color:var(--ink)}
+.vbtn.sel .vd{color:rgba(15,11,7,.6)}
+.verdict-box label.fl{color:rgba(255,255,255,.4)}
+.verdict-box textarea.fi{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--ink);font-family:var(--sans);font-weight:500;letter-spacing:.07em;text-transform:uppercase;font-size:.72rem;border-radius:2px;padding:.78rem 1.5rem;transition:background var(--t)}
+.btn-gold:hover{background:var(--gold2)}
+.btn-ghost{display:inline-block;color:rgba(255,255,255,.5);font-family:var(--sans);font-weight:500;letter-spacing:.07em;text-transform:uppercase;font-size:.72rem;border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:.78rem 1.5rem;transition:all var(--t)}
+.btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.5)}
+.saved-note{font-family:var(--sans);font-size:.66rem;letter-spacing:.05em;color:rgba(255,255,255,.35);margin-top:1rem}
+/* KEY VERSES */
+.verses{background:var(--cream);border:1px solid var(--bdr);border-radius:2px;padding:2rem;margin-bottom:1.6rem}
+.verses h2{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--bark);margin-bottom:1rem}
+.verses dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.2rem}
+.verses dt{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.05em;color:var(--golddk);white-space:nowrap;padding-top:.15rem}
+.verses dt a{border-bottom:1px dotted var(--bdr2)}
+.verses dt a:hover{color:var(--gold)}
+.verses dd{font-family:var(--serif);font-size:.95rem;color:var(--ink);line-height:1.6}
+/* FUNNEL */
+.next-sec{background:var(--parch);border-top:1px solid var(--bdr);padding:4rem 0 3.5rem}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem}
+.next-card{display:block;border:1px solid var(--bdr2);border-radius:2px;background:#FBF7EF;padding:1.6rem 1.8rem;transition:border-color .22s,transform .22s}
+.next-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.next-k{font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--golddk);display:block;margin-bottom:.5rem}
+.next-t{font-family:var(--serif);font-size:1.25rem;color:var(--ink);display:block;line-height:1.3;margin-bottom:.55rem}
+.next-a{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--golddk)}
+.found-box{background:var(--ink2);border:1px solid rgba(191,155,44,.25);border-radius:2px;padding:2.5rem 2.25rem;text-align:center;margin-bottom:2rem}
+.fb-eye{font-family:var(--sans);font-size:.64rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:.8rem}
+.found-box h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,3vw,1.9rem);color:#fff;line-height:1.2;margin-bottom:.7rem}
+.found-box .fb-p{font-family:var(--serif);font-size:.95rem;font-style:italic;color:rgba(255,255,255,.55);line-height:1.8;max-width:520px;margin:0 auto 1.5rem}
+.fb-form{display:flex;gap:.6rem;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.fb-form input[type=email]{flex:1;min-width:220px;background:#fff;border:1px solid var(--bdr2);border-radius:2px;font-family:var(--sans);font-size:.85rem;padding:.72rem 1rem;color:var(--ink)}
+.fb-form button{background:var(--gold);color:var(--ink);font-family:var(--sans);font-weight:500;letter-spacing:.07em;text-transform:uppercase;font-size:.72rem;border:none;border-radius:2px;padding:.72rem 1.4rem;cursor:pointer;transition:background .22s}
+.fb-form button:hover{background:var(--gold2)}
+.fb-note{font-size:.66rem;color:rgba(255,255,255,.45);letter-spacing:.05em;margin-top:1rem}
+.fb-note a{color:var(--gold2)}
+.bless{text-align:center;font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--stone)}
+.bless a{color:var(--golddk);font-style:normal;font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.bless a:hover{color:var(--gold)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* FOOTER */
+.footer{background:var(--ink2);border-top:1px solid rgba(191,155,44,.12);padding:4rem 0 0}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-logo{height:72px;width:auto;filter:brightness(0) invert(1);opacity:.55;margin-bottom:1rem}
+.ft-tag{font-family:var(--serif);font-size:.88rem;font-style:italic;color:rgba(255,255,255,.5);line-height:1.6;max-width:220px;margin-bottom:.7rem}
+.ft-url{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.45}
+.ft-col h4{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.ft-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.7);margin-bottom:.45rem;transition:color var(--t)}
+.ft-col a:hover{color:rgba(255,255,255,.75)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.ft-copy{font-size:.7rem;color:rgba(255,255,255,.5)}
+.ft-verse{font-family:var(--serif);font-size:.8rem;font-style:italic;color:rgba(255,255,255,.5)}
+/* PRINT WORKSHEET */
+#worksheet{display:none}
+@media print{
+  body{background:#fff}
+  .nav,.mob,.t-hero,.tool,.next-sec,.footer,.skip{display:none!important}
+  #worksheet{display:block;font-family:Georgia,'Times New Roman',serif;color:#000;padding:0;max-width:100%}
+  #worksheet .ws-head{border-bottom:2px solid #000;padding-bottom:.6rem;margin-bottom:1.2rem}
+  #worksheet .ws-brand{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-family:Arial,sans-serif;margin-bottom:.3rem}
+  #worksheet h1{font-size:1.6rem;font-weight:normal;margin-bottom:.2rem}
+  #worksheet .ws-sub{font-style:italic;font-size:.9rem;color:#333}
+  #worksheet h2{font-size:1rem;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;border-bottom:1px solid #999;padding-bottom:.25rem;margin:1.4rem 0 .6rem}
+  #worksheet p,#worksheet li{font-size:.95rem;line-height:1.6;margin-bottom:.4rem}
+  #worksheet .ws-verdict{border:2px solid #000;padding:.8rem 1rem;margin-top:.6rem;font-size:1.05rem}
+  #worksheet .ws-foot{margin-top:2rem;padding-top:.6rem;border-top:1px solid #999;font-style:italic;font-size:.85rem;text-align:center}
+  #worksheet .ws-meta{font-size:.8rem;color:#444;font-family:Arial,sans-serif}
+}
+@media(max-width:1020px){.ft-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+@media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.burger{display:flex}}
+@media(max-width:700px){.next-grid{grid-template-columns:1fr}.vgrid{grid-template-columns:1fr}}
+@media(max-width:600px){.ft-grid{grid-template-columns:1fr}.tool{padding:3rem 0 3.5rem}.step{padding:1.5rem 1.3rem}.verses dl{grid-template-columns:1fr}.verses dt{padding-top:.5rem}}
+
+.fb-status{font-family:var(--sans);font-size:.78rem;letter-spacing:.03em;margin:.9rem auto 0;max-width:460px;color:#F3BBAA}
+</style>
+</head>
+<body>
+<a href="#tool" class="skip">Skip to the tool</a>
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <div class="nav-in">
+    <a href="/" class="nav-logo" aria-label="L'ets Echad home">
+      <img src="logo.png" alt="L'ets Echad" class="nav-logo-img" width="296" height="300" loading="lazy" decoding="async">
+      <div class="nav-logo-wrap">
+        <span class="nav-logo-name">L'ets Echad</span>
+        <span class="nav-logo-sub">Ezekiel 37:19</span>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="Site">
+      <a href="teachings" class="nav-a">Teachings</a>
+      <a href="foundation" class="nav-a">Free Course</a>
+      <a href="about" class="nav-a">About</a>
+      <a href="resources" class="nav-a">Resources</a>
+      <a href="support" class="nav-a nav-give">Give</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mob">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mob" id="mob" role="dialog" aria-label="Mobile menu">
+  <a href="teachings" class="mob-a">Teachings</a>
+  <a href="foundation" class="mob-a">Free Course</a>
+  <a href="about" class="mob-a">About</a>
+  <a href="resources" class="mob-a">Resources</a>
+  <a href="support" class="mob-a">Give</a>
+</div>
+
+<header class="t-hero">
+  <div class="t-hero-in">
+    <span class="t-tag">L'ets Echad · Interactive Study Tool</span>
+    <h1 class="t-title">Test a Teaching</h1>
+    <p class="t-refs">Deuteronomy 4:2 · Deuteronomy 13 · Deuteronomy 19:15 · Isaiah 8:20</p>
+    <p class="t-lede">Someone handed you a teaching. A video, a doctrine, a claim about what Scripture says. This tool walks you through the full test, one question at a time, and prints your worksheet when you are done. It works on anyone. On the loudest voice online. On your favorite teacher. On this ministry. And on you.</p>
+  </div>
+</header>
+
+<main class="tool" id="tool">
+  <div class="tool-inner">
+    <p class="lead">You weigh the teaching against the text, not against the teacher's charisma. A true thing from a flawed person is still true. A false thing from a magnetic person is still false. Pull the claim away from the personality and put it under the text, where charisma cannot help it. Your answers save in your browser as you go, so you can stop and come back.</p>
+
+    <!-- STEP 0: THE CLAIM -->
+    <section class="step" aria-labelledby="s0h">
+      <span class="step-k">Before You Begin</span>
+      <h2 id="s0h">Name the claim</h2>
+      <p>Write the teaching down in one or two plain sentences. If you cannot state it plainly, you cannot test it. Vague claims hide from the text.</p>
+      <label class="fl" for="f-claim">The teaching or claim</label>
+      <textarea class="fi" id="f-claim" data-save maxlength="700" placeholder="Example: A teacher says a certain practice is now required for everyone, based on one verse."></textarea>
+      <label class="fl" for="f-source">Who teaches it (optional)</label>
+      <input type="text" class="fi" id="f-source" data-save maxlength="160" placeholder="Teacher, ministry, video, book">
+      <label class="fl" for="f-verse">The verse or source it rests on</label>
+      <input type="text" class="fi" id="f-verse" data-save maxlength="160" placeholder="Example: Deuteronomy 30:3, Matthew 5:17, or a quoted midrash">
+      <div class="res-bar">
+        <button class="btn-bark" id="res-btn" type="button">Do the Legwork &rarr;</button>
+        <p class="res-note">The assistant opens the source, reads the context, checks the language, and hunts Tanakh for witnesses. It reads Tanakh references on Sefaria and Christian Bible references too, including the New Testament. When a New Testament verse quotes Tanakh, it lays the Tanakh text beside it. It gathers. It does not judge. It can err, so open every citation yourself before you lean on it. The gates below stay yours to answer. Clicking sends what you typed above to the research service so it can search. Nothing else leaves this page.</p>
+      </div>
+      <div class="res" id="res" aria-live="polite" aria-label="Research findings"></div>
+    </section>
+
+    <!-- STEP 1: VERIFY -->
+    <section class="step" aria-labelledby="s1h">
+      <span class="step-k">Phase One</span>
+      <h2 id="s1h">Verify the claim</h2>
+      <p>Most people skip this and lose before they start. Before you weigh whether a teaching is true, confirm it is even real. If it fails any one of these, you are done.</p>
+
+      <div class="q">
+        <p class="q-t">1. Go to the source. Does it exist, and does it say what they claim?</p>
+        <p class="hint">Open it yourself. This space runs on fabricated quotes, invented etymologies, a midrash no one can locate, a verse that is not there. Search <a class="vref" href="https://www.sefaria.org" target="_blank" rel="noopener">Sefaria</a> for a Tanakh reference, or <a class="vref" href="https://www.biblegateway.com" target="_blank" rel="noopener">BibleGateway</a> for a Christian Bible reference. Watch the numbering: Jewish and Christian Bibles count some verses differently. The teaching often dies right here.</p>
+        <div class="opts" data-q="v1" role="group" aria-label="Source check">
+          <button class="opt" data-val="pass">It exists and says what they claim</button>
+          <button class="opt" data-val="fail" data-tone="bad">It does not</button>
+          <button class="opt" data-val="unsure" data-tone="warn">I cannot confirm yet</button>
+        </div>
+        <p class="flag" id="flag-v1">The claim failed verification. The teaching dies here. You do not owe a fabricated source a hearing. You can stop now, or keep going to see how the rest of the test works.</p>
+      </div>
+
+      <div class="q">
+        <p class="q-t">2. Read the context. Does the claim survive the surrounding passage?</p>
+        <p class="hint">Pull back to the verses before and after, then the whole passage. A verse can say one thing alone and the opposite inside its paragraph.</p>
+        <div class="opts" data-q="v2" role="group" aria-label="Context check">
+          <button class="opt" data-val="pass">It survives its context</button>
+          <button class="opt" data-val="fail" data-tone="bad">Context breaks it</button>
+          <button class="opt" data-val="unsure" data-tone="warn">I cannot tell yet</button>
+        </div>
+        <p class="flag" id="flag-v2">The verse does not say in its paragraph what the teacher says it says alone. The claim failed verification. You are done, unless you want to see the rest of the method.</p>
+      </div>
+
+      <div class="q">
+        <p class="q-t">3. Check the Hebrew. Does the translation carry the meaning?</p>
+        <p class="hint">Whole doctrines hang on one mistranslated word. Run the key word through a real tool like <a class="vref" href="https://www.pealim.com" target="_blank" rel="noopener">Pealim</a> or <a class="vref" href="https://www.morfix.co.il" target="_blank" rel="noopener">Morfix</a>, or compare translations on Sefaria. If the claim rests on a New Testament verse that quotes Tanakh, find the Tanakh text it quotes and check the Hebrew there. The quote may follow the Greek Septuagint where it differs from the Hebrew. Ask whether the teacher built a tower on a translation error.</p>
+        <div class="opts" data-q="v3" role="group" aria-label="Hebrew check">
+          <button class="opt" data-val="pass">The Hebrew holds</button>
+          <button class="opt" data-val="fail" data-tone="bad">It rests on a translation error</button>
+          <button class="opt" data-val="unsure" data-tone="warn">I cannot check yet</button>
+        </div>
+        <p class="flag" id="flag-v3">A doctrine built on a mistranslated word is built on nothing. The claim failed verification.</p>
+      </div>
+    </section>
+
+    <!-- ORDER OF AUTHORITY -->
+    <aside class="order" aria-labelledby="oah">
+      <span class="step-k" style="color:var(--gold2)">Phase Two · The Measuring Line</span>
+      <h2 id="oah">The order of authority</h2>
+      <ol>
+        <li><b>The Ten Commandments.</b>&nbsp;Worship and the identity of G-d get settled here in one move. Israel heard these directly (Makkot 24a).</li>
+        <li><b>Deuteronomy, with extra weight on Deuteronomy 13.</b>&nbsp;Moshe's own explanation of the Torah (Deuteronomy 1:5) and the densest source of the commands and the tests themselves.</li>
+        <li><b>The rest of Torah.</b>&nbsp;The narrative, the case law, the rest of the five books.</li>
+        <li><b>The Prophets.</b>&nbsp;They apply, rebuke, and call Israel back. They never legislate new Torah and never cancel a command.</li>
+        <li><b>The Writings.</b>&nbsp;Inspired and authoritative, and the most open to interpretation. Read in light of everything above.</li>
+        <li><b>Everything else.</b>&nbsp;Talmud, midrash, the commentators. They illuminate and apply. They never override.</li>
+      </ol>
+      <p class="note">You are ranking clarity, not importance. The whole Torah binds. Stand on the clearest word first. A claim that fails there fails fastest, and you never have to defend a clear text with a murky one. Now run the claim through the gates below, starting at the top rung it touches.</p>
+    </aside>
+
+    <!-- STEP 2: GATE ONE -->
+    <section class="step" aria-labelledby="s2h">
+      <span class="step-k">Gate One · Deuteronomy 13</span>
+      <h2 id="s2h">Which direction does it pull?</h2>
+      <p>Toward the G-d of Israel and His Torah, or away from them. A sign, a feeling, or a fulfilled prediction does not save a teaching that moves you away (<a class="vref" href="https://www.sefaria.org/Deuteronomy.13" target="_blank" rel="noopener">Deuteronomy 13</a>). Direction overrides every wonder.</p>
+      <div class="opts" data-q="g1" role="group" aria-label="Direction gate">
+        <button class="opt" data-val="toward">Toward HaShem and His Torah</button>
+        <button class="opt" data-val="neutral">Neutral on worship and Torah</button>
+        <button class="opt" data-val="away" data-tone="bad">Away from them</button>
+        <button class="opt" data-val="unsure" data-tone="warn">I cannot tell yet</button>
+      </div>
+      <p class="flag" id="flag-g1">If it moves your worship, do not debate it. Leave. Deuteronomy 13 does not ask you to win the argument. It asks you to walk away.</p>
+    </section>
+
+    <!-- STEP 3: GATE TWO -->
+    <section class="step" aria-labelledby="s3h">
+      <span class="step-k">Gate Two · Deuteronomy 4:2</span>
+      <h2 id="s3h">Does it add or subtract a command?</h2>
+      <p>Add nothing, subtract nothing (<a class="vref" href="https://www.sefaria.org/Deuteronomy.4.2" target="_blank" rel="noopener">Deuteronomy 4:2</a>). The obvious failures cancel a command. The sneaky ones add a new binding obligation that contradicts nothing, so it slips past a filter that only watches for what got removed. Watch both directions.</p>
+      <div class="opts" data-q="g2" role="group" aria-label="Add or subtract gate">
+        <button class="opt" data-val="no">It adds and subtracts nothing</button>
+        <button class="opt" data-val="adds" data-tone="bad">It adds a binding obligation</button>
+        <button class="opt" data-val="subtracts" data-tone="bad">It cancels or loosens a command</button>
+        <button class="opt" data-val="unsure" data-tone="warn">I cannot tell yet</button>
+      </div>
+      <p class="flag" id="flag-g2">Flag it. A teaching that binds what Torah did not bind, or looses what Torah bound, fails at Deuteronomy 4:2 no matter how good it sounds.</p>
+    </section>
+
+    <!-- STEP 4: SECOND WITNESS -->
+    <section class="step" aria-labelledby="s4h">
+      <span class="step-k">Gate Three · Deuteronomy 19:15</span>
+      <h2 id="s4h">Is there a second witness?</h2>
+      <p>A matter is established by two or three witnesses (<a class="vref" href="https://www.sefaria.org/Deuteronomy.19.15" target="_blank" rel="noopener">Deuteronomy 19:15</a>). Apply this to the teaching, not to the text. A command G-d stated once stands on its own, because Torah said it. But a new doctrine built on a verse needs corroboration. Search the rest of Torah, the Prophets, and the Writings.</p>
+      <div class="opts" data-q="g3" role="group" aria-label="Second witness gate">
+        <button class="opt" data-val="yes">Yes, Scripture corroborates it elsewhere</button>
+        <button class="opt" data-val="command">It is a command Torah itself states</button>
+        <button class="opt" data-val="no" data-tone="warn">No second witness anywhere</button>
+        <button class="opt" data-val="unsure" data-tone="warn">Still searching</button>
+      </div>
+      <p class="flag gold" id="flag-g3">One anchor and no support is not established. It is one person's reading. You set it aside even when it contradicts nothing. That is not the same as calling it false.</p>
+      <label class="fl" for="f-witness">If yes, list the witnessing verses</label>
+      <input type="text" class="fi" id="f-witness" data-save placeholder="Example: Jeremiah 31:31, Ezekiel 37:24">
+    </section>
+
+    <!-- STEP 5: HOW IT IS BEING SOLD -->
+    <section class="step" aria-labelledby="s5h">
+      <span class="step-k">The Teacher, Not the Teaching</span>
+      <h2 id="s5h">How is it being sold?</h2>
+      <p>The tests above weigh the teaching. These weigh the teacher. The enticer in Scripture works in secret and sells the new, the hidden, the thing they kept from you (Deuteronomy 13). Check any that apply.</p>
+      <label class="chk"><input type="checkbox" id="sell1" data-save><span><b>Secrecy.</b> Do not tell the rabbis. Do not tell your old congregation.</span></label>
+      <label class="chk"><input type="checkbox" id="sell2" data-save><span><b>Urgency.</b> Decide now. The time is short. You cannot wait to check.</span></label>
+      <label class="chk"><input type="checkbox" id="sell3" data-save><span><b>Hidden knowledge.</b> They hid this from you. Only I have the real name, the real calendar, the real Hebrew.</span></label>
+      <label class="chk"><input type="checkbox" id="sell4" data-save><span><b>Isolation.</b> The teaching pulls you away from everyone who might check it.</span></label>
+      <p class="flag gold" id="flag-sell">None of these proves a teaching false on its own. Every one of them is a reason to slow down and run the full test before you move an inch.</p>
+    </section>
+
+    <!-- VERDICT -->
+    <section class="verdict-box" aria-labelledby="s6h" id="verdict-sec">
+      <span class="step-k">The Verdict</span>
+      <h2 id="s6h">Where the test points</h2>
+      <div class="points" id="points" aria-live="polite">Answer the questions above and the test will point somewhere. It has not pointed anywhere yet.</div>
+      <p class="vp">The test points. You decide. No tool renders a verdict for you, and neither does a teacher. These are four different actions, not a thumbs up or down. Choose the one you are prepared to act on.</p>
+      <div class="vgrid" role="group" aria-label="Your verdict">
+        <button class="vbtn" data-verdict="Receive"><span class="vn">Receive</span><span class="vd">It coheres with the higher text and has a second witness. You can take it.</span></button>
+        <button class="vbtn" data-verdict="Set aside"><span class="vn">Set aside</span><span class="vd">It contradicts nothing, but it has no second witness. Do not adopt it. That is not the same as calling it false.</span></button>
+        <button class="vbtn" data-verdict="Hold"><span class="vn">Hold</span><span class="vd">It is genuinely debated and you cannot resolve it. Sit in the tension. Be whole with G-d and wait (Deuteronomy 18:13).</span></button>
+        <button class="vbtn" data-verdict="Reject"><span class="vn">Reject</span><span class="vd">It contradicts a higher text. If it moves your worship or cancels a command, do not debate it. Leave.</span></button>
+      </div>
+      <label class="fl" for="f-notes">Your notes and reasoning</label>
+      <textarea class="fi" id="f-notes" data-save placeholder="What settled it for you. What you still need to check. Who you will study this with."></textarea>
+      <div class="actions">
+        <button class="btn-gold" id="print-btn">Print the Worksheet</button>
+        <button class="btn-ghost" id="reset-btn">Clear and Test Another</button>
+      </div>
+      <p class="saved-note">Your answers stay in this browser. The one exception: what you type in the claim step is sent to the research service when you click Do the Legwork, and only then.</p>
+    </section>
+
+    <!-- KEY VERSES -->
+    <aside class="verses" aria-labelledby="kvh">
+      <h2 id="kvh">Key verses for this test</h2>
+      <dl>
+        <dt><a class="vref" href="https://www.sefaria.org/Numbers.12.6-8" target="_blank" rel="noopener">Numbers 12:6-8</a></dt><dd>Moshe's prophecy is unlike any other. Why the Torah governs the prophets.</dd>
+        <dt><a class="vref" href="https://www.sefaria.org/Deuteronomy.1.5" target="_blank" rel="noopener">Deuteronomy 1:5</a></dt><dd>Moshe began to explain this Torah. Why your testing starts in Deuteronomy.</dd>
+        <dt><a class="vref" href="https://www.sefaria.org/Deuteronomy.4.2" target="_blank" rel="noopener">Deuteronomy 4:2</a></dt><dd>Add nothing to the command, take nothing away.</dd>
+        <dt><a class="vref" href="https://www.sefaria.org/Deuteronomy.13" target="_blank" rel="noopener">Deuteronomy 13</a></dt><dd>The false prophet and the enticer. The direction test. The secret pitch.</dd>
+        <dt><a class="vref" href="https://www.sefaria.org/Deuteronomy.18.13" target="_blank" rel="noopener">Deuteronomy 18:13</a></dt><dd>Be whole, tamim, with HaShem your G-d.</dd>
+        <dt><a class="vref" href="https://www.sefaria.org/Deuteronomy.18.15-22" target="_blank" rel="noopener">Deuteronomy 18:15-22</a></dt><dd>A prophet speaks and it does not come to pass. How a false word is exposed.</dd>
+        <dt><a class="vref" href="https://www.sefaria.org/Deuteronomy.19.15" target="_blank" rel="noopener">Deuteronomy 19:15</a></dt><dd>A matter is established by two or three witnesses.</dd>
+        <dt><a class="vref" href="https://www.sefaria.org/Isaiah.8.20" target="_blank" rel="noopener">Isaiah 8:20</a></dt><dd>To the Torah and the testimony. The prophet's own measuring line.</dd>
+      </dl>
+      <p style="font-family:var(--serif);font-size:.88rem;font-style:italic;color:var(--stone);margin-top:1rem;line-height:1.7">A note on numbering: some Bibles number Deuteronomy 13 one verse later than Jewish editions. The add-nothing command sits at Deuteronomy 13:1 in Jewish texts and Deuteronomy 12:32 in many Christian Bibles. The false-prophet section follows either way. For deeper study: Makkot 24a, and Rambam, Mishneh Torah, Yesodei HaTorah ch. 9.</p>
+    </aside>
+  </div>
+</main>
+
+<!-- PRINT WORKSHEET (populated by JS, shown only when printing) -->
+<div id="worksheet" aria-hidden="true"></div>
+
+<!-- CONTINUE & CONNECT -->
+<section class="next-sec" aria-label="Continue learning">
+  <div class="Wsm">
+    <div class="next-grid">
+      <a class="next-card" href="guides/How_to_Test_a_Teaching.pdf">
+        <span class="next-k">The Full Study Guide</span>
+        <span class="next-t">How to Test a Teaching (PDF)</span>
+        <span class="next-a">Download and run it with your group &rarr;</span>
+      </a>
+      <a class="next-card" href="para">
+        <span class="next-k">New Here? Start at the Beginning</span>
+        <span class="next-t">Para: Uncovered</span>
+        <span class="next-a">Read the foundational teaching &rarr;</span>
+      </a>
+    </div>
+    <div class="found-box">
+      <span class="fb-eye">Free 5-Day Email Course</span>
+      <h2>Learn to Read Scripture on Its Own Terms</h2>
+      <p class="fb-p">This tool tests a claim. The Foundation trains the reader. A free five-day course. One idea a day. One small practice you can do the same afternoon.</p>
+      <form class="fb-form" action="https://assets.mailerlite.com/jsonp/2329338/forms/186918982725404138/subscribe" method="post">
+        <label class="sr-only" for="fb-email">Email address</label>
+        <input id="fb-email" type="email" name="fields[email]" placeholder="Your email address" autocomplete="email" required>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <button type="submit">Start the Course &rarr;</button>
+      </form>
+      <p class="fb-status" role="status" aria-live="polite" hidden></p>
+      <p class="fb-note">No spam. No noise. Just teaching. Unsubscribe any time. <a href="foundation">About the course &rarr;</a></p>
+    </div>
+    <p class="bless">If this tool was a blessing to you, <a href="support">help the work continue &rarr;</a></p>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="W">
+    <div class="ft-grid">
+      <div>
+        <img src="logo.png" alt="L'ets Echad" class="ft-logo" width="296" height="300" loading="lazy" decoding="async">
+        <p class="ft-tag">"Into One Stick — Ezekiel 37:19"<br>A ministry of reunification.</p>
+        <p class="ft-url">letsechad.com</p>
+      </div>
+      <div class="ft-col">
+        <h4>Ministry</h4>
+        <a href="about">About L'ets Echad</a>
+        <a href="about#mission">Our Mission</a>
+        <a href="about#matti">About Matti</a>
+        <a href="about#matti">Invite to Speak</a>
+        <a href="shalom-7mQ92">Contact</a>
+      </div>
+      <div class="ft-col">
+        <h4>Content</h4>
+        <a href="teachings">All Teachings</a>
+        <a href="/#start">Start Here</a>
+        <a href="resources">Resources</a>
+        <a href="glossary">Glossary</a>
+        <a href="resources#faq">FAQ</a>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <a href="support">Give to L'ets Echad</a>
+        <a href="support#israel">Support Israel</a>
+        <a href="https://support.fidf.org" target="_blank" rel="noopener">FIDF</a>
+        <a href="https://secure.afmda.org" target="_blank" rel="noopener">Magen David Adom</a>
+        <a href="https://give.zakaworld.org" target="_blank" rel="noopener">ZAKA</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">© 2026 L'ets Echad · <a href="mailto:matti@letsechad.com" style="color:inherit">matti@letsechad.com</a> · <a href="privacy" style="color:inherit">Privacy</a></p>
+      <p class="ft-verse">"They shall become one in My hand." — Ezekiel 37:19</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var KEY='letsechad-test-a-teaching-v1';
+var state={answers:{},checks:{},fields:{},verdict:''};
+
+/* ---------- persistence ---------- */
+function load(){
+  try{var raw=localStorage.getItem(KEY);if(raw){state=JSON.parse(raw)||state;}}catch(e){}
+  state.answers=state.answers||{};state.checks=state.checks||{};state.fields=state.fields||{};
+}
+function save(){
+  try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}
+}
+
+/* ---------- option groups ---------- */
+var groups=document.querySelectorAll('.opts');
+groups.forEach(function(g){
+  var q=g.getAttribute('data-q');
+  g.querySelectorAll('.opt').forEach(function(btn){
+    btn.setAttribute('aria-pressed','false');
+    btn.addEventListener('click',function(){
+      state.answers[q]=btn.getAttribute('data-val');
+      paintGroup(g);save();update();
+    });
+  });
+});
+function paintGroup(g){
+  var q=g.getAttribute('data-q');
+  g.querySelectorAll('.opt').forEach(function(btn){
+    var sel=state.answers[q]===btn.getAttribute('data-val');
+    btn.classList.toggle('sel',sel);
+    btn.classList.toggle('bad',sel&&btn.getAttribute('data-tone')==='bad');
+    btn.classList.toggle('warn',sel&&btn.getAttribute('data-tone')==='warn');
+    btn.setAttribute('aria-pressed',sel?'true':'false');
+  });
+}
+
+/* ---------- fields and checkboxes ---------- */
+document.querySelectorAll('[data-save]').forEach(function(el){
+  var id=el.id;
+  var ev=el.type==='checkbox'?'change':'input';
+  el.addEventListener(ev,function(){
+    if(el.type==='checkbox'){state.checks[id]=el.checked;}
+    else{state.fields[id]=el.value;}
+    save();update();
+  });
+});
+
+/* ---------- verdict buttons ---------- */
+var vbtns=document.querySelectorAll('.vbtn');
+vbtns.forEach(function(btn){
+  btn.setAttribute('aria-pressed','false');
+  btn.addEventListener('click',function(){
+    state.verdict=btn.getAttribute('data-verdict');
+    vbtns.forEach(function(b){
+      var sel=b===btn;
+      b.classList.toggle('sel',sel);
+      b.setAttribute('aria-pressed',sel?'true':'false');
+    });
+    save();
+  });
+});
+
+/* ---------- flags and the pointer ---------- */
+function show(id,on){var el=document.getElementById(id);if(el)el.classList.toggle('on',!!on);}
+function update(){
+  var a=state.answers;
+  show('flag-v1',a.v1==='fail');
+  show('flag-v2',a.v2==='fail');
+  show('flag-v3',a.v3==='fail');
+  show('flag-g1',a.g1==='away');
+  show('flag-g2',a.g2==='adds'||a.g2==='subtracts');
+  show('flag-g3',a.g3==='no');
+  var sells=['sell1','sell2','sell3','sell4'].filter(function(k){return state.checks[k];}).length;
+  show('flag-sell',sells>0);
+
+  var p=document.getElementById('points');
+  var answered=['v1','v2','v3','g1','g2','g3'].filter(function(k){return a[k];}).length;
+  var verifyFail=(a.v1==='fail'||a.v2==='fail'||a.v3==='fail');
+  var msg;
+  if(answered===0){
+    msg='Answer the questions above and the test will point somewhere. It has not pointed anywhere yet.';
+  }else if(verifyFail){
+    msg='The test points to <b>Reject</b>. The claim failed verification. A teaching built on a source that does not exist, does not survive its context, or rests on a translation error is not established. You are done.';
+  }else if(a.g1==='away'){
+    msg='The test points to <b>Reject</b>. The teaching pulls away from HaShem and His Torah. Deuteronomy 13 settles this regardless of any sign or wonder. Do not debate it. Leave.';
+  }else if(a.g2==='adds'||a.g2==='subtracts'){
+    msg='The test points to <b>Reject</b>. The teaching '+(a.g2==='adds'?'adds a binding obligation':'cancels or loosens a command')+', and Deuteronomy 4:2 says add nothing, subtract nothing.';
+  }else if(answered<6){
+    msg='So far, so good. '+answered+' of 6 questions answered. Keep going. The test has not finished pointing.';
+  }else if(a.v1==='unsure'||a.v2==='unsure'||a.v3==='unsure'||a.g1==='unsure'||a.g2==='unsure'||a.g3==='unsure'){
+    msg='The test points to <b>Hold</b>. You have honest unknowns left. Do not adopt a teaching you have not finished testing. Sit in the tension, be whole with G-d, and finish the work (Deuteronomy 18:13).';
+  }else if(a.g3==='no'){
+    msg='The test points to <b>Set aside</b>. The teaching contradicts nothing, but it has no second witness (Deuteronomy 19:15). One anchor and no support is one person’s reading. Do not adopt it. That is not the same as calling it false.';
+  }else{
+    msg='The test points to <b>Receive</b>. The claim verified, it pulls toward HaShem and His Torah, it adds and subtracts nothing, and it is established '+(a.g3==='command'?'by Torah’s own word':'by a second witness')+'. You can take it.';
+  }
+  if(sells>0&&answered>0){
+    msg+=' Note: you flagged '+sells+' pressure tactic'+(sells>1?'s':'')+' in how it is being sold. Slow down.';
+  }
+  p.innerHTML=msg;
+}
+
+/* ---------- restore ---------- */
+load();
+groups.forEach(paintGroup);
+Object.keys(state.fields).forEach(function(id){
+  var el=document.getElementById(id);if(el)el.value=state.fields[id];
+});
+Object.keys(state.checks).forEach(function(id){
+  var el=document.getElementById(id);if(el)el.checked=!!state.checks[id];
+});
+if(state.verdict){
+  vbtns.forEach(function(b){
+    var sel=b.getAttribute('data-verdict')===state.verdict;
+    b.classList.toggle('sel',sel);
+    b.setAttribute('aria-pressed',sel?'true':'false');
+  });
+}
+update();
+
+/* ---------- research assistant ---------- */
+function esc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+var NT_RE=/^\s*(matt(hew)?|mark|mk|luke?|lk|john|jhn|jn|acts?|rom(ans)?|[12]\s*cor(inthians)?|gal(atians)?|eph(esians)?|philipp?ians|php|phil|col(ossians)?|[12]\s*thess?(alonians)?|[12]\s*tim(othy)?|tit(us)?|philem(on)?|phm|heb(rews)?|ja(me)?s|[12]\s*pet(er)?|[123]\s*(john|jhn|jn)|jude|rev(elations?)?)\.?\s+\d/i;
+function sefUrl(ref){return 'https://www.sefaria.org/'+String(ref||'').trim().replace(/ /g,'.').replace(/:/g,'.');}
+function gwUrl(ref){return 'https://www.biblegateway.com/passage/?search='+encodeURIComponent(String(ref||'').trim())+'&version=WEB';}
+function refLink(ref){
+  var url=NT_RE.test(ref||'')?gwUrl(ref):sefUrl(ref);
+  return '<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(ref)+'</a>';
+}
+function renderResearch(data){
+  var box=document.getElementById('res');
+  if(!data){box.classList.remove('on');box.innerHTML='';return;}
+  var r=data.research||{},sf=data.sefaria,bb=data.bible,h='';
+  if(sf){
+    h+='<div class="res-card"><span class="res-k">The Source · '+esc(sf.ref)+'</span>';
+    if(sf.he)h+='<p class="heb">'+esc(sf.he)+'</p>';
+    h+='<p>'+esc(sf.en)+'</p><p><a href="'+esc(sf.url)+'" target="_blank" rel="noopener">Open it yourself on Sefaria &rarr;</a></p></div>';
+  }
+  if(bb){
+    h+='<div class="res-card"><span class="res-k">The Source · '+esc(bb.ref)+' · '+esc(bb.translation||'Christian Bible')+'</span>';
+    h+='<p>'+esc(bb.en)+'</p>';
+    if(bb.jewishNumberingMissed)h+='<p><em>This reference was not found under Jewish numbering on Sefaria. Christian Bibles count some verses differently. Check the notes below for the Jewish numbering.</em></p>';
+    h+='<p><a href="'+esc(bb.url)+'" target="_blank" rel="noopener">Open it yourself &rarr;</a></p></div>';
+  }
+  if(r.source_check){
+    var bad=r.source_check.status==='not_found'||r.source_check.status==='misquoted';
+    h+='<div class="res-card'+(bad?' warn':'')+'"><span class="res-k">Source Check · '+esc((r.source_check.status||'').replace('_',' '))+'</span><p>'+esc(r.source_check.note)+'</p></div>';
+  }
+  if(r.context_note)h+='<div class="res-card"><span class="res-k">The Context</span><p>'+esc(r.context_note)+'</p></div>';
+  if(r.hebrew_note)h+='<div class="res-card"><span class="res-k">The Language</span><p>'+esc(r.hebrew_note)+'</p></div>';
+  if(r.quoted_tanakh&&r.quoted_tanakh.length){
+    h+='<div class="res-card"><span class="res-k">The Tanakh Behind It · Open Each One Yourself</span>';
+    r.quoted_tanakh.forEach(function(w){h+='<p>'+refLink(w.ref)+' '+esc(w.note)+'</p>';});
+    h+='</div>';
+  }
+  if(r.witnesses&&r.witnesses.length){
+    h+='<div class="res-card"><span class="res-k">Possible Witnesses · Weigh Each One Yourself</span>';
+    r.witnesses.forEach(function(w){h+='<p>'+refLink(w.ref)+' '+esc(w.note)+'</p>';});
+    h+='</div>';
+  }
+  if(r.counter_texts&&r.counter_texts.length){
+    h+='<div class="res-card warn"><span class="res-k">Texts That May Cut Against It</span>';
+    r.counter_texts.forEach(function(w){h+='<p>'+refLink(w.ref)+' '+esc(w.note)+'</p>';});
+    h+='</div>';
+  }
+  if(r.cautions)h+='<div class="res-card"><span class="res-k">What You Still Must Check</span><p>'+esc(r.cautions)+'</p></div>';
+  h+='<p class="res-note">Evidence gathered. Judgment not included. Now walk the gates below with your own eyes on the text.</p>';
+  box.innerHTML=h;box.classList.add('on');
+}
+var resBtn=document.getElementById('res-btn');
+resBtn.addEventListener('click',function(){
+  var claim=(state.fields['f-claim']||'').trim();
+  var box=document.getElementById('res');
+  if(!claim){
+    box.innerHTML='<div class="res-err">Name the claim first. If you cannot state it plainly, the assistant cannot research it and you cannot test it.</div>';
+    box.classList.add('on');return;
+  }
+  resBtn.disabled=true;resBtn.textContent='Doing the legwork…';
+  box.innerHTML='';box.classList.remove('on');box.setAttribute('aria-busy','true');
+  fetch('/api/research',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({claim:claim,source:state.fields['f-source']||'',verse:state.fields['f-verse']||''})})
+  .then(function(resp){return resp.json().then(function(j){return{status:resp.status,j:j};});})
+  .then(function(o){
+    resBtn.disabled=false;resBtn.innerHTML='Do the Legwork &rarr;';box.removeAttribute('aria-busy');
+    if(o.j&&o.j.ok){state.research=o.j;save();renderResearch(o.j);return;}
+    var msg;
+    if(o.j&&o.j.error==='not-configured'){msg='The research assistant is not switched on yet. The tool still works. Do the legwork by hand, the way the guide teaches, and open every source on Sefaria yourself.';}
+    else{msg='The research assistant could not complete the search. Nothing is lost. Do the legwork by hand and open every source yourself.';}
+    box.innerHTML='<div class="res-err">'+msg+'</div>';box.classList.add('on');
+  })
+  .catch(function(){
+    resBtn.disabled=false;resBtn.innerHTML='Do the Legwork &rarr;';box.removeAttribute('aria-busy');
+    box.innerHTML='<div class="res-err">The research assistant could not be reached. The tool still works. Do the legwork by hand.</div>';
+    box.classList.add('on');
+  });
+});
+if(state.research)renderResearch(state.research);
+
+/* ---------- print worksheet ---------- */
+function label(q,val){
+  var maps={
+    v1:{pass:'Verified. The source exists and says what they claim.',fail:'FAILED. The source does not exist or does not say it.',unsure:'Not yet confirmed.'},
+    v2:{pass:'Verified. The claim survives its context.',fail:'FAILED. The context breaks the claim.',unsure:'Not yet confirmed.'},
+    v3:{pass:'Verified. The Hebrew carries the meaning.',fail:'FAILED. It rests on a translation error.',unsure:'Not yet checked.'},
+    g1:{toward:'It pulls toward HaShem and His Torah.',neutral:'Neutral on worship and Torah.',away:'IT PULLS AWAY. Deuteronomy 13 settles this.',unsure:'Direction not yet clear.'},
+    g2:{no:'It adds and subtracts nothing.',adds:'IT ADDS a binding obligation. Deuteronomy 4:2.',subtracts:'IT CANCELS or loosens a command. Deuteronomy 4:2.',unsure:'Not yet clear.'},
+    g3:{yes:'A second witness exists.',command:'A command Torah itself states. Stands on its own.',no:'NO second witness found. One anchor is not established.',unsure:'Still searching.'}
+  };
+  return (maps[q]&&maps[q][val])||'Unanswered.';
+}
+document.getElementById('print-btn').addEventListener('click',function(){
+  var a=state.answers,f=state.fields,c=state.checks;
+  var sells=[];
+  if(c.sell1)sells.push('Secrecy');if(c.sell2)sells.push('Urgency');
+  if(c.sell3)sells.push('Hidden knowledge');if(c.sell4)sells.push('Isolation');
+  var d=new Date();
+  var ds=d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  var h='';
+  h+='<div class="ws-head"><p class="ws-brand">L’ets Echad · Study Tool</p><h1>How to Test a Teaching — Worksheet</h1><p class="ws-sub">A method for weighing any claim against the text · letsechad.com/test-a-teaching</p><p class="ws-meta">Date: '+ds+'  ·  Tested by: ________________________</p></div>';
+  h+='<h2>The Claim</h2><p>'+(esc(f['f-claim'])||'________________________________________')+'</p>';
+  if(f['f-source'])h+='<p class="ws-meta">Taught by: '+esc(f['f-source'])+'</p>';
+  h+='<p class="ws-meta">Rests on: '+(esc(f['f-verse'])||'____________________')+'</p>';
+  h+='<h2>Phase One · Verify</h2><ul>';
+  h+='<li>Source: '+label('v1',a.v1)+'</li>';
+  h+='<li>Context: '+label('v2',a.v2)+'</li>';
+  h+='<li>Hebrew: '+label('v3',a.v3)+'</li></ul>';
+  h+='<h2>Phase Two · The Gates</h2><ul>';
+  h+='<li>Direction (Deuteronomy 13): '+label('g1',a.g1)+'</li>';
+  h+='<li>Add or subtract (Deuteronomy 4:2): '+label('g2',a.g2)+'</li>';
+  h+='<li>Second witness (Deuteronomy 19:15): '+label('g3',a.g3)+(f['f-witness']?' Listed: '+esc(f['f-witness']):'')+'</li></ul>';
+  h+='<h2>How It Is Being Sold</h2><p>'+(sells.length?('Flagged: '+sells.join(', ')+'. Not proof of falsehood. Reason to slow down.'):'No pressure tactics flagged.')+'</p>';
+  if(state.research&&state.research.research){
+    var rr=state.research.research;
+    h+='<h2>Research Assistant Findings</h2>';
+    if(rr.source_check)h+='<p>Source check: '+esc((rr.source_check.status||'').replace('_',' '))+'. '+esc(rr.source_check.note)+'</p>';
+    if(rr.quoted_tanakh&&rr.quoted_tanakh.length)h+='<p>Tanakh behind the cited source: '+rr.quoted_tanakh.map(function(w){return esc(w.ref);}).join(', ')+'</p>';
+    if(rr.witnesses&&rr.witnesses.length)h+='<p>Possible witnesses gathered: '+rr.witnesses.map(function(w){return esc(w.ref);}).join(', ')+'</p>';
+    if(rr.counter_texts&&rr.counter_texts.length)h+='<p>Texts that may cut against it: '+rr.counter_texts.map(function(w){return esc(w.ref);}).join(', ')+'</p>';
+    h+='<p class="ws-meta">Gathered by the research assistant. The assistant gathers, it does not judge, and it can err. Citations verified by the reader: yes / no</p>';
+  }
+  h+='<h2>Verdict</h2>';
+  h+='<div class="ws-verdict"><b>'+(esc(state.verdict)||'Not yet rendered')+'</b>'+(state.verdict?'. Rendered by the reader, as it should be.':'. The reader renders the verdict. The test only points.')+'</div>';
+  if(f['f-notes'])h+='<h2>Notes</h2><p>'+esc(f['f-notes']).replace(/\n/g,'<br>')+'</p>';
+  h+='<p class="ws-foot">“They shall become one in My hand.” — Ezekiel 37:19 · L’ets Echad · letsechad.com</p>';
+  document.getElementById('worksheet').innerHTML=h;
+  window.print();
+});
+
+/* ---------- reset ---------- */
+document.getElementById('reset-btn').addEventListener('click',function(){
+  if(!confirm('Clear this test and start another?'))return;
+  state={answers:{},checks:{},fields:{},verdict:'',research:null};
+  try{localStorage.removeItem(KEY);}catch(e){}
+  renderResearch(null);
+  document.querySelectorAll('[data-save]').forEach(function(el){
+    if(el.type==='checkbox')el.checked=false;else el.value='';
+  });
+  groups.forEach(paintGroup);
+  vbtns.forEach(function(b){b.classList.remove('sel');b.setAttribute('aria-pressed','false');});
+  document.querySelectorAll('.flag').forEach(function(el){el.classList.remove('on');});
+  update();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+/* ---------- nav ---------- */
+var nav=document.getElementById('nav');
+var burger=document.getElementById('burger');
+var mob=document.getElementById('mob');
+window.addEventListener('scroll',function(){nav.classList.toggle('on',window.scrollY>10);});
+burger.addEventListener('click',function(){
+  var open=mob.classList.toggle('open');
+  burger.classList.toggle('x',open);
+  burger.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+mob.querySelectorAll('.mob-a').forEach(function(a){a.addEventListener('click',function(){
+  mob.classList.remove('open');burger.classList.remove('x');
+  burger.setAttribute('aria-expanded','false');document.body.style.overflow='';
+});});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'&&mob.classList.contains('open')){
+    mob.classList.remove('open');burger.classList.remove('x');
+    burger.setAttribute('aria-expanded','false');document.body.style.overflow='';
+    burger.focus();
+  }
+});
+
+/* ---------- course form ---------- */
+document.querySelectorAll('.fb-form').forEach(function(f){
+  var status=f.parentNode.querySelector('.fb-status');
+  var btn=f.querySelector('button[type=submit]');
+  function show(msg){if(status){status.textContent=msg;status.hidden=false;}}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(status){status.hidden=true;status.textContent='';}
+    if(btn){btn.disabled=true;}
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d&&d.success){location.href='thank-you';}
+        else{if(btn){btn.disabled=false;}show('That address was not accepted. Check it and try again.');}
+      })
+      .catch(function(){if(btn){btn.disabled=false;}show('Something went wrong on our end. Please try again in a moment, or write to matti@letsechad.com.');});
+  });
+});
+})();
+</script>
+</body>
+</html>
