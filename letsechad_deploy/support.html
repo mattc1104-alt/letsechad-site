@@ -352,11 +352,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <div class="pr-ft"><span class="pr-soon">Coming soon</span></div>
       </article>
 
-      <article class="pr-c fu d3 in">
+      <article class="pr-c fu d3 in pr-clickable" role="link" tabindex="0" aria-label="Book a Chavruta Session with Matti" onclick="window.open('https://cal.com/letsechad/chavruta-session', '_blank', 'noopener,noreferrer')" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); window.open('https://cal.com/letsechad/chavruta-session', '_blank', 'noopener,noreferrer'); }">
         <span class="pr-tag">Study with Matti</span>
         <h3 class="pr-t">Chavruta Sessions</h3>
         <p class="pr-d">Torah was never meant to be studied alone. A limited number of one-on-one study sessions: your questions, the text open, and a partner who has walked the road. Serious inquiries welcome.</p>
-        <div class="pr-ft"><a href="mailto:matti@letsechad.com?subject=Chavruta%20Sessions" class="btn btn-outline btn-sm">Inquire →</a></div>
+        <div class="pr-ft"><span class="btn btn-outline btn-sm">Book a Session →</span><a href="mailto:matti@letsechad.com?subject=Chavruta%20Sessions" class="pr-link2" onclick="event.stopPropagation();">Or email first →</a></div>
       </article>
 
     </div>
